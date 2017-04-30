@@ -1,0 +1,248 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@import "normalize";
+@import url(https://fonts.googleapis.com/css?family=PT+Mono);
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+}
+main {
+  line-height: 1.5;
+}
+h1 {
+  font-size: 1.4em;
+}
+header.head h1 a {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.2em;
+}
+code,
+pre,
+section.archive_list ul .date {
+  font-family: 'PT Mono', Courier, 'Menlo', 'Andale Mono';
+}
+pre {
+  margin: .5em 1.5em;
+}
+pre.bigblock,
+pre code {
+  display: block;
+  overflow: scroll;
+  color: #000;
+  padding: 5px;
+  margin: .5em 1.5em;
+  background-color: #f1f1f1;
+  border: 1px solid silver;
+}
+pre.bigblock code {
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.more,
+footer.byline,
+aside.sidebar {
+  font-size: 0.9em;
+}
+article,
+footer.byline {
+  margin: 1em 0;
+}
+.tags ul,
+.tags li {
+  display: inline;
+}
+.tags ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+footer.foot {
+  padding: 1em;
+  font-size: 1em;
+  color: white;
+  background-color: #003487;
+}
+footer.foot > div {
+  white-space: nowrap;
+}
+ul.section_list {
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style-type: none;
+}
+ul.section_list li {
+  margin: 0 10px 2px 0;
+  padding: 0;
+}
+section.archive_list ul {
+  list-style-type: none;
+  padding-left: 1em;
+}
+section.archive_list ul .date {
+  font-size: 0.9em;
+  padding-right: 1em;
+}
+.all_tags {
+  text-align: justify;
+}
+.prev-next .center {
+  text-align: center;
+  width: 15em;
+}
+.prev-next .left {
+  text-align: left;
+  width: 10em;
+  min-width: 10em;
+
+}
+.prev-next .right {
+  text-align: right;
+  width: 10em;
+  min-width: 10em;
+}
+/*
+ * links
+ */
+a {
+ text-decoration: none;
+}
+.container h1 a,
+section.archive_list a,
+section.articles a,
+section.page a,
+section.cv a,
+article.post a {
+ color: #D05800;
+ border-bottom: 1px solid silver;
+}
+section.cv a,
+aside.sidebar a,
+footer.foot a {
+   color: #007ad1;
+}
+section.articles a img,
+section.page a img,
+article.post a img {
+  border: none;
+}
+header.head h1 a {
+  color: #000;
+}
+footer.foot a svg {
+  height: 1.5em;
+  width: 1.5em;
+}
+section.cv .title {
+	font-weight: bold;
+}
+section.cv .address,
+section.cv .contact,
+section.cv .version,
+section.cv .duration,
+section.cv .location {
+	font-size:small;
+}
+section.cv tr.bullet td {
+  padding: 0px 10px 5px 15px;
+  border-bottom: 1px solid #eee;
+}
+section.cv h1 {
+  font-size: 1.3em;
+}
+section.cv h2 {
+  font-size: 1.2em;
+  border-bottom: 1px solid gray;
+}
+section.cv th {
+  font-size: 1.2em;
+  text-align: left;
+  padding: 1.5em 0 0 0;
+  border-bottom: 1px solid gray;
+}
+
+/* Default Layout: body containing wrapper and footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+.wrapper {
+  position: relative;
+  flex: 1 1 auto;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100%
+}
+header.head {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+footer.foot {
+  flex: 0;
+  display: flex;
+  min-height: 3em;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+section.cv {
+  max-width: 900px;
+  margin: 0 auto;
+}
+/* Layout: wrapper contains header.head and content
+ page: header.page-header, main.page, and div.prev-next
+ archive: header.page-header, div.archive
+ post: header.page-header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+header.page-header {
+  flex: 0;
+}
+nav.prev-next {
+  flex: 0;
+  height: 2em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+article.post,
+div.archive {
+  flex: 1;
+}
+/* Layout: div.archive contains main.archive and sidebar.aside
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+div.archive {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+main.archive {
+  flex: 1;
+  padding-right: 1em;
+}
+aside.sidebar {
+  width: 250px;
+}
+@media (min-width: 500px) {
+
+}

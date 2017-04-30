@@ -1,0 +1,17 @@
+<aside class="sidebar">
+  <h2 class="tags-header">my tags</h2>
+  {% assign rawtags = "" %}
+  {% assign tags = "" %}
+  {% for tag_hash in site.tags %}
+    {% assign rawtags = rawtags | append:tag_hash[0] | append:'|' %}
+  {% endfor %}
+  {% assign tags = rawtags | split:'|' | sort %}
+  <p class="all_tags">{% for tag in tags %}
+  <a href="/tag#{{ tag | slugify }}"> {{ tag }} </a>
+  {% endfor %}</p>
+
+  <h2 class="tags-header"><a href="https://pinboard.in/u:ebullient">my pinboard tags</a></h2>
+  <p class="all_tags">
+    <script language="javascript" src="http://pinboard.in/badge?user=ebullient&num=80&color=003487-6EB6FF&size=12-15"></script>
+  </p>
+</aside>

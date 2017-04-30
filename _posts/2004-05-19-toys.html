@@ -1,0 +1,49 @@
+---
+layout: post
+title: TOYS!
+redirect_from:
+- articles/17/toys
+tags:
+- gentoo
+- thinkpad
+---
+	<p>I got a Sony Clie PEG-TJ37. I was thinking about the PEG-TJ55, but I just could NOT deal with the wheel thing in the back &#8211; too awkward. </p>
+
+	<p>Since the info on getting this puppy to work with linux seemed a little scattered, I figured I&#8217;d make my notes here, maybe someone else would find them handy, too.</p>
+
+
+
+ 
+<!--more-->
+	<p>Just as a side comment, syncing with jpilot worked oddly until I changed from devfs to udev (I left devfs in the kernel, but used the boot option to prevent it from being mounted). Once I switched to udev, behavior made much more sense.</p>
+
+	<p>linux distro: <code>gentoo</code><br />
+kernel version: <code>2.6.5-gentoo-r1 (gentoo-dev-sources)</code></p>
+
+	<p>kernel options: </p>
+
+	<p><blockquote><pre>  CONFIG_USB=y</p>
+  CONFIG_USB_DEVICEFS=y 
+  CONFIG_USB_EHCI_HCD=m
+  CONFIG_USB_UHCI_HCD=y
+  CONFIG_USB_SERIAL=m
+  CONFIG_USB_SERIAL_VISOR=m
+</pre></blockquote>
+
+	<p><em>References:</em></p>
+
+	<ul>
+	<li><a href="http://www.gentoo.org/doc/en/udev-guide.xml">Gentoo UDev Guide</a></li>
+		<li><a href="http://www.monkeynoodle.org/comp/clie-ms">Using a Clie&#8217;s Memory Stick with Linux</a></li>
+		<li><a href="http://nick.kreucher.net/clie/survey-results.php">Sony Cli&eacute;and Linux Survey Results</a>, <a href="http://nick.kreucher.net/clie/">Sony Cli &eacute;and Linux</a></li>
+		<li><a href="http://pilot-link.org/README.usb">http://pilot-link.org/README.usb</a></li>
+		<li><a href="http://wiki.pilot-link.org/title/Palm+Device+Matrix">Palm Device Matrix &#8211; pilot-link Community Portal</a></li>
+		<li><a href="http://homepages.nildram.co.uk/~milnber/cliehowto.html">Sony Cli&eacute; HOWTO</a></li>
+		<li><a href="http://news.gmane.org/gmane.comp.handhelds.clie.linux/">clie-linux mailing list archives</a></li>
+		<li><a href="http://www.geniusweb.com/LDP/HOWTO/Wireless-Sync-HOWTO/">Wireless Sync HOWTO</a></li>
+		<li><a href="http://www.nicholson.com/rhn/palm/pdb.txt">PDB Formats</a></li>
+		<li><a href="http://www.geocities.com/Heartland/Acres/3216/palmrecs.htm">Palm Desktop File Formats</a></li>
+	</ul>
+
+
+ 

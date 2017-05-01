@@ -7,7 +7,7 @@
   {% endfor %}
   {% assign tags = rawtags | split:'|' | sort %}
   <p class="all_tags">{% for tag in tags %}
-  <a href="/tag#{{ tag | slugify }}"> {{ tag }} </a>
+  <a href="/tag/#{{ tag | slugify }}"> {{ tag }} </a>
   {% endfor %}</p>
 
   <h2 class="tags-header"><a href="https://pinboard.in/u:ebullient">my pinboard tags</a></h2>

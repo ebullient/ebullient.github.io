@@ -19,9 +19,9 @@ author:
 collections:
    pages:
      output: true
-     permalink: /:path
+     permalink: /:path/
 
-permalink: /:year/:month/:day/:title
+permalink: /:year/:month/:day/:title.html
 
 # Build settings
 markdown: kramdown

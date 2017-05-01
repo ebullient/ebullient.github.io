@@ -1,0 +1,582 @@
+<?php 
+ 
+//0.4 fixed bug: numlic only
+//0.3 fixed bug: delete action
+//0.2 supports and/or query
+ 
+// plugin needs to work on Nucleus versions <=2.0 as well
+if (!function_exists('sql_table')){
+    function sql_table($name) {
+        return 'nucleus_' . $name;
+    }
+}
+ 
+class NP_ELSTagEX extends NucleusPlugin { 
+//------------------------------------------------------
+    function getName() { return 'ELS Tags Extension'; } 
+    function getAuthor() { return 'nakahara21 | Erin Schnabel'; } 
+    function getURL() { return 'http://nakahara21.com | http://ebullientworks.com'; } 
+    function getVersion() { return '0.4'; } 
+    function getDescription() { return 'Tags Extension + ELS changes'; } 
+ 
+    function supportsFeature($what) {
+        switch($what) {
+            case 'SqlTablePrefix':
+                return 1;
+            default:
+                return 0;
+        }
+    }
+
+    function install() {
+        $this->createOption("flg_erase", "Erase data on uninstall.", "yesno", "no");
+        mysql_query("CREATE TABLE IF NOT EXISTS ". sql_table("plug_tagex") ." ( 
+            inum int(9) NOT NULL default '0',
+            itags text NOT NULL,
+            itagreg timestamp(14) NOT NULL,
+            PRIMARY KEY  (inum)
+            ) TYPE=MyISAM;");
+        mysql_query("CREATE TABLE IF NOT EXISTS ". sql_table("plug_tagex_klist") 
+            ." ( 
+            listid int(9) NOT NULL auto_increment,
+            iblog int(11) NOT NULL default '1',
+            tag varchar(255) default NULL,
+            inums text NOT NULL,
+            inums_count int(11) NOT NULL default '0',
+            ireg timestamp(14) NOT NULL,
+            PRIMARY KEY  (listid)
+            ) TYPE=MyISAM;");
+    }
+
+    function uninstall() {
+        if ($this->getOption('flg_erase') == 'yes') {
+            mysql_query ( "DROP table IF EXISTS ". sql_table("plug_tagex") );
+            mysql_query ( "DROP table IF EXISTS ". sql_table("plug_tagex_klist") );
+        }
+    }
+
+    function getTableList() {
+        return array( sql_table('plug_tagex'), sql_table('plug_tagex_klist') );
+    }
+    
+    //------------------------------------------------------
+    function getEventList() { return array('ParseURL',
+                                           'AddItemFormExtras', 'EditItemFormExtras', 
+                                           'PostAddItem', 'PreUpdateItem', 'PreItem', 'PreDeleteItem'); }
+
+//---------------------------------------------------
+// Events: AddItemFormExtras, EditItemFormExtras
+//---------------------------------------------------
+
+    function event_AddItemFormExtras($data) {
+            $this->showItemForm('','', $data['blog']->getID());
+    } 
+ 
+    function event_EditItemFormExtras($data) {
+            $id = $data['variables']['itemid'];
+            $result = mysql_query("SELECT itags FROM ". sql_table("plug_tagex"). " WHERE inum='$id'");
+            if (mysql_num_rows($result) > 0) {
+                $itags  = mysql_result($result,0,0);
+            }
+            $oldforj = str_replace("\n",'\n',htmlspecialchars($itags));
+            $this->showItemForm($oldforj, htmlspecialchars($itags), $data['blog']->getID());
+    } 
+
+    /* --------
+     * display form for both event_AddItemFormExtras and event_EditItemFormExtras
+     */
+    function showItemForm($oldforj, $itags, $blogId) {
+            $existTagList = '';
+            $existTags = $this->lookupBlogTags($blogId);
+
+            for($i=0;$i<count($existTags);$i++){
+                $existTagList .= '<li><a href="javascript:insertag('."'".$existTags[$i]."'".')">'.$existTags[$i].'</a></li>';
+            }
+?>
+<div><!-- noname -->
+<div style="float: left">
+    <label for="tagex">Tag(s):</label>
+    <a href="javascript:resetOlder('<?php echo $oldforj ?>')">[Reset]</a>
+    <br />
+    <textarea id="tagex" name="itags" rows="3" cols="40"><?php echo $itags; ?></textarea>
+</div>
+<div style="height: 100px;overflow: auto; padding-left: 5px">
+    Existing Tag(s):<br />
+    <?php echo $existTagList; ?>
+</div>
+<div class="clearing">&nbsp;</div>
+<script language="JavaScript" type="text/javascript"> 
+<!--
+function insertag(tag){ 
+    if(document.getElementById('tagex').value != '')
+        tag = "\n" + tag;
+    document.getElementById('tagex').value += tag;        
+} 
+function resetOlder(old){
+    document.getElementById('tagex').value = old;        
+}
+//-->
+</script>
+</div><!-- noname -->
+<?php
+    }
+
+//-------------------------------------------------------------
+// Events: PostAddItem, PreUpdateItem, PreItem, PreDeleteItem
+//-------------------------------------------------------------
+
+    function event_PostAddItem($data) {
+        $itags  = trim(requestVar('itags'));
+        if (!$itags) 
+            return;
+        
+        $inum = $data['itemid'];
+        $iblog = quickQuery('SELECT iblog as result FROM '.sql_table('item').' WHERE inumber='.$inum);
+
+        sql_query("INSERT INTO ". sql_table('plug_tagex') . " (inum, itags) VALUES ('$inum','".addslashes($itags)."')");
+ 
+        $temp_tags_array = preg_split("/[\r\n,]+/", $itags);
+        for($i=0;$i<count($temp_tags_array);$i++) {
+            $this->mergeTags(trim($temp_tags_array[$i]), $inum, $iblog);
+        }
+    } 
+ 
+    function event_PreUpdateItem($data) {
+        $itags  = trim(requestVar('itags'));
+        
+        $inum = $data['itemid'];
+        $iblog = $data['blog']->getID();
+
+        $oldTags = quickQuery('SELECT itags as result FROM '.sql_table('plug_tagex').' WHERE inum='.$inum);
+        
+        if($itags == $oldTags) 
+            return;
+        
+        if( $itags && ! $oldTags ) {
+            sql_query("INSERT INTO ". sql_table('plug_tagex') . " (inum, itags) VALUES ('$inum','".addslashes($itags)."')");
+        } else if ( $itags ) {
+            sql_query("UPDATE ". sql_table('plug_tagex') . " SET inum='$inum', itags='".addslashes($itags)."' WHERE inum='$inum'");
+        } else {
+            sql_query("DELETE FROM ". sql_table("plug_tagex") ." WHERE inum='$inum'");
+        }
+ 
+        $old_tags_array = $this->getTags($oldTags);
+        $new_tags_array = $this->getTags($itags);
+ 
+        $deleteTags = $this->array_minus_array($old_tags_array, $new_tags_array);
+        for($i=0;$i<count($deleteTags);$i++){
+            $this->deleteTags($deleteTags[$i], $inum, $iblog);
+        }
+        
+        $addTags = $this->array_minus_array($new_tags_array, $old_tags_array);
+        for($i=0;$i<count($addTags);$i++){
+            $this->mergeTags($addTags[$i], $inum, $iblog);
+        }
+        
+    }
+ 
+    function event_PreItem($data) {
+        return;
+    } 
+ 
+    function event_PreDeleteItem($data) {
+        $inum = $data['itemid'];
+
+        $iblog = quickQuery('SELECT iblog as result FROM '.sql_table('item').' WHERE inumber='.$inum);
+        $oldTags = quickQuery('SELECT itags as result FROM '.sql_table('plug_tagex').' WHERE inum='.$inum);
+        
+        if(!$oldTags) 
+            return;
+        
+        sql_query("DELETE FROM ". sql_table("plug_tagex") ." WHERE inum='$inum'");
+        
+        $deleteTags = $this->getTags($oldTags);
+        for($i=0;$i<count($deleteTags);$i++){
+            $this->deleteTags($deleteTags[$i], $inum, $iblog);
+        }
+    }
+    
+//-------------------------------------------------------------
+// Events: ParseURL, InitSkinParse
+//-------------------------------------------------------------
+
+    /**
+     * Parse URLs:
+     *        /tag/tagname
+     */
+    function event_ParseURL(&$data) {
+        global $blogid, $CONF, $archivelist, $archive;
+                
+        $this->activeURLTags = $this->getNoDecodeQuery('tag');
+        if ( !empty($this->activeURLTags) ) {
+            $this->activeTags = $this->splitRequestTags($this->activeURLTags);
+            $archive          = 'tag';
+            $data['complete'] = true;
+        }
+    }
+
+    function doIf($key, $value) {
+        global $archive; 
+        switch($key) {
+            case 'archive' :
+               return strcmp($archive, 'tag') == 0;
+        }
+        print_r($args);
+    }
+
+    function doSkinVar() {
+        global $manager, $CONF, $blog, $archive;
+
+        $args = func_get_args();
+        $skinType = $args[0];
+
+        if ( count($args) < 2 )
+            $type = 'list';
+        else
+            $type = $args[1];
+
+        if ( $type != 'tag' ) {
+            if ( isset($blog) )
+                $b =& $blog;
+            else
+                $b =& $manager->getBlog($CONF['DefaultBlog']);
+            
+            $existTags = $this->lookupBlogTags($b->getID(), '*');
+        }
+
+        switch($type)
+        {
+            case 'tag' : 
+                if ( $skinType == 'archivelist' ) {
+                    echo "Monthly Archives";
+                    break;
+                }
+
+                // If tags are active in Request URI/Query string, display heading for tagged entries
+                if ( isset($this->activeTags) && !empty($this->activeTags) ) {
+                    $requestT = $this->activeURLTags;
+                    $requestTarray = $this->activeTags;
+
+                    $reqAND = array_map(array(&$this, "_rawdecode"), $requestTarray['and']);
+                    if($requestTarray['or'])
+                        $reqOR = array_map(array(&$this, "_rawdecode"), $requestTarray['or']);
+
+                    echo "Tagged entries: \""; 
+                    $reqANDp = @join('" and "',$reqAND);
+                    if($reqOR){
+                        $reqORp = '", or "' . @join('", or "',$reqOR);
+                    }
+                    echo $reqANDp.$reqORp.'"';
+                } else if ( $skinType == 'archive' ) {
+                    sscanf($archive, '%d-%d-%d', $y, $m, $d);
+                    $format = "%B %Y";
+                    echo "Archives: ".strftime($format,mktime(0,0,0,$m,$d?$d:1,$y));
+                }
+
+                break;
+            case 'list' : 
+                $tagTemplate = '<li class="ELSTagEX_li <%tagclass%>"><a href="<%taglinkurl%>"><%tag%></a> <small>(<%tagamount%>)</small></li>';
+                $class = 'odd';
+                foreach ( $existTags as $row ) {
+                    $printData = array(
+                        'tagclass'   => $class,
+                        'tagamount'  => $row['inums_count'],
+                        'taglinkurl' => $this->createTagLink($row['tag']),
+                        'tag'        => htmlspecialchars($row['tag'])
+                        );
+                    $eachTag[] = TEMPLATE::fill($tagTemplate, $printData);
+                    $class = ($class == 'odd' ? 'even' : 'odd' );
+                }
+                echo '<ul class="ELSTagEX_ul">'."\n";
+                echo @join("\n", $eachTag);
+                echo '</ul>';
+                break;
+            case 'cloud' :
+                $size1 = (count($args) < 3) ? 1 : $args[2];
+                $size2 = (count($args) < 4) ? 4 : $args[3];
+
+                if ( $size1 != $size2 ) {
+                    $minFontSize = min($size1, $size2);
+                    $maxFontSize = max($size1, $size2);
+                    $fontRange = ($maxFontSize - $minFontSize);
+
+                    list($maxCount, $minCount) = $this->scanCount($b->getID(), $existTags);
+                    $countRange = ($maxCount - $minCount);
+                    $fontInterval = ($countRange == 0) ? $fontRange : $fontRange / $countRange;
+                }
+
+                $tagTemplate = '<span style="font-size:<%fontlevel%>em" title="<%tagamount%> post(s)"><a href="<%taglinkurl%>"><%tag%></a></span>';
+
+                $eachTag = array();
+                foreach ( $existTags as $row ) {
+                    $printData = array(
+                        'tagamount'  => $row['inums_count'],
+                        'fontlevel'  => ($row['inums_count'] - $minCount) * $fontInterval + $minFontSize,
+                        'taglinkurl' => $this->createTagLink($row['tag']),
+                        'tag'        => htmlspecialchars($row['tag'])
+                        );
+                    $eachTag[] = TEMPLATE::fill($tagTemplate, $printData);
+                }
+                echo '<div class="ELSTagEX_cloud">';
+                echo @join(' ', $eachTag);
+                echo '</div>';
+                break;
+        }
+    }
+
+    function doTemplateVar(&$item, $type='') {
+        $q = "SELECT * FROM ".sql_table("plug_tagex")." WHERE inum=".$item->itemid;
+        $res = sql_query($q);
+        while($o = mysql_fetch_object($res)){
+            $temp_tags_array = preg_split("/[\r\n,]+/", trim($o->itags));
+            for($i=0;$i<count($temp_tags_array);$i++){
+                $tag = trim($temp_tags_array[$i]);
+                $taglink = $this->createTagLink($tag);
+                $taglist[$i] = '<a href="'.$taglink.'">'.htmlspecialchars($tag).'</a>';
+            }
+        }
+        if($taglist)
+            echo 'tags: '. @join(' / ', $taglist);
+    }
+
+
+//------------------------------------------------------
+ 
+    function getTags($str) {
+        if ( empty($str) )
+            return array();
+
+        $tempArray = preg_split("/[\r\n,]+/", $str);
+        $returnArray = array_map('trim', $tempArray);
+        return array_unique($returnArray);
+    }
+ 
+    function array_minus_array($a, $b) {
+        $c=array_diff($a,$b);
+        $c=array_intersect($c, $a);
+        return array_values($c); 
+    }
+ 
+    function deleteTags($tag, $inum, $iblog=1) {
+            $findres = sql_query("SELECT inums FROM ".sql_table("plug_tagex_klist")." WHERE tag='".$tag."'" . ' AND inums REGEXP "(^|,)'.$inum.'(,|$)" order by ireg desc');
+            
+            if(mysql_num_rows($findres) == 0) 
+                return;
+            
+            $temp_inums = mysql_result($findres,0,0);
+            if($temp_inums == $inum){
+                sql_query("DELETE FROM ". sql_table("plug_tagex_klist") ." WHERE tag='$tag' and iblog='$iblog'");
+                return;
+            }
+ 
+            $inums_array = explode(',', $temp_inums);
+            $trans = array_flip($inums_array);
+            unset($trans[$inum]);
+            $inums_array = array_flip($trans);
+            $inums_count = count($inums_array);
+            $inums = @join(",",$inums_array);
+            
+            if($inums) {
+                sql_query("UPDATE ". sql_table('plug_tagex_klist') ." SET inums='$inums', inums_count='$inums_count' WHERE tag='$tag' and iblog='$iblog'");
+            }
+    }
+ 
+    function mergeTags($tag, $inum, $iblog=1) {
+        global $manager, $CONF;
+
+        if(!$tag) 
+            return;
+
+        $findres = sql_query("SELECT inums FROM ".sql_table("plug_tagex_klist")." WHERE tag='$tag' and iblog='$iblog' order by ireg desc");
+        if(mysql_num_rows($findres) > 0) 
+        {
+            $temp_inums = mysql_result($findres,0,0);
+            $inums_array = explode(',', $temp_inums);
+            if(!in_array($inum, $inums_array))
+            {
+                $inums = $temp_inums.','.$inum;
+                $inums_count = count($inums_array) + 1;
+                sql_query("UPDATE ". sql_table('plug_tagex_klist') ." SET inums='$inums', inums_count='$inums_count' WHERE tag='$tag' and iblog='$iblog'");
+            }
+        }
+        else
+        {
+            sql_query("INSERT INTO ". sql_table('plug_tagex_klist') . " (iblog, tag, inums, inums_count) VALUES ('$iblog','".addslashes($tag)."','$inum','1')");
+        }
+    }
+
+    function lookupBlogTags($blogId, $select='tag') {
+        $findres = sql_query("SELECT $select FROM ".sql_table("plug_tagex_klist")." WHERE iblog='".$blogId."'" . ' order by tag');
+
+        if(mysql_num_rows($findres) <= 0) {
+            mysql_free_result($findres);
+            return array();
+        } else {
+            $existTags = array();
+            while($row = mysql_fetch_assoc($findres)){
+                if ( $select == 'tag' ) {
+                    $existTags[] = $row['tag'];
+                } elseif ( count($row) == 1 ) {
+                    $keys = array_keys($row);
+                    $existTags[] = $row[$keys[0]];
+                } else {
+                    $existTags[] = $row;
+                }
+            }
+            mysql_free_result($findres);
+            return $existTags;
+        }
+    }
+
+    function scanCount($blogId, &$tagArray) {
+        $findres = sql_query("SELECT MAX(inums_count) as mx, MIN(inums_count) as mn FROM ".sql_table("plug_tagex_klist")." WHERE iblog='".$blogId."'");
+
+        if ( mysql_num_rows($findres) <= 0 ) {
+            $max = 0;
+            $min = 0;
+            foreach ($tagArray as $row) {
+                if ( $min == 0 || $row['inums_count'] < $min ) {
+                    $min = $row['inums_count'];
+                } 
+                if ( $max == 0 || $row['inums_count'] > $max ) {
+                    $max = $row['inums_count'];
+                }
+            }
+            mysql_free_result($findres);
+            return array($max, $min);
+        } else {
+            while($row = mysql_fetch_assoc($findres)) {
+                mysql_free_result($findres);
+                return array($row['mx'],$row['mn']);
+            }
+        }
+    }
+ 
+//------------------------------------
+
+    function getNoDecodeQuery($q){
+        global $CONF;
+ 
+        if ($CONF['URLMode'] == 'pathinfo') {
+            $urlq = serverVar("REQUEST_URI");
+            $tempq = explode($q.'/', $urlq, 2);
+            if($tempq[1]){
+                $tagq = explode('/', $tempq[1]);
+                return $tagq[0];
+            }
+        }
+        
+        $urlq = serverVar("QUERY_STRING");
+        if ( !empty($urlq) && strpos($urlq, $q) !== FALSE ) {
+            $urlq = str_replace('?','',$urlq);
+            $urlq = explode('&',$urlq);
+            for($i=0;$i<count($urlq);$i++){
+                $tempq = explode('=',$urlq[$i]);
+                if($tempq[0] == $q)
+                    return $tempq[1];
+            }
+        }
+        
+        return FALSE;
+    }
+ 
+    function splitRequestTags($q){
+        if(!strstr($q, '+') && !strstr($q, ':')){
+            $res['and'][0] = $q;
+            return $res;
+        }
+        $res = array('and'=>array(), 'or'=>array());
+        $tempAnd = explode('+', $q);
+        for($i=0;$i<count($tempAnd);$i++){
+            $temp = explode(':', $tempAnd[$i]);
+            $res['and'][] = array_shift($temp);
+            if($temp != array())
+                $res['or'] = array_merge($res['or'],$temp);
+        }
+        return $res;
+    }
+
+    function getSQLQuery(&$blog) {
+        if ( empty($this->activeTags) ) 
+            return '';
+        
+        $requestTarray = $this->activeTags;
+        $reqAND = array_map(array(&$this, "_rawdecode"), $requestTarray['and']);
+        if($requestTarray['or'])
+            $reqOR = array_map(array(&$this, "_rawdecode"), $requestTarray['or']);
+
+        $useInums = array();
+        if ( !empty($reqAND) ) {
+            foreach($reqAND as $tag) {
+                $findres = sql_query("SELECT inums FROM ".sql_table("plug_tagex_klist")." WHERE iblog='".$blog->getID()."' AND tag='".$tag."'");
+                if(mysql_num_rows($findres) > 0) {
+                    $row = mysql_fetch_assoc($findres);
+                    if ( !empty($useInums) ) {
+                        $useInums = array_intersect($useInums, explode(',',$row['inums']));
+                    } else {
+                        $useInums = explode(',',$row['inums']);
+                    }
+                } else {
+                    return " and 0";
+                }
+                mysql_free_result($findres);
+            }
+        }
+        if ( !empty($reqOR) ) {
+            foreach($reqOR as $tag) {
+                $findres = sql_query("SELECT inums FROM ".sql_table("plug_tagex_klist")." WHERE iblog='".$blog->getID()."' AND tag='".$tag."'");
+                if(mysql_num_rows($findres) > 0) {
+                    $row = mysql_fetch_assoc($findres);
+                    if ( !empty($useInums) ) {
+                        $useInums = array_merge($useInums, explode(',',$row['inums']));
+                    } else {
+                        $useInums = explode(',',$row['inums']);
+                    }
+                }
+                mysql_free_result($findres);
+            }
+            $useInums = array_unique($useInums);
+        }
+
+        return empty($useInums) ? '' : " and inumber IN ('".implode("','",$useInums)."')"; 
+    }
+
+
+    function _rawencode($str){
+        if(_CHERSET != 'UTF-8'){
+            $str = mb_convert_encoding($str,"UTF-8",_CHARSET);
+        }
+        return rawurlencode($str);
+    }
+ 
+    function _rawdecode($str){
+        $str = rawurldecode($str);
+        if(_CHERSET != 'UTF-8'){
+            $str = mb_convert_encoding($str,_CHARSET,"UTF-8");
+        }
+        return $str;
+    }
+ 
+    function createTagLink($tag, $ready='', $sep=''){
+        global $CONF;
+       
+        $linkparams = array();
+ 
+        if(!$ready) 
+            $sep = '';
+
+        if ($CONF['URLMode'] == 'pathinfo') {
+            $link = $CONF['Self'];
+            if ( $link[strlen($link)-1] != '/' )
+                $link .= '/';
+
+            $link .= 'tag/' . $ready.$sep.$this->_rawencode($tag).'/';
+        } else {
+            $link = $CONF['Self'] . '?tag=' . $ready.$sep.$this->_rawencode($tag);
+        }
+
+        return $link;
+    }
+
+
+}

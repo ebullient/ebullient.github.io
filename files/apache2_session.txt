@@ -1,0 +1,34 @@
+#!/sbin/runscript
+# Copyright 2004 Erin Schnabel <ebullient@squirrelmail.org>
+# Distributed under the terms of the GNU General Public License v2
+
+opts="${opts}"
+
+depend() {
+	need checkfs
+	before apache2
+}
+
+start() {
+	ebegin "Creating PHP session RAMDISK"
+	/sbin/mkfs -t ext2 /dev/ram2  >/dev/null
+	mount /dev/ram2 /var/spool/php_apps/session >/dev/null
+	chown apache:apache /var/spool/php_apps/session >/dev/null
+	eend $? "Error mounting RAMDISK"
+	eend 0
+}
+
+stop() {
+        MOUNT=$(df | grep ram2)
+	if [ -n "$MOUNT" ]
+	then
+	  ebegin "Destroying PHP session RAMDISK"
+	  umount /var/spool/php_apps/session
+	  eend $? "Error cleaning up session RAMDISK"
+	fi
+}
+
+restart() {
+	stop
+	start
+}

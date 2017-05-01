@@ -1,0 +1,37 @@
+<?
+/**
+ * SocialTag: links for Del.icio.us and Digg
+*/
+class NP_ELSSocialTags extends NucleusPlugin {
+
+    function getEventList() { return array(); }
+    function getName() { return 'ELS Social Tags'; }
+    function getAuthor() { return 'Erin Schnabel'; }
+    function getURL() { return 'http://ebullientworks.com/'; }
+    function getVersion() { return '0.1'; }
+    function getDescription() {
+        return 'Use <%ELSSocialTags%>, where type is delicious or digg';
+    }
+
+
+    // skinvar plugin can have a blogname as second parameter
+    function doTemplateVar(&$item) {
+        global $CONF, $manager;
+
+        $itemurl = '';
+        if ($manager->pluginInstalled('NP_FancierURL2')) {
+			$lplugin =& $manager->getPlugin('NP_FancierURL2');
+            $itemurl = $lplugin->getTemplateURL(&$item);
+        }
+        $encurl = urlencode($CONF['ItemURL'].'/'.$itemurl);
+        $enctitle = urlencode($item->title);
+
+        $delurl = 'http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='.$encurl.'&amp;title='.$enctitle;
+        $diggurl = 'http://www.digg.com/submit?url='.$encurl.'&amp;title='.$enctitle.'&amp;media=news';
+?>
+<a title="tag in del.icio.us" href="http://del.icio.us/post" onclick="window.open('<?php echo $delurl; ?>','delicious','toolbar=no,width=700,height=400'); return false;"><img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="tag in del.icio.us"/></a>
+<a title="Digg this" href="<?php echo $diggurl; ?>"><img src="http://digg.com/img/badges/16x16-digg-guy.gif" width="16" height="16" alt="Digg!" /></a>
+<?php
+    }
+}
+?>

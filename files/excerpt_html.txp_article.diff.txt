@@ -1,0 +1,140 @@
+Index: include/txp_article.php
+===================================================================
+RCS file: /home/cvs/textpattern/include/txp_article.php,v
+retrieving revision 1.1
+retrieving revision 1.4
+diff -u -b -r1.1 -r1.4
+--- include/txp_article.php	23 Jan 2005 02:40:40 -0000	1.1
++++ include/txp_article.php	19 Feb 2005 22:14:00 -0000	1.4
+@@ -8,7 +8,7 @@
+ */
+ 
+ 	$vars = array(
+-		'ID','Title','Title_html','Body','Body_html','Excerpt','textile_excerpt','Image',
++		'ID','Title','Body','Body_html','Excerpt','Excerpt_html','textile_excerpt','Image',
+ 		'textile_body', 'Keywords','Status','Posted','Section','Category1','Category2',
+ 		'Annotate','AnnotateInvite','publish_now','reset_time','AuthorID','sPosted',
+ 		'LastModID','sLastMod','override_form','from_view','year','month','day','hour',
+@@ -63,7 +63,9 @@
+ 		$incoming['Title'] = $textile->TextileThis($incoming['Title'],'',1);
+ 
+ 		if ($incoming['textile_excerpt']) {
+-			$incoming['Excerpt'] = $textile->TextileThis($incoming['Excerpt'],1);
++			$incoming['Excerpt_html'] = $textile->TextileThis($incoming['Excerpt']);
++		} else {
++			$incoming['Excerpt_html'] = trim($incoming['Excerpt']);
+ 		}
+ 
+ 			extract(doSlash($incoming));
+@@ -75,7 +77,7 @@
+ 				$when = "from_unixtime($when)";
+ 			}
+ 
+-			if ($Title and $Body) {
++		if ($Title and ($Excerpt or $Body) ) {
+ 
+ 				$textile_body = (!$textile_body) ? 0 : 1;
+ 				$textile_excerpt = (!$textile_excerpt) ? 0 : 1;
+@@ -89,6 +91,7 @@
+ 					Body            = '$Body',
+ 					Body_html       = '$Body_html',
+ 					Excerpt         = '$Excerpt',
++					Excerpt_html    = '$Excerpt_html',
+ 					Image           = '$Image',
+ 					Keywords        = '$Keywords',
+ 					Status          = '$Status',
+@@ -143,7 +146,9 @@
+ 			}
+ 			
+ 				article_edit($message);
+-		} else article_edit();
++		} 
++        else 
++            article_edit();
+ 	}
+ 
+ //--------------------------------------------------------------
+@@ -174,9 +179,12 @@
+ 		}
+ 		
+ 		if ($incoming['textile_excerpt']) {
+-			$incoming['Excerpt'] = $textile->TextileThis($incoming['Excerpt'],1);
++			$incoming['Excerpt_html'] = $textile->TextileThis($incoming['Excerpt']);
++		} else {
++			$incoming['Excerpt_html'] = trim($incoming['Excerpt']);
+ 		}
+ 
++
+ 		$myprivs = fetch('privs','txp_users','name',$txp_user);
+ 		if ($myprivs==5 && $Status==4) $Status = 3;
+ 							
+@@ -198,6 +206,7 @@
+ 			Body            = '$Body',
+ 			Body_html       = '$Body_html',
+ 			Excerpt         = '$Excerpt',
++			Excerpt_html    = '$Excerpt_html',
+ 			Keywords        = '$Keywords',
+ 			Image           = '$Image',
+ 			Status          = '$Status',
+@@ -446,6 +455,30 @@
+   		echo '</td>
+     	<td valign="top" style="width:400px">';
+ 
++	//-- excerpt --------------------
++
++		if ($txpac['articles_use_excerpts']) {
++
++			if ($view=='text') {
++			
++				echo '<textarea style="width:400px;height:120px" rows="1" cols="1" name="Excerpt" tabindex="3">'.$Excerpt.'</textarea>';
++		
++			} else {
++				
++				echo ($textile_excerpt)
++				?	($view=='preview')
++					?	graf($textile->textileThis($Excerpt))
++					:	tag(str_replace(array(n,t),
++							array(br,sp.sp.sp.sp),htmlspecialchars(
++								$textile->TextileThis($Excerpt))),'code')
++				:	graf($Excerpt);
++	
++				echo '<hr width="50%" />';
++			}
++		}
++    
++	//-- body --------------------
++    
+     	if ($view=="preview") { 
+ 
+ 			if ($use_textile==2) {
+@@ -474,30 +507,6 @@
+ 
+ 		}
+ 
+-	//-- excerpt --------------------
+-
+-		if ($txpac['articles_use_excerpts']) {
+-
+-			if ($view=='text') {
+-			
+-				echo graf(gTxt('excerpt').popHelp('excerpt').br.
+-				'<textarea style="width:400px;height:70px" rows="1" cols="1" name="Excerpt" tabindex="3">'.$Excerpt.'</textarea>');
+-		
+-			} else {
+-	
+-				echo '<hr width="50%" />';
+-				
+-				echo ($textile_excerpt)
+-				?	($view=='preview')
+-					?	graf($textile->textileThis($Excerpt),1)
+-					:	tag(str_replace(array(n,t),
+-							array(br,sp.sp.sp.sp),htmlspecialchars(
+-								$textile->TextileThis($Excerpt),1)),'code')
+-				:	graf($Excerpt);
+-			}
+-		}
+-
+-
+ 	//-- author --------------
+ 	
+ 		if ($view=="text" && $step != "create") {

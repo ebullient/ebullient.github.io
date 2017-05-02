@@ -3,6 +3,7 @@ layout: post
 title: Gentoo, T23, and VMWare
 redirect_from:
 - articles/10/gentoo-t23-and-vmware
+- archives/000139.php/
 tags:
 - gentoo
 - thinkpad
@@ -13,7 +14,7 @@ tags:
 
 <blockquote><p>Because devfs rebuilds the /dev tree at each reboot, it is likely that your vmnet and vmmon devices will become unavailable. Because those devices are now unavailable, you have to manually run the vmware-config.pl to rebuild them into the existing /dev tree.</p></blockquote>
 
-<p><strong>[UPDATE: 9/29/2004]</strong> This is total hogwash, see <a href="/archives/000144.php">here</a></p>
+<p><strong>[UPDATE: 9/29/2004]</strong> This is total hogwash, see <a href="{{ site.baseurl }}{% link _posts/2003-09-29-its-alive-gentoo-and-t23.html %}">here</a></p>
 <!--more-->
 <p>So, I added the vmmon lines to devfs.d/vmware, which should start that part ok. The vmnet nodes are a bit more of a puzzle. One place says put a wrapper around init. I am not brave enough for that, and I'd rather work out the right stuff to have the nodes added by devfs when vmnet is referenced - that would make the most sense to me, anyway.</p>
 
@@ -35,4 +36,3 @@ tags:
 <li><a href="http://www-106.ibm.com/developerworks/library/l-fs4.html" title="Introduction to devfs">Common threads: Advanced filesystem implementor's guide, Part 4</a></li>
 <li><a href="http://www-106.ibm.com/developerworks/library/l-fs5.html" title="Setting up devfs">Common threads: Advanced filesystem implementor's guide, Part 5</a></li>
 </ul>
-

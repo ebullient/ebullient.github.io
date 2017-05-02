@@ -3,12 +3,12 @@ layout: post
 title: Fixing Sound/Suspend-Resume on IBM T23 for Gentoo
 redirect_from:
 - articles/13/fixing-soundsuspend-resume-on-ibm-t23-for-gentoo
-- "/archives/000180.php"
+- archives/000180.php/
 tags:
 - gentoo
 - thinkpad
 ---
-	<p><span class="caps">ALSA</span> does work, as I mentioned <a href="http://ebullient.haaser.com/archives/000137.php">here</a>, but it seems to have problems across a suspend-resume, i.e. it doesn&#8217;t work post-resume.</p>
+	<p><span class="caps">ALSA</span> does work, as I mentioned <a href="{{site.baseurl}}{% link _posts/2003-09-21-dammit-gentoo-on-t23-continued.html %}">here</a>, but it seems to have problems across a suspend-resume, i.e. it doesn&#8217;t work post-resume.</p>
 
 	<p>Previously used patches don&#8217;t seem to apply to newer Alsa modules.</p>
 <!--more-->
@@ -82,4 +82,4 @@ esac </pre></p>
 
 	<p>Everywhere I looked, things would reference debian&#8217;s <code>/etc/apm/event.d/alsa</code> script. Thing is, I don&#8217;t run debian, and I&#8217;ll be damned if I could find the contents of the script anywhere&#8230; </p>
 
-	<p>For future reference, I&#8217;ve attached the source <a href="http://ebullient.haaser.com/archives/alsa">here</a>.</p>
+	<p>For future reference, I&#8217;ve attached the source <a href="/files/alsa">here</a>.</p>

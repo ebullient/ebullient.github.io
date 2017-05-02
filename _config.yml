@@ -8,7 +8,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Nothing poetic here, just a collection of things. Some are "how I did this so I can remember later", others are "this is totally cool!", and some are something else entirely.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.ebullientworks.com" # the base hostname & protocol for your site, e.g. http://example.com
-google_analytics: ""
+google_analytics: "UA-1146860-5"
 
 author:
   - name: erin

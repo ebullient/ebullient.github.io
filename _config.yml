@@ -7,14 +7,14 @@ title: ebullient·works
 description: > # this means to ignore newlines until "baseurl:"
   Nothing poetic here, just a collection of things. Some are "how I did this so I can remember later", others are "this is totally cool!", and some are something else entirely.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.ebullientworks.com" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: ""
 
 author:
   - name: erin
   - github: https://github.com/ebullient
   - twitter: ebullientworks
-  - uri: http://ebullientworks.com/
+  - uri: http://www.ebullientworks.com/
 
 collections:
    pages:
@@ -30,6 +30,7 @@ gems:
   - jekyll-feed
   - jekyll-mentions
   - jekyll-redirect-from
+
 exclude:
   - Gemfile
   - Gemfile.lock

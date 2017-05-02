@@ -28,6 +28,6 @@ noindex: true
 <section class="archive_list">{% for tag in tags %}
   <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
   <ul>{% for post in site.tags[tag] %}
-    <li><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>  <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
   {% endfor %}</ul>
 {% endfor %}</section>

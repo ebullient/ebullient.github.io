@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="articles">
+<main class="articles">
   {% for post in site.posts limit:10%}
     {% assign author = site.data.authors[post.author] %}
     {% assign tags = (post.tags | sort) %}
@@ -26,7 +26,7 @@ layout: default
       </footer>
     </article>
   {% endfor %}
-</section>
+</main>
 <nav class="prev-next">
-  <div class="center"><a href="/archive">More..</a></div>
+  <div class="center"><a href="/archive/">More..</a></div>
 </nav>

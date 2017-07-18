@@ -2,13 +2,16 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @import "normalize";
+@import "colors";
 @import url(https://fonts.googleapis.com/css?family=PT+Mono);
+
+
 
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
+  color: $night-rider;
 }
 main {
   line-height: 1.5;
@@ -34,10 +37,10 @@ pre.bigblock,
 pre code {
   display: block;
   overflow: scroll;
-  color: #000;
+  color: $black;
   padding: 5px;
   margin: .5em 1.5em;
-  background-color: #f1f1f1;
+  background-color: $white-smoke;
   border: 1px solid silver;
 }
 pre.bigblock code {
@@ -67,7 +70,7 @@ footer.foot {
   padding: 1em;
   font-size: 1em;
   color: white;
-  background-color: #003487;
+  background-color: $smalt;
 }
 footer.foot > div {
   white-space: nowrap;
@@ -116,25 +119,25 @@ a {
 }
 .container h1 a,
 section.archive_list a,
-section.articles a,
+main.articles a,
 section.page a,
 section.cv a,
 article.post a {
- color: #D05800;
+ color: $tawny;
  border-bottom: 1px solid silver;
 }
 section.cv a,
 aside.sidebar a,
 footer.foot a {
-   color: #007ad1;
+   color: $navy-blue;
 }
-section.articles a img,
+main.articles a img,
 section.page a img,
 article.post a img {
   border: none;
 }
 header.head h1 a {
-  color: #000;
+  color: $black;
 }
 footer.foot a svg {
   height: 1.5em;
@@ -152,7 +155,7 @@ section.cv .location {
 }
 section.cv tr.bullet td {
   padding: 0px 10px 5px 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $white-smoke;
 }
 section.cv h1 {
   font-size: 1.3em;

@@ -11,9 +11,9 @@ I am experimenting with a cute little app (I have, sad to say, fallen head over 
 
 Why would I want to do that?
 
-A) Device junky that I am, I totes splurged and got an iPad Pro, with its little keyboard.
-B) I would really really really like to make more entries to this blog, for example. This is a nice alternative to hauling laptop around.
-C) I want to see how far I can push this über tiny device thing, that ALSO happens to have a stylus (yes, I am one of those people that thinks better long-hand).
+* Device junky that I am, I totes splurged and got an iPad Pro, with its little keyboard.
+* I would really really really like to make more entries to this blog, for example. This is a nice alternative to hauling laptop around.
+* I want to see how far I can push this über tiny device thing, that ALSO happens to have a stylus (yes, I am one of those people that thinks better long-hand).
 
 So exciting! 
 

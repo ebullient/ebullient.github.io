@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Java EE ebullience — airhacks.fm podcast with Adam Bien
+summary: I spent an excellent few hours recording a podcast with Adam Bien!
 tags:
 - podcast
 - java-we

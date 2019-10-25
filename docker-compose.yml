@@ -1,27 +1,34 @@
 version: '2'
 
 services:
+
   jekyll:
     image: jekyll/builder:pages
-    command: [sh, -c, "ls /srv/jekyll/vendor; if [ ! -f '/srv/jekyll/vendor/done' ]; then bundle update && touch /srv/jekyll/vendor/done; fi"]
+    command: [sh, -c, "ls /srv/jekyll/vendor; if [ ! -f '/srv/jekyll/vendor/done' ]; then apk add --update --no-cache libxml2-dev libxslt-dev build-base && gem install commonmarker -v '0.17.13' && gem install oj && bundle install && bundle update && touch /srv/jekyll/vendor/done; fi"]
     volumes:
       - $PWD:/srv/jekyll
-      - $PWD/.vendor:/srv/jekyll/vendor
+      - 'lib:/usr/local/bundle'
+      - 'vendor:/srv/jekyll/vendor'
     container_name: jekyll
     environment:
       - BUNDLE_CACHE
 
   blog:
-    build: .
+    image: jekyll/jekyll:pages
     command: [sh, -c, "while [ ! -f '/srv/jekyll/vendor/done' ]; do echo 'waiting for update...'; sleep 2; done; bundle exec jekyll s --drafts --trace --host=0.0.0.0"]
     depends_on:
       - jekyll
     volumes:
       - $PWD:/srv/jekyll
-      - $PWD/.vendor:/srv/jekyll/vendor
+      - 'lib:/usr/local/bundle'
+      - 'vendor:/srv/jekyll/vendor'
     container_name: blog
     ports:
       - 4000:4000
     environment:
       - BUNDLE_CACHE
       - POLLING
+
+volumes:
+  lib:
+  vendor:

@@ -16,7 +16,7 @@ more things specific to this group of projects. This kind of approach grew out
 of the scripts written for Game On!, which still work well, and do their extra
 duty reminding me what on earth I was doing the last time I worked on it.
 
-<!-- more -->
+<!--more-->
 
 ```
 #!/bin/bash

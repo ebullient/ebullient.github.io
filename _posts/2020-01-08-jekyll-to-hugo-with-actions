@@ -1,6 +1,7 @@
 ---
 layout: "post"
 title: "From Jekyll and GitBook to Hugo and Asciidoc, care of Github Actions"
+date: "2020-01-08 21:15"
 tags:
   - jekyll
   - hugo

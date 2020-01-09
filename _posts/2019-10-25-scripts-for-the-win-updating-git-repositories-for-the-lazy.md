@@ -1,9 +1,10 @@
 ---
 layout: "post"
 title: "Scripts for the win! Updating git repositories for the lazy."
-date: "2019-10-25 10:32"
+date: "2019-10-25 20:45"
 tags:
 - scripts
+- git
 ---
 
 I love scripts! I treat them as my extended memory. Blog posts used to do this,

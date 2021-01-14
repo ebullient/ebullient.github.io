@@ -6,6 +6,7 @@ tags:
 - conference
 - microservices
 - metrics
+- monsters
 - spring
 ---
 Two things collided in my brain this year ahead of SpringOne: Preparing a new talk from scratch covering the Micrometer (and the related Spring implementation), and learning everything I needed to know to be a Dungeon Master for my 10-year-old son and his friends.

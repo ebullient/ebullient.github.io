@@ -10,7 +10,7 @@ tags:
 I love scripts! I treat them as my extended memory. Blog posts used to do this,
 but life and children have eaten up the capacity I used to have for writing.
 
-But I thought I would share my latest script for the lazy (which I have now duplicated several times. I know, I know. WET, DRY. I can't be bothered). This script iterates over all of the git repositories in a sub-directory (where I have several related ones), fetches everyting, fast-forwards if it can, and otherwise tries to rebase on the upstream branch if there is one that matches.
+But I thought I would share my latest script for the lazy (which I have now duplicated several times. I know, I know. WET, DRY. I can't be bothered). This script iterates over all of the git repositories in a sub-directory (where I have several related ones), fetches everything, fast-forwards if it can, and otherwise tries to rebase on the upstream branch if there is one that matches.
 
 There is an extra case statement at the bottom as I inevitably extend this to do
 more things specific to this group of projects. This kind of approach grew out

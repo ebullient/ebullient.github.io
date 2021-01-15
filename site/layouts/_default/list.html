@@ -1,9 +1,21 @@
 {{ define "main" }}
-  <h1>Posts</h1>
-  {{ range .Pages }}
-    <article>
-      <h2>{{ .Title }}</h2>
-      {{ .Content }}
-    </article>
-  {{ end }}
+<main class="page">
+  <header class="page-header">
+    <h1 class="page-title">{{.Title}}</h1>
+  </header>
+  {{- with .Content }}
+  <article>
+    {{.}}
+  </article>
+  {{- end}}
+  <section class="archive_list">
+    <ul>
+      {{ range .Pages }}
+      <li>
+          {{.Date.Format "2006-01-02"}} | <a href="{{.RelPermalink}}">{{.Title}}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+</main>
 {{ end }}

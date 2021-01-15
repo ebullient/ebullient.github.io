@@ -1,0 +1,10 @@
+<footer class="byline">
+  <div>posted <time class="post_date">{{ .Date.Format "02 January 2006" }}</time></div>
+  <div class="tags">tags:
+    <ul>
+    {{- range .Params.tags -}}
+      <li>&nbsp;<a href="{{ "tags" | relURL }}/#{{ . | urlize }}">{{ . }}</a></li>
+    {{- end -}}
+    </ul>
+  </div>
+</footer>

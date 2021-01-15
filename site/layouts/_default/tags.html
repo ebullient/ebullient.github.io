@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main class="page">
+  <header class="page-header">
+    <h1 class="page-title">{{.Title}}</h1>
+  </header>
+  {{- with .Content }}
+  <article>
+    {{.}}
+  </article>
+  {{- end}}
+  <section class="archive_list">
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+     <h2 id="{{ $name | urlize }}">{{ $name }}</h2>
+     <ul>
+     {{ range $taxonomy }}
+     <li>
+         {{.Date.Format "2006-01-02"}} | <a href="{{.RelPermalink}}">{{.Title}}</a>
+     </li>
+     {{ end }}
+     </ul>
+    {{ end }}
+  </section>
+</main>
+{{ end }}

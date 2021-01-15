@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /archives
+Disallow: /articles
+Disallow: /musing
+Disallow: /articles
+Disallow: /skills.php

@@ -1,0 +1,236 @@
+Section "ServerLayout"
+	Identifier     "Main Layout"
+	Screen      0  "aticonfig-Screen[0]" 0 0
+	InputDevice    "Mouse1" "CorePointer"
+	InputDevice    "Touchpad" "SendCoreEvents"
+	InputDevice    "Keyboard1" "CoreKeyboard"
+EndSection
+
+Section "Files"
+
+# The location of the RGB database.  Note, this is the name of the
+# file minus the extension (like ".txt" or ".db").  There is normally
+# no need to change the default.
+# Multiple FontPath entries are allowed (which are concatenated together),
+# as well as specifying multiple comma-separated entries in one FontPath
+# command (or a combination of both methods)
+# ModulePath can be used to set a search path for the X server modules.
+# The default path is shown here.
+#    ModulePath	"/usr/lib/xorg/modules"
+	RgbPath      "/usr/share/X11/rgb"
+	FontPath     "/usr/share/fonts/TTF"
+	FontPath     "/usr/share/fonts/ttf-bitstream-vera"
+	FontPath     "/usr/share/fonts/ttf-gentium"
+	FontPath     "/usr/share/fonts/cheapskatefonts"
+	FontPath     "/usr/share/fonts/hunkyfonts"
+	FontPath     "/usr/share/fonts/75dpi:unscaled"
+	FontPath     "/usr/share/fonts/misc"
+	FontPath     "/usr/share/fonts/artwiz"
+	FontPath     "/usr/share/fonts/freefont"
+	FontPath     "/usr/share/fonts/Type1"
+	FontPath     "/usr/share/fonts/sharefonts"
+	FontPath     "/usr/share/fonts/urw-fonts"
+	FontPath     "/usr/share/fonts/util"
+	FontPath     "/usr/share/fonts/local"
+EndSection
+
+Section "Module"
+	Load  "dbe"
+	Load  "ddc"
+	Load  "evdev"
+	Load  "extmod"
+	Load  "freetype"
+	Load  "type1"
+	Load  "record"
+	Load  "dri"
+	Load  "glx"
+EndSection
+
+Section "ServerFlags"
+
+# Uncomment this to cause a core dump at the spot where a signal is 
+# received.  This may leave the console in an unusable state, but may
+# provide a better stack trace in the core dump to aid in debugging
+#    Option	"NoTrapSignals"
+# Uncomment this to disable the <Crtl><Alt><Fn> VT switch sequence
+# (where n is 1 through 12).  This allows clients to receive these key
+# events.
+#    Option	"DontVTSwitch"
+# Uncomment this to disable the <Crtl><Alt><BS> server abort sequence
+# This allows clients to receive this key event.
+#    Option	"DontZap"
+# Uncomment this to disable the <Crtl><Alt><KP_+>/<KP_-> mode switching
+# sequences.  This allows clients to receive these key events.
+#    Option	"DontZoom"
+# Uncomment this to disable tuning with the xvidtune client. With
+# it the client can still run and fetch card and monitor attributes,
+# but it will not be allowed to change them. If it tries it will
+# receive a protocol error.
+#    Option	"DisableVidModeExtension"
+# Uncomment this to enable the use of a non-local xvidtune client.
+#    Option	"AllowNonLocalXvidtune"
+# Uncomment this to disable dynamically modifying the input device
+# (mouse and keyboard) settings.
+#    Option	"DisableModInDev"
+# Uncomment this to enable the use of a non-local client to
+# change the keyboard or mouse settings (currently only xset).
+#    Option	"AllowNonLocalModInDev"
+# Set the basic blanking screen saver timeout.
+# Set the DPMS timeouts.  These are set here because they are global
+# rather than screen-specific.  These settings alone don't enable DPMS.
+# It is enabled per-screen (or per-monitor), and even then only when
+# the driver supports it.
+# memory and pio ranges. This is done by assuming that PCI ranges
+# don't overlap. Some broken BIOSes tend to set ranges of inactive
+# devices wrong. Here one can adjust how aggressive the assumptions
+# should be. Default is 0.
+# Option   "EstimateSizesAggresively" "0"
+	Option	    "blank time" "10"	# 10 minutes
+	Option	    "standby time" "20"
+	Option	    "suspend time" "30"
+	Option	    "off time" "60"
+# On some platform the server needs to estimate the sizes of PCI
+EndSection
+
+Section "InputDevice"
+	Identifier  "Keyboard1"
+	Driver      "keyboard"
+	Option      "XkbRules"   "xorg"
+	Option      "XkbLayout"  "us"
+	Option      "XkbModel"   "pc104"
+	Option	    "AutoRepeat" "500 5"
+EndSection
+# For most OSs the protocol can be omitted (it defaults to "Standard").
+# When using XQUEUE (only for SVR3 and SVR4, but not Solaris), comment
+# out the above line, and uncomment the following line.
+#    Option	"Protocol"	"Xqueue"
+# Set the keyboard auto repeat parameters.  Not all platforms implement
+# this.
+#    Option	"Xleds"	"1 2 3"
+# To disable the XKEYBOARD extension, uncomment XkbDisable.
+#    Option	"XkbDisable"
+# To customise the XKB settings to suit your keyboard, modify the
+# lines below (which are the defaults).  For example, for a European
+# keyboard, you will probably want to use one of:
+#
+#    Option	"XkbModel"	"pc102"
+#    Option	"XkbModel"	"pc105"
+#
+# If you have a Microsoft Natural keyboard, you can use:
+#
+#    Option	"XkbModel"	"microsoft"
+#
+# If you have a US "windows" keyboard you will want:
+#
+#    Option	"XkbModel"	"pc104"
+#
+# Then to change the language, change the Layout setting.
+# For example, a german layout can be obtained with:
+#
+#    Option	"XkbLayout"	"de"
+#
+# or:
+#
+#    Option	"XkbLayout"	"de"
+#    Option	"XkbVariant"	"nodeadkeys"
+#
+# If you'd like to switch the positions of your capslock and
+# control keys, use:
+#
+#    Option	"XkbOptions"	"ctrl:swapcaps"
+# These are the default XKB settings for xorg
+#
+#    Option	"XkbRules"	"xorg"
+#    Option	"XkbModel"	"pc101"
+#    Option	"XkbLayout"	"us"
+#    Option	"XkbVariant"	""
+#    Option	"XkbOptions"	""
+
+
+# Identifier and driver
+# The mouse protocol and device.  The device is normally set to /dev/mouse,
+# which is usually a symbolic link to the real device.
+# protocol setting can be used when using a newer PnP mouse:
+#    Option	"Protocol"	"Auto"
+# When using mouse connected to a PS/2 port (aka "MousePort"), set the
+# the protocol as follows.  On some platforms some other settings may
+# be available.
+#    Option "Protocol"	"PS/2"
+# When using XQUEUE (only for SVR3 and SVR4, but not Solaris), use
+# the following instead of any of the lines above.  The Device line
+# is not required in this case.
+#    Option	"Protocol"	"Xqueue"
+# Baudrate and SampleRate are only for some older Logitech mice.  In
+# almost every case these lines should be omitted.
+#    Option	"BaudRate"	"9600"
+#    Option	"SampleRate"	"150"
+# Emulate3Buttons is an option for 2-button mice
+# Emulate3Timeout is the timeout in milliseconds (default is 50ms)
+#    Option	"Emulate3Buttons"
+#    Option	"Emulate3Timeout"	"50"
+# ChordMiddle is an option for some 3-button Logitech mice, or any
+# 3-button mouse where the middle button generates left+right button
+# events.
+#    Option	"ChordMiddle"
+
+Section "InputDevice"
+	Identifier  "Mouse1"
+	Driver      "mouse"
+	Option	    "Protocol" "Auto"
+	Option	    "Device" "/dev/input/mice"
+	Option      "Emulate3Buttons" "true"
+	Option      "ZAxisMapping" "4 5"
+EndSection
+
+Section "InputDevice"
+	Identifier  "Touchpad"
+	Driver      "synaptics"
+	Option	    "Protocol" "auto-dev"
+	Option	    "Device" "/dev/psaux"
+	Option      "HorizScrollDelta" "0"
+EndSection
+
+Section "Monitor"
+	Identifier  "aticonfig-Monitor[0]"
+	Option	    "VendorName" "ATI Proprietary Driver"
+	Option	    "ModelName" "Generic Autodetecting Monitor"
+	Option	    "DPMS" "true"
+EndSection
+
+Section "Device"
+	Identifier  "aticonfig-Device[0]"
+	Driver      "fglrx"
+	VendorName  "ati"
+	BusID       "PCI:1:0:0"
+	#Option      "VideoOverlay" "off"
+	Option      "VideoOverlay" "on"
+	Option      "UseFBDev" "true"
+EndSection
+
+Section "Screen"
+	Identifier "aticonfig-Screen[0]"
+	Device     "aticonfig-Device[0]"
+	Monitor    "aticonfig-Monitor[0]"
+	DefaultDepth     24
+	SubSection "Display"
+		Viewport   0 0
+		Depth     8
+	EndSubSection
+	SubSection "Display"
+		Viewport   0 0
+		Depth     16
+	EndSubSection
+	SubSection "Display"
+		Viewport   0 0
+		Depth     24
+	EndSubSection
+EndSection
+
+Section "DRI"
+	Group "video"
+	Mode  0666
+EndSection
+
+Section "Extensions"
+	Option "XVideo" "Enable"
+EndSection

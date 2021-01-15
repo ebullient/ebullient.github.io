@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# stop/continue processes using sound devices.
+
+set -e
+
+if [ -e /etc/default/alsa ]; then
+	. /etc/default/alsa
+fi
+
+devices=$(find /dev -type c | xargs stat -c '%t %n' | sed -n 's/^e //p')
+if [ "$1" = suspend ]; then
+	if [ "$force_stop_modules_before_suspend" = "forcibly-unload-driver" ]; then
+		alsactl store || true
+		sleep 1
+		/etc/init.d/alsa force-stop || true
+	elif [ "$force_stop_modules_before_suspend" = "stop-procs" ]; then
+		if [ -d /proc/asound ]; then
+			kill -STOP $(fuser $devices) | cut -d: -f2 | tr '\n' ' '
+		fi
+	fi
+	sleep 1
+elif [ "$1" = resume ]; then
+	if [ "$force_stop_modules_before_suspend" = "forcibly-unload-driver" ]; then
+		/etc/init.d/alsa start || true
+		sleep 1
+        alsactl restore || true
+	elif [ "$force_stop_modules_before_suspend" = "stop-procs" ]; then
+		if [ -d /proc/asound ]; then
+			kill -CONT $(fuser $devices) | cut -d: -f2 | tr '\n' ' '
+		fi
+	fi
+fi
+

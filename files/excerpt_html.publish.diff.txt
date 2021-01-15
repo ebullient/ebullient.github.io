@@ -1,0 +1,43 @@
+Index: publish.php
+===================================================================
+RCS file: /home/cvs/textpattern/publish.php,v
+retrieving revision 1.1
+retrieving revision 1.3
+diff -u -b -r1.1 -r1.3
+--- publish.php	23 Jan 2005 02:40:40 -0000	1.1
++++ publish.php	7 Feb 2005 19:20:50 -0000	1.3
+@@ -264,7 +264,6 @@
+ 
+ 			foreach($rs as $a) {
+ 				extract($a);
+-
+ 				$com_count = safe_count('txp_discuss',"parentid=$ID and visible=1");
+ 
+ 				$author = fetch('RealName','txp_users','name',$AuthorID);
+@@ -282,7 +281,7 @@
+ 				$out['author']         = $author;
+ 				$out['permlink']       = formatPermLink($ID,$Section);
+ 				$out['body']           = parse($Body_html);
+-				$out['excerpt']        = $Excerpt;
++				$out['excerpt']        = parse($Excerpt_html);
+ 				$out['title']          = $Title;
+ 				$out['url_title']      = $url_title;
+ 				$out['category1']      = $Category1;
+@@ -362,7 +361,7 @@
+ 			$out['author']          = $author;
+ 			$out['permlink']        = formatPermLink($ID,$Section);
+ 			$out['body']            = parse($Body_html);
+-			$out['excerpt']         = $Excerpt;
++			$out['excerpt']         = parse($Excerpt_html);
+ 			$out['title']           = $Title;
+ 			$out['url_title']       = $url_title;
+ 			$out['category1']       = $Category1;
+@@ -468,7 +467,7 @@
+ 				$out['author']          = $author;
+ 				$out['permlink']        = formatPermLink($ID,$Section);
+ 				$out['body']            = parse($Body_html);
+-				$out['excerpt']         = $Excerpt;
++				$out['excerpt']         = parse($Excerpt_html);
+ 				$out['title']           = $Title;
+ 				$out['url_title']       = $url_title;
+ 				$out['category1']       = $Category1;

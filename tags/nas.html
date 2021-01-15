@@ -1,0 +1,107 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><link rel=stylesheet href=/blog.css><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><title>nas</title><link rel=canonical href=/tags/nas.html><link rel=alternate type=application/rss+xml href=/tags/nas/index.xml title=ebullient·works></head><body><div class=wrapper><header class=page-header><h1><a href=/>ebullient·works</a></h1><div>[ <a href=/about/>About</a> &#183; <a href=/archive/>Archive</a> ]</div></header><h1>Posts</h1><article><h2>DNS-323: FFP on a stick, nightly rsync backup...</h2><p>I have a lot of things working well, gathered from a lot of resources. I tweaked some scripts to make them work better:</p><ul><li>I created an /ffp/<hostname> directory for my personal scripts.</li><li>I have an rsync script that mirrors the ffp installation on the USB stick (/mnt/usb/ffp) to the primary hard drive (/mnt/HD_a2). This means I only have to maintain the USB-copy, but if the USB is not available, I'll still have working stuff on the regular drive.</li><li>I have a few (small) scripts that I use for cron jobs, rather than putting it all directly into the cron task: has the advantage of being able to use logger to add syslog messages.</li></ul><p>Very very simple: ffp-sync.sh for keeping the usb ffp in sync with the copy on the hard drive. I have this as a small, separate, invokable script so that I can run the backup myself if I've made changes and am feeling paranoid/proactive.</p><div class=code>#!/ffp/bin/sh
+rsync -av --exclude=packages \
+--exclude=var/log \
+--exclude=var/run \
+--delete /mnt/usb/ffp/ /mnt/HD_a2/ffp</div><p>This is the rsync line for the nightly backup from HD_a2 to HD_b2, based on scripts from the forum post(s) and the interwebs (see references below). The only real change here: using logger to get some evidence in the syslog about when backups start/stop.</p><div class=code>#!/ffp/bin/sh
+export PATH=/ffp/sbin:/ffp/bin:$PATH
+mv /ffp/var/log/rsync.last.log /ffp/var/log/rsync.last.log.prev
+srcpath=/mnt/HD_a2/
+dstpath=/mnt/HD_b2/backup
+date=`date "+%Y%m%d"`
+mkdir $dstpath/$date
+logger Begin backup: $date
+# Use rsync to backup content from the $srcpath to $dstpath/$date
+# The contents of --link-dest=$dstpath/current are used as a 'base':
+# files are hard-linked from that directory unless they've been changed,
+# in which case the file is copied $srcpath.
+# -ii is used to include detail in the log (which files are linked, which are copied)
+/ffp/bin/rsync -avx -ii \
+--exclude=ffp/var/log \
+--exclude=ffp/var/run \
+--exclude=lost+found \
+--link-dest=$dstpath/current $srcpath $dstpath/$date \
+> /ffp/var/log/rsync.last.log 2>&1
+
+var=`ls -1A $dstpath/$date | wc -l`
+echo $var
+if [ $var -ne 0 ]
+then
+rm $dstpath/current
+ln -s $date $dstpath/current
+fi
+logger Backup complete: $date</div><p>I also made a script (w/ syslog message: I like to be able to look back when things go wrong and know if/when cron jobs were running):</p><div class=code>#!/ffp/bin/sh
+logger Checking time via sntp
+/usr/sbin/sntp -r -P no us.pool.ntp.org</div><p>All of this is set up with /ffp/etc/fun_plug.local (of course). Having the home directories on the USB stick avoids the issues I was having before with the permissions being reset. I've preserved the authorized scripts, though, and ensure that they're run if/when the usb stick is unavailable at boot.</p><div class=code>#!/ffp/bin/sh
+PATH=/ffp/sbin:/ffp/bin:/usr/sbin:/sbin:/usr/bin:/bin
+# Use ffp busybox instead
+mv /bin/busybox /bin/busybox-dns323
+ln -s /ffp/bin/busybox /bin/busybox
+if [ ! -h /data ]; then
+ln -s /mnt/HD_a2 /data
+fi
+# if we're running from USB, then make sure home is mounted
+if [ -d /mnt/usb/home/root ]; then
+chmod -x /ffp/start/authorize*.sh 2>/dev/null
+grep /home /proc/mounts >/dev/null 2>/dev/null
+if [ $? -ne 0 ]; then
+mount --bind /mnt/usb/home /home
+fi
+else
+# If we aren't running from USB, make sure authorize* scripts are executable
+chmod -x /ffp/start/authorize*.sh 2>/dev/null
+fi
+# update home directories in /etc/passwd (DNS-323 likes to reset them..)
+usermod -d /home/xx -g 510 xx
+# set timezone
+echo 'EST5EDT,M3.2.0,M11.1.0' > /etc/TZ
+# change cron jobs
+echo "** Update cron jobs"
+# This removes firmware cronjobs that interfere with ntpd.
+crontab -l | grep -vw '/usr/sbin/daylight' | grep -vw '/usr/sbin/rtc' | grep -vw '/usr/sbin/stime' | crontab -
+#Now start custom cron jobs, including the first which checks the date.
+echo "0 * * * * /ffp/hostname/checkdate.sh" >> /var/spool/cron/crontabs/root
+echo "1 * * * * /ffp/hostname/routerset.pl" >> /var/spool/cron/crontabs/root
+echo "2 3 * * * /ffp/hostname/ffp-sync.sh" >> /var/spool/cron/crontabs/root
+echo "5 3 * * * /ffp/hostname/backup.sh" >> /var/spool/cron/crontabs/root
+cat /var/spool/cron/crontabs/root
+# force a cronjob update
+echo "root" >> /var/spool/cron/crontabs/cron.update</div><p>References:<ul><li><a href=http://forum.dsmg600.info/t2125-DNS-323-Rsync-Time-Machine!.html>Rsync Time Machine (DNS-323 forum)</a> -- source of backup script</li><li><a href=http://blog.interlinked.org/tutorials/rsync_time_machine.html>Time Machine for every Unix out there</a></li><li><a href="http://forum.dsmg600.info/viewtopic.php?id=1150">Tutorial: Backup Everything from Vol A to Vol B once a night</a></li></ul></p></article><article><h2>DNS-323: Finally back to it (SSH/busybox)</h2><p>After a long hiatus, I'm back to trying to finish customizing our NAS; life with kid means your extra time doesn't always get spent the way you'd like, and I've migrated to a new laptop running ubuntu en route, I should write about that, too.</p><p>Reviewed the <a href=http://wiki.dns323.info/howto:ffp#version_0.5>howto</a> again, to see where I left off, which was pretty much right where I finished writing the last entry.</p><h3>Setting up SSH</h3><p>Setting up SSH was fairly straight-forward. I did have to set up a script to copy the authorized_keys file for the root user to a directory in the flash memory (to ensure that I can log in with my ssh key across a reboot). I opted to create an authorize.sh script in /ffp/start, as described in <a href="http://forum.dsmg600.info/viewtopic.php?id=1630">this forum post</a>.</p><p>I also want to log in as a non-root user, and logging in with a public key (without a password) didn't seem to work unless the home directory for my user was also in flash memory (instead of on the mouted volume. So I created another script for "regular" users that I can use to set up more than one user: i.e. an account for me, one for the hubby (whenever he gets around to wanting one), etc. Here it is (/ffp/start/authorize-user.sh):</p><pre><code>#!/bin/sh
+
+create_dir() {
+    export USER_HOME="/mnt/HD_a2/users/$1"
+    export NEW_HOME="/home/$1"
+    export NEW_CHOWN="$1:$2"
+
+    echo "USER = $1:$2, HOME = $USER_HOME, NEW = $NEW_HOME"
+    if [ -d $USER_HOME ]; then
+        if [ ! -d "$NEW_HOME" ]; then
+            mkdir $NEW_HOME
+            chown $1:$2 $NEW_HOME
+            echo "directory created: `ls -ald $NEW_HOME`"
+        fi
+
+        if [ -x "$USER_HOME/.setup_home" ]; then
+            echo "* /mnt/HD_a2/users/$1/.setup_home ..."
+            /mnt/HD_a2/users/$1/.setup_home
+        elif [ -d "$USER_HOME/.ssh" ]; then
+            cp -Rpv $USER_HOME/.ssh $NEW_HOME
+        fi
+    fi
+}
+
+# One line per user to copy:
+create_dir  "myuser"  "defaultGroup"
+
+echo "done."
+</code></pre><p>And that's it. Works fairly well: at the minimum, it copies the .ssh directory, which is required for ssh key-based login. For me, since I have to be fancy about things, I can put a .setup_home file (executable) in the home directory on the shared volume to give more direction about what should be copied and how. It "appears to function", but I haven't had the <a href="http://forum.dsmg600.info/viewtopic.php?id=135">permissions reset after a reboot</a> (yet). So we'll see if that still happens. I have a USB thumbdrive I intend to move ffp to, if I have issues with permissions problems, I may just move the home directories there so I can skip these copy steps altogether.</p><h3>Replacing busybox</h3><p>The howto mentioned updating the root busybox. I set the default path to put /ffp/bin first, but I also updated the link to busybox in the root /bin file in /ffp/etc/fun_plug.local:<pre><code>#!/ffp/bin/sh
+PATH=/ffp/sbin:/ffp/bin:/usr/sbin:/sbin:/usr/bin:/bin
+
+# Use ffp busybox instead
+mv /bin/busybox /bin/busybox-dns323
+ln -s /ffp/bin/busybox /bin/busybox
+</code></pre><p>lighttpd and php next...</p><p><i>UPDATE - 6 Jun 2010: Holy hell, batman: when I originally wrote this, I totally typed SSL instead of SSH. WTF?!</i></p></article><article><h2>DNS-323: Initial set-up</h2><p>I purchased (a shamefully long time ago, welcome to tech live as a mom with a toddler) a DNS-323 (and two 1T drives) with the hope of moving most of our shared files onto it. Now that we don't record TV shows anymore, having that box on all the time is just a power drain. So: the goal is a DNS-323 with all of our files (photos, music, finance stuff, some movies, etc.) onto the first volume of that drive, and then using an rsync shadow with hardlinks to do nightly backups to the second drive. Some RAID configurations have been reported as less than stable, and using a mirror configuration requires both drives to be active: a nightly rsync backup will do.</p><h3>Applying firmware and extra software</h3><p>A <a href="http://www.dlink.com/products/default.aspx?pid=DNS-323&tab=3">firmware update</a> became available between when I bought the unit and when I finally got a chance to work on it-- so I updated the firmware to 1.08, and installed the optional NFS package, though I haven't set NFS up yet.</p><blockquote>Firmware<ol><li>Download the firmware update (as a zip) from dlink.com (under "Support Resources")</li><li>Unzip the download</li><li>Using the Web UI, go to the Tools tab, select Firmware from the left-hand menu</li><li>Use the browse button to find the firmware update (dns323_firmware_108 in my case)</li><li>Use the apply button (which is in the text above the form, oddly enough) to apply the firmware update</li></ol>Additional Software / NFS update<ol><li>Download the additional software package from dlink.com (under "Additional Downloads")</li><li>Unzip the download</li><li>Using the Web UI, go to the Advanced tab, and select "ADD-ONS"</li><li>Browse to the unzipped file using the appropriate form (Application Pack, in my case, with the file dns323_NFS _Package_v1.00)</li><li>Use the apply button to install the software: it will show up in the table below (in the case of the application pack, anyway), and you can toggle the status there (enable/disable via start/stop).</li></ol></blockquote><h3>Setting up funplug, etc.</h3><p>First, install <a href=http://www.inreto.de/dns323/fun-plug/0.5/>fun_plug (v0.5)</a>.<ul><li>I used the Web UI to create a new user, and then used the FTP to transfer fun_plug and fun_plug.tgz to Volume 1 as described <a href=http://wiki.dns323.info/howto:fun_plug>here</a>.</li><li>Easy to follow instructions to install additional packages from in the <a href=http://www.inreto.de/dns323/fun-plug/0.5/README.txt>README</a>:<blockquote><pre>telnet &lt;your-dns-323&gt;
+cd /mnt/HD_a2
+rsync -av inreto.de::dns323/fun-plug/0.5/packages .
+cd packages
+funpkg -i *.tgz
+</pre></blockquote>That does install all of the additional packages, but <a href=http://wiki.dns323.info/howto:ffp#version_0.5>fonz's how-to</a> recommends,<blockquote><p>There's nothing in the install tarball (fun_plug.tgz) that's not in a package. The simplest way to stay current is to install all the main packages ( http://www.inreto.de/dns323/fun-plug/0.5/packages/ ).</p><p>I suggest to keep a local copy of the packages using rsync (don't forget –delete). Then use 'funpkg -i *.tgz' and 'funpkg -u *.tgz' to install and upgrade.</p></blockquote>So, that's what I did. At the end of the day, I'll be using quite a few of the extra packages anyhow...</li></ul>All of the above was easy enough, and gave me a telnet shell with root access (no password).</p><h4>Fixing the root user</h4><p><a href=http://wiki.dns323.info/howto:ffp#version_0.5>fonz's how-to</a> includes a section on "fixing" the root user.<table><tr><td>pwconv</td><td>Ensures we have an /etc/shadow file based on the contents of /etc/passwd</td></tr><tr><td>passwd</td><td>Set a password for root</td></tr><tr><td>usermod -s /ffp/bin/sh root</td><td>Set the root user's shell to one that won't prompt for an obscure unlock code</td></tr><tr><td>pwck</td><td>Sanity check the /etc/passwd file; ignore missing home directories for nobody and admin</td></tr><tr><td>grpck</td><td>Sanity check the /etc/group file; ignore bad group names 500/501</td></tr><tr><td>login</td><td>Test your changes: verify you can log in with the password you think you set. ;)</td></tr></table></article></div><footer class=page-footer><div id=copyrights>&#169; 2002-2021 Erin Schnabel</div><div><a target=_blank href=https://github.com/ebullient title="ebullient on GitHub"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1664 896q0 251-146.5 451.5T1139 1625q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105T1386 856q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27T578 459.5 492 446q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5T484 1274q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5T128 896q0-209 103-385.5T510.5 231 896 128t385.5 103T1561 510.5 1664 896z" fill="#fff"/></svg></a><a target=_blank href=https://twitter.com/ebullientworks title="Follow @ebullientworks"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5T1369.5 1125 1185 1335.5t-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5T285 1033q33 5 61 5 43 0 85-11-112-23-185.5-111.5T172 710v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5T884 653q-8-38-8-74 0-134 94.5-228.5T1199 256q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" fill="#fff"/></svg></a><a target=_blank href=https://www.linkedin.com/in/erinschnabel/ title="Erin Schnabel on linked.in"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991H147V625h330zm21-306q1 73-50.5 122T312 490h-2q-82 0-132-49t-50-122q0-74 51.5-122.5T314 148t133 48.5T498 319zm1166 729v568h-329v-530q0-105-40.5-164.5T1168 862q-63 0-105.5 34.5T999 982q-11 30-11 81v553H659q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5T1285 602q171 0 275 113.5t104 332.5z" fill="#fff"/></svg></a><a target=_blank href=https://gameontext.org/slackin/ title="ebullient on gameontext.slack.com"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1583 776q62 0 103.5 40.5T1728 918q0 97-93 130l-172 59 56 167q7 21 7 47 0 59-42 102t-101 43q-47 0-85.5-27t-53.5-72l-55-165-310 106 55 164q8 24 8 47 0 59-42 102t-102 43q-47 0-85-27t-53-72l-55-163-153 53q-29 9-50 9-61 0-101.5-40T260 1323q0-47 27.5-85t71.5-53l156-53-105-313-156 54q-26 8-48 8-60 0-101-40.5T64 740q0-47 27.5-85t71.5-53l157-53-53-159q-8-24-8-47 0-60 42-102.5T403 198q47 0 85 27t53 72l54 160 310-105-54-160q-8-24-8-47 0-59 42.5-102T987 0q47 0 85.5 27.5T1126 99l53 161 162-55q21-6 43-6 60 0 102.5 39.5T1529 337q0 45-30 81.5t-74 51.5l-157 54 105 316 164-56q24-8 46-8zm-794 262 310-105-105-315-310 107z" fill="#fff"/></svg></a><a target=_blank href=https://pinboard.in/u:ebullient title=pinboard.in><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25 25" enable-background="new 0 0 25 25"><polygon fill="#fff" points="13.908,14.85 9.211,19.547 9.961,15.412 3.571,7.706 0,7.894 7.895,0 7.895,3.007 15.412,9.773 20.111,8.647 15.227,13.721 25,24.436"/></svg></a><a target=_blank href=/index.xml title=Subscribe><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M576 1344q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm512 123q2 28-17 48-18 21-47 21H889q-25 0-43-16.5t-20-41.5q-22-229-184.5-391.5T250 902q-25-2-41.5-20T192 839V704q0-29 21-47 17-17 43-17h5q160 13 306 80.5T826 902q114 113 181.5 259t80.5 306zm512 2q2 27-18 47-18 20-46 20h-143q-26 0-44.5-17.5T1329 1476q-12-215-101-408.5t-231.5-336-336-231.5T252 398q-25-1-42.5-19.5T192 335V192q0-28 20-46 18-18 44-18h3q262 13 501.5 120T1186 542q187 186 294 425.5t120 501.5z" fill="#fff"/></svg></a></div></footer><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-1146860-5','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>

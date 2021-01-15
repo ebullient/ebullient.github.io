@@ -4,6 +4,8 @@ _site
 .bundle
 .mysql
 .vendor
+jekyll
 vendor
+public
 *~
 *.DS_Store

@@ -1,0 +1,32 @@
+title: ebullient·works
+description: > # this means to ignore newlines until the next tag
+  Nothing poetic here, just a collection of things. Some are "how I did this so I can remember later", others are "this is totally cool!", and some are something else entirely.
+baseURL: ""
+uglyURLs: true
+disablePathToLower: true
+disableLiveReload: true
+publishDir: "../public"
+languageCode: en-us
+enableGitInfo: true
+summaryLength: 1000
+googleAnalytics: UA-1146860-5
+frontmatter:
+  date:
+    - ":filename"
+    - ":git"
+    - ":default"
+permalinks:
+  posts: /:year/:month/:day/:slug
+taxonomies:
+  tag: tags
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: false
+    noClasses: true
+    style: pygments
+    tabWidth: 2

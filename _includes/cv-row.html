@@ -1,7 +1,0 @@
-{% assign howMany = include.end | minus: include.start %}
-{% if howMany == 0 %}{% assign howMany = (6 months) %}{% else %}
-{% capture howMany %}{{howMany}} year{% if howMany > 1 %}s{% endif %}<br /><small>({{include.start}} - {{include.end}})</small>{% endcapture %}{% endif %}
-<tr class="bullet">
-  <td>{% if include.url %}<a href="{{ include.url }}">{{ include.name }}</a>{% else %}{{ include.name }}{% endif %} {% if include.version %}<span class="version">({{ include.version }})</span>{% endif %}{% if include.details %}<br />&nbsp;&nbsp;<span class="version">{{ include.details }}</span>{% endif %}</td>
-  <td class="duration">{{ howMany }}</td>
-</tr>

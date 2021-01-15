@@ -1,0 +1,24 @@
+{{ define "main" }}
+<header class="page-header">
+  <h1 class="page-title">{{.Title}}</h1>
+</header>
+{{- with .Content }}
+<article>
+  {{.}}
+</article>
+{{- end}}
+<section class="archive_list">
+  {{ range where .Site.Sections "Section" .Params.section }}
+  {{ range .RegularPages.GroupByPublishDate "2006" }}
+  <h2 id="y{{ .Key }}">{{ .Key }}</h2>
+  <ul>
+    {{ range .Pages }}
+    <li>
+      <span class="date">{{.Date.Format "02 Jan"}}</span> <a href="{{.RelPermalink}}">{{.Title}}</a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  {{ end }}
+</section>
+{{ end }}

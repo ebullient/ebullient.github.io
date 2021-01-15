@@ -1,0 +1,266 @@
+<?php
+
+class NP_ELSShowBlogs extends NucleusPlugin
+{
+
+    function getName() {                return 'ELS Show Blogs'; }
+    function getMinNucleusVersion() {   return '322'; }
+    function getAuthor()  {             return 'Erin Schnabel';  }
+    function getURL()     {             return 'http://ebullient.dev'; }
+    function getVersion() {             return '0.9'; }
+    function getDescription() {         return 'Correct prev/next links on archive and index pages;
+ display entries for tag/date archives, the archive list, and the main index'; }
+
+    function supportsFeature($what)
+    {
+        switch($what){
+            case 'SqlTablePrefix':
+                return 1;
+            default:
+                return 0;
+        }
+    }
+
+    function getEventList()
+    {
+        return array(
+            'ParseURL', 'InitSkinParse'
+        );
+    }
+
+    function getPluginDep() {
+        return array('NP_ELSTagEX');
+    }
+
+    function install()
+    {
+        $this->createBlogOption('index_limit', "Number of entries to show on index page",    'text',     '5');
+    }
+
+    function event_ParseURL(&$data) {
+        global $manager, $blog, $CONF;
+
+        $this->TagEX =& $manager->getPlugin('NP_ELSTagEX');
+
+        $this->pageIndex = $this->TagEX->getNoDecodeQuery('page');
+        if ( empty($this->pageIndex) ) {
+            $this->pageIndex = 1;
+        }
+    }
+
+    function event_InitSkinParse(&$data) {
+        global $manager, $blog, $CONF;
+
+        if ( isset($blog) ) {
+            $b =& $blog;
+        } else {
+            $b =& $manager->getBlog($CONF['DefaultBlog']);
+        }
+
+        $blogid = $b->getID();
+
+        $lim = $this->getBlogOption($blogid, 'index_limit');
+        if ( is_numeric($lim) ) {
+            $this->pageLimit = intval($lim);
+        } else {
+            $this->pageLimit = 5;
+        }
+
+        switch($data['type']) {
+
+            case 'archive':
+                global $archive, $archivenext, $archiveprev, $archivetype, $archivenextexists, $archiveprevexists;
+
+                if ( $archive == 'tag' )
+                    return;
+
+                sscanf($archive, '%d-%d-%d', $y, $m, $d);
+
+                // previous month or day (using a strict < in SQL, so make timestamp for 1st of month or specified day)
+                if ( $archivetype == 'month' ) {
+                    $prev_t = mktime(0, 0, 0, $m, 1, $y);
+                } else {
+                    $prev_t = mktime(0, 0, 0, $m, $d, $y);
+                }
+
+	        $query = "SELECT UNIX_TIMESTAMP(itime) FROM ".sql_table('item')
+                        ." WHERE idraft=0 and iblog=$blogid and itime < " . mysqldate($prev_t)
+                        ." ORDER by itime desc LIMIT 1";
+
+                $res = sql_query($query);
+                $prev = mysql_fetch_row($res);
+                if ( empty($prev) ) {
+                    unset($archiveprev);
+                    $archiveprevexists = false;
+                } else {
+                    $archiveprev = strftime('%Y-%m', $prev[0]);
+                }
+
+                // next month or day (using >= in SQL, so make timestamp for 1st of next month or add a day
+                if ( $archivetype == 'month' ) {
+                    $next_t = mktime(0, 0, 0, $m+1, 1, $y);
+                } else {
+                    // one day has 24 * 60 * 60 = 86400 seconds
+                    $next_t = mktime(0, 0, 0, $m, $d, $y) + 86400;
+                }
+
+                $query = "SELECT UNIX_TIMESTAMP(itime) FROM ".sql_table('item')
+                        ." WHERE idraft=0 and iblog=$blogid and itime >= " . mysqldate($next_t)
+                        ." ORDER by itime asc LIMIT 1";
+
+                $res = sql_query($query);
+                $next = mysql_fetch_row($res);
+                if ( empty($next) ) {
+                    unset($archivenext);
+                    $archivenextexists = false;
+                } else {
+                    $archivenext = strftime('%Y-%m', $next[0]);
+                }
+
+                break;
+        }
+    }
+
+    function doIf($key, $value) {
+        switch($key) {
+            case 'pages' :
+                return $this->pageTotal > 1;
+            case 'prevpage' :
+                return $this->pageIndex < $this->pageTotal;
+            case 'nextpage' :
+                return $this->pageIndex > 1;
+        }
+    }
+
+
+    function doSkinVar()
+    {
+        global $manager, $blog, $CONF, $archive;
+
+        $args = func_get_args();
+        $skinType = $args[0];
+        $template = (count($args) < 2) ? 'default/index' : $args[1];
+
+        if ( isset($blog) ) {
+            $b =& $blog;
+        } else {
+            $b =& $manager->getBlog($CONF['DefaultBlog']);
+        }
+
+        switch($skinType) {
+            case 'item':
+                return;
+            case 'archivelist':
+                $this->showArchiveList($b, $args);
+                return;
+            case 'archive' :
+                if ( $archive == 'tag' ) {
+                    $extra_query = $this->TagEX->getSQLQuery($b);
+                    $b->readLogAmount($template,0,$extra_query,'',0,0);
+                } else {
+                    sscanf($archive,'%d-%d-%d',$y,$m,$d);
+                    $b->showArchive($template, $y, $m, $d);
+                }
+                return;
+            case 'index' :
+                if ( empty($this->pageTotal) ) {
+                    $query = $b->getSqlBlog('', 'count');
+                    $this->pageTotal = ceil(quickQuery($query) / $this->pageLimit);
+                }
+
+                if ( $template == 'link' ) {
+                    $which = (count($args) < 3) ? 'older' : $args[2];
+                    if ( $which == 'older' )
+                        echo $this->createPageLink($this->pageIndex + 1);
+                    else
+                        echo $this->createPageLink($this->pageIndex - 1);
+
+                    return;
+                }
+
+                global $startpos;
+                $startpos = ($this->pageIndex - 1) * $this->pageLimit;
+                $b->readLog($template, $this->pageLimit, 0, $startpos);
+                return;
+        }
+    }
+
+    function showArchiveList(&$blog, &$args)
+    {
+        global $manager, $CONF, $archive, $catid;
+
+        $template = (count($args) < 2) ? 'default/index' : $args[1];
+        $mode     = (count($args) < 3) ? 'month' : $args[2];
+
+        $template =& $manager->getTemplate($template);
+
+        $query = 'SELECT itime, SUBSTRING(itime,1,4) AS Year, SUBSTRING(itime,6,2) AS Month, SUBSTRING(itime,9,2) as Day'
+                 . ' FROM '.sql_table('item')
+                 . ' WHERE iblog=' . $blog->getID()
+                 . ' and itime <=' . mysqldate($blog->getCorrectTime())    // don't show future items!
+                 . ' and idraft=0'; // don't show draft items
+
+        if ($catid) {
+            $linkparams = array('catid' => $catid);
+            $query .= ' and icat=' . intval($catid);
+        }
+
+        $query .= ' GROUP BY Year, Month';
+        if ($mode == 'day')
+            $query .= ', Day';
+
+        $query .= ' ORDER BY itime DESC';
+
+        if ($limit > 0)
+            $query .= ' LIMIT ' . intval($limit);
+
+        $res = sql_query($query);
+
+        $data['blogid'] = $blog->getID();
+        while($current = mysql_fetch_assoc($res)) {
+            if ( empty($data['year']) || $current['Year'] != $data['year'] )
+            {
+                if ( !empty($data['year']) ) {
+                    echo TEMPLATE::fill($template['ARCHIVELIST_FOOTER'],$data)."\n";
+                }
+                $data['year'] = $current['Year'];
+                echo TEMPLATE::fill($template['ARCHIVELIST_HEADER'],$data)."\n";
+            }
+
+            $current['itime'] = strtotime($current['itime']);	// string time -> unix timestamp
+
+            if ($mode == 'day') {
+                $archivedate = date('Y-m-d',$current['itime']);
+                $archive['day'] = date('d',$current['itime']);
+            } else {
+                $archivedate = date('Y-m',$current['itime']);
+            }
+
+            $data['month'] = date('m',$current['itime']);
+            $data['archivelink'] = createArchiveLink($blog->getID(), $archivedate, $linkparams);
+
+            $temp = TEMPLATE::fill($template['ARCHIVELIST_LISTITEM'],$data);
+            echo strftime($temp,$current['itime']);
+        }
+        echo TEMPLATE::fill($template['ARCHIVELIST_FOOTER'],$data);
+        mysql_free_result($res);
+    }
+
+
+    function createPageLink($page) {
+        global $CONF;
+
+        if ($CONF['URLMode'] == 'pathinfo') {
+            $link = $CONF['Self'];
+            if ( $link[strlen($link)-1] != '/' )
+                $link .= '/';
+
+            $link .= "page/$page/";
+        } else {
+            $link = $CONF['Self'] . "?page=$page";
+        }
+
+        return $link;
+    }
+}
+?>

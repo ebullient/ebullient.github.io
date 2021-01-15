@@ -1,0 +1,36 @@
+{{ define "main" }}
+<main class="articles">
+  {{ range first 10 (where .Site.RegularPages "Section" "posts") }}
+    <article>
+      <header>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      </header>
+      {{ if .Truncated }}
+      <section class="post_excerpt">
+        {{ .Summary }}
+      </section>
+      <div>[<a class="read-more" href="{{ .RelPermalink }}">more</a>]</div>
+      {{ else }}
+      <section class="post_excerpt">
+        {{ .Content }}
+      </section>
+      {{ end }}
+      <footer class="byline">
+        <div>posted <time class="post_date">{{ .Date.Format "02 January 2006" }}</time></div>
+        <div class="tags">tags:
+          <ul>
+          {{- range .Params.tags -}}
+            <li><a href="{{ "tags" | relURL }}/{{ . | urlize }}">{{ . }}</a> </li>
+          {{- end -}}
+          </ul>
+        </div>
+      </footer>
+    </article>
+  {{ end }}
+</main>
+<nav class="prev-next">
+  <div>&nbsp;</div>
+  <div><a href="/archive/">More..</a></div>
+  <div>&nbsp;</div>
+</nav>
+{{ end }}

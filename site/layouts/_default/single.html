@@ -1,0 +1,28 @@
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<article class="post">
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  <section class="content">
+    {{ .Content }}
+  </section>
+  <footer class="byline">
+    <div>posted <time class="post_date">{{ .Date.Format "02 January 2006" }}</time></div>
+    <div class="tags">tags:
+      <ul>
+      {{- range .Params.tags -}}
+        <li><a href="{{ "tags" | relURL }}/{{ . | urlize }}">{{ . }}</a> </li>
+      {{- end -}}
+      </ul>
+    </div>
+  </footer>
+</article>
+<nav class="prev-next">
+  <div class="nav-left">{{ with .PrevInSection }}<a href="{{.RelPermalink}}" title="Previous: {{ .Title }}">&laquo; Older</a>{{ end }}</div>
+  <div class="nav-center"><a href="/">Top</a> | <a href="/archive/">Archive</a></div>
+  <div class="nav-right">{{ with .NextInSection }}<a href="{{.RelPermalink}}" title="Next: {{ .Title }}">Newer &raquo;</a>{{ end }}</div>
+</nav>
+{{ end }}

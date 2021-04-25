@@ -1,5 +1,4 @@
 ---
-date: "2019-10-25T00:00:00Z"
 tags:
 - scripts
 - git

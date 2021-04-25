@@ -1,5 +1,4 @@
 ---
-date: "2013-09-24T00:00:00Z"
 aliases:
 - /articles/66/diy-paper-planner-with-a-cover
 tags:

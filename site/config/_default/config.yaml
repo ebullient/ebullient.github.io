@@ -15,6 +15,14 @@ frontmatter:
     - ":filename"
     - ":git"
     - ":default"
+  publishDate:
+    - ":filename"
+    - ":default"
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
 permalinks:
   posts: /:year/:month/:day/:slug
 taxonomies:

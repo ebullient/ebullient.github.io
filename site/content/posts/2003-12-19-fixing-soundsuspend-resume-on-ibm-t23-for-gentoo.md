@@ -1,5 +1,4 @@
 ---
-date: "2003-12-19T00:00:00Z"
 aliases:
 - /articles/13/fixing-soundsuspend-resume-on-ibm-t23-for-gentoo
 - /archives/000180.php/

@@ -1,5 +1,4 @@
 ---
-date: "2015-08-25T00:00:00Z"
 aliases:
 - /articles/72/docker-script-for-anyconnect-on-osx
 tags:

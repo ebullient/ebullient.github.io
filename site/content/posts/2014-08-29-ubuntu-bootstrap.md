@@ -1,5 +1,4 @@
 ---
-date: "2014-08-29T00:00:00Z"
 aliases:
 - /articles/68/ubuntu-bootstrap
 tags:

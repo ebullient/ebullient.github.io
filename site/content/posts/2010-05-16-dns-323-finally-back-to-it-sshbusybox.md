@@ -1,5 +1,4 @@
 ---
-date: "2010-05-16T00:00:00Z"
 aliases:
 - /articles/51/dns-323-finally-back-to-it-sshbusybox
 tags:

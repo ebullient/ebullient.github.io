@@ -1,5 +1,4 @@
 ---
-date: "2016-01-27T00:00:00Z"
 aliases:
 - /articles/77/swagger-first-api-design
 tags:

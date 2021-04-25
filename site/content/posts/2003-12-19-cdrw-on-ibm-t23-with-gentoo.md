@@ -1,5 +1,4 @@
 ---
-date: "2003-12-19T00:00:00Z"
 aliases:
 - /articles/12/cdrw-on-ibm-t23-with-gentoo
 - /archives/000179.php/

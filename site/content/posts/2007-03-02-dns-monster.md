@@ -1,5 +1,4 @@
 ---
-date: "2007-03-02T00:00:00Z"
 aliases:
 - /articles/40/dns-monster
 tags:

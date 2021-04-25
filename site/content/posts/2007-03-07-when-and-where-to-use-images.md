@@ -1,5 +1,4 @@
 ---
-date: "2007-03-07T00:00:00Z"
 aliases:
 - /articles/41/when-and-where-to-use-images
 tags:

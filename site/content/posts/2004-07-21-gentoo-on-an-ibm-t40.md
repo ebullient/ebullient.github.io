@@ -1,5 +1,4 @@
 ---
-date: "2004-07-21T00:00:00Z"
 aliases:
 - /articles/18/gentoo-on-an-ibm-t40
 tags:

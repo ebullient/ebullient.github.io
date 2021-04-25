@@ -1,5 +1,4 @@
 ---
-date: "2003-09-22T00:00:00Z"
 aliases:
 - /articles/10/gentoo-t23-and-vmware
 - /archives/000139.php/

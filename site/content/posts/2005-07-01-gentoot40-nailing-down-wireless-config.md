@@ -1,5 +1,4 @@
 ---
-date: "2005-07-01T00:00:00Z"
 aliases:
 - /articles/23/gentoot40-nailing-down-wireless-config
 tags:

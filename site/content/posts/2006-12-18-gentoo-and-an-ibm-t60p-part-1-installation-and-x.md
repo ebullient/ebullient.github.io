@@ -1,5 +1,4 @@
 ---
-date: "2006-12-18T00:00:00Z"
 aliases:
 - /articles/24/gentoo-and-an-ibm-t60p-part-1-installation-and-x
 tags:

@@ -1,5 +1,4 @@
 ---
-date: "2004-01-20T00:00:00Z"
 aliases:
 - /articles/15/linuxt23---dual-monitors
 - /archives/000198.php/

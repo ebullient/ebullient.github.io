@@ -1,5 +1,4 @@
 ---
-date: "2015-12-16T00:00:00Z"
 aliases:
 - /articles/76/shell-prompt-crazy-for-git-submodules
 tags:

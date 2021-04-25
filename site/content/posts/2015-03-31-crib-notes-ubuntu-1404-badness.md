@@ -1,5 +1,4 @@
 ---
-date: "2015-03-31T00:00:00Z"
 aliases:
 - /articles/71/crib-notes-ubuntu-1404-badness
 tags:

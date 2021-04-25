@@ -1,5 +1,4 @@
 ---
-date: "2005-02-23T00:00:00Z"
 aliases:
 - /articles/39/
 tags:

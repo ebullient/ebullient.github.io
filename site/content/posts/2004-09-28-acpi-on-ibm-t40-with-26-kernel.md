@@ -1,5 +1,4 @@
 ---
-date: "2004-09-28T00:00:00Z"
 aliases:
 - /articles/19/acpi-on-ibm-t40-with-26-kernel
 tags:

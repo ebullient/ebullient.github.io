@@ -1,5 +1,4 @@
 ---
-date: "2011-10-11T00:00:00Z"
 aliases:
 - /articles/54/lubuntu-1104-on-thinkpad-w520
 tags:

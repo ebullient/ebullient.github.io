@@ -1,5 +1,4 @@
 ---
-date: "2005-01-03T00:00:00Z"
 aliases:
 - /articles/22/cleaning-up-gentoo
 tags:

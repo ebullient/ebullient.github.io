@@ -1,5 +1,4 @@
 ---
-date: "2007-12-21T00:00:00Z"
 aliases:
 - /musing/45/happy-solstice
 tags:

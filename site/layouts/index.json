@@ -1,0 +1,12 @@
+{
+  {{- $.Scratch.Add "taglist" slice -}}
+  {{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
+  {{- $.Scratch.Add "taglist" (slice $name ) -}}
+  {{- end -}}
+  "tags": {{- $.Scratch.Get "taglist" | jsonify -}},
+  {{- $.Scratch.Add "index" slice -}}
+  {{- range where .Site.RegularPages "Section" "posts" -}}
+  {{- $.Scratch.Add "index" (dict "uri" .Permalink "title" .Title ) -}}
+  {{- end -}}
+  "posts": {{- $.Scratch.Get "index" | jsonify -}}
+}

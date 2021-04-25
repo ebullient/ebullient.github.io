@@ -1,5 +1,4 @@
 ---
-date: "2003-09-21T00:00:00Z"
 aliases:
 - /articles/9/dammit--gentoo-on-t23-continued
 - /archives/000137.php/

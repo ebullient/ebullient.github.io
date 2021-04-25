@@ -1,5 +1,4 @@
 ---
-date: "2006-07-11T00:00:00Z"
 aliases:
 - /articles/32/rails-printing-validation-errors-as-flash-notices
 tags:

@@ -1,5 +1,4 @@
 ---
-date: "2007-03-30T00:00:00Z"
 aliases:
 - /musing/55/emergency-brain
 tags:

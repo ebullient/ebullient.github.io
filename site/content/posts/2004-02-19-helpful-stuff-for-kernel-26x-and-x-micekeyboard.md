@@ -1,5 +1,4 @@
 ---
-date: "2004-02-19T00:00:00Z"
 aliases:
 - /articles/28/helpful-stuff-for-kernel-26x-and-x-micekeyboard
 - /archives/000206.php/

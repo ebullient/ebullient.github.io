@@ -1,5 +1,4 @@
 ---
-date: "2015-12-05T00:00:00Z"
 aliases:
 - /articles/73/which-gradle
 tags:

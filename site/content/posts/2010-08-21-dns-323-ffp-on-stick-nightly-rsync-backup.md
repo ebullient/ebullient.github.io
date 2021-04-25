@@ -1,5 +1,4 @@
 ---
-date: "2010-08-21T00:00:00Z"
 aliases:
 - /articles/52/dns-323-ffp-on-stick-nightly-rsync-backup
 tags:

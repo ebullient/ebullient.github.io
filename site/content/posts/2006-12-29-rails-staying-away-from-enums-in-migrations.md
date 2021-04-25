@@ -1,5 +1,4 @@
 ---
-date: "2006-12-29T00:00:00Z"
 aliases:
 - /articles/31/rails-staying-away-from-enums-in-migrations
 tags:

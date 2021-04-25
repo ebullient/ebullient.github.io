@@ -1,5 +1,4 @@
 ---
-date: "2020-03-06T00:00:00Z"
 tags:
 - hugo
 - blog

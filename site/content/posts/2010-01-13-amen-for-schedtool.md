@@ -1,5 +1,4 @@
 ---
-date: "2010-01-13T00:00:00Z"
 aliases:
 - /articles/48/amen-for-schedtool
 tags:

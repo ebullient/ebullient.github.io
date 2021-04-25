@@ -1,5 +1,4 @@
 ---
-date: "2010-10-26T00:00:00Z"
 aliases:
 - /articles/53/ubuntu-1010-sound-crackling-especially-pidgin-and-fluxbox-crashes
 tags:

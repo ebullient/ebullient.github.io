@@ -1,5 +1,4 @@
 ---
-date: "2014-12-30T00:00:00Z"
 aliases:
 - /articles/69/updating-to-yosemite-clean-install-with-a-clever-backup
 tags:

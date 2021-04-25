@@ -1,5 +1,4 @@
 ---
-date: "2007-01-05T00:00:00Z"
 aliases:
 - /articles/26/gentoo-and-an-ibm-t60p-part-3-networking
 tags:

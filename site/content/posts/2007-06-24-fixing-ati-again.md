@@ -1,5 +1,4 @@
 ---
-date: "2007-06-24T00:00:00Z"
 aliases:
 - /articles/43/fixing-ati-again
 tags:

@@ -1,5 +1,4 @@
 ---
-date: "2007-12-31T00:00:00Z"
 aliases:
 - /articles/46/ejecting-cd-when-things-are-hosed
 tags:

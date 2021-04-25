@@ -1,5 +1,4 @@
 ---
-date: "2010-04-01T00:00:00Z"
 aliases:
 - /articles/50/movies-schmovies
 tags:

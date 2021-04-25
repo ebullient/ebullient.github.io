@@ -1,5 +1,4 @@
 ---
-date: "2010-01-04T00:00:00Z"
 aliases:
 - /articles/47/upgrading-old-rails-apps
 tags:

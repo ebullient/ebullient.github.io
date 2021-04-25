@@ -1,5 +1,4 @@
 ---
-date: "2003-09-29T00:00:00Z"
 aliases:
 - /articles/11/its-alive-gentoo-and-t23
 - /archives/000144.php/

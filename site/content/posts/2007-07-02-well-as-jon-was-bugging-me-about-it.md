@@ -1,5 +1,4 @@
 ---
-date: "2007-07-02T00:00:00Z"
 aliases:
 - /musing/44/well-as-jon-was-bugging-me-about-it
 tags:

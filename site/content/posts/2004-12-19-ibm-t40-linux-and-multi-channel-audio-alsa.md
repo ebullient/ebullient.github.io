@@ -1,5 +1,4 @@
 ---
-date: "2004-12-19T00:00:00Z"
 aliases:
 - /articles/21/ibm-t40-linux-and-multi-channel-audio-alsa
 tags:

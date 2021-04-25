@@ -1,5 +1,4 @@
 ---
-date: "2015-03-31T00:00:00Z"
 aliases:
 - /articles/70/crib-notes-docker-on-osx
 tags:

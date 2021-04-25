@@ -1,5 +1,4 @@
 ---
-date: "2007-01-05T00:00:00Z"
 aliases:
 - /articles/27/gentoo-and-an-ibm-t60p-part-2-dual-boot-ntfs
 tags:

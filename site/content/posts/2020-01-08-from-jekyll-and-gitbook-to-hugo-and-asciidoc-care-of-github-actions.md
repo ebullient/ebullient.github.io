@@ -1,5 +1,4 @@
 ---
-date: "2020-01-08T00:00:00Z"
 tags:
 - jekyll
 - hugo

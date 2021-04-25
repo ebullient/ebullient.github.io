@@ -1,6 +1,5 @@
 ---
 title: Gentoooooooooooooooooooooo
-date: "2003-09-16T00:00:00Z"
 aliases:
 - /articles/7/gentoooooooooooooooooooooo
 - /archives/000130.php

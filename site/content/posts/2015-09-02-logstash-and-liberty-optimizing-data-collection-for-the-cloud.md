@@ -1,5 +1,4 @@
 ---
-date: "2015-09-02T00:00:00Z"
 aliases:
 - /articles/81/logstash-and-liberty-optimizing-data-collection-for-the-cloud
 tags:
@@ -9,7 +8,8 @@ tags:
 title: Using Grok filters to parse Liberty Logs
 source: html
 ---
-> Note: Originally posted on <a href="https://developer.ibm.com/wasdev/docs/logstash-liberty-optimizing-data-collection-cloud/">Continue with post on <span class="caps">IBM</span> DeveloperWorks</a>. Some of this content is old, but the gist is still useful.
+
+> Note: Originally posted on [IBM DeveloperWorks](https://developer.ibm.com/wasdev/docs/logstash-liberty-optimizing-data-collection-cloud/). Some of this content is old, but the gist is still useful.
 
 Microservice architectures are highly distributed, with services provided by individual processes that are scaled independently. Understanding and maintaining overall system health becomes increasingly difficult as the system grows; it becomes impractical to look at services instance-by-instance. Monitoring systems like nagios help, but what happens when things go wrong? It is not always possible (much less easy) to ssh into any given system. In some environments the filesystem used by any given instance is transient; when the process stops, the filesystem is cleaned up, including all the logs!
 
@@ -329,4 +329,3 @@ Some useful links for further reading:
     * [filter reference](https://www.elastic.co/guide/en/logstash/current/filter-plugins.html)
     * [grok filter reference](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html)
 * [Logstash-forwarder](https://github.com/elastic/logstash-forwarder)
-

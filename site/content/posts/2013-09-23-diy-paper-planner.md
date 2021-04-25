@@ -1,5 +1,4 @@
 ---
-date: "2013-09-23T00:00:00Z"
 aliases:
 - /articles/65/diy-paper-planner
 tags:

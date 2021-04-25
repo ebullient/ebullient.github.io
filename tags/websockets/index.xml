@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>websockets on ebullient·works</title><link>/tags/websockets.html</link><description>Recent content in websockets on ebullient·works</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 27 Feb 2015 00:00:00 +0000</lastBuildDate><atom:link href="/tags/websockets/index.xml" rel="self" type="application/rss+xml"/><item><title>IBM InterConnect 2015: WebSockets and Async EE7</title><link>/2015/02/27/ibm-interconnect-2015-websockets-and-async-ee7.html</link><pubDate>Fri, 27 Feb 2015 00:00:00 +0000</pubDate><guid>/2015/02/27/ibm-interconnect-2015-websockets-and-async-ee7.html</guid><description>&lt;p>All of the new shiny Async things.&lt;/p>
+&lt;ol>
+&lt;li>Introduction to WebSockets&lt;/li>
+&lt;li>Don't Wait! Develop Responsive Applications with Java EE7 Instead&lt;/li>
+&lt;/ol></description></item><item><title>IBM Impact 2014: WebSockets and Liberty Deployment Topologies</title><link>/2014/05/03/ibm-impact-2014-websockets-and-liberty-deployment-topologies.html</link><pubDate>Sat, 03 May 2014 00:00:00 +0000</pubDate><guid>/2014/05/03/ibm-impact-2014-websockets-and-liberty-deployment-topologies.html</guid><description>&lt;p>This was also my first talk in a long time, given in a big ballroom. Nothing like jumping right in.&lt;/p>
+&lt;ol>
+&lt;li>WebSockets for Java EE&lt;/li>
+&lt;li>Liberty Series: WebSphere Liberty Profile Deployment Topologies (with Chris Vignola)&lt;/li>
+&lt;/ol></description></item></channel></rss>

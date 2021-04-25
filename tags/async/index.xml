@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>async on ebullient·works</title><link>/tags/async.html</link><description>Recent content in async on ebullient·works</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 27 Feb 2015 00:00:00 +0000</lastBuildDate><atom:link href="/tags/async/index.xml" rel="self" type="application/rss+xml"/><item><title>IBM InterConnect 2015: WebSockets and Async EE7</title><link>/2015/02/27/ibm-interconnect-2015-websockets-and-async-ee7.html</link><pubDate>Fri, 27 Feb 2015 00:00:00 +0000</pubDate><guid>/2015/02/27/ibm-interconnect-2015-websockets-and-async-ee7.html</guid><description>&lt;p>All of the new shiny Async things.&lt;/p>
+&lt;ol>
+&lt;li>Introduction to WebSockets&lt;/li>
+&lt;li>Don't Wait! Develop Responsive Applications with Java EE7 Instead&lt;/li>
+&lt;/ol></description></item></channel></rss>

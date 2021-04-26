@@ -1,0 +1,70 @@
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: none;
+}
+.reveal table th,
+.reveal table td {
+  vertical-align: top
+}
+.reveal div .attrib {
+  font-size: .5em;
+  width: 100%;
+  position:absolute;
+  text-align: center;
+  bottom:0;
+}
+.reveal section img.ghost {
+  border: none;
+}
+.reveal section img.dev {
+  border: none;
+  width: 200px;
+}
+.cloud-native .reveal h2,
+.monolith .reveal h2 {
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+.config .reveal {
+    background-image: url("/files/2019-spring-mystery-polyglot/images/spring-config-sources.png");
+    background-position: center right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 180px auto;
+}
+.config .reveal section ul {
+    margin-right: 200px;
+}
+@media screen and (max-width: 700px) {
+    .config .reveal {
+        background-size: 100px auto;
+    }
+    .config .reveal section ul {
+        margin-right: 150px;
+    }
+}
+.go .reveal .google {
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 75% auto;
+}
+
+
+.google h3 {
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 2px rgb(116, 116, 116);
+    text-decoration: underline;
+    padding:5px 2px;
+    text-align:center;
+    border: 1px solid #000;
+    opacity: 0.9;
+    background-color: #c0c0ff;
+}

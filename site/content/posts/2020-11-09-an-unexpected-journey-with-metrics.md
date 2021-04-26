@@ -3,6 +3,7 @@ tags:
 - article
 - microservices
 - metrics
+- micrometer
 - monster-combat
 title: 'D&D and Metrics: an unexpected journey'
 ---

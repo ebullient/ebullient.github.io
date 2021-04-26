@@ -4,7 +4,6 @@ tags:
   - interview
   - metrics
   - monster-combat
-  - springone
   - micrometer
 title: "SpringOne 2019 Preview: Metrics for the Win"
 ---

@@ -6,6 +6,7 @@ tags:
   - spring
   - microservices
   - gameontext
+  - micrometer
 ---
 This was one of those sessions that did not go right.
 

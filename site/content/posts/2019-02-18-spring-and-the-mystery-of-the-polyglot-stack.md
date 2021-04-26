@@ -6,6 +6,7 @@ tags:
   - spring
   - microservices
   - gameontext
+  - micrometer
 ---
 [Spring and the Mystery of the Polyglot Stack](https://devnexus.com/archive/devnexus2019/presentations/3833/)
 

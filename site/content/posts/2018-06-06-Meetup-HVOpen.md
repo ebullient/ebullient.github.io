@@ -2,6 +2,7 @@
 tags:
 - meetup
 - microservices
+- gameontext
 title: "Learning Microservices in the open with Game On! Text Adventure"
 ---
 

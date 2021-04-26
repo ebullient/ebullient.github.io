@@ -3,6 +3,7 @@ tags:
 - conference
 - microservices
 - metrics
+- micrometer
 - monster-combat
 title: "J4K 2020: Metrics for the win!"
 ---

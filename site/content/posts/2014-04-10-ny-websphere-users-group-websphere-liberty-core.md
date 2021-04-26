@@ -1,5 +1,5 @@
 ---
-title: "NY WebSphere Users Group: WebSphere Liberty core"
+title: "NY WebSphere Users Group: WebSphere Liberty"
 tags:
   - meetup
   - liberty

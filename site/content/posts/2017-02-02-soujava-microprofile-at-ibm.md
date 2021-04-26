@@ -2,6 +2,8 @@
 tags:
 - meetup
 - microservices
+- liberty
+- java
 title: "SouJava: MicroProfile at IBM"
 ---
 What a hoot!

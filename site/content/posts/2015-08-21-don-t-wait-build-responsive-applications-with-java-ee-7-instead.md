@@ -3,6 +3,7 @@ aliases:
 - /articles/82/don-t-wait-build-responsive-applications-with-java-ee-7-instead
 tags:
 - liberty
+- java
 - java-ee
 title: Don't Wait! Play with Async EE7 instead
 ---

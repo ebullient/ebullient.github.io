@@ -5,6 +5,7 @@ tags:
 - conference
 - microservices
 - metrics
+- micrometer
 - monster-combat
 title: "DevNexus 2021: The Mechanics of Metrics"
 ---

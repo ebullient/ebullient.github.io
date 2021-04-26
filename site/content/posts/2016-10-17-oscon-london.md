@@ -3,6 +3,7 @@ tags:
 - conference
 - microservices
 - gameontext
+- java
 title: "OSCon London 2016: Game On! Microservices in the open"
 ---
 Kate Stanley and I took Game On Text Adventure to [OSCon London](https://www.oreilly.com/library/view/oscon-2016-/9781491958476/)! We spoke about our experiences building the game, and Kate created a new room in Java from scratch and showed the game finding the room, and coping as the service recycled in response to updates.

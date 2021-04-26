@@ -14,4 +14,6 @@ Kate Stanley and I took Game On Text Adventure to [OSCon London](https://www.ore
 
 <!--more-->
 
+{{< pdf "/files/2016-OSCon16-Game-On-Text-Adventure-FINAL.pdf" >}}
+
 The [video](https://learning.oreilly.com/library/view/oscon-2016-/9781491958476/chapter-video284456-12) is available if you have a subscription.

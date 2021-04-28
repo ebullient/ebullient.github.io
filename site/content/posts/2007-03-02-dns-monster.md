@@ -1,4 +1,5 @@
 ---
+draft: true
 aliases:
 - /articles/40/dns-monster
 tags:

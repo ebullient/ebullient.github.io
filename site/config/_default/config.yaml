@@ -36,5 +36,5 @@ markup:
     lineNos: true
     lineNumbersInTable: false
     noClasses: true
-    style: pygments
+    style: monokailight
     tabWidth: 2

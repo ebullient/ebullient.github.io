@@ -5,7 +5,7 @@ tags:
 - interview
 - java-ee
 - liberty
-title: Java EE ebullience — airhacks.fm podcast with Adam Bien
+title: "airhacks.fm: Java EE ebullience — podcast with Adam Bien"
 ---
 
 I spent an excellent few hours recording a podcast with Adam Bien.
@@ -14,7 +14,11 @@ CORBA? OpenLiberty? Robots? The glory days of object marshaling? Such a trip dow
 
 Can you hear my rings clinking on my favorite mug? Yes, yes you can.
 
-Give it a listen: [Java EE ebullience](https://s3.eu-central-1.amazonaws.com/airhacks.fm/airhacksfm_3.mp3).
+Give it a listen: 
+
+{{< embed >}}
+<iframe allow="autoplay" width="100%" height="200" src="https://www.iheart.com/podcast/256-airhacksfm-podcast-with-ad-43073886/episode/java-ee-ebullience-44463279/?embed=true" frameborder="0"></iframe>
+{{< /embed >}}
 
 <!--more-->
 

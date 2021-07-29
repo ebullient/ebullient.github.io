@@ -8,8 +8,10 @@ Not alot of description around this one. Let's just say it's .. crochet engineer
 
 And things kind of grew from there. 
 
+{{< figure src="/files/dice-cauldron-3.jpg" title="Open"  width="600px" >}}
+
+<!--more-->
+
 {{< figure src="/files/dice-cauldron-1.jpg" title="The cauldron in progress" width="600px" >}}
 
 {{< figure src="/files/dice-cauldron-2.jpg" title="Closed" width="600px" >}}
-
-{{< figure src="/files/dice-cauldron-3.jpg" title="Open"  width="600px" >}}

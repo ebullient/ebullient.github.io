@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/28/helpful-stuff-for-kernel-26x-and-x-micekeyboard
-- /archives/000206.php/
+  - /articles/28/helpful-stuff-for-kernel-26x-and-x-micekeyboard
+  - /archives/000206.php/
 tags:
-- linux
+  - linux
 title: Helpful stuff for kernel 2.6.x and X (mice/keyboard)
 source: html
 ---

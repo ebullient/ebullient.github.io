@@ -1,8 +1,8 @@
 ---
 aliases:
-- /articles/20/handy-cd-readingwritingripping-stuff
+  - /articles/20/handy-cd-readingwritingripping-stuff
 tags:
-- linux
+  - linux
 title: Handy CD reading/writing/ripping stuff
 source: html
 ---

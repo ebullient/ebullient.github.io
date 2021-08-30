@@ -1,9 +1,8 @@
 ---
 aliases:
-- /musing/45/happy-solstice
+  - /musing/45/happy-solstice
 tags:
-- toys
-- mac
+  - hardware-mac
 title: Happy Solstice!
 ---
 {{< raw_html >}}

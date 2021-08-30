@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/19/acpi-on-ibm-t40-with-26-kernel
+  - /articles/19/acpi-on-ibm-t40-with-26-kernel
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: ACPI on IBM T40 with 2.6 kernel
 source: html
 ---

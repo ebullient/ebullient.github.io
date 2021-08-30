@@ -1,8 +1,8 @@
 ---
 title: "Quarkus Insights #58 (host): Sanne talks about Hibernate ORM and GraalVM native images"
 tags:
-- interview
-- quarkus
+  - interview
+  - quarkus
 canonical: https://youtu.be/y0-cuY8qCMg
 ---
 

@@ -1,10 +1,11 @@
 ---
 aliases:
-- /articles/81/logstash-and-liberty-optimizing-data-collection-for-the-cloud
+  - /articles/81/logstash-and-liberty-optimizing-data-collection-for-the-cloud
 tags:
-- microservices
-- liberty
-- logstash
+  - microservices
+  - java
+  - liberty
+  - logstash
 title: Using Grok filters to parse Liberty Logs
 source: html
 ---

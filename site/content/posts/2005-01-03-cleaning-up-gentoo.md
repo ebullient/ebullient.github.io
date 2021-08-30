@@ -1,8 +1,8 @@
 ---
 aliases:
-- /articles/22/cleaning-up-gentoo
+  - /articles/22/cleaning-up-gentoo
 tags:
-- gentoo
+  - linux-gentoo
 title: Cleaning up gentoo...
 ---
 

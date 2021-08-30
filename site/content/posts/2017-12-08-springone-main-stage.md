@@ -1,8 +1,8 @@
 ---
 aliases:
-- /2017/12/08/SpringOne.html
+  - /2017/12/08/SpringOne.html
 tags:
-- conference
+  - conference
 title: 'SpringOne 2017: Lightning talk on the Mainstage'
 ---
 I will absolutely confess that it was daunting to start with, but that once I was out on the stage, everything was fine.

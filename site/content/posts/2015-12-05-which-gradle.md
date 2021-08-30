@@ -1,9 +1,8 @@
 ---
 aliases:
-- /articles/73/which-gradle
+  - /articles/73/which-gradle
 tags:
-- mac
-- scripts
+  - scripts
 title: 'Which gradle... '
 ---
 {{< raw_html >}}

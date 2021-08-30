@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/49/dns-323-initial-set-up
+  - /articles/49/dns-323-initial-set-up
 tags:
-- backup
-- nas
+  - backup
+  - hardware-nas
 title: 'DNS-323: Initial set-up'
 ---
 {{< raw_html >}}

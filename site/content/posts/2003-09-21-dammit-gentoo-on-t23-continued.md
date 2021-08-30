@@ -1,10 +1,10 @@
 ---
 aliases:
-- /articles/9/dammit--gentoo-on-t23-continued
-- /archives/000137.php/
+  - /articles/9/dammit--gentoo-on-t23-continued
+  - /archives/000137.php/
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: Dammit- Gentoo on T23 continued
 ---
 {{< raw_html >}}

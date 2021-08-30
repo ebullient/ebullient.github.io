@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/21/ibm-t40-linux-and-multi-channel-audio-alsa
+  - /articles/21/ibm-t40-linux-and-multi-channel-audio-alsa
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: IBM T40 and multi-channel audio (ALSA)
 source: html
 ---

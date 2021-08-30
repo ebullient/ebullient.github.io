@@ -1,8 +1,8 @@
 ---
 title: "Quarkus Insights #47 (host): Keycloak's Journey to Quarkus"
 tags:
-- interview
-- quarkus
+  - interview
+  - quarkus
 canonical: https://youtu.be/qNeDPgrytxE
 ---
 

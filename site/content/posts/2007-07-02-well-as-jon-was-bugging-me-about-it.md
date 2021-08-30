@@ -1,8 +1,8 @@
 ---
 aliases:
-- /musing/44/well-as-jon-was-bugging-me-about-it
+  - /musing/44/well-as-jon-was-bugging-me-about-it
 tags:
-- sketches
+  - sketches
 title: Well, as Jon was bugging me about it..
 ---
 {{< raw_html >}}

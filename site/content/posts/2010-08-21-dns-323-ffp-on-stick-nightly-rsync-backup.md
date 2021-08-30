@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/52/dns-323-ffp-on-stick-nightly-rsync-backup
+  - /articles/52/dns-323-ffp-on-stick-nightly-rsync-backup
 tags:
-- backup
-- nas
+  - backup
+  - hardware-nas
 title: 'DNS-323: FFP on a stick, nightly rsync backup... '
 ---
 {{< raw_html >}}
@@ -111,7 +111,7 @@ echo "** Update cron jobs"
 # This removes firmware cronjobs that interfere with ntpd.
 crontab -l | grep -vw '/usr/sbin/daylight' | grep -vw '/usr/sbin/rtc' | grep -vw '/usr/sbin/stime' | crontab -
 
-#Now start custom cron jobs, including the first which checks the date.
+# Now start custom cron jobs, including the first which checks the date.
 echo "0 * * * * /ffp/hostname/checkdate.sh" >> /var/spool/cron/crontabs/root
 echo "1 * * * * /ffp/hostname/routerset.pl" >> /var/spool/cron/crontabs/root
 echo "2 3 * * * /ffp/hostname/ffp-sync.sh"  >> /var/spool/cron/crontabs/root

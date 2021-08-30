@@ -1,7 +1,7 @@
 ---
 tags:
-- javascript
-- gulp
+  - javascript
+  - gulp
 title: Debug gulp
 ---
 A gulp build unhelpfully finished with:

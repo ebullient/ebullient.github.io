@@ -1,8 +1,8 @@
 ---
 aliases:
-- /articles/47/upgrading-old-rails-apps
+  - /articles/47/upgrading-old-rails-apps
 tags:
-- rails
+  - rails
 title: 'Upgrading old rails apps... '
 ---
 {{< raw_html >}}

@@ -1,9 +1,9 @@
 ---
 draft: true
 aliases:
-- /articles/40/dns-monster
+  - /articles/40/dns-monster
 tags:
-- hosting
+  - hosting
 title: DNS Monster
 ---
 {{< raw_html >}}

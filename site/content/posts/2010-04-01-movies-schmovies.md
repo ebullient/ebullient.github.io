@@ -1,8 +1,8 @@
 ---
 aliases:
-- /articles/50/movies-schmovies
+  - /articles/50/movies-schmovies
 tags:
-- linux
+  - linux
 title: Movies schmovies
 ---
 {{< raw_html >}}

@@ -2,8 +2,8 @@
 title: "Some notes about jitpack"
 tags:
   - java
+  - jitpack
   - git
-  - monster
   - obsidian
 ---
 I created another weird side project, this one only sort of related to monsters. I do (still) use FightClub5 as a player, and to manage what my players have to deal with / look at for our campaigns. [Obsidian](https://obsidian.md) has started to take over as campaign manager, because encounters are created/set up/and tracked in Roll20.

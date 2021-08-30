@@ -1,10 +1,10 @@
 ---
 aliases:
-- /articles/70/crib-notes-docker-on-osx
+  - /articles/70/crib-notes-docker-on-osx
 tags:
-- docker
-- mac
-- vpn
+  - docker
+  - hardware-mac
+  - vpn
 title: 'Crib notes: Docker on OSX'
 source: html
 ---

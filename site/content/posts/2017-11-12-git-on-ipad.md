@@ -1,7 +1,7 @@
 ---
 tags:
-- toys
-- git
+  - git
+  - iOS
 title: Git with edit on an iPad?
 ---
 We shall see how this goes over time, but so far? Oh hell yes.
@@ -19,4 +19,3 @@ So exciting!
 The one challenge with this, in particular, is that I can’t get the Jekyll preview that I could if I were running locally. The iPad Pro is quite the workhorse... but it doesn’t (yet, ha!) run Docker containers.
 
 Oh, right. The app: [Working Copy](https://workingcopyapp.com). It also integrates with [iOctocat](https://ioctocat.com).
-

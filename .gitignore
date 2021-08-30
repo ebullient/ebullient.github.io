@@ -4,6 +4,7 @@ _site
 .bundle
 .mysql
 .vendor
+.obsidian
 jekyll
 vendor
 public

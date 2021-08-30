@@ -1,10 +1,8 @@
 ---
 aliases:
-- /articles/68/ubuntu-bootstrap
+  - /articles/68/ubuntu-bootstrap
 tags:
-- ubuntu
-- linux
-- bootstrap
+  - linux-ubuntu
 title: Bootstrapping ubuntu server on an external drive
 source: html
 ---

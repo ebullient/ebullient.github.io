@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/26/gentoo-and-an-ibm-t60p-part-3-networking
+  - /articles/26/gentoo-and-an-ibm-t60p-part-3-networking
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: 'Gentoo and an IBM T60p - Part 3: Networking'
 ---
 {{< raw_html >}}

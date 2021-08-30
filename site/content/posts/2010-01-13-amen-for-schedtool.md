@@ -1,8 +1,8 @@
 ---
 aliases:
-- /articles/48/amen-for-schedtool
+  - /articles/48/amen-for-schedtool
 tags:
-- linux
+  - linux
 title: Amen for schedtool
 ---
 {{< raw_html >}}

@@ -2,6 +2,7 @@
 title: "Interview with Alex Blewitt: OSGi and Liberty"
 tags:
   - interview
+  - java
   - liberty
   - osgi
 ---

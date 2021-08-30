@@ -1,10 +1,9 @@
 ---
 aliases:
-- /articles/41/when-and-where-to-use-images
+  - /articles/41/when-and-where-to-use-images
 tags:
-- accessibility
-- css
-- webdesign
+  - accessibility
+  - css
 title: When and where to use images..
 ---
 {{< raw_html >}}

@@ -1,11 +1,11 @@
 ---
 title: Gentoooooooooooooooooooooo
 aliases:
-- /articles/7/gentoooooooooooooooooooooo
-- /archives/000130.php
+  - /articles/7/gentoooooooooooooooooooooo
+  - /archives/000130.php
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 ---
 Jimminy Christmas!
 

@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/27/gentoo-and-an-ibm-t60p-part-2-dual-boot-ntfs
+  - /articles/27/gentoo-and-an-ibm-t60p-part-2-dual-boot-ntfs
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: 'Gentoo and an IBM T60p - Part 2: Dual Boot / NTFS'
 ---
 {{< raw_html >}}

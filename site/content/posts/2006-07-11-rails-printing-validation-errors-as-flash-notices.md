@@ -1,8 +1,8 @@
 ---
 aliases:
-- /articles/32/rails-printing-validation-errors-as-flash-notices
+  - /articles/32/rails-printing-validation-errors-as-flash-notices
 tags:
-- rails
+  - rails
 title: 'Rails: Printing validation errors as flash notices'
 ---
 {{< raw_html >}}

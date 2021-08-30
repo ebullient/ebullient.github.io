@@ -1,8 +1,8 @@
 ---
 aliases:
-- /articles/65/diy-paper-planner
+  - /articles/65/diy-paper-planner
 tags:
-- craft
+  - craft
 title: DIY paper planner
 ---
 {{< raw_html >}}

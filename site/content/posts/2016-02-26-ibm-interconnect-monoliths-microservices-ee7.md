@@ -1,11 +1,11 @@
 ---
 tags:
-- conference
-- microservices
-- java
-- java-ee
-- liberty
-- gameontext
+  - conference
+  - microservices
+  - java
+  - java-ee
+  - liberty
+  - gameontext
 title: "IBM InterConnect 2016: Microservices, Monoliths, and Async EE7"
 ---
 

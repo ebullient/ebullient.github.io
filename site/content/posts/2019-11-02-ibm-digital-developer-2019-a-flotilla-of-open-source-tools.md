@@ -1,9 +1,7 @@
 ---
 title: "IBM Digital Developer 2019: A Flotilla of Open Source tools... "
 tags:
-  - appsody
   - conference
-  - virtual
 ---
 How often do you get to give a talk with the word "Flotilla" in the title?
 

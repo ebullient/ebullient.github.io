@@ -1,6 +1,6 @@
 ---
 title: "Spring IO 2019: Spring and the Mystery of the Polyglot Stack"
-tags: 
+tags:
   - conference
   - java
   - spring

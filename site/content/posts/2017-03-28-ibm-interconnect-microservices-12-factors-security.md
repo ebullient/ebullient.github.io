@@ -1,11 +1,11 @@
 ---
 tags:
-- conference
-- microservices
-- java
-- liberty
-- gameontext
-title: "IBM InterConnect 2017: Microservices, Twelve Factors, Security" 
+  - conference
+  - microservices
+  - liberty
+  - gameontext
+  - java
+title: "IBM InterConnect 2017: Microservices, Twelve Factors, Security"
 ---
 
 Lots to talk about this year. So many sessions.

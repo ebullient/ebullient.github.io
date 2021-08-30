@@ -1,8 +1,8 @@
 ---
 title: "Quarkus Insights #17 (guest): What's new in Metrics"
 tags:
-- interview
-- quarkus
+  - interview
+  - quarkus
 canonical: https://youtu.be/mijoal4B8Ik
 ---
 

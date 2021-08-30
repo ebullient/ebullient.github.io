@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/18/gentoo-on-an-ibm-t40
+  - /articles/18/gentoo-on-an-ibm-t40
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: Gentoo on an IBM T40
 source: html
 ---

@@ -1,10 +1,10 @@
 ---
 aliases:
-- /articles/13/fixing-soundsuspend-resume-on-ibm-t23-for-gentoo
-- /archives/000180.php/
+  - /articles/13/fixing-soundsuspend-resume-on-ibm-t23-for-gentoo
+  - /archives/000180.php/
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: Fixing Sound/Suspend-Resume on IBM T23 for Gentoo
 ---
 {{< raw_html >}}

@@ -1,9 +1,9 @@
 ---
 tags:
-- conference
-- microservices
-- gameontext
-- java
+  - conference
+  - microservices
+  - gameontext
+  - java
 title: "JavaOne 2016: Game On! Microservices"
 ---
 We ran a contest! People wrote rooms for our game!

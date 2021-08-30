@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/24/gentoo-and-an-ibm-t60p-part-1-installation-and-x
+  - /articles/24/gentoo-and-an-ibm-t60p-part-1-installation-and-x
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: 'Gentoo and an IBM T60p - Part 1: Installation and X'
 ---
 {{< raw_html >}}

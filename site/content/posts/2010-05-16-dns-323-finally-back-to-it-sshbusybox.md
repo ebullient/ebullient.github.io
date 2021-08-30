@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/51/dns-323-finally-back-to-it-sshbusybox
+  - /articles/51/dns-323-finally-back-to-it-sshbusybox
 tags:
-- backup
-- nas
+  - backup
+  - hardware-nas
 title: 'DNS-323: Finally back to it (SSH/busybox)'
 ---
 {{< raw_html >}}

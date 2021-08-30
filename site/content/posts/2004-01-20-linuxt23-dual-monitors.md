@@ -1,10 +1,10 @@
 ---
 aliases:
-- /articles/15/linuxt23---dual-monitors
-- /archives/000198.php/
+  - /articles/15/linuxt23---dual-monitors
+  - /archives/000198.php/
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: Linux/T23 - Dual Monitors
 ---
 {{< raw_html >}}

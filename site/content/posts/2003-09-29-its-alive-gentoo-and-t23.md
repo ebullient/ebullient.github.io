@@ -1,10 +1,10 @@
 ---
 aliases:
-- /articles/11/its-alive-gentoo-and-t23
-- /archives/000144.php/
+  - /articles/11/its-alive-gentoo-and-t23
+  - /archives/000144.php/
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: It's Alive!! (Gentoo and T23)
 ---
 {{< raw_html >}}

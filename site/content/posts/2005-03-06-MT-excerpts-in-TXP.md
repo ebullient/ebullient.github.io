@@ -1,8 +1,9 @@
 ---
 aliases:
-- /articles/38/
+  - /articles/38/
 tags:
-- textpattern
+  - blog
+  - textpattern
 title: 'TXP Hack: Using TXP Excerpts like MT'
 ---
 {{< raw_html >}}

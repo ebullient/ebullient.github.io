@@ -1,7 +1,7 @@
 ---
 tags:
-- scripts
-- git
+  - scripts
+  - git
 title: Scripts for the win! Updating git repositories for the lazy.
 ---
 

@@ -1,8 +1,8 @@
 ---
 aliases:
-- /articles/31/rails-staying-away-from-enums-in-migrations
+  - /articles/31/rails-staying-away-from-enums-in-migrations
 tags:
-- rails
+  - rails
 title: 'Rails: Staying away from Enums in Migrations'
 ---
 {{< raw_html >}}

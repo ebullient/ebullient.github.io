@@ -1,10 +1,10 @@
 ---
 summary: I spent an excellent few hours recording a podcast with Adam Bien!
 tags:
-- podcast
-- interview
-- java-ee
-- liberty
+  - podcast
+  - interview
+  - java-ee
+  - liberty
 title: "airhacks.fm: Java EE ebullience — podcast with Adam Bien"
 ---
 

@@ -1,10 +1,10 @@
 ---
 tags:
-- conference
-- microservices
-- metrics
-- micrometer
-- monster-combat
+  - conference
+  - microservices
+  - metrics
+  - micrometer
+  - monster-combat
 title: "JConf 2020: Metrics for the win!"
 ---
 

@@ -1,10 +1,10 @@
 ---
 aliases:
-- /articles/10/gentoo-t23-and-vmware
-- /archives/000139.php/
+  - /articles/10/gentoo-t23-and-vmware
+  - /archives/000139.php/
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: Gentoo, T23, and VMWare
 ---
 {{< raw_html >}}

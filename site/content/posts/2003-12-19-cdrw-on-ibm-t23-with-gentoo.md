@@ -1,10 +1,10 @@
 ---
 aliases:
-- /articles/12/cdrw-on-ibm-t23-with-gentoo
-- /archives/000179.php/
+  - /articles/12/cdrw-on-ibm-t23-with-gentoo
+  - /archives/000179.php/
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: CDRW on IBM T23 with Gentoo
 ---
 {{< raw_html >}}

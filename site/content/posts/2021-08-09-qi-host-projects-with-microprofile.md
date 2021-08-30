@@ -1,8 +1,8 @@
 ---
 title: "Quarkus Insights #59 (host): Quarkus projects using MicroProfile specs with Giuseppe"
 tags:
-- interview
-- quarkus
+  - interview
+  - quarkus
 canonical: https://youtu.be/-CB7OQmNg5Q
 ---
 

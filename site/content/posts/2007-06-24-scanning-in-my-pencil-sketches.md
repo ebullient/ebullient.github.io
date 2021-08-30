@@ -1,9 +1,8 @@
 ---
 aliases:
-- /articles/42/scanning-in-my-pencil-sketches
+  - /articles/42/scanning-in-my-pencil-sketches
 tags:
-- scanning
-- sketches
+  - sketches
 title: Scanning in my pencil sketches...
 ---
 {{< raw_html >}}

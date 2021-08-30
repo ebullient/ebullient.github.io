@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/69/updating-to-yosemite-clean-install-with-a-clever-backup
+  - /articles/69/updating-to-yosemite-clean-install-with-a-clever-backup
 tags:
-- backup
-- mac
+  - backup
+  - hardware-mac
 title: 'Updating to Yosemite: clean install with a clever backup'
 source: html
 ---

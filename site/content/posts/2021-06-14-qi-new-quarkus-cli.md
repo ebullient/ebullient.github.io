@@ -1,8 +1,8 @@
 ---
 title: "Quarkus Insights #57 (guest): Quarkus CLI"
 tags:
-- interview
-- quarkus
+  - interview
+  - quarkus
 canonical: https://youtu.be/e_kwOJE2vQo
 ---
 

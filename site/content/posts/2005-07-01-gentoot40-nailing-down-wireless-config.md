@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/23/gentoot40-nailing-down-wireless-config
+  - /articles/23/gentoot40-nailing-down-wireless-config
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: 'Gentoo/T40: Nailing down wireless config'
 ---
 {{< raw_html >}}

@@ -2,7 +2,7 @@
 aliases:
 - /musing/55/emergency-brain
 tags:
-- dad
+- justme
 title: Emergency brain
 ---
 {{< raw_html >}}

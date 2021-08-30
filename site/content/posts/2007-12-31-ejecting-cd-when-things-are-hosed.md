@@ -1,9 +1,8 @@
 ---
 aliases:
-- /articles/46/ejecting-cd-when-things-are-hosed
+  - /articles/46/ejecting-cd-when-things-are-hosed
 tags:
-- toys
-- mac
+  - hardware-mac
 title: Ejecting the CD when things are hosed...
 ---
 {{< raw_html >}}

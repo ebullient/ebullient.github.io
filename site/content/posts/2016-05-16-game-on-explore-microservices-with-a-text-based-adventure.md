@@ -1,11 +1,11 @@
 ---
 aliases:
-- /articles/78/game-on-explore-microservices-with-a-text-based-adventure
+  - /articles/78/game-on-explore-microservices-with-a-text-based-adventure
 tags:
-- gameontext
-- microservices
-- java
-- liberty
+  - gameontext
+  - microservices
+  - java
+  - liberty
 title: Game On! Explore microservices with a text-based adventure
 ---
 Microservices: the buzz is everywhere. Given the breadth of technologies related to the term, it can be difficult to get a full picture of what a microservices architecture should look like, or to understand why it is said that microservices architectures both remove and introduce complexity at the same time. [Game On! Text Adventure](https://gameontext.org) is a throwback text-based adventure built to help you explore microservices concepts.

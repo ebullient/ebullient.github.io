@@ -1,6 +1,6 @@
 ---
 tags:
-- craft
+  - craft
 title: DIY dice cauldron
 ---
 

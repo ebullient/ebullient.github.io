@@ -1,12 +1,12 @@
 ---
 aliases:
-- /2021/03/05/DevNexus-mechanics-of-metrics.html
+  - /2021/03/05/DevNexus-mechanics-of-metrics.html
 tags:
-- conference
-- microservices
-- metrics
-- micrometer
-- monster-combat
+  - conference
+  - microservices
+  - metrics
+  - micrometer
+  - monster-combat
 title: "DevNexus 2021: The Mechanics of Metrics"
 ---
 

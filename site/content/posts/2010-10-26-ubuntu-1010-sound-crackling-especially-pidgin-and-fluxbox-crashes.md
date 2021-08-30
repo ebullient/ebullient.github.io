@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/53/ubuntu-1010-sound-crackling-especially-pidgin-and-fluxbox-crashes
+  - /articles/53/ubuntu-1010-sound-crackling-especially-pidgin-and-fluxbox-crashes
 tags:
-- ubuntu
-- audio
+  - linux-ubuntu
+  - audio
 title: 'ubuntu 10.10: sound crackling (especially pidgin), and fluxbox crashes'
 ---
 {{< raw_html >}}

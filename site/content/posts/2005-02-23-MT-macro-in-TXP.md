@@ -1,8 +1,9 @@
 ---
 aliases:
-- /articles/39/
+  - /articles/39/
 tags:
-- textpattern
+  - blog
+  - textpattern
 title: 'TXP Hack: MT-Macro like function in textpattern'
 ---
 {{< raw_html >}}

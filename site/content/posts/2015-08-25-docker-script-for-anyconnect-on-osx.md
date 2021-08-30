@@ -1,11 +1,11 @@
 ---
 aliases:
-- /articles/72/docker-script-for-anyconnect-on-osx
+  - /articles/72/docker-script-for-anyconnect-on-osx
 tags:
-- docker
-- mac
-- vpn
-- scripts
+  - docker
+  - hardware-mac
+  - vpn
+  - scripts
 title: Docker script for AnyConnect on OSX
 ---
 {{< raw_html >}}

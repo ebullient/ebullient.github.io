@@ -1,9 +1,8 @@
 ---
 aliases:
-- /articles/71/crib-notes-ubuntu-1404-badness
+  - /articles/71/crib-notes-ubuntu-1404-badness
 tags:
-- linux
-- ubuntu
+  - linux-ubuntu
 title: 'Crib notes: ubuntu 14.04 badness'
 source: html
 ---

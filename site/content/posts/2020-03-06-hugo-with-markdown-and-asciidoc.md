@@ -1,8 +1,8 @@
 ---
 tags:
-- hugo
-- blog
-- asciidoc
+  - blog
+  - hugo
+  - asciidoc
 title: Hugo with markdown and asciidoc
 ---
 All done!

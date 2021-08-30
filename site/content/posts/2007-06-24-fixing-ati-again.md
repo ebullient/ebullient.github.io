@@ -1,9 +1,9 @@
 ---
 aliases:
-- /articles/43/fixing-ati-again
+  - /articles/43/fixing-ati-again
 tags:
-- gentoo
-- thinkpad
+  - linux-gentoo
+  - hardware-thinkpad
 title: Fixing ATI again..
 ---
 {{< raw_html >}}

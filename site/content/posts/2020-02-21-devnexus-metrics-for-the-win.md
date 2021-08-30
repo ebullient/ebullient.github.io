@@ -1,10 +1,10 @@
 ---
 title: "DevNexus 2020: Metrics for the Win"
 tags:
-- conference
-- metrics
-- micrometer
-- monster-combat
+  - conference
+  - metrics
+  - micrometer
+  - monster-combat
 ---
 
 While not recorded, it was nice to revisit and brush up the Monster Combat application. I enjoyed working with Quarkus! Micrometer was easy to bring in as a third-partly library.

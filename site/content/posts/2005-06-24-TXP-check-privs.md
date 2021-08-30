@@ -1,8 +1,9 @@
 ---
 aliases:
-- /articles/36/
+  - /articles/36/
 tags:
-- textpattern
+  - blog
+  - textpattern
 title: 'TXP Hack: centralizing priv lookups'
 source: html
 ---

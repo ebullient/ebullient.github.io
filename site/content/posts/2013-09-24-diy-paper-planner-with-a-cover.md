@@ -1,8 +1,8 @@
 ---
 aliases:
-- /articles/66/diy-paper-planner-with-a-cover
+  - /articles/66/diy-paper-planner-with-a-cover
 tags:
-- craft
+  - craft
 title: DIY paper planner - with a cover
 source: html
 ---

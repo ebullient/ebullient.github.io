@@ -15,6 +15,10 @@ Github repository: [ebullient/monster-combat](https://github.com/ebullient/monst
 
 {{< youtube _Vg4J9cdO6s >}}
 
+And hooray! ;)
+
+{{< twitter 1182483499552591872 >}}
+
 <!--more-->
 
 [Metrics for the Win: Using Micrometer to Understand Application Behavior](https://springone.io/2019/sessions/metrics-for-the-win-using-micrometer-to-understand-application-behavior)

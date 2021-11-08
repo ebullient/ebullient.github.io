@@ -7,7 +7,7 @@ tags:
 
 OMG! I had a hard time writing this. I was asked if I would do it, which I said yes to before really having a clear idea what I wanted to talk about. As a keynote for J4K, I could have spoken about ... a whole plethora of things.
 
-Placeholder: I'll update this post as soon as the replay is available on Youtube. ;)
+{{< youtube SqnmLUXJXVA >}}
 
 <!--more-->
 

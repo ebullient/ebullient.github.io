@@ -1,7 +1,6 @@
 @import "normalize";
 @import "colors";
 @import url(https://fonts.googleapis.com/css?family=PT+Mono);
-
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
@@ -169,7 +168,24 @@ section.cv th {
   padding: 1.5em 0 0 0;
   border-bottom: 1px solid gray;
 }
-
+/* Embedded video */
+.embed.video-player {
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+.embed.video-player::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+.embed.video-player iframe.youtube-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 /* Default Layout: body containing wrapper and footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 body {

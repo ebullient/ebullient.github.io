@@ -6,4 +6,4 @@ tags:
 
 I am honored to join the Java Champion community. Heart is all aflutter.
 
-{{< tweet 1169620821758894080 >}}
+{{< tweet id="1169620821758894080" user="ebullientworks" >}}

@@ -17,7 +17,7 @@ Github repository: [ebullient/monster-combat](https://github.com/ebullient/monst
 
 And hooray! ;)
 
-{{< twitter 1182483499552591872 >}}
+{{< twitter id="1182483499552591872" user="ebullientworks" >}}
 
 <!--more-->
 

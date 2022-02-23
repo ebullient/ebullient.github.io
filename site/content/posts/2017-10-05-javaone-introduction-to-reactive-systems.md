@@ -13,7 +13,7 @@ A Joint adventure with Lightbend, we lead folks in the workshop through a specia
 
 Slides: [Why Reactive? With GameOn](https://static.rainfocus.com/oracle/oow17/sess/1504101843284001eyBI/PF/JavaOne_Why_Reactive_1507060963241001zChl.pdf)
 
-{{< twitter 914940801737740288 >}}
+{{< twitter id="914940801737740288" user="ebullientworks" >}}
 
 * https://github.com/lagom/lagom-gameon-example
 * https://github.com/lagom/lagom-gameon-maven-archetype 

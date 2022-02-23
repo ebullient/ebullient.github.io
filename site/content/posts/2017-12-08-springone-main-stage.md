@@ -11,4 +11,4 @@ I will also confess to ad nauseum rehearsal. To reciting what I had to cram into
 
 I didn't really wrap my head around what I wanted to say until the night before. Things just didn't fall into place before then. But hey, I lived! It was quite the experience.
 
-{{< tweet 941051353761288192 >}}
+{{< tweet id="941051353761288192" user="ebullientworks" >}}

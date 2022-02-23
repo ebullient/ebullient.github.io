@@ -1,39 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>conference on ebullient·works</title><link>/tags/conference.html</link><description>Recent content in conference on ebullient·works</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 08 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/conference/index.xml" rel="self" type="application/rss+xml"/><item><title>QCon Plus: The mechanics of metrics</title><link>/2021/11/08/qcon-plus-the-mechanics-of-metrics.html</link><pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate><guid>/2021/11/08/qcon-plus-the-mechanics-of-metrics.html</guid><description>&lt;p>Speaking at the QCon Plus virtual conference was a nice experience. Each track had an ad-hoc meeting room that you could join after the session, which was really cool. It was nice to be able to speak with people that watched my talk directly. It brought back a bit of the in-person conference feel.&lt;/p>
-&lt;p>Of &lt;em>course&lt;/em> the first question was &amp;ldquo;Which edition of D&amp;amp;D?&amp;rdquo; (5e), what I didn't expect was the next question, &amp;ldquo;Is that the new Sesame Street Lego set?&amp;rdquo; (yes).&lt;/p>
+&lt;p>Of &lt;em>course&lt;/em> the first question was &amp;ldquo;Which edition of D&amp;amp;D?&amp;rdquo; (5e), what I didn&amp;rsquo;t expect was the next question, &amp;ldquo;Is that the new Sesame Street Lego set?&amp;rdquo; (yes).&lt;/p>
 &lt;p>The recording will be generally available in August of 2022!&lt;/p></description></item><item><title>J4K Keynote: OMG The Best Java Ever!</title><link>/2021/10/07/j4k-keynote-omg-the-best-java-ever.html</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>/2021/10/07/j4k-keynote-omg-the-best-java-ever.html</guid><description>&lt;p>OMG! I had a hard time writing this. I was asked if I would do it, which I said yes to before really having a clear idea what I wanted to talk about. As a keynote for J4K, I could have spoken about &amp;hellip; a whole plethora of things.&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/SqnmLUXJXVA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;div class="embed video-player">
+&lt;iframe id="SqnmLUXJXVA" class="youtube-player" frameborder="0" allowfullscreen
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+src="https://www.youtube.com/embed/SqnmLUXJXVA">
+&lt;/iframe>
 &lt;/div></description></item><item><title>DevNexus 2021: The Mechanics of Metrics</title><link>/2021/03/05/DevNexus-mechanics-of-metrics.html</link><pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate><guid>/2021/03/05/DevNexus-mechanics-of-metrics.html</guid><description>&lt;p>A reframing of the metrics talk, with a much more detailed look at how emitted metrics are aggregated by PromQL / Grafana dashboards.&lt;/p>
 &lt;p>I quite like this one, to be honest.&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/ru7ySIqa6qI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;div class="embed video-player">
+&lt;iframe id="ru7ySIqa6qI" class="youtube-player" frameborder="0" allowfullscreen
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+src="https://www.youtube.com/embed/ru7ySIqa6qI">
+&lt;/iframe>
 &lt;/div></description></item><item><title>J4K 2020: Metrics for the win!</title><link>/2020/11/12/metrics-for-the-win-at-j4k.html</link><pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate><guid>/2020/11/12/metrics-for-the-win-at-j4k.html</guid><description>&lt;p>A longer form of Metrics for the Win! recorded for J4K, which occurred in
 October of 2020.&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/emOBXgDZ9Pc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;div class="embed video-player">
+&lt;iframe id="emOBXgDZ9Pc" class="youtube-player" frameborder="0" allowfullscreen
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+src="https://www.youtube.com/embed/emOBXgDZ9Pc">
+&lt;/iframe>
 &lt;/div></description></item><item><title>JConf 2020: Metrics for the win!</title><link>/2020/10/12/metrics-for-the-win-at-jconf.html</link><pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate><guid>/2020/10/12/metrics-for-the-win-at-jconf.html</guid><description>&lt;p>A fully online recorded talk, sliding in at just 30 minutes, for JConf in the fall of 2020.&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/YK4e3wefqWY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;div class="embed video-player">
+&lt;iframe id="YK4e3wefqWY" class="youtube-player" frameborder="0" allowfullscreen
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+src="https://www.youtube.com/embed/YK4e3wefqWY">
+&lt;/iframe>
 &lt;/div></description></item><item><title>DevNexus 2020: Metrics for the Win</title><link>/2020/02/21/devnexus-metrics-for-the-win.html</link><pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate><guid>/2020/02/21/devnexus-metrics-for-the-win.html</guid><description>&lt;p>While not recorded, it was nice to revisit and brush up the Monster Combat application. I enjoyed working with Quarkus! Micrometer was easy to bring in as a third-partly library.&lt;/p></description></item><item><title>IBM Digital Developer 2019: A Flotilla of Open Source tools...</title><link>/2019/11/02/ibm-digital-developer-2019-a-flotilla-of-open-source-tools.html</link><pubDate>Sat, 02 Nov 2019 00:00:00 +0000</pubDate><guid>/2019/11/02/ibm-digital-developer-2019-a-flotilla-of-open-source-tools.html</guid><description>&lt;p>How often do you get to give a talk with the word &amp;ldquo;Flotilla&amp;rdquo; in the title?&lt;/p>
-&lt;p>Maybe some day I'll be able to share the recording (it is not public, at the moment). This is a revision / revisitation of what was covered at Oracle CodeOne.&lt;/p></description></item><item><title>SpringOne 2019: Monsters and Metrics</title><link>/2019/10/23/springone-monsters-metrics.html</link><pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate><guid>/2019/10/23/springone-monsters-metrics.html</guid><description>&lt;p>Two things collided in my brain this year ahead of SpringOne: Preparing a new talk from scratch covering the Micrometer (and the related Spring implementation), and learning everything I needed to know to be a Dungeon Master for my 10-year-old son and his friends.&lt;/p>
+&lt;p>Maybe some day I&amp;rsquo;ll be able to share the recording (it is not public, at the moment). This is a revision / revisitation of what was covered at Oracle CodeOne.&lt;/p></description></item><item><title>SpringOne 2019: Monsters and Metrics</title><link>/2019/10/23/springone-monsters-metrics.html</link><pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate><guid>/2019/10/23/springone-monsters-metrics.html</guid><description>&lt;p>Two things collided in my brain this year ahead of SpringOne: Preparing a new talk from scratch covering the Micrometer (and the related Spring implementation), and learning everything I needed to know to be a Dungeon Master for my 10-year-old son and his friends.&lt;/p>
 &lt;p>Thanks to a brilliant suggestion from a friend, these two things collided in the talk, too. Which lightened the mental load (or at least reduced the amount of full stack swapping going on).&lt;/p>
 &lt;p>Github repository: &lt;a href="https://github.com/ebullient/monster-combat">ebullient/monster-combat&lt;/a> with Spring Boot 2, WebFlux, and Micrometer&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/_Vg4J9cdO6s" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;div class="embed video-player">
+&lt;iframe id="_Vg4J9cdO6s" class="youtube-player" frameborder="0" allowfullscreen
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+src="https://www.youtube.com/embed/_Vg4J9cdO6s">
+&lt;/iframe>
 &lt;/div>
 &lt;p>And hooray! ;)&lt;/p>
 &lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">My day has just been made. Someone that attended my @s1p talk just stopped me as we got off the plane to let me know they liked it. 😇☺️ I hope everyone else enjoyed Austin this week!&lt;/p>&amp;mdash; Erin Schnabel (@ebullientworks) &lt;a href="https://twitter.com/ebullientworks/status/1182483499552591872?ref_src=twsrc%5Etfw">October 11, 2019&lt;/a>&lt;/blockquote>
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>CodeOne 2019: Overcoming Obstacles: Streamline Your Move to the Cloud</title><link>/2019/09/17/codeone-appsody-for-java-development.html</link><pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate><guid>/2019/09/17/codeone-appsody-for-java-development.html</guid><description>&lt;p>JavaOne is gone, CodeOne is here, and IBM attended to represent a new collection of open source projects attempting to aid companies adopt cloud native development.&lt;/p>
-&lt;p>In an &lt;a href="https://share.transistor.fm/s/ee304a5c">interview with Luke Shantz&lt;/a>, I described what role I felt Appsody played in the Cloud-native development game, including how it could make developer's lives easier.&lt;/p>
-&lt;p>&lt;strong>Edit&lt;/strong>: Not all of the tech we brought to CodeOne in 2019 lived for very long, but some of it did address real issues, and I imagine we'll see it creep back in via other methods.&lt;/p></description></item><item><title>Spring IO 2019: Spring and the Mystery of the Polyglot Stack</title><link>/2019/05/17/spring-io-2019-spring-and-the-mystery-of-the-polyglot-stack.html</link><pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate><guid>/2019/05/17/spring-io-2019-spring-and-the-mystery-of-the-polyglot-stack.html</guid><description>This was one of those sessions that did not go right.
-The speaker before ran over, and there were two of us. We didn't have time to get our microphones set up right. So switching between speakers, and between slides and demo was awkward at best.
+&lt;p>In an &lt;a href="https://share.transistor.fm/s/ee304a5c">interview with Luke Shantz&lt;/a>, I described what role I felt Appsody played in the Cloud-native development game, including how it could make developer&amp;rsquo;s lives easier.&lt;/p>
+&lt;p>&lt;strong>Edit&lt;/strong>: Not all of the tech we brought to CodeOne in 2019 lived for very long, but some of it did address real issues, and I imagine we&amp;rsquo;ll see it creep back in via other methods.&lt;/p></description></item><item><title>Spring IO 2019: Spring and the Mystery of the Polyglot Stack</title><link>/2019/05/17/spring-io-2019-spring-and-the-mystery-of-the-polyglot-stack.html</link><pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate><guid>/2019/05/17/spring-io-2019-spring-and-the-mystery-of-the-polyglot-stack.html</guid><description>This was one of those sessions that did not go right.
+The speaker before ran over, and there were two of us. We didn&amp;rsquo;t have time to get our microphones set up right. So switching between speakers, and between slides and demo was awkward at best.
 It was no fun.
-As this was a revisitation of our DevNexus talk, we knew it could work.. it just didn't.</description></item><item><title>DevNexus 2019: Spring and the Mystery of the Polyglot Stack</title><link>/2019/02/18/spring-and-the-mystery-of-the-polyglot-stack.html</link><pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate><guid>/2019/02/18/spring-and-the-mystery-of-the-polyglot-stack.html</guid><description>Spring and the Mystery of the Polyglot Stack
+As this was a revisitation of our DevNexus talk, we knew it could work.. it just didn&amp;rsquo;t.</description></item><item><title>DevNexus 2019: Spring and the Mystery of the Polyglot Stack</title><link>/2019/02/18/spring-and-the-mystery-of-the-polyglot-stack.html</link><pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate><guid>/2019/02/18/spring-and-the-mystery-of-the-polyglot-stack.html</guid><description>Spring and the Mystery of the Polyglot Stack
 Modern Cloud Native applications are not composed of a single language, or runtime. There are often local standards and requirements for individual services, intended to allow the application as a whole to be properly managed, and secure. In this talk, Erin and Ozzy will discuss what it means to be a Spring application in a polyglot environment, with a focus on interoperable security, logging, metrics, and including a brief boat trip to view the architectural considerations for a Spring Cloud application on Kubernetes.
 This session has its root in some work Ozzy and I did with one of our customers.</description></item><item><title>Code @ IBM Think 2019: Cloud-Native Security for Java</title><link>/2019/02/16/ibm-think-cloud-native-security.html</link><pubDate>Sat, 16 Feb 2019 00:00:00 +0000</pubDate><guid>/2019/02/16/ibm-think-cloud-native-security.html</guid><description>&lt;p>Billy and I put together a tidy little talk about Cloud-Native
 Security for Java applications to give at &amp;ldquo;Code @ Think&amp;rdquo; during
 the annual IBM Think Conference.&lt;/p></description></item><item><title>Oracle CodeOne 2018: Reactive Java? Let Us Count the Ways</title><link>/2018/10/24/oracle-codeone-2018-reactive-java-let-us-count-the-ways.html</link><pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate><guid>/2018/10/24/oracle-codeone-2018-reactive-java-let-us-count-the-ways.html</guid><description>Jabberwocky.
-I can't make conference materials with a straight-face when left to my own devices, I just can't!
+I can&amp;rsquo;t make conference materials with a straight-face when left to my own devices, I just can&amp;rsquo;t!
 Reactive paradigms can be confusing, so Ozzy and I put this workshop together.
 First, we give an overview of reactive operators. Using the Jabberwocky as input, we present participants with problems to solve.
 First with RxJava, then with Spring WebFlux, and finally with Akka.
@@ -43,8 +58,11 @@ Other references:
 https://openliberty.io/blog/2018/10/18/meet-us-at-oc1-and-ece.html</description></item><item><title>CF Summit 2018: Cloud Native and the Java Ecosystem</title><link>/2018/04/19/cfsummit-java-ecosystem-collision.html</link><pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate><guid>/2018/04/19/cfsummit-java-ecosystem-collision.html</guid><description>&lt;p>I was the lead for the Java track for CF Summit 2018. We had a great slate of speakers.&lt;/p>
 &lt;p>I was able to make attempt number two for the evolution of Cloud Native and the Java ecosystem.&lt;/p>
 &lt;p>&lt;a href="https://cfna18.sched.com/event/DdaB/the-java-ecosystem-collision-what-is-the-future-of-cloud-native-erin-schnabel-ibm">The Java Ecosystem Collision: What is the Future of Cloud Native? - Erin Schnabel, IBM&lt;/a>&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/NkBNLkmldnI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;div class="embed video-player">
+&lt;iframe id="NkBNLkmldnI" class="youtube-player" frameborder="0" allowfullscreen
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+src="https://www.youtube.com/embed/NkBNLkmldnI">
+&lt;/iframe>
 &lt;/div></description></item><item><title>Index 2018: What is a Cloud Native application, anyway?</title><link>/2018/03/10/index-conference-cloud-native.html</link><pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate><guid>/2018/03/10/index-conference-cloud-native.html</guid><description>&lt;p>I gave a few talks at &lt;strong>Index&lt;/strong> Developer Conference in San Francisco:&lt;/p>
 &lt;ol>
 &lt;li>
@@ -58,11 +76,14 @@ https://openliberty.io/blog/2018/10/18/meet-us-at-oc1-and-ece.html</description>
 &lt;/li>
 &lt;/ol>
 &lt;p>I did have a lovely interview with Kevin Allen beforehand:&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/y4aCcT_lmik" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;div class="embed video-player">
+&lt;iframe id="y4aCcT_lmik" class="youtube-player" frameborder="0" allowfullscreen
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+src="https://www.youtube.com/embed/y4aCcT_lmik">
+&lt;/iframe>
 &lt;/div></description></item><item><title>SpringOne 2017: Lightning talk on the Mainstage</title><link>/2017/12/08/springone-main-stage.html</link><pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate><guid>/2017/12/08/springone-main-stage.html</guid><description>I will absolutely confess that it was daunting to start with, but that once I was out on the stage, everything was fine.
-I will also confess to ad nauseum rehearsal. To reciting what I had to cram into two segments (one only 2 minutes long, and the other 2 minutes and 30 seconds) to every inanimate object in my hotel room: lamps, laptops, mirrors, showerheads, and I'm pretty sure my pillow while I was sleeping.
-I didn't really wrap my head around what I wanted to say until the night before. Things just didn't fall into place before then. But hey, I lived! It was quite the experience.
+I will also confess to ad nauseum rehearsal. To reciting what I had to cram into two segments (one only 2 minutes long, and the other 2 minutes and 30 seconds) to every inanimate object in my hotel room: lamps, laptops, mirrors, showerheads, and I&amp;rsquo;m pretty sure my pillow while I was sleeping.
+I didn&amp;rsquo;t really wrap my head around what I wanted to say until the night before. Things just didn&amp;rsquo;t fall into place before then. But hey, I lived! It was quite the experience.
 Watch the #SpringOne mainstage lightning talks on Distributed Systems, featuring @cdavisafc, @meaghnk, @midatlantictez, @ebullientworks, and Mathangi Venkatesan. https://t.co/PVxlz1ta5V
 &amp;mdash; VMware Tanzu (@VMwareTanzu) December 13, 2017</description></item><item><title>JavaOne 2017: Introduction to Reactive Systems</title><link>/2017/10/05/javaone-introduction-to-reactive-systems.html</link><pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate><guid>/2017/10/05/javaone-introduction-to-reactive-systems.html</guid><description>A Joint adventure with Lightbend, we lead folks in the workshop through a specialized version of our Game On! Text Adventure..
 IBM and Lightbend are teaming up to introduce you to developing reactive microservices on Kubernetes. Lagom is a microservice framework built atop Lightbend’s tried-and-proven distributed systems toolkit, Akka. This framework helps you build microservices as systems—reactive systems, to be precise—so that your microservices are elastic and resilient by nature. The reactive programming model aims to ensure systems availability and performance while processing streaming data. You will use Lagom’s development environment to avoid tedious setup and scripting when developing locally and will deploy your application to a Kubernetes cluster, so others in the workshop (and at JavaOne) can test out what you built.
@@ -75,7 +96,7 @@ Getting ready for our lab this afternoon -- HOL7896 at 4:30 PDT today! https://t
 &lt;li>Monolithic Application to Microservice Architecture: How to break down your existing Application&lt;/li>
 &lt;li>Real-World Microservice Development with IBM WebSphere Liberty: Game On!&lt;/li>
 &lt;/ol>
-&lt;p>There were a few more that I haven't posted the charts for.. phew!&lt;/p></description></item><item><title>QCon SF 2016: Microservices and Sticky Notes, Game On!</title><link>/2016/11/06/qcon-sf-after-hours-microservices-and-elections.html</link><pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate><guid>/2016/11/06/qcon-sf-after-hours-microservices-and-elections.html</guid><description>&lt;p>This was an after hours session, served up alongside food and drinks.&lt;/p>
+&lt;p>There were a few more that I haven&amp;rsquo;t posted the charts for.. phew!&lt;/p></description></item><item><title>QCon SF 2016: Microservices and Sticky Notes, Game On!</title><link>/2016/11/06/qcon-sf-after-hours-microservices-and-elections.html</link><pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate><guid>/2016/11/06/qcon-sf-after-hours-microservices-and-elections.html</guid><description>&lt;p>This was an after hours session, served up alongside food and drinks.&lt;/p>
 &lt;p>Attendees sat around big tables, laden with sticky notes, and were encouraged to brainstorm what a room for a text-based adventure game could be (without coding it, in this case). The intent was to mentally walk people through the problems where they usually get stuck if they are used to monolithic/traditional deployment environments, and then talk with their neighbors or ask questons for how to overcome problems as we get there.&lt;/p>
 &lt;p>I know some did want to have the laptops out, but with food and drink, I thought it best if we stick with sticky notes and talking. ;)&lt;/p></description></item><item><title>OSCon London 2016: Game On! Microservices in the open</title><link>/2016/10/17/oscon-london.html</link><pubDate>Mon, 17 Oct 2016 00:00:00 +0000</pubDate><guid>/2016/10/17/oscon-london.html</guid><description>&lt;p>Kate Stanley and I took Game On Text Adventure to &lt;a href="https://www.oreilly.com/library/view/oscon-2016-/9781491958476/">OSCon London&lt;/a>! We spoke about our experiences building the game, and Kate created a new room in Java from scratch and showed the game finding the room, and coping as the service recycled in response to updates.&lt;/p>
 &lt;div class="embed-container">
@@ -83,20 +104,19 @@ Getting ready for our lab this afternoon -- HOL7896 at 4:30 PDT today! https://t
 &lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>
 &lt;/div></description></item><item><title>JavaOne 2016: Game On! Microservices</title><link>/2016/09/12/javaone-game-on.html</link><pubDate>Mon, 12 Sep 2016 00:00:00 +0000</pubDate><guid>/2016/09/12/javaone-game-on.html</guid><description>&lt;p>We ran a contest! People wrote rooms for our game!
 And I got to talk about it in a big room full of people!&lt;/p>
-&lt;figure>
-&lt;img src="/files/2016-JavaOne-GO-Booth_edited.jpg"/> &lt;figcaption>
+&lt;figure>&lt;img src="/files/2016-JavaOne-GO-Booth_edited.jpg"/>&lt;figcaption>
 &lt;h4>Chilling with Ross Pavitt at the IBM booth&lt;/h4>
 &lt;/figcaption>
 &lt;/figure></description></item><item><title>IBM InterConnect 2016: Microservices, Monoliths, and Async EE7</title><link>/2016/02/26/ibm-interconnect-monoliths-microservices-ee7.html</link><pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate><guid>/2016/02/26/ibm-interconnect-monoliths-microservices-ee7.html</guid><description>&lt;p>Lots to talk about this year!&lt;/p>
 &lt;ol>
 &lt;li>Creating Twelve Factor Applications with Liberty on Bluemix&lt;/li>
-&lt;li>Don't Wait! Develop responsive applications with Java EE7 instead!&lt;/li>
+&lt;li>Don&amp;rsquo;t Wait! Develop responsive applications with Java EE7 instead!&lt;/li>
 &lt;li>Evolving a monolithic Java EE application to microservices: Microservices meet legacy applications&lt;/li>
 &lt;/ol>
-&lt;p>There were a few more that I haven't posted the charts for..&lt;/p></description></item><item><title>IBM InterConnect 2015: WebSockets and Async EE7</title><link>/2015/02/27/ibm-interconnect-2015-websockets-and-async-ee7.html</link><pubDate>Fri, 27 Feb 2015 00:00:00 +0000</pubDate><guid>/2015/02/27/ibm-interconnect-2015-websockets-and-async-ee7.html</guid><description>&lt;p>All of the new shiny Async things.&lt;/p>
+&lt;p>There were a few more that I haven&amp;rsquo;t posted the charts for..&lt;/p></description></item><item><title>IBM InterConnect 2015: WebSockets and Async EE7</title><link>/2015/02/27/ibm-interconnect-2015-websockets-and-async-ee7.html</link><pubDate>Fri, 27 Feb 2015 00:00:00 +0000</pubDate><guid>/2015/02/27/ibm-interconnect-2015-websockets-and-async-ee7.html</guid><description>&lt;p>All of the new shiny Async things.&lt;/p>
 &lt;ol>
 &lt;li>Introduction to WebSockets&lt;/li>
-&lt;li>Don't Wait! Develop Responsive Applications with Java EE7 Instead&lt;/li>
+&lt;li>Don&amp;rsquo;t Wait! Develop Responsive Applications with Java EE7 Instead&lt;/li>
 &lt;/ol></description></item><item><title>OSGi DevCon 2014: Building a right-sized, do-anything runtime using OSGi technologies</title><link>/2014/06/13/osgi-devcon-building-a-right-sized-do-anything-runtime-using-osgi-technologies.html</link><pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate><guid>/2014/06/13/osgi-devcon-building-a-right-sized-do-anything-runtime-using-osgi-technologies.html</guid><description>&lt;p>This was a fun conference. In NYC, co-located with QCon and filled with lots of great people. Explaining the crazy things Liberty does is also a blast.&lt;/p></description></item><item><title>IBM Impact 2014: WebSockets and Liberty Deployment Topologies</title><link>/2014/05/03/ibm-impact-2014-websockets-and-liberty-deployment-topologies.html</link><pubDate>Sat, 03 May 2014 00:00:00 +0000</pubDate><guid>/2014/05/03/ibm-impact-2014-websockets-and-liberty-deployment-topologies.html</guid><description>&lt;p>This was also my first talk in a long time, given in a big ballroom. Nothing like jumping right in.&lt;/p>
 &lt;ol>
 &lt;li>WebSockets for Java EE&lt;/li>

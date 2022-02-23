@@ -1,13 +1,61 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><link rel=stylesheet href=/blog.css><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><title>Using Grok filters to parse Liberty Logs &ndash; ebullient·works</title><link rel=canonical href=/2015/09/02/logstash-and-liberty-optimizing-data-collection-for-the-cloud.html></head><body><div class=wrapper><header class=page-header><h1><a href=/>ebullient·works</a></h1><div>[ <a href=/about/>About</a> &#183; <a href=/archive/>Archive</a> &#183; <a href=/tags/>Tags</a> ]</div></header><main class=page id=content><article class=post><header><h1>Using Grok filters to parse Liberty Logs</h1></header><section class=content><blockquote><p>Note: Originally posted on <a href=https://developer.ibm.com/wasdev/docs/logstash-liberty-optimizing-data-collection-cloud/>IBM DeveloperWorks</a>. Some of this content is old, but the gist is still useful.</p></blockquote><p>Microservice architectures are highly distributed, with services provided by individual processes that are scaled independently. Understanding and maintaining overall system health becomes increasingly difficult as the system grows; it becomes impractical to look at services instance-by-instance. Monitoring systems like nagios help, but what happens when things go wrong? It is not always possible (much less easy) to ssh into any given system. In some environments the filesystem used by any given instance is transient; when the process stops, the filesystem is cleaned up, including all the logs!</p><p>The ELK stack (Elasticsearch, Logstash, and Kibana) is a commonly used system for gathering data (both logs and metrics), and allowing that data to be aggregated, analyzed, visualized, and searched in useful ways.</p><p>In this post, I'll focus on getting the most out of WAS Liberty logs using logstash. This isn't the only way: the IBM WebSphere Liberty buildpack in Bluemix, for example, uses loggregator (Cloud Foundry) rather than logstash. But I do hope that this gives you some ideas for how to make the logging capabilities in WAS Liberty work for your environment.</p><h2 id=getting-useful-information-to-system-streams>Getting useful information to system streams</h2><p>When operating on its own, WAS Liberty produces a few different log files by default:</p><ul><li>&ldquo;console&rdquo; output is lightly formatted and contains no timestamps. Failure/error messages and System.err are routed to STDERR, while other important messages and System.out, are routed to STDOUT. When run in the background via <code>server start</code>, both streams are collected into a <code>console.log</code> file.</li><li><code>messages.log</code> also collects System out, System err, as well as a larger subset of messages (including INFO).</li><li><code>trace.log</code> only appears if detailed trace is enabled. It includes output from all enabled log sources, including System.out and System.err.</li></ul><p>Having log messages go directly to STDOUT and/or STDERR is a good environment-agnostic practice for microservices (and is also <a href=http://12factor.net/logs>one of the 12-factors</a>). It is a pretty simple change to get formatted Liberty logs writing to STDOUT. To ensure we don't miss any messages from server bootstrap and startup, we'll do this via a <a href="http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_inst_bootstrap.html?cp=SSAW57_8.5.5%2F1-3-11-0-2-6"><code>bootstrap.properties</code> file</a> that contains:</p><pre><code class=language-properties data-lang=properties># Write WLP logs to stdout directly
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="chrome=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<link rel=stylesheet href=/blog.css>
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<title>
+Using Grok filters to parse Liberty Logs &ndash; ebullient·works
+</title>
+<link rel=canonical href=/2015/09/02/logstash-and-liberty-optimizing-data-collection-for-the-cloud.html>
+</head>
+<body>
+<div class=wrapper>
+<header class=page-header>
+<h1><a href=/>ebullient·works</a></h1>
+<div>
+[ <a href=/about/>About</a> &#183; <a href=/archive/>Archive</a> &#183; <a href=/tags/>Tags</a> ]
+</div>
+</header>
+<main class=page id=content>
+<article class=post>
+<header>
+<h1>Using Grok filters to parse Liberty Logs</h1>
+</header>
+<section class=content>
+<blockquote>
+<p>Note: Originally posted on <a href=https://developer.ibm.com/wasdev/docs/logstash-liberty-optimizing-data-collection-cloud/>IBM DeveloperWorks</a>. Some of this content is old, but the gist is still useful.</p>
+</blockquote>
+<p>Microservice architectures are highly distributed, with services provided by individual processes that are scaled independently. Understanding and maintaining overall system health becomes increasingly difficult as the system grows; it becomes impractical to look at services instance-by-instance. Monitoring systems like nagios help, but what happens when things go wrong? It is not always possible (much less easy) to ssh into any given system. In some environments the filesystem used by any given instance is transient; when the process stops, the filesystem is cleaned up, including all the logs!</p>
+<p>The ELK stack (Elasticsearch, Logstash, and Kibana) is a commonly used system for gathering data (both logs and metrics), and allowing that data to be aggregated, analyzed, visualized, and searched in useful ways.</p>
+<p>In this post, I&rsquo;ll focus on getting the most out of WAS Liberty logs using logstash. This isn&rsquo;t the only way: the IBM WebSphere Liberty buildpack in Bluemix, for example, uses loggregator (Cloud Foundry) rather than logstash. But I do hope that this gives you some ideas for how to make the logging capabilities in WAS Liberty work for your environment.</p>
+<h2 id=getting-useful-information-to-system-streams>Getting useful information to system streams</h2>
+<p>When operating on its own, WAS Liberty produces a few different log files by default:</p>
+<ul>
+<li>&ldquo;console&rdquo; output is lightly formatted and contains no timestamps. Failure/error messages and System.err are routed to STDERR, while other important messages and System.out, are routed to STDOUT. When run in the background via <code>server start</code>, both streams are collected into a <code>console.log</code> file.</li>
+<li><code>messages.log</code> also collects System out, System err, as well as a larger subset of messages (including INFO).</li>
+<li><code>trace.log</code> only appears if detailed trace is enabled. It includes output from all enabled log sources, including System.out and System.err.</li>
+</ul>
+<p>Having log messages go directly to STDOUT and/or STDERR is a good environment-agnostic practice for microservices (and is also <a href=http://12factor.net/logs>one of the 12-factors</a>). It is a pretty simple change to get formatted Liberty logs writing to STDOUT. To ensure we don&rsquo;t miss any messages from server bootstrap and startup, we&rsquo;ll do this via a <a href="http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_inst_bootstrap.html?cp=SSAW57_8.5.5%2F1-3-11-0-2-6"><code>bootstrap.properties</code> file</a> that contains:</p>
+<pre tabindex=0><code class=language-properties data-lang=properties># Write WLP logs to stdout directly
 com.ibm.ws.logging.trace.file.name=stdout
-</code></pre><p>As you might infer, this re-routes what would go to <code>trace.log</code> to STDOUT. Before this change, STDOUT when running Liberty looks something like this:</p><pre><code class=language-console data-lang=console>$ wlp/bin/server run
-Launching defaultServer (WebSphere Application Server 8.5.5.6/wlp-1.0.9.cl50620150610-1749) on Java HotSpot(TM) 64-Bit Server VM, version 1.7.0_72-b14 (en_US)
-[AUDIT   ] CWWKE0001I: The server defaultServer has been launched.
-</code></pre><p>Afterwards, it looks more like (notice the leading timestamp and fixed fields):</p><pre><code class=language-console data-lang=console>$ wlp/bin/server run
-Launching defaultServer (WebSphere Application Server 8.5.5.6/wlp-1.0.9.cl50620150610-1749) on Java HotSpot(TM) 64-Bit Server VM, version 1.7.0_72-b14 (en_US)
-[8/25/15 12:40:44:479 EDT] 00000001 id=         com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
-</code></pre><p>In some cases, this might be enough. If you're running Liberty in the foreground in a Docker container, Liberty's formatted log entries would now be spilling out as the Docker container's STDOUT. If the hosting environment does post-processing on that output, you may have nothing left to do.</p><h2 id=using-logstash-to-post-process-logs>Using logstash to post-process logs</h2><p>However, we can use logstash to process Liberty log output to produce more robust events. How you link logstash and Liberty together will depend on how and where Liberty is running. As a bare minimum useful for testing filters, you can try something like the following:</p><pre><code class=language-console data-lang=console>$ wlp/bin/server run | logstash -f /path/to/logstash.conf
-</code></pre><p>You can use the <code>-e</code> command line option to define your filters inline, but I'm starting with the configuration file up front because I'll spend the rest of the post adding things to it.</p><h2 id=changing-the-output--making-sure-it-works>Changing the output / making sure it works</h2><p>I'll start with the log-processing equivalent of &ldquo;Hello World&rdquo;. Edit your logstash.conf file to contain:</p><pre><code>input {
+</code></pre><p>As you might infer, this re-routes what would go to <code>trace.log</code> to STDOUT. Before this change, STDOUT when running Liberty looks something like this:</p>
+<div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-console data-lang=console><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>$ wlp/bin/server run
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>Launching defaultServer (WebSphere Application Server 8.5.5.6/wlp-1.0.9.cl50620150610-1749) on Java HotSpot(TM) 64-Bit Server VM, version 1.7.0_72-b14 (en_US)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>[AUDIT   ] CWWKE0001I: The server defaultServer has been launched.
+</code></pre></div><p>Afterwards, it looks more like (notice the leading timestamp and fixed fields):</p>
+<div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-console data-lang=console><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>$ wlp/bin/server run
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>Launching defaultServer (WebSphere Application Server 8.5.5.6/wlp-1.0.9.cl50620150610-1749) on Java HotSpot(TM) 64-Bit Server VM, version 1.7.0_72-b14 (en_US)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>[8/25/15 12:40:44:479 EDT] 00000001 id=         com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
+</code></pre></div><p>In some cases, this might be enough. If you&rsquo;re running Liberty in the foreground in a Docker container, Liberty&rsquo;s formatted log entries would now be spilling out as the Docker container&rsquo;s STDOUT. If the hosting environment does post-processing on that output, you may have nothing left to do.</p>
+<h2 id=using-logstash-to-post-process-logs>Using logstash to post-process logs</h2>
+<p>However, we can use logstash to process Liberty log output to produce more robust events. How you link logstash and Liberty together will depend on how and where Liberty is running. As a bare minimum useful for testing filters, you can try something like the following:</p>
+<div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-console data-lang=console><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>$ wlp/bin/server run <span style=color:#111>|</span> logstash -f /path/to/logstash.conf
+</code></pre></div><p>You can use the <code>-e</code> command line option to define your filters inline, but I&rsquo;m starting with the configuration file up front because I&rsquo;ll spend the rest of the post adding things to it.</p>
+<h2 id=changing-the-output--making-sure-it-works>Changing the output / making sure it works</h2>
+<p>I&rsquo;ll start with the log-processing equivalent of &ldquo;Hello World&rdquo;. Edit your logstash.conf file to contain:</p>
+<pre tabindex=0><code>input {
   stdin {
   }
 }
@@ -15,17 +63,24 @@ output {
   stdout {
   }
 }
-</code></pre><p>You get back pretty much exactly what you had before (with a leading message about logstash startup being complete and additional leading logstash timestamps):</p><pre><code class=language-console data-lang=console>$ wlp/bin/server run | logstash -f logstash.conf
-Logstash startup completed
-2015-08-26T22:23:04.587Z ec2db0f13b8f Launching defaultServer (WebSphere Application Server 8.5.5.6/wlp-1.0.9.cl50620150610-1749) on OpenJDK 64-Bit Server VM, version 1.8.0_45-internal-b14 (en)
-2015-08-26T22:23:04.588Z ec2db0f13b8f [8/26/15 22:22:45:918 UTC] 00000001 id=         com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
-</code></pre><p>This does increase the amount of time it takes before we can see that the server has started properly, as the messages piped through logstash get delayed a bit while logstash starts itself.</p><h2 id=debugging>Debugging</h2><p>Given we're going to start doing crazy things, we'll want to be able to see how we changed what logstash stores for each entry. We'll use the <code>rubydebug</code> codec to do this:</p><pre><code>output {
+</code></pre><p>You get back pretty much exactly what you had before (with a leading message about logstash startup being complete and additional leading logstash timestamps):</p>
+<div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-console data-lang=console><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>$ wlp/bin/server run <span style=color:#111>|</span> logstash -f logstash.conf
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>Logstash startup completed
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>2015-08-26T22:23:04.587Z ec2db0f13b8f Launching defaultServer (WebSphere Application Server 8.5.5.6/wlp-1.0.9.cl50620150610-1749) on OpenJDK 64-Bit Server VM, version 1.8.0_45-internal-b14 (en)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4</span>2015-08-26T22:23:04.588Z ec2db0f13b8f [8/26/15 22:22:45:918 UTC] 00000001 id=         com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
+</code></pre></div><p>This does increase the amount of time it takes before we can see that the server has started properly, as the messages piped through logstash get delayed a bit while logstash starts itself.</p>
+<h2 id=debugging>Debugging</h2>
+<p>Given we&rsquo;re going to start doing crazy things, we&rsquo;ll want to be able to see how we changed what logstash stores for each entry. We&rsquo;ll use the <code>rubydebug</code> codec to do this:</p>
+<pre tabindex=0><code>output {
   stdout {
     codec =&gt; rubydebug
   }
   ...
 }
-</code></pre><p>Once we add that, those first few lines now look like this (please do scroll right):</p><h2 id=handle-multiple-lines>Handle multiple lines</h2><p>We're going to start adding filters in the next few sections. The first we will add is for multi-line output.</p><pre><code>input {
+</code></pre><p>Once we add that, those first few lines now look like this (please do scroll right):</p>
+<h2 id=handle-multiple-lines>Handle multiple lines</h2>
+<p>We&rsquo;re going to start adding filters in the next few sections. The first we will add is for multi-line output.</p>
+<pre tabindex=0><code>input {
   ...
 }
 filter {
@@ -41,7 +96,10 @@ filter {
 output {
   ...
 }
-</code></pre><p>Note first that the pattern is negated; we're asserting that any line that does not match the pattern is a continuation, and should be lumped together with the previous line.</p><p>Liberty log entries (and even wrapped System.out or System.err output) all start with a bracketed timestamp that looks something like, <code>[8/26/15 22:22:45:918 UTC]</code>. But, remember that first line of Liberty trace? &ldquo;Launching defaultServer (WebSphere Application Server 8.5.5.6/wlp-1.0.9.cl50620150610-1749)". Since this is the very first line of output, we have to account for it as a standalone line (go ahead and take it out if you don't believe me&mldr; ).</p><p>Without logstash (just using raw Liberty), you might see the following output if you use an include to reconfigure your httpEndpoint. Note that the Liberty log timestamp is only on the first line, as this is a multi-line entry that is (further) not a stack trace:</p><pre><code>[8/28/15 13:10:45:551 UTC] 00000018 id=         com.ibm.ws.config.xml.internal.ConfigValidator               W CWWKG0011W: The configuration validation did not succeed. Found conflicting settings for com.ibm.ws.http[defaultHttpEndpoint] instance of httpEndpoint configuration.
+</code></pre><p>Note first that the pattern is negated; we&rsquo;re asserting that any line that does not match the pattern is a continuation, and should be lumped together with the previous line.</p>
+<p>Liberty log entries (and even wrapped System.out or System.err output) all start with a bracketed timestamp that looks something like, <code>[8/26/15 22:22:45:918 UTC]</code>. But, remember that first line of Liberty trace? &ldquo;Launching defaultServer (WebSphere Application Server 8.5.5.6/wlp-1.0.9.cl50620150610-1749)&rdquo;. Since this is the very first line of output, we have to account for it as a standalone line (go ahead and take it out if you don&rsquo;t believe me&mldr; ).</p>
+<p>Without logstash (just using raw Liberty), you might see the following output if you use an include to reconfigure your httpEndpoint. Note that the Liberty log timestamp is only on the first line, as this is a multi-line entry that is (further) not a stack trace:</p>
+<pre tabindex=0><code>[8/28/15 13:10:45:551 UTC] 00000018 id=         com.ibm.ws.config.xml.internal.ConfigValidator               W CWWKG0011W: The configuration validation did not succeed. Found conflicting settings for com.ibm.ws.http[defaultHttpEndpoint] instance of httpEndpoint configuration.
   Property httpPort has conflicting values:
     Value 9081 is set in file:/opt/ibm/wlp/usr/servers/defaultServer/server.xml.
     Value 9080 is set in file:/opt/ibm/wlp/usr/servers/defaultServer/configDropins/overrides/docker.xml.
@@ -50,12 +108,29 @@ output {
     Value 9444 is set in file:/opt/ibm/wlp/usr/servers/defaultServer/server.xml.
     Value 9443 is set in file:/opt/ibm/wlp/usr/servers/defaultServer/configDropins/overrides/docker.xml.
   Property httpsPort will be set to 9443.
-</code></pre><p>Once this filter is applied, things are all properly together as one element. Scroll on and on (and on&mldr;) to the right, you'll see all the lines are mashed together in the message separated by <code>\n</code> characters:</p><h2 id=fill-the-logstash-entry-with-interesting-bits-from-liberty-trace>Fill the logstash entry with interesting bits from Liberty trace</h2><p>Just underneath the multiline filter (we'll keep adding just above the <code>## MORE HERE</code> line), we'll add a filter to parse out interesting tidbits from the Liberty log so that we can end up with something useful to trawl through later. This grok filter changes what logstash keeps track of for each entry, and is scary detailed, and is so long it has wrapped. You've been warned.</p><pre><code># Overall WLP filter
+</code></pre><p>Once this filter is applied, things are all properly together as one element. Scroll on and on (and on&mldr;) to the right, you&rsquo;ll see all the lines are mashed together in the message separated by <code>\n</code> characters:</p>
+<h2 id=fill-the-logstash-entry-with-interesting-bits-from-liberty-trace>Fill the logstash entry with interesting bits from Liberty trace</h2>
+<p>Just underneath the multiline filter (we&rsquo;ll keep adding just above the <code>## MORE HERE</code> line), we&rsquo;ll add a filter to parse out interesting tidbits from the Liberty log so that we can end up with something useful to trawl through later. This grok filter changes what logstash keeps track of for each entry, and is scary detailed, and is so long it has wrapped. You&rsquo;ve been warned.</p>
+<pre tabindex=0><code># Overall WLP filter
 grok {
   match =&gt; [ &quot;message&quot;, &quot;(?m)[%{GREEDYDATA:ts}]%{SPACE}%{WORD:threadid}%{SPACE}id=%{BASE16NUM:id}?%{SPACE}%{NOTSPACE:module}%{SPACE}%{WORD:loglevel}%{SPACE}%{GREEDYDATA:message}&quot; ]
   overwrite =&gt; [ &quot;message&quot; ]
 }
-</code></pre><p>This filter removes all of the fixed fields from the beginning of the message, transforming them into logstash entry attributes instead. The elements of the filter:</p><ul><li><code>(?m)</code> &ndash; allows matching across line breaks, which is important when gathering the multi-line payload</li><li><code>\[%{GREEDYDATA:ts}\]</code> &ndash; splices off Liberty's timestamp by matching the brackets and being greedy about the middle, and then stores the timestamp</li><li><code>%{SPACE}</code> &ndash; eats whitespace (used a few times)</li><li><code>%{WORD:threadid}</code> &ndash; stores the thread id</li><li><code>id=%{BASE16NUM:id}?</code> &ndash; stores the associated object id as an attribute (this may or may not have a value, and can be used to group entries that are related to the same instance of some object)</li><li><code>%{NOTSPACE:module}</code> &ndash; stores the name of the Logger</li><li><code>%{WORD:loglevel}</code> &ndash; stores the log level, e.g. O = System.out, R = System.err, E = Error, W = Warning, etc.</li><li><code>%{GREEDYDATA:message}</code> &ndash; replaces the message field with the remainder of the (potentially multi-line) log entry (note that this is possible because of the overwrite directive)</li></ul><p>The output after you add this filter has more individual attributes, and a more focused message field, it looks like this:</p><h2 id=catching-mis-fits>Catching mis-fits</h2><p>As we mess around, we're bound to mis-parse something. In addition to stdout, we'll add an additional output filter to route badly parsed messages to a file (you might want this in /var/log):</p><pre><code>output {
+</code></pre><p>This filter removes all of the fixed fields from the beginning of the message, transforming them into logstash entry attributes instead. The elements of the filter:</p>
+<ul>
+<li><code>(?m)</code> &ndash; allows matching across line breaks, which is important when gathering the multi-line payload</li>
+<li><code>\[%{GREEDYDATA:ts}\]</code> &ndash; splices off Liberty&rsquo;s timestamp by matching the brackets and being greedy about the middle, and then stores the timestamp</li>
+<li><code>%{SPACE}</code> &ndash; eats whitespace (used a few times)</li>
+<li><code>%{WORD:threadid}</code> &ndash; stores the thread id</li>
+<li><code>id=%{BASE16NUM:id}?</code> &ndash; stores the associated object id as an attribute (this may or may not have a value, and can be used to group entries that are related to the same instance of some object)</li>
+<li><code>%{NOTSPACE:module}</code> &ndash; stores the name of the Logger</li>
+<li><code>%{WORD:loglevel}</code> &ndash; stores the log level, e.g. O = System.out, R = System.err, E = Error, W = Warning, etc.</li>
+<li><code>%{GREEDYDATA:message}</code> &ndash; replaces the message field with the remainder of the (potentially multi-line) log entry (note that this is possible because of the overwrite directive)</li>
+</ul>
+<p>The output after you add this filter has more individual attributes, and a more focused message field, it looks like this:</p>
+<h2 id=catching-mis-fits>Catching mis-fits</h2>
+<p>As we mess around, we&rsquo;re bound to mis-parse something. In addition to stdout, we&rsquo;ll add an additional output filter to route badly parsed messages to a file (you might want this in /var/log):</p>
+<pre tabindex=0><code>output {
   stdout {
     codec =&gt; &quot;rubydebug&quot;
   }
@@ -63,7 +138,9 @@ grok {
     file { path =&gt; &quot;failed_parse_events-%{+YYYY-MM-dd}&quot; }
   }
 }
-</code></pre><p>And wouldn't you know, we already have one (a parse error, I mean). When you run with that configuration, the file is created, and it contains:</p><p>Hey! It's that first line that we said wasn't a multi-line entry. The trouble is, it doesn't match the only filter we have defined either. So let's add one:</p><pre><code># Check for the first line (no parsed timestamp)
+</code></pre><p>And wouldn&rsquo;t you know, we already have one (a parse error, I mean). When you run with that configuration, the file is created, and it contains:</p>
+<p>Hey! It&rsquo;s that first line that we said wasn&rsquo;t a multi-line entry. The trouble is, it doesn&rsquo;t match the only filter we have defined either. So let&rsquo;s add one:</p>
+<pre><code># Check for the first line (no parsed timestamp)
 if [ts] !~ /.+/ {
   grok {
     match =&gt; [ &quot;message&quot;, &quot;(WebSphere Application Server)&quot; ]
@@ -71,13 +148,24 @@ if [ts] !~ /.+/ {
     remove_tag =&gt; [&quot;_grokparsefailure&quot;]
   }
 }
-</code></pre><p>You can only have one dominant grok filter. If you want to do any subsequent filters, they need to be guarded as this one is. This grok filter will only be attempted if the match failed on the previous grok filter (i.e. the ts field hasn't been set). We then look to see if the WebSphere Application Server string is in there, and if it is, tag it as a &ldquo;version&rdquo; entry and remove the &ldquo;_grokparsefailure&rdquo; tag, as we have now successfully parsed it. Removing the parse failure tag is the more important of the two, IMO. The result looks like this:</p><p>See? Much nicer, no parse errors, and a potentially useful version tag. Not bad.</p><h2 id=tag-exceptions>Tag exceptions</h2><p>To tag exceptions, we'll add this filter (again, continuing to insert into the logstash.conf just abouve the <code>## MORE HERE.</code> line):</p><pre><code># tag exceptions / stack traces
+</code></pre>
+<p>You can only have one dominant grok filter. If you want to do any subsequent filters, they need to be guarded as this one is. This grok filter will only be attempted if the match failed on the previous grok filter (i.e. the ts field hasn&rsquo;t been set). We then look to see if the WebSphere Application Server string is in there, and if it is, tag it as a &ldquo;version&rdquo; entry and remove the &ldquo;_grokparsefailure&rdquo; tag, as we have now successfully parsed it. Removing the parse failure tag is the more important of the two, IMO. The result looks like this:</p>
+<p>See? Much nicer, no parse errors, and a potentially useful version tag. Not bad.</p>
+<h2 id=tag-exceptions>Tag exceptions</h2>
+<p>To tag exceptions, we&rsquo;ll add this filter (again, continuing to insert into the logstash.conf just abouve the <code>## MORE HERE.</code> line):</p>
+<pre><code># tag exceptions / stack traces
 if [message] =~ /.java:\d/ {
   mutate {
     add_tag =&gt; [&quot;exception&quot;, &quot;trace&quot;]
   }
 }
-</code></pre><p>If we have a message that has been de-multilined and contains <code>.java:</code> followed by a digit, we're going to hazard a good guess that it is a stack trace. This will add some tags for that case (to make searching easier). You can obviously do this to flag/tag other interesting messages as needed.</p><p>I hacked my app to throw an exception, and it generated a lot of stuff. But I'll grab one so you can see the single json event that contains the stacktrace in the message:</p><p>Lots of scrolling to the right will show the de-multi-lined stack trace, but the more interesting aspect is that our filter added the tags we wanted (exception and trace).</p><h2 id=functional-output>Functional output</h2><p>The <code>rubydebug</code> codec is great for debugging, but probably isn't what you want to push around for a live system. Switching to JSON is as easy as replacing the <code>rubydebug</code> codec with <code>json</code>. You can also have a few output filters at the same time:</p><pre><code>output {
+</code></pre>
+<p>If we have a message that has been de-multilined and contains <code>.java:</code> followed by a digit, we&rsquo;re going to hazard a good guess that it is a stack trace. This will add some tags for that case (to make searching easier). You can obviously do this to flag/tag other interesting messages as needed.</p>
+<p>I hacked my app to throw an exception, and it generated a lot of stuff. But I&rsquo;ll grab one so you can see the single json event that contains the stacktrace in the message:</p>
+<p>Lots of scrolling to the right will show the de-multi-lined stack trace, but the more interesting aspect is that our filter added the tags we wanted (exception and trace).</p>
+<h2 id=functional-output>Functional output</h2>
+<p>The <code>rubydebug</code> codec is great for debugging, but probably isn&rsquo;t what you want to push around for a live system. Switching to JSON is as easy as replacing the <code>rubydebug</code> codec with <code>json</code>. You can also have a few output filters at the same time:</p>
+<pre tabindex=0><code>output {
   stdout {
     codec =&gt; &quot;json&quot;
   }
@@ -88,4 +176,45 @@ if [message] =~ /.java:\d/ {
     file { path =&gt; &quot;failed_parse_events-%{+YYYY-MM-dd}&quot; }
   }
 }
-</code></pre><p>The above configuration produces single-line JSON going to STDOUT (lots of scrolling to the right again):</p><p>And it <em>also</em> produces a file containing the same thing (the default codec for the file filter is &ldquo;plain&rdquo; and the default message_format is &ldquo;json&rdquo;), which is a handy local backup should some other post-processing step stop working.</p><h1 id=the-road-goes-ever-on-and-on>The road goes ever on and on..</h1><p>There is so much more you can do with logstash, I could probably write a book about it (though I am fairly sure others already have).</p><p>When using Docker containers, you could run logstash inside the container, allowing you to manipulate the output before it goes anywhere else. The example configuration I've provided generates a rotating log file in addition to changing stdout from the container, but you could alternately use logstash in the container to write to syslog instead of stdout.</p><p><a href=https://denibertovic.com/post/docker-and-logstash-smarter-log-management-for-your-containers/>Logstash and containers</a> provides one point of view for how to use logstash with Docker containers, but bear in mind that some Docker hosting environments (like the IBM Container service in Bluemix) would handle the output produced by your container, alleviating some of the concerns around the log data managed by docker.</p><p>Some useful links for further reading:</p><ul><li><a href=https://www.elastic.co/guide/en/logstash/current/introduction.html>Logstash overview</a><ul><li><a href=https://www.elastic.co/guide/en/logstash/current/filter-plugins.html>filter reference</a></li><li><a href=https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html>grok filter reference</a></li></ul></li><li><a href=https://github.com/elastic/logstash-forwarder>Logstash-forwarder</a></li></ul></section><footer class=byline><div>posted <time class=post_date>02 September 2015</time></div><div class=tags>tags:<ul><li>&nbsp;<a href=/tags/#microservices>microservices</a></li><li>&nbsp;<a href=/tags/#java>java</a></li><li>&nbsp;<a href=/tags/#liberty>liberty</a></li><li>&nbsp;<a href=/tags/#logstash>logstash</a></li></ul></div></footer></article><nav class=prev-next><div class=nav-left><a href=/2015/08/25/docker-script-for-anyconnect-on-osx.html title="Previous: Docker script for AnyConnect on OSX">&#171; Older</a></div><div class=nav-center><a href=/>Top</a> | <a href=/archive/>Archive</a></div><div class=nav-right><a href=/2015/12/04/secure-microservices-api-keys-access-tokens-and-signed-jwts.html title="Next: Secure Microservices: API Keys, Access Tokens, and Signed JWTs">Newer &#187;</a></div></nav></main></div><footer class=page-footer><div id=copyrights>&#169; 2002-2022 Erin Schnabel</div><div><a target=_blank href=https://github.com/ebullient title="ebullient on GitHub"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1664 896q0 251-146.5 451.5T1139 1625q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105T1386 856q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27T578 459.5 492 446q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5T484 1274q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5T128 896q0-209 103-385.5T510.5 231 896 128t385.5 103T1561 510.5 1664 896z" fill="#fff"/></svg></a><a target=_blank href=https://twitter.com/ebullientworks title="Follow @ebullientworks"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5T1369.5 1125 1185 1335.5t-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5T285 1033q33 5 61 5 43 0 85-11-112-23-185.5-111.5T172 710v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5T884 653q-8-38-8-74 0-134 94.5-228.5T1199 256q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" fill="#fff"/></svg></a><a target=_blank href=https://www.linkedin.com/in/erinschnabel/ title="Erin Schnabel on linked.in"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991H147V625h330zm21-306q1 73-50.5 122T312 490h-2q-82 0-132-49t-50-122q0-74 51.5-122.5T314 148t133 48.5T498 319zm1166 729v568h-329v-530q0-105-40.5-164.5T1168 862q-63 0-105.5 34.5T999 982q-11 30-11 81v553H659q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5T1285 602q171 0 275 113.5t104 332.5z" fill="#fff"/></svg></a><a target=_blank href=/index.xml title=Subscribe><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M576 1344q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm512 123q2 28-17 48-18 21-47 21H889q-25 0-43-16.5t-20-41.5q-22-229-184.5-391.5T250 902q-25-2-41.5-20T192 839V704q0-29 21-47 17-17 43-17h5q160 13 306 80.5T826 902q114 113 181.5 259t80.5 306zm512 2q2 27-18 47-18 20-46 20h-143q-26 0-44.5-17.5T1329 1476q-12-215-101-408.5t-231.5-336-336-231.5T252 398q-25-1-42.5-19.5T192 335V192q0-28 20-46 18-18 44-18h3q262 13 501.5 120T1186 542q187 186 294 425.5t120 501.5z" fill="#fff"/></svg></a></div></footer><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-1146860-5','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></body></html>
+</code></pre><p>The above configuration produces single-line JSON going to STDOUT (lots of scrolling to the right again):</p>
+<p>And it <em>also</em> produces a file containing the same thing (the default codec for the file filter is &ldquo;plain&rdquo; and the default message_format is &ldquo;json&rdquo;), which is a handy local backup should some other post-processing step stop working.</p>
+<h1 id=the-road-goes-ever-on-and-on>The road goes ever on and on..</h1>
+<p>There is so much more you can do with logstash, I could probably write a book about it (though I am fairly sure others already have).</p>
+<p>When using Docker containers, you could run logstash inside the container, allowing you to manipulate the output before it goes anywhere else. The example configuration I&rsquo;ve provided generates a rotating log file in addition to changing stdout from the container, but you could alternately use logstash in the container to write to syslog instead of stdout.</p>
+<p><a href=https://denibertovic.com/post/docker-and-logstash-smarter-log-management-for-your-containers/>Logstash and containers</a> provides one point of view for how to use logstash with Docker containers, but bear in mind that some Docker hosting environments (like the IBM Container service in Bluemix) would handle the output produced by your container, alleviating some of the concerns around the log data managed by docker.</p>
+<p>Some useful links for further reading:</p>
+<ul>
+<li><a href=https://www.elastic.co/guide/en/logstash/current/introduction.html>Logstash overview</a>
+<ul>
+<li><a href=https://www.elastic.co/guide/en/logstash/current/filter-plugins.html>filter reference</a></li>
+<li><a href=https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html>grok filter reference</a></li>
+</ul>
+</li>
+<li><a href=https://github.com/elastic/logstash-forwarder>Logstash-forwarder</a></li>
+</ul>
+</section>
+<footer class=byline>
+<div>posted <time class=post_date>02 September 2015</time></div>
+<div class=tags>tags:
+<ul><li>&nbsp;<a href=/tags/#microservices>microservices</a></li><li>&nbsp;<a href=/tags/#java>java</a></li><li>&nbsp;<a href=/tags/#liberty>liberty</a></li><li>&nbsp;<a href=/tags/#logstash>logstash</a></li></ul>
+</div>
+</footer>
+</article>
+<nav class=prev-next>
+<div class=nav-left><a href=/2015/08/25/docker-script-for-anyconnect-on-osx.html title="Previous: Docker script for AnyConnect on OSX">&#171; Older</a></div>
+<div class=nav-center><a href=/>Top</a> | <a href=/archive/>Archive</a></div>
+<div class=nav-right><a href=/2015/12/04/secure-microservices-api-keys-access-tokens-and-signed-jwts.html title="Next: Secure Microservices: API Keys, Access Tokens, and Signed JWTs">Newer &#187;</a></div>
+</nav>
+</main>
+</div>
+<footer class=page-footer>
+<div id=copyrights>&#169; 2002-2022 Erin Schnabel</div>
+<div>
+<a target=_blank href=https://github.com/ebullient title="ebullient on GitHub"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1664 896q0 251-146.5 451.5T1139 1625q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105T1386 856q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27T578 459.5 492 446q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5T484 1274q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5T128 896q0-209 103-385.5T510.5 231 896 128t385.5 103T1561 510.5 1664 896z" fill="#fff"/></svg></a>
+<a target=_blank href=https://twitter.com/ebullientworks title="Follow @ebullientworks"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5T1369.5 1125 1185 1335.5t-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5T285 1033q33 5 61 5 43 0 85-11-112-23-185.5-111.5T172 710v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5T884 653q-8-38-8-74 0-134 94.5-228.5T1199 256q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" fill="#fff"/></svg></a>
+<a target=_blank href=https://www.linkedin.com/in/erinschnabel/ title="Erin Schnabel on linked.in"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991H147V625h330zm21-306q1 73-50.5 122T312 490h-2q-82 0-132-49t-50-122q0-74 51.5-122.5T314 148t133 48.5T498 319zm1166 729v568h-329v-530q0-105-40.5-164.5T1168 862q-63 0-105.5 34.5T999 982q-11 30-11 81v553H659q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5T1285 602q171 0 275 113.5t104 332.5z" fill="#fff"/></svg></a>
+<a target=_blank href=/index.xml title=Subscribe><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M576 1344q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm512 123q2 28-17 48-18 21-47 21H889q-25 0-43-16.5t-20-41.5q-22-229-184.5-391.5T250 902q-25-2-41.5-20T192 839V704q0-29 21-47 17-17 43-17h5q160 13 306 80.5T826 902q114 113 181.5 259t80.5 306zm512 2q2 27-18 47-18 20-46 20h-143q-26 0-44.5-17.5T1329 1476q-12-215-101-408.5t-231.5-336-336-231.5T252 398q-25-1-42.5-19.5T192 335V192q0-28 20-46 18-18 44-18h3q262 13 501.5 120T1186 542q187 186 294 425.5t120 501.5z" fill="#fff"/></svg></a>
+</div>
+</footer>
+</body>
+</html>

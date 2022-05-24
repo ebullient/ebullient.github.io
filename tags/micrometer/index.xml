@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>micrometer on ebullient·works</title><link>/tags/micrometer.html</link><description>Recent content in micrometer on ebullient·works</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 10 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/micrometer/index.xml" rel="self" type="application/rss+xml"/><item><title>Know your app: Add metrics to Java with Micrometer</title><link>/2021/06/10/devnation-know-your-app.html</link><pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate><guid>/2021/06/10/devnation-know-your-app.html</guid><description>&lt;div class="embed video-player">
-&lt;iframe id="ldeb_DaH49U" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="ldeb_DaH49U" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/ldeb_DaH49U">
 &lt;/iframe>
@@ -9,14 +9,14 @@ src="https://www.youtube.com/embed/ldeb_DaH49U">
 &lt;/div></description></item><item><title>DevNexus 2021: The Mechanics of Metrics</title><link>/2021/03/05/DevNexus-mechanics-of-metrics.html</link><pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate><guid>/2021/03/05/DevNexus-mechanics-of-metrics.html</guid><description>&lt;p>A reframing of the metrics talk, with a much more detailed look at how emitted metrics are aggregated by PromQL / Grafana dashboards.&lt;/p>
 &lt;p>I quite like this one, to be honest.&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="ru7ySIqa6qI" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="ru7ySIqa6qI" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/ru7ySIqa6qI">
 &lt;/iframe>
 &lt;/div></description></item><item><title>J4K 2020: Metrics for the win!</title><link>/2020/11/12/metrics-for-the-win-at-j4k.html</link><pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate><guid>/2020/11/12/metrics-for-the-win-at-j4k.html</guid><description>&lt;p>A longer form of Metrics for the Win! recorded for J4K, which occurred in
 October of 2020.&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="emOBXgDZ9Pc" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="emOBXgDZ9Pc" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/emOBXgDZ9Pc">
 &lt;/iframe>
@@ -27,7 +27,7 @@ Publication:
 Schnabel, E. (2020, September). Dungeons &amp;amp; Dragons: An adventure full of monsters, battles, and application metrics. Java Magazin, 82–94. https://kiosk.entwickler.de/java-magazin/java-magazin-9-2020/dungeons-dragons/
 First publication, in German Schnabel, E. (2020, November 9). Monsters in combat: exploring application metrics with D&amp;amp;D. JAXenter. https://jaxenter.com/metrics-dnd-173311.html Schnabel, E. (2020, November 3). Monsters in combat: exploring application metrics with D&amp;amp;D. DevOps Conference Blog. https://devopscon.io/blog/monsters-in-combat-exploring-application-metrics-with-dd Schnabel, E. (2021, January 21). Monsters in Combat: Exploring Application Metrics with Dungeons &amp;amp; Dragons. DEVOPS MAGAZINE, 43–53. https://devopscon.io/whitepaper/devops-magazine-1-21/</description></item><item><title>JConf 2020: Metrics for the win!</title><link>/2020/10/12/metrics-for-the-win-at-jconf.html</link><pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate><guid>/2020/10/12/metrics-for-the-win-at-jconf.html</guid><description>&lt;p>A fully online recorded talk, sliding in at just 30 minutes, for JConf in the fall of 2020.&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="YK4e3wefqWY" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="YK4e3wefqWY" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/YK4e3wefqWY">
 &lt;/iframe>
@@ -35,7 +35,7 @@ src="https://www.youtube.com/embed/YK4e3wefqWY">
 &lt;p>Thanks to a brilliant suggestion from a friend, these two things collided in the talk, too. Which lightened the mental load (or at least reduced the amount of full stack swapping going on).&lt;/p>
 &lt;p>Github repository: &lt;a href="https://github.com/ebullient/monster-combat">ebullient/monster-combat&lt;/a> with Spring Boot 2, WebFlux, and Micrometer&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="_Vg4J9cdO6s" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="_Vg4J9cdO6s" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/_Vg4J9cdO6s">
 &lt;/iframe>

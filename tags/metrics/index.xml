@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>metrics on ebullient·works</title><link>/tags/metrics.html</link><description>Recent content in metrics on ebullient·works</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 08 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/metrics/index.xml" rel="self" type="application/rss+xml"/><item><title>QCon Plus: The mechanics of metrics</title><link>/2021/11/08/qcon-plus-the-mechanics-of-metrics.html</link><pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate><guid>/2021/11/08/qcon-plus-the-mechanics-of-metrics.html</guid><description>&lt;p>Speaking at the QCon Plus virtual conference was a nice experience. Each track had an ad-hoc meeting room that you could join after the session, which was really cool. It was nice to be able to speak with people that watched my talk directly. It brought back a bit of the in-person conference feel.&lt;/p>
 &lt;p>Of &lt;em>course&lt;/em> the first question was &amp;ldquo;Which edition of D&amp;amp;D?&amp;rdquo; (5e), what I didn&amp;rsquo;t expect was the next question, &amp;ldquo;Is that the new Sesame Street Lego set?&amp;rdquo; (yes).&lt;/p>
 &lt;p>The recording will be generally available in August of 2022!&lt;/p></description></item><item><title>Know your app: Add metrics to Java with Micrometer</title><link>/2021/06/10/devnation-know-your-app.html</link><pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate><guid>/2021/06/10/devnation-know-your-app.html</guid><description>&lt;div class="embed video-player">
-&lt;iframe id="ldeb_DaH49U" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="ldeb_DaH49U" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/ldeb_DaH49U">
 &lt;/iframe>
@@ -11,20 +11,20 @@ src="https://www.youtube.com/embed/ldeb_DaH49U">
 &lt;/div></description></item><item><title>DevNexus 2021: The Mechanics of Metrics</title><link>/2021/03/05/DevNexus-mechanics-of-metrics.html</link><pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate><guid>/2021/03/05/DevNexus-mechanics-of-metrics.html</guid><description>&lt;p>A reframing of the metrics talk, with a much more detailed look at how emitted metrics are aggregated by PromQL / Grafana dashboards.&lt;/p>
 &lt;p>I quite like this one, to be honest.&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="ru7ySIqa6qI" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="ru7ySIqa6qI" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/ru7ySIqa6qI">
 &lt;/iframe>
 &lt;/div></description></item><item><title>J4K 2020: Metrics for the win!</title><link>/2020/11/12/metrics-for-the-win-at-j4k.html</link><pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate><guid>/2020/11/12/metrics-for-the-win-at-j4k.html</guid><description>&lt;p>A longer form of Metrics for the Win! recorded for J4K, which occurred in
 October of 2020.&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="emOBXgDZ9Pc" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="emOBXgDZ9Pc" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/emOBXgDZ9Pc">
 &lt;/iframe>
 &lt;/div></description></item><item><title>JConf 2020: Metrics for the win!</title><link>/2020/10/12/metrics-for-the-win-at-jconf.html</link><pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate><guid>/2020/10/12/metrics-for-the-win-at-jconf.html</guid><description>&lt;p>A fully online recorded talk, sliding in at just 30 minutes, for JConf in the fall of 2020.&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="YK4e3wefqWY" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="YK4e3wefqWY" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/YK4e3wefqWY">
 &lt;/iframe>
@@ -32,7 +32,7 @@ src="https://www.youtube.com/embed/YK4e3wefqWY">
 &lt;p>Thanks to a brilliant suggestion from a friend, these two things collided in the talk, too. Which lightened the mental load (or at least reduced the amount of full stack swapping going on).&lt;/p>
 &lt;p>Github repository: &lt;a href="https://github.com/ebullient/monster-combat">ebullient/monster-combat&lt;/a> with Spring Boot 2, WebFlux, and Micrometer&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="_Vg4J9cdO6s" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="_Vg4J9cdO6s" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/_Vg4J9cdO6s">
 &lt;/iframe>

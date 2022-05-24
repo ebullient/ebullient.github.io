@@ -18,7 +18,7 @@ Max and I discuss different testing strategies for command mode applications (or
 &lt;script src="//cdn.jsdelivr.net/github-cards/latest/widget.js">&lt;/script>
 &lt;p>In any event, the way things have evolved, I needed a plugin that did something a little differently for tasks associated with a project, so I created the &lt;a href="https://github.com/ebullient/obsidian-task-collector">Task Collector&lt;/a> plugin.&lt;/p></description></item><item><title>J4K Keynote: OMG The Best Java Ever!</title><link>/2021/10/07/j4k-keynote-omg-the-best-java-ever.html</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>/2021/10/07/j4k-keynote-omg-the-best-java-ever.html</guid><description>&lt;p>OMG! I had a hard time writing this. I was asked if I would do it, which I said yes to before really having a clear idea what I wanted to talk about. As a keynote for J4K, I could have spoken about &amp;hellip; a whole plethora of things.&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="SqnmLUXJXVA" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="SqnmLUXJXVA" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/SqnmLUXJXVA">
 &lt;/iframe>
@@ -28,7 +28,7 @@ src="https://www.youtube.com/embed/SqnmLUXJXVA">
 &lt;p>Happy Happy!&lt;/p>
 &lt;div class="github-card" data-github="ebullient/fc5-convert-cli" data-width="400" data-height="" data-theme="default">&lt;/div>
 &lt;script src="//cdn.jsdelivr.net/github-cards/latest/widget.js">&lt;/script></description></item><item><title>Quarkus Insights #58 (host): Sanne talks about Hibernate ORM and GraalVM native images</title><link>/2021/07/19/qi-host-duties-sanne-and-hibernate-orm.html</link><pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate><guid>/2021/07/19/qi-host-duties-sanne-and-hibernate-orm.html</guid><description>Being a co-host is hard work, especially while in (yet another) remote location.</description></item><item><title>Quarkus Insights #57 (guest): Quarkus CLI</title><link>/2021/06/14/qi-new-quarkus-cli.html</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>/2021/06/14/qi-new-quarkus-cli.html</guid><description>A video in which live coding happens, and I don&amp;rsquo;t mess up too badly.</description></item><item><title>Know your app: Add metrics to Java with Micrometer</title><link>/2021/06/10/devnation-know-your-app.html</link><pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate><guid>/2021/06/10/devnation-know-your-app.html</guid><description>&lt;div class="embed video-player">
-&lt;iframe id="ldeb_DaH49U" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="ldeb_DaH49U" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/ldeb_DaH49U">
 &lt;/iframe>
@@ -38,7 +38,7 @@ src="https://www.youtube.com/embed/ldeb_DaH49U">
 &lt;/div></description></item><item><title>Quarkus Insights #47 (host): Keycloak's Journey to Quarkus</title><link>/2021/05/03/qi-keycloak-journey-to-quarkus.html</link><pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate><guid>/2021/05/03/qi-keycloak-journey-to-quarkus.html</guid><description>Dimitrios Andreadis and I host Sebastien Blanc and Pedro Igor to talk about Keycloak&amp;rsquo;s journey to Quarkus.</description></item><item><title>Quarkus Insights #43 (host): Writing Quarkus Extensions</title><link>/2021/04/07/qi-writing-quarkus-extensions.html</link><pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate><guid>/2021/04/07/qi-writing-quarkus-extensions.html</guid><description>A group discussion on how to write Quarkus Extensions with guest Peter Palaga.</description></item><item><title>DevNexus 2021: The Mechanics of Metrics</title><link>/2021/03/05/DevNexus-mechanics-of-metrics.html</link><pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate><guid>/2021/03/05/DevNexus-mechanics-of-metrics.html</guid><description>&lt;p>A reframing of the metrics talk, with a much more detailed look at how emitted metrics are aggregated by PromQL / Grafana dashboards.&lt;/p>
 &lt;p>I quite like this one, to be honest.&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="ru7ySIqa6qI" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="ru7ySIqa6qI" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/ru7ySIqa6qI">
 &lt;/iframe>
@@ -49,7 +49,7 @@ src="https://www.youtube.com/embed/ru7ySIqa6qI">
 &lt;/figure></description></item><item><title>Quarkus Insights #34 (guest): Talking about Quarkus 1.11 Release</title><link>/2021/01/25/qi-1.html</link><pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate><guid>/2021/01/25/qi-1.html</guid><description>Georgios and I talk about all kinds of things, most of them related to Quarkus 1.11.</description></item><item><title>J4K 2020: Metrics for the win!</title><link>/2020/11/12/metrics-for-the-win-at-j4k.html</link><pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate><guid>/2020/11/12/metrics-for-the-win-at-j4k.html</guid><description>&lt;p>A longer form of Metrics for the Win! recorded for J4K, which occurred in
 October of 2020.&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="emOBXgDZ9Pc" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="emOBXgDZ9Pc" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/emOBXgDZ9Pc">
 &lt;/iframe>
@@ -60,7 +60,7 @@ Publication:
 Schnabel, E. (2020, September). Dungeons &amp;amp; Dragons: An adventure full of monsters, battles, and application metrics. Java Magazin, 82–94. https://kiosk.entwickler.de/java-magazin/java-magazin-9-2020/dungeons-dragons/
 First publication, in German Schnabel, E. (2020, November 9). Monsters in combat: exploring application metrics with D&amp;amp;D. JAXenter. https://jaxenter.com/metrics-dnd-173311.html Schnabel, E. (2020, November 3). Monsters in combat: exploring application metrics with D&amp;amp;D. DevOps Conference Blog. https://devopscon.io/blog/monsters-in-combat-exploring-application-metrics-with-dd Schnabel, E. (2021, January 21). Monsters in Combat: Exploring Application Metrics with Dungeons &amp;amp; Dragons. DEVOPS MAGAZINE, 43–53. https://devopscon.io/whitepaper/devops-magazine-1-21/</description></item><item><title>JConf 2020: Metrics for the win!</title><link>/2020/10/12/metrics-for-the-win-at-jconf.html</link><pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate><guid>/2020/10/12/metrics-for-the-win-at-jconf.html</guid><description>&lt;p>A fully online recorded talk, sliding in at just 30 minutes, for JConf in the fall of 2020.&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="YK4e3wefqWY" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="YK4e3wefqWY" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/YK4e3wefqWY">
 &lt;/iframe>
@@ -77,7 +77,7 @@ duty reminding me what on earth I was doing the last time I worked on it.&lt;/p>
 &lt;p>Thanks to a brilliant suggestion from a friend, these two things collided in the talk, too. Which lightened the mental load (or at least reduced the amount of full stack swapping going on).&lt;/p>
 &lt;p>Github repository: &lt;a href="https://github.com/ebullient/monster-combat">ebullient/monster-combat&lt;/a> with Spring Boot 2, WebFlux, and Micrometer&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="_Vg4J9cdO6s" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="_Vg4J9cdO6s" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/_Vg4J9cdO6s">
 &lt;/iframe>
@@ -116,7 +116,7 @@ was happening.&lt;/p></description></item><item><title>Learning Microservices in
 &lt;p>I was able to make attempt number two for the evolution of Cloud Native and the Java ecosystem.&lt;/p>
 &lt;p>&lt;a href="https://cfna18.sched.com/event/DdaB/the-java-ecosystem-collision-what-is-the-future-of-cloud-native-erin-schnabel-ibm">The Java Ecosystem Collision: What is the Future of Cloud Native? - Erin Schnabel, IBM&lt;/a>&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="NkBNLkmldnI" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="NkBNLkmldnI" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/NkBNLkmldnI">
 &lt;/iframe>
@@ -134,7 +134,7 @@ src="https://www.youtube.com/embed/NkBNLkmldnI">
 &lt;/ol>
 &lt;p>I did have a lovely interview with Kevin Allen beforehand:&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="y4aCcT_lmik" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="y4aCcT_lmik" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/y4aCcT_lmik">
 &lt;/iframe>
@@ -171,7 +171,7 @@ Next post: the jekyll stuff.</description></item><item><title>IBM InterConnect 2
 &lt;p>There were a few more that I haven&amp;rsquo;t posted the charts for.. phew!&lt;/p></description></item><item><title>SouJava: MicroProfile at IBM</title><link>/2017/02/02/soujava-microprofile-at-ibm.html</link><pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate><guid>/2017/02/02/soujava-microprofile-at-ibm.html</guid><description>&lt;p>What a hoot!&lt;/p>
 &lt;p>While talking about MicroProfile at IBM, Alasdair and I also got some time to reflect on how Liberty was built and how it has grown&amp;hellip;&lt;/p>
 &lt;div class="embed video-player">
-&lt;iframe id="nGla6-g76M0" class="youtube-player" frameborder="0" allowfullscreen
+&lt;iframe name="nGla6-g76M0" class="youtube-player" frameborder="0" allowfullscreen
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 src="https://www.youtube.com/embed/nGla6-g76M0">
 &lt;/iframe>

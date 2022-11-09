@@ -123,7 +123,7 @@ article.post a {
 section.cv a,
 aside.sidebar a,
 footer a {
-   color: $navy-blue;
+   color: $white-smoke;
 }
 main.articles a img,
 section.page a img,
@@ -136,6 +136,7 @@ header h1 a {
 footer a svg {
   height: 1.5em;
   width: 1.5em;
+  fill: currentColor;
 }
 section.cv .title {
 	font-weight: bold;

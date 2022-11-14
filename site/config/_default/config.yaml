@@ -9,7 +9,6 @@ publishDir: "../public"
 languageCode: en-us
 enableGitInfo: true
 summaryLength: 1000
-googleAnalytics: UA-1146860-5
 frontmatter:
   date:
     - ":filename"

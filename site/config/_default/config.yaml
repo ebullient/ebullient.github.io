@@ -35,5 +35,5 @@ markup:
     lineNos: true
     lineNumbersInTable: false
     noClasses: true
-    style: monokailight
+    style: github
     tabWidth: 2

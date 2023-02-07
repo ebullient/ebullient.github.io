@@ -4,6 +4,7 @@ tags:
   - command-line
   - java
   - quarkus
+  - pockets
 canonical: https://youtu.be/M-Xbym3Dbpo
 ---
 A new talk! I have two recorded versions, but few charts, as this one was mostly code. 

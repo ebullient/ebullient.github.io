@@ -1,10 +1,10 @@
 ---
+title: From Jekyll and GitBook to Hugo and Asciidoc, care of Github Actions
 tags:
   - blog
   - jekyll
   - hugo
   - asciidoc
-title: From Jekyll and GitBook to Hugo and Asciidoc, care of Github Actions
 ---
 This won't be a super chatty post. We have two websites for Game On! (our microservices text adventure): a jekyll-based markdown blog and a legacy-gitbook-based asciidoc book. For various reason, I want to combine them,and I woukd rather not spend gobs of time converting between markdown and asciidoc.
 

@@ -11,3 +11,4 @@ public
 *~
 *.DS_Store
 site/.hugo_build.lock
+_gen

@@ -22,6 +22,37 @@
 <main class=articles>
 <article>
 <header>
+<h2><a href=/2023/02/07/iterative-development-quarkus-svelte-quinoa.html>Iterative development with Quarkus and Svelte, care of Quinoa</a></h2>
+</header>
+<section class=post_excerpt>
+<p>Another conference is coming up, and I&rsquo;m writing another ridiculous frankenstein app for it.</p>
+<p>For this revision, I am going to add a local-only Web UI for a few reasons:</p>
+<ul>
+<li>This app is still mostly command-line driven, but some configuration options are awkward to set as arguments, and manually editing a config file is &mldr; meh.</li>
+<li>I haven&rsquo;t done any serious front-end UI work in a really long time. The UI for <a href=https://github.com/gameontext/gameon-webapp>Game On! Text adventure</a> is overdue for an overhaul, it&rsquo;s an Angular 1 app. I know, I know. Don&rsquo;t judge me.</li>
+</ul>
+<p>Between one thing and another, I&rsquo;ve been doing more TypeScript alongside my Java and because of some collaboration on plugins for <a href=https://obsidian.md/>Obsidian.md</a>, I&rsquo;ve been bumping up against Svelte. I&rsquo;m going to use this little project to actually figure out how Svelte works.</p>
+<p>This project will then have:</p>
+<ul>
+<li><a href=https://quarkus.io/>Quarkus</a> as the main CLI driver that will sometimes wait around for awhile while you fuss around with a Web UI.</li>
+<li><a href=https://svelte.dev/>Svelte</a> to create a UI that feels nice to use.</li>
+<li><a href=https://maven.apache.org/>Maven</a> for building Java things</li>
+<li><a href=https://nodejs.org/en/>Node</a> + <a href=https://vitejs.dev/>Vite</a> for TypeScript tooling</li>
+</ul>
+<p>On the surface, the above sounds like a big mess, right? I&rsquo;m installing double the tools, having to do this build in two steps, and then do the fancy dance to get the Node stuff in the right place in the Java stuff, and deal with making native images happy, and&mldr; <em>gross</em> 🤢.</p>
+<p>Thankfully, <a href=https://github.com/ia3andy>Andy Damevin</a> has already come to provide the rescue I didn&rsquo;t know I would need. He created the <a href=https://quarkiverse.github.io/quarkiverse-docs/quarkus-quinoa/dev/index.html>Quinoa extension</a>, and I am a fan! 🎉</p>
+<p>The Quinoa extension manages building and packaging the embedded Web UI with its preferred tools. So the outer Maven build can carry on doing its thing, and the Quinoa extension will invoke the appropriate node scripts to build and package the Web UI, and tuck them in the right place for serving with an uber jar or native binary. Not only that, but it integrates Quarkus dev mode with the web framework&rsquo;s live coding support, which means you just keep coding and the entire web app evolves as you go. Holy cow, it&rsquo;s awesome.</p>
+</section>
+<div>[<a class=read-more href=/2023/02/07/iterative-development-quarkus-svelte-quinoa.html>more</a>]</div>
+<footer class=byline>
+<div>posted <time class=post_date>07 February 2023</time></div>
+<div class=tags>tags:
+<ul><li>&nbsp;<a href=/tags/#quarkus>quarkus</a></li><li>&nbsp;<a href=/tags/#svelte>svelte</a></li><li>&nbsp;<a href=/tags/#gameontext>gameontext</a></li><li>&nbsp;<a href=/tags/#pockets>pockets</a></li></ul>
+</div>
+</footer>
+</article>
+<article>
+<header>
 <h2><a href=/2022/10/12/signing-git-commits.html>Signing git commits</a></h2>
 </header>
 <section class=post_excerpt>
@@ -38,21 +69,35 @@
 </article>
 <article>
 <header>
+<h2><a href=/2022/06/14/enlightning-what-should-application-developers-know-about-metrics.html>Enlightning: What Should Application Developers Know about Metrics?</a></h2>
+</header>
+<section class=post_excerpt>
+<p>I ❤️ Whitney Lee! This was a blast.</p>
+<div class="embed video-player">
+<iframe name=MFhgCHAUkDw class=youtube-player frameborder=0 allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src=https://www.youtube.com/embed/MFhgCHAUkDw></iframe>
+</div>
+</section>
+<footer class=byline>
+<div>posted <time class=post_date>14 June 2022</time></div>
+<div class=tags>tags:
+<ul><li>&nbsp;<a href=/tags/#metrics>metrics</a></li></ul>
+</div>
+</footer>
+</article>
+<article>
+<header>
 <h2><a href=/2022/05/18/pockets-command-line-apps-at-devoxx-uk.html>Devoxx UK 2022: Take a walk on the cient side</a></h2>
 </header>
 <section class=post_excerpt>
-<p>I spoke about creating command line applications at Devoxx UK in May. I wanted to change a few things the second time around, to see if I could get farther along with the application, but I was stymied again! No one texted me this time. Instead, my ipad and laptop fought with the projector over screen resolution.</p>
-<blockquote class=twitter-tweet><p lang=en dir=ltr>“We’re just going to code in the air.”<br><br>See that blank screen behind <a href="https://twitter.com/ebullientworks?ref_src=twsrc%5Etfw">@ebullientworks</a>? <br><br>Apparently her laptop doesn’t like the <a href="https://twitter.com/hashtag/DevoxxUK?src=hash&ref_src=twsrc%5Etfw">#DevoxxUK</a> AV, but she’s rolling with it. It reminds me of <a href="https://twitter.com/ixchelruiz?ref_src=twsrc%5Etfw">@ixchelruiz</a>’s virtuoso projection-free talk at Voxxed Milan, when 3 adapters let her down. <a href=https://t.co/1FHYOGs6Gs>pic.twitter.com/1FHYOGs6Gs</a></p>&mdash; Holly Cummins (holly_cummins@hachyderm.io) (@holly_cummins) <a href="https://twitter.com/holly_cummins/status/1524765304206811136?ref_src=twsrc%5Etfw">May 12, 2022</a></blockquote>
-<script async src=https://platform.twitter.com/widgets.js></script>
-<div class="embed video-player">
-<iframe name=ffGKrO1yD_c class=youtube-player frameborder=0 allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src=https://www.youtube.com/embed/ffGKrO1yD_c></iframe>
-</div>
-<p>The subject of the talk is a little command line application called &ldquo;Pockets&rdquo;, and it lives here: <a href=https://github.com/ebullient/pockets-cli>https://github.com/ebullient/pockets-cli</a></p>
+<p>I spoke about creating command line applications at DevNexus in May. I wanted to change a few things the second time around, to see if I could get farther along with the application, but I was stymied again! No one texted me this time. Instead, my ipad and laptop fought with the projector over screen resolution.</p>
+<figure><img src=/images/2022-05-twitter-devoxxuk.png alt="Coding in the air" width=400px>
+</figure>
 </section>
+<div>[<a class=read-more href=/2022/05/18/pockets-command-line-apps-at-devoxx-uk.html>more</a>]</div>
 <footer class=byline>
 <div>posted <time class=post_date>18 May 2022</time></div>
 <div class=tags>tags:
-<ul><li>&nbsp;<a href=/tags/#command-line>command-line</a></li><li>&nbsp;<a href=/tags/#java>java</a></li><li>&nbsp;<a href=/tags/#quarkus>quarkus</a></li></ul>
+<ul><li>&nbsp;<a href=/tags/#command-line>command-line</a></li><li>&nbsp;<a href=/tags/#java>java</a></li><li>&nbsp;<a href=/tags/#quarkus>quarkus</a></li><li>&nbsp;<a href=/tags/#pockets>pockets</a></li></ul>
 </div>
 </footer>
 </article>
@@ -71,7 +116,7 @@
 <footer class=byline>
 <div>posted <time class=post_date>18 April 2022</time></div>
 <div class=tags>tags:
-<ul><li>&nbsp;<a href=/tags/#command-line>command-line</a></li><li>&nbsp;<a href=/tags/#java>java</a></li><li>&nbsp;<a href=/tags/#quarkus>quarkus</a></li></ul>
+<ul><li>&nbsp;<a href=/tags/#command-line>command-line</a></li><li>&nbsp;<a href=/tags/#java>java</a></li><li>&nbsp;<a href=/tags/#quarkus>quarkus</a></li><li>&nbsp;<a href=/tags/#pockets>pockets</a></li></ul>
 </div>
 </footer>
 </article>
@@ -115,9 +160,10 @@
 <h2><a href=/2022/01/25/distinguished-engineer.html>Distinguished Engineer</a></h2>
 </header>
 <section class=post_excerpt>
-<blockquote class=twitter-tweet><p lang=en dir=ltr>So. This happened... 😇 <a href=https://t.co/k3iHKz2rcJ>pic.twitter.com/k3iHKz2rcJ</a></p>&mdash; Erin Schnabel (@ebullient@fosstodon.org) (@ebullientworks) <a href="https://twitter.com/ebullientworks/status/1485943604375924738?ref_src=twsrc%5Etfw">January 25, 2022</a></blockquote>
-<script async src=https://platform.twitter.com/widgets.js></script>
+<figure><img src=/images/2022-01-twitter-de-promote.png alt="Coding in the air" width=400px>
+</figure>
 </section>
+<div>[<a class=read-more href=/2022/01/25/distinguished-engineer.html>more</a>]</div>
 <footer class=byline>
 <div>posted <time class=post_date>25 January 2022</time></div>
 <div class=tags>tags:
@@ -159,40 +205,6 @@
 </div>
 </footer>
 </article>
-<article>
-<header>
-<h2><a href=/2022/01/17/qi-quarkus-q-a.html>Quarkus Insights #76 (guest): Quarkus Q&A</a></h2>
-</header>
-<section class=post_excerpt>
-<p>Max, Jason, Georgios and I all got together to answer questions about Quarkus.</p>
-<div class="embed video-player">
-<iframe name=JuBmInppfOw class=youtube-player frameborder=0 allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src=https://www.youtube.com/embed/JuBmInppfOw></iframe>
-</div>
-</section>
-<footer class=byline>
-<div>posted <time class=post_date>17 January 2022</time></div>
-<div class=tags>tags:
-<ul><li>&nbsp;<a href=/tags/#microservices>microservices</a></li><li>&nbsp;<a href=/tags/#interview>interview</a></li><li>&nbsp;<a href=/tags/#quarkus>quarkus</a></li></ul>
-</div>
-</footer>
-</article>
-<article>
-<header>
-<h2><a href=/2021/11/22/qi-using-jreleaser-with-quarkus.html>Quarkus Insights #71 (co-host): Using JReleaser with Quarkus</a></h2>
-</header>
-<section class=post_excerpt>
-<p>Andres Almiray joins us to discuss how to package and release Quarkus applications with JReleaser.</p>
-<div class="embed video-player">
-<iframe name=Ui_bwjNNjcc class=youtube-player frameborder=0 allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src=https://www.youtube.com/embed/Ui_bwjNNjcc></iframe>
-</div>
-</section>
-<footer class=byline>
-<div>posted <time class=post_date>22 November 2021</time></div>
-<div class=tags>tags:
-<ul><li>&nbsp;<a href=/tags/#microservices>microservices</a></li><li>&nbsp;<a href=/tags/#interview>interview</a></li><li>&nbsp;<a href=/tags/#quarkus>quarkus</a></li></ul>
-</div>
-</footer>
-</article>
 </main>
 <nav class=prev-next>
 <div>&nbsp;</div>
@@ -201,7 +213,7 @@
 </nav>
 </div>
 <footer class=page-footer>
-<div id=copyrights>&#169; 2002-2022 Erin Schnabel</div>
+<div id=copyrights>&#169; 2002-2023 Erin Schnabel</div>
 <div class=icons>
 <a target=_blank rel=nopopener href=https://github.com/ebullient title="ebullient on GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6.0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6.0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3.0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1.0-6.2-.3-40.4-.3-61.4.0.0-70 15-84.7-29.8.0.0-11.4-29.1-27.8-36.6.0.0-22.9-15.7 1.6-15.4.0.0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5.0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9.0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4.0 33.7-.3 75.4-.3 83.6.0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6.0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9.0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
 </a>

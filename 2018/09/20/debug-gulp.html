@@ -31,9 +31,9 @@ Debug gulp &ndash; ebullient·works
 </code></pre><p>I needed to change both my gulpfile and my IDE to be able to follow what
 was happening.</p>
 <p>I added this rejection handler to my gulpfile first:</p>
-<div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span><span style=color:#75af00>process</span><span style=color:#111>.</span><span style=color:#75af00>on</span><span style=color:#111>(</span><span style=color:#d88200>&#39;unhandledRejection&#39;</span><span style=color:#111>,</span> <span style=color:#111>(</span><span style=color:#75af00>reason</span><span style=color:#111>,</span> <span style=color:#75af00>p</span><span style=color:#111>)</span> <span style=color:#111>=&gt;</span> <span style=color:#111>{</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>  <span style=color:#75af00>console</span><span style=color:#111>.</span><span style=color:#75af00>log</span><span style=color:#111>(</span><span style=color:#d88200>&#39;Unhandled Rejection at: Promise&#39;</span><span style=color:#111>,</span> <span style=color:#75af00>p</span><span style=color:#111>,</span> <span style=color:#d88200>&#39;, reason:&#39;</span><span style=color:#111>,</span> <span style=color:#75af00>reason</span><span style=color:#111>);</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span><span style=color:#111>});</span>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>process.on(<span style=color:#d14>&#39;unhandledRejection&#39;</span>, (reason, p) =&gt; {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>  console.log(<span style=color:#d14>&#39;Unhandled Rejection at: Promise&#39;</span>, p, <span style=color:#d14>&#39;, reason:&#39;</span>, reason);
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>});
 </code></pre></div><p>which netted me this:</p>
 <pre tabindex=0><code>Unhandled Rejection at: Promise Promise {
   &lt;rejected&gt; null,
@@ -47,15 +47,15 @@ was happening.</p>
 </code></pre><p>Not much better.</p>
 <p>Let&rsquo;s try debugging gulp! How do I do that again?</p>
 <p>In VS Code, let&rsquo;s create a debug configuration that is brain-bashingly simple. Add this to launch.json:</p>
-<div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-json data-lang=json><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>  <span style=color:#111>{</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>    <span style=color:#f92672>&#34;type&#34;</span><span style=color:#111>:</span> <span style=color:#d88200>&#34;node&#34;</span><span style=color:#111>,</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>    <span style=color:#f92672>&#34;request&#34;</span><span style=color:#111>:</span> <span style=color:#d88200>&#34;attach&#34;</span><span style=color:#111>,</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4</span>    <span style=color:#f92672>&#34;name&#34;</span><span style=color:#111>:</span> <span style=color:#d88200>&#34;Attach to Remote&#34;</span><span style=color:#111>,</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5</span>    <span style=color:#f92672>&#34;address&#34;</span><span style=color:#111>:</span> <span style=color:#d88200>&#34;127.0.0.1&#34;</span><span style=color:#111>,</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6</span>    <span style=color:#f92672>&#34;port&#34;</span><span style=color:#111>:</span> <span style=color:#ae81ff>9229</span><span style=color:#111>,</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7</span>    <span style=color:#f92672>&#34;localRoot&#34;</span><span style=color:#111>:</span> <span style=color:#d88200>&#34;${workspaceFolder}/resources&#34;</span><span style=color:#111>,</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">8</span>    <span style=color:#f92672>&#34;remoteRoot&#34;</span><span style=color:#111>:</span> <span style=color:#d88200>&#34;Absolute path to the remote directory containing the program&#34;</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">9</span>  <span style=color:#111>}</span>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-json data-lang=json><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span>  {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span>    <span style=color:navy>&#34;type&#34;</span>: <span style=color:#d14>&#34;node&#34;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>    <span style=color:navy>&#34;request&#34;</span>: <span style=color:#d14>&#34;attach&#34;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4</span>    <span style=color:navy>&#34;name&#34;</span>: <span style=color:#d14>&#34;Attach to Remote&#34;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5</span>    <span style=color:navy>&#34;address&#34;</span>: <span style=color:#d14>&#34;127.0.0.1&#34;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6</span>    <span style=color:navy>&#34;port&#34;</span>: <span style=color:#099>9229</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7</span>    <span style=color:navy>&#34;localRoot&#34;</span>: <span style=color:#d14>&#34;${workspaceFolder}/resources&#34;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">8</span>    <span style=color:navy>&#34;remoteRoot&#34;</span>: <span style=color:#d14>&#34;Absolute path to the remote directory containing the program&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">9</span>  }
 </code></pre></div><p>Now launch gulp with some options. I&rsquo;m using <code>npx</code> here because I detest <code>npm install -g</code>:</p>
 <pre tabindex=0><code>$ npx -n --inspect-brk gulp build
 </code></pre><p>This process will now wait until VS Code attaches. When the debugger attaches, check the &ldquo;Uncaught Exceptions&rdquo; box in the breakpoint section of the debug panel.</p>
@@ -77,7 +77,7 @@ was happening.</p>
 </main>
 </div>
 <footer class=page-footer>
-<div id=copyrights>&#169; 2002-2022 Erin Schnabel</div>
+<div id=copyrights>&#169; 2002-2023 Erin Schnabel</div>
 <div class=icons>
 <a target=_blank rel=nopopener href=https://github.com/ebullient title="ebullient on GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6.0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6.0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3.0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1.0-6.2-.3-40.4-.3-61.4.0.0-70 15-84.7-29.8.0.0-11.4-29.1-27.8-36.6.0.0-22.9-15.7 1.6-15.4.0.0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5.0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9.0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4.0 33.7-.3 75.4-.3 83.6.0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6.0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9.0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
 </a>

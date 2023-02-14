@@ -2,10 +2,10 @@
 aliases:
   - /articles/76/shell-prompt-crazy-for-git-submodules
 tags:
-  - microservices
-  - git
-  - scripts
   - gameontext
+  - git
+  - microservices
+  - scripts
 title: Shell prompt crazy for Git Submodules
 ---
 {{< raw_html >}}

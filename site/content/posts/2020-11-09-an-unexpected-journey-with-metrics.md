@@ -1,6 +1,7 @@
 ---
 tags:
   - article
+  - java
   - microservices
   - micrometer
   - monster-combat

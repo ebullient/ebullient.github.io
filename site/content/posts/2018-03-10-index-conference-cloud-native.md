@@ -1,9 +1,9 @@
 ---
 tags:
   - conference
-  - microservices
-  - interview
   - gameontext
+  - interview
+  - microservices
 title: "Index 2018: What is a Cloud Native application, anyway?"
 ---
 I gave a few talks at **Index** Developer Conference in San Francisco:

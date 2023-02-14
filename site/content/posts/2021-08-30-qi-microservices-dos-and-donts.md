@@ -3,7 +3,6 @@ title: "Quarkus Insights #61 (host): Do's and Don'ts of Microservice design"
 tags:
   - microservices
   - interview
-  - quarkus
 canonical: https://youtu.be/KLYxyacnuOc
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: "Quarkus Insights #57 (guest): Quarkus CLI"
 tags:
-  - interview
-  - quarkus
   - command-line
+  - interview
+  - java
+  - quarkus
 canonical: https://youtu.be/e_kwOJE2vQo
 ---
 

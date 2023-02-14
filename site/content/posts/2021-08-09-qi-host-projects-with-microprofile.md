@@ -2,6 +2,7 @@
 title: "Quarkus Insights #59 (host): Quarkus projects using MicroProfile specs with Giuseppe"
 tags:
   - interview
+  - java
   - quarkus
 canonical: https://youtu.be/-CB7OQmNg5Q
 ---

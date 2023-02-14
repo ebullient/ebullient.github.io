@@ -2,8 +2,8 @@
 aliases:
   - /articles/54/lubuntu-1104-on-thinkpad-w520
 tags:
-  - linux-ubuntu
   - hardware-thinkpad
+  - linux-ubuntu
 title: lubuntu 11.04 on a thinkpad w520
 ---
 {{< raw_html >}}

@@ -1,8 +1,8 @@
 ---
 title: "Quarkus Insights #76 (guest): Quarkus Q&A"
 tags:
-  - microservices
   - interview
+  - java
   - quarkus
 canonical: https://youtu.be/JuBmInppfOw
 ---

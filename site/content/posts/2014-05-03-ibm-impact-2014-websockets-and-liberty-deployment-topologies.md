@@ -3,9 +3,9 @@ title: "IBM Impact 2014: WebSockets and Liberty Deployment Topologies"
 tags:
   - conference
   - java
-  - websockets
-  - liberty
   - java-ee
+  - liberty
+  - websockets
 ---
 
 This was also my first talk in a long time, given in a big ballroom. Nothing like jumping right in.

@@ -1,9 +1,9 @@
 ---
 tags:
   - conference
+  - java
   - microservices
   - microservices-security
-  - java
 title: "Code @ IBM Think 2019: Cloud-Native Security for Java"
 ---
 

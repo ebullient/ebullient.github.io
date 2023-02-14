@@ -1,10 +1,11 @@
 ---
 title: "airhacks.fm: MicroProfile Metrics, Micrometer and Quarkus — podcast with Adam Bien"
 tags:
-  - podcast
   - interview
+  - java
   - metrics
   - micrometer
+  - podcast
   - quarkus
 ---
 

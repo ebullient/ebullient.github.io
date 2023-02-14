@@ -1,10 +1,11 @@
 ---
 title: "Iterative development with Quarkus and Svelte, care of Quinoa"
 tags:
+  - gameontext
+  - java
+  - pockets
   - quarkus
   - svelte
-  - gameontext
-  - pockets
 ---
 
 Another conference is coming up, and I'm writing another ridiculous frankenstein app for it. 

@@ -1,10 +1,11 @@
 ---
 tags:
-  - podcast
   - interview
+  - java
   - metrics
-  - monster-combat
   - micrometer
+  - monster-combat
+  - podcast
 title: "SpringOne 2019 Preview: Metrics for the Win"
 ---
 Mark is one of my favorite humans. It is always lovely to talk with him.

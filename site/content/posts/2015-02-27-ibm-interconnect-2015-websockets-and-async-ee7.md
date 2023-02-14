@@ -1,10 +1,10 @@
 ---
 title: "IBM InterConnect 2015: WebSockets and Async EE7"
 tags:
-  - conference
-  - websockets
-  - java
   - async
+  - conference
+  - java
+  - websockets
 ---
 
 All of the new shiny Async things.

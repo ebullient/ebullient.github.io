@@ -1,8 +1,8 @@
 ---
 title: "Quarkus Insights #81 (host): Morphia and MongoDB object-document mapping"
 tags:
-  - microservices
   - interview
+  - java
   - quarkus
 canonical: https://youtu.be/XL-rSQJuhqI
 ---

@@ -1,8 +1,8 @@
 ---
 title: "Quarkus Insights #71 (co-host): Using JReleaser with Quarkus"
 tags:
-  - microservices
   - interview
+  - java
   - quarkus
 canonical: https://youtu.be/Ui_bwjNNjcc
 ---

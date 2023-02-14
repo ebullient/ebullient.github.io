@@ -2,11 +2,11 @@
 aliases:
   - /articles/77/swagger-first-api-design
 tags:
-  - microservices
-  - swagger
+  - gameontext
   - java
   - liberty
-  - gameontext
+  - microservices
+  - swagger
 title: Swagger-first API design
 ---
 {{< raw_html >}}

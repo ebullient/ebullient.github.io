@@ -2,9 +2,9 @@
 aliases:
   - /articles/80/secure-microservices-api-keys-access-tokens-and-signed-jwts
 tags:
-  - microservices
   - java
   - liberty
+  - microservices
 title: 'Secure Microservices: API Keys, Access Tokens, and Signed JWTs'
 ---
 

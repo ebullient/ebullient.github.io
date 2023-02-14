@@ -1,8 +1,8 @@
 ---
 title: "Quarkus Insights #80 (co-host): Neo4j with Quarkus"
 tags:
-  - microservices
   - interview
+  - java
   - quarkus
 canonical: https://youtu.be/H4FI19b4FMA
 ---

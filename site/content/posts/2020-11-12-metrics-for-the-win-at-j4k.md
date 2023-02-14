@@ -2,6 +2,7 @@
 title: "J4K 2020: Metrics for the win!"
 tags:
   - conference
+  - java
   - microservices
   - metrics
   - micrometer

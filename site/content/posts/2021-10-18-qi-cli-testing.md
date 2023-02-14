@@ -1,9 +1,10 @@
 ---
 title: "Quarkus Insights #67 (guest): Testing command mode"
 tags:
-  - microservices
   - interview
+  - java
   - quarkus
+  - testing
 canonical: https://youtu.be/oY8TtKrC_5I
 ---
 

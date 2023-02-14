@@ -2,6 +2,7 @@
 title: "DevNexus 2022: Take a walk on the cient side"
 tags:
   - command-line
+  - conference
   - java
   - quarkus
   - pockets

@@ -2,9 +2,10 @@
 title: "JavaOne 2017: Introduction to Reactive Systems"
 tags:
   - conference
-  - workshop
-  - reactive
   - gameontext
+  - java
+  - reactive
+  - workshop
 ---
 
 A Joint adventure with Lightbend, we lead folks in the workshop through a specialized version of our Game On! Text Adventure.. 

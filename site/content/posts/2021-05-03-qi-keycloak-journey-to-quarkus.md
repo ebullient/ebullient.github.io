@@ -2,6 +2,7 @@
 title: "Quarkus Insights #47 (host): Keycloak's Journey to Quarkus"
 tags:
   - interview
+  - java
   - quarkus
 canonical: https://youtu.be/qNeDPgrytxE
 ---

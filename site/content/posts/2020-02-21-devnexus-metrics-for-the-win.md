@@ -2,6 +2,7 @@
 title: "DevNexus 2020: Metrics for the Win"
 tags:
   - conference
+  - java
   - metrics
   - micrometer
   - monster-combat

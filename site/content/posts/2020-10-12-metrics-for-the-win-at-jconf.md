@@ -1,6 +1,7 @@
 ---
 tags:
   - conference
+  - java
   - microservices
   - metrics
   - micrometer

@@ -1,8 +1,8 @@
 ---
 title: "Quarkus Insights #77 (co-host): Quarkus Renarde - a server-side web framework experiment"
 tags:
-  - microservices
   - interview
+  - java
   - quarkus
 canonical: https://youtu.be/ChDVGuqGqUI
 ---

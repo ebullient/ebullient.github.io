@@ -1,8 +1,9 @@
 ---
 title: "Quarkus and Camel in bites: REST endpoints"
 tags:
-  - quarkus
   - camel
+  - java
+  - quarkus
   - rest
 ---
 

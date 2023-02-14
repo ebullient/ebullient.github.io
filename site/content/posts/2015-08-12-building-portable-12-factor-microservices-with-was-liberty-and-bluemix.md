@@ -2,9 +2,9 @@
 aliases:
   - /articles/83/building-portable-12-factor-microservices-with-was-liberty-and-bluemix
 tags:
-  - microservices
   - java
   - liberty
+  - microservices
 title: Building portable, 12-factor microservices with WAS Liberty and Bluemix
 ---
 

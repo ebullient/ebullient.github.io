@@ -1,6 +1,7 @@
 ---
 tags:
   - conference
+  - java
   - micrometer
   - metrics
   - spring

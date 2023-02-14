@@ -1,9 +1,9 @@
 ---
 title: "NY WebSphere Users Group: WebSphere Liberty"
 tags:
-  - meetup
   - java
   - liberty
+  - meetup
 ---
 Met with WebSphere User Group to talk about all things Liberty.
 

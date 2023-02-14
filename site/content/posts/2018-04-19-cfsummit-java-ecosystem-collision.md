@@ -1,8 +1,8 @@
 ---
 tags:
   - conference
-  - microservices
   - java
+  - microservices
 title: "CF Summit 2018: Cloud Native and the Java Ecosystem"
 ---
 

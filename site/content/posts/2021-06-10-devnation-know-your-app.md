@@ -1,6 +1,7 @@
 ---
 title: "Know your app: Add metrics to Java with Micrometer"
 tags:
+  - java
   - metrics
   - micrometer
 canonical: https://developers.redhat.com/devnation/tech-talks/java-micrometer

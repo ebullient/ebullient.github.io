@@ -19,9 +19,9 @@ title: Docker script for AnyConnect on OSX
 <code>&gt; docker-machine env default</code><br />
 I do this instead, and the script does the rest: <br />
 <code>&gt; . dockerEnv</code></p>
-{{< raw_html >}}
-<!--more-->
 {{< /raw_html >}}
+<!--more-->
+{{< raw_html >}}
 <p>The contents of the script are pretty trivial (I am sure shell wizards can find plenty  wrong with it, starting with the direct reference to bash, but whatever. Laziness, right?): </p>
 
 <pre><code>#!/bin/bash

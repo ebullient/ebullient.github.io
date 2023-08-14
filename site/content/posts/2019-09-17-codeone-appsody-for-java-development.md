@@ -7,7 +7,7 @@ tags:
 ---
 JavaOne is gone, CodeOne is here, and IBM attended to represent a new collection of open source projects attempting to aid companies adopt cloud native development.
 
-In an [interview with Luke Shantz](https://share.transistor.fm/s/ee304a5c), I described what role I felt Appsody played in the Cloud-native development game, including how it could make developer's lives easier.
+In an [interview with Luke Shantz](/files/2019-erin-schnabel-appsody-podcast.mp3), I described what role I felt Appsody played in the Cloud-native development game, including how it could make developer's lives easier.
 
 **Edit**: Not all of the tech we brought to CodeOne in 2019 lived for very long, but some of it did address real issues, and I imagine we'll see it creep back in via other methods. 
 

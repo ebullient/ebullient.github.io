@@ -129,4 +129,4 @@ echo "root" >> /var/spool/cron/crontabs/cron.update
 <li><a href="http://forum.dsmg600.info/viewtopic.php?id=1150">Tutorial: Backup Everything from Vol A to Vol B once a night</a></li>
 
 </ul></p>
-{{< raw_html >}}
+{{< /raw_html >}}

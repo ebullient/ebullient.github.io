@@ -139,4 +139,4 @@ srwxrwxrwx    1 xfs      xfs             0 Jul  9 23:15 /tmp/.font-unix/fs7100</
 <p>Which the font server (xfs) is listening on. Note the &#8220;s&#8221; in the beggining<br />
 of the ls -l line: this says this is a special unix-domain *s*ocket file.</p>
 </blockquote>
-{{< raw_html >}}
+{{< /raw_html >}}

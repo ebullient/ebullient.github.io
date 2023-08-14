@@ -67,4 +67,4 @@ ln -s /ffp/bin/busybox /bin/busybox
 <p>lighttpd and php next... </p>
 
 <p><i>UPDATE - 6 Jun 2010: Holy hell, batman: when I originally wrote this, I totally typed SSL instead of SSH. WTF?!</i></p>
-{{< raw_html >}}
+{{< /raw_html >}}

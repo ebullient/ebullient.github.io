@@ -15,4 +15,4 @@ title: Movies schmovies
 <li>And last, but not least, the simplest instruction from <a href="http://www.xine-project.org/faq#discardedskipped">xine's help</a>: change the niceness level of xine.. <code>nice --5 xine</code></li>
 </ul>
 <p>And poof! movie! with menu! rock on</p>
-{{< raw_html >}}
+{{< /raw_html >}}

@@ -58,4 +58,4 @@ All of the above was easy enough, and gave me a telnet shell with root access (n
 <tr><td>grpck</td><td>Sanity check the /etc/group file; ignore bad group names 500/501</td></tr>
 <tr><td>login</td><td>Test your changes: verify you can log in with the password you think you set. ;) </td></tr>
 </table>
-{{< raw_html >}}
+{{< /raw_html >}}

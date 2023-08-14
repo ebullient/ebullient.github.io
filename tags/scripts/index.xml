@@ -11,8 +11,10 @@ I've also been using some very useful aliases to make working with submodules sa
 I've learned to type gradle, like all the time. Now I need to use gradlew, and for some reason this is difficult.
 So I wrote a script, that I've now aliased (whichGradle is now obviously on my path):
 alias gradle='whichGradle'
-which just does this: if [ -x $PWD/gradlew ]; then echo Using $PWD/gradlew $PWD/gradlew $@ else echo Using `which gradle` gradle $@ fi</description></item><item><title>Docker script for AnyConnect on OSX</title><link>/2015/08/25/docker-script-for-anyconnect-on-osx.html</link><pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate><guid>/2015/08/25/docker-script-for-anyconnect-on-osx.html</guid><description>I am queen of laziness, and I have to use AnyConnect, and that screws with Docker, and then I have to go looking to remember the magic incantation to get things right...
-Who has time for that? I made a script that wraps the whole thing up and reminds me what I should do when it doesn't work.
-Instead of: &amp;gt; docker-machine env default
-I do this instead, and the script does the rest: &amp;gt; . dockerEnv
-The contents of the script are pretty trivial (I am sure shell wizards can find plenty wrong with it, starting with the direct reference to bash, but whatever. Laziness, right?): #!/bin/bash UP=`docker-machine status default` if [ "$UP" != "Running" ] ; then echo "Starting default docker VM" docker-machine start default fi eval "$(docker-machine env default)" export DM_IP=$(docker-machine ip default) echo $DM_IP DM_SUBNET=192.168.$(echo $DM_IP| cut -d'.' -f 3) RESULT=`netstat -rn | grep $DM_SUBNET | grep vboxnet` if [ "$RESULT" = "" ] ; then echo "Adding route for vboxnet0" sudo route -nv add -net $DM_SUBNET -interface vboxnet0 RESULT=`netstat -rn | grep $DM_SUBNET | grep vboxnet` if [ $RESULT = "" ] ; then echo "Quit AnyConnect and re-run this script." exit fi fi docker-machine ls [edit on 3 Sept: updated for even better-ness. Laziness rocks.]</description></item></channel></rss>
+which just does this: if [ -x $PWD/gradlew ]; then echo Using $PWD/gradlew $PWD/gradlew $@ else echo Using `which gradle` gradle $@ fi</description></item><item><title>Docker script for AnyConnect on OSX</title><link>/2015/08/25/docker-script-for-anyconnect-on-osx.html</link><pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate><guid>/2015/08/25/docker-script-for-anyconnect-on-osx.html</guid><description>&lt;p>I am queen of laziness, and I have to use AnyConnect, and that screws with Docker, and then I have to go looking to remember the magic incantation to get things right...&lt;/p>
+&lt;p>Who has time for that? &lt;/p>
+&lt;p>I made a script that wraps the whole thing up and reminds me what I should do when it doesn't work.&lt;/p>
+&lt;p>Instead of: &lt;br />
+&lt;code>&amp;gt; docker-machine env default&lt;/code>&lt;br />
+I do this instead, and the script does the rest: &lt;br />
+&lt;code>&amp;gt; . dockerEnv&lt;/code>&lt;/p></description></item></channel></rss>

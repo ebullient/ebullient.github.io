@@ -3,6 +3,11 @@
 {{ end }}
 {{ define "main" }}
 <main class="page" id="content">
+  {{- with .Params.figure }}
+  <figure>
+    <img src="{{ .src }}#float-right"{{ with .alt }} alt="{{.}}"{{end}} />{{ with .caption }}<figcaption>{{.}}</figcaption>{{end}}
+  </figure>
+  {{- end}}
   <article class="post">
     <header>
       <h1>{{ .Title }}</h1>

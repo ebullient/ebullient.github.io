@@ -33,7 +33,7 @@ The inspiration to try this:
 
 {{< youtube Zq1B18nPeHo >}}
 
-References:
+**References**:
 - [Signing Git Commits with Your SSH Key](https://calebhearth.com/sign-git-with-ssh)
 - [How to Sign git Commits with an SSH key - The New Stack](https://thenewstack.io/how-to-sign-git-commits-with-an-ssh-key/)
 - [SSH signing keys - GitHub Docs](https://docs.github.com/en/rest/users/ssh-signing-keys)

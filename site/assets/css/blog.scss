@@ -91,6 +91,9 @@ section.archive_list ul .date {
 .all_tags {
   text-align: justify;
 }
+.prev-next {
+  clear: both;
+}
 .prev-next .center {
   text-align: center;
   width: 15em;
@@ -99,7 +102,6 @@ section.archive_list ul .date {
   text-align: left;
   width: 10em;
   min-width: 10em;
-
 }
 .prev-next .right {
   text-align: right;
@@ -202,6 +204,9 @@ body {
   flex: 1 1 auto;
   height: 100%
 }
+article:not(.post) header {
+  clear: both;
+}
 header {
   display: flex;
   flex-flow: row wrap;
@@ -238,7 +243,7 @@ nav.prev-next {
 }
 article.post,
 div.archive {
-  flex: 1;
+  position: relative;
 }
 /* Layout: div.archive contains main.archive and sidebar.aside
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -260,4 +265,10 @@ aside.sidebar {
     width: 800px;
     margin: 0 auto;
   }
+}
+img[src$='#float-right']
+{
+  float:right;
+  max-width: 300px;
+  max-height: 400px;
 }

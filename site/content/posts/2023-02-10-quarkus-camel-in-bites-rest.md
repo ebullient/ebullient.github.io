@@ -13,9 +13,7 @@ Using Quarkus and Camel together is a bit of a brain-bender, as you're overlappi
 
 <!--more-->
 
-
 This is just a snip, and it isn't checked in anywhere, but as a snapshot, it explains what I had to do to get a Rest endpoint functioning (with my own quirks, of course):
-
 
 ```java
 package dev.ebullient.pockets.routes;

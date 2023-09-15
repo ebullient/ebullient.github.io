@@ -16,7 +16,7 @@ In this attempt, I'm using an [invokable scripts](https://github.com/saml-dev/ob
 
 The general idea: I run the script (command), it updates/replaces the contents of a note. I can review that note and decide if unreferenced files should be deleted, or if links need to be fixed, etc. I can run the script again to verify that I've fixed the problem, or I can forget about it until the next time I feel like I should tidy things up.
 
-The gist is below the fold (see more).
+The [gist](https://gist.github.com/ebullient/9574764676b96530659e4f65945d3392) is shown below the fold (see more).
 
 <!--more-->
 

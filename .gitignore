@@ -6,7 +6,6 @@ _site
 .vendor
 .obsidian
 jekyll
-vendor
 public
 *~
 *.DS_Store

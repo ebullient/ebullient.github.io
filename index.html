@@ -22,6 +22,27 @@
 <main class=articles>
 <article>
 <header>
+<h2><a href=/2023/09/14/find-lost-things-in-obsidian-with-customjs.html>Find lost things in Obsidian with the CustomJS plugin</a></h2>
+</header>
+<section class=post_excerpt>
+<p><a href=https://obsidian.md>Obsidian</a> is a lovely note-taking tool that I use for all the things.
+It is flexible and plastic in a really lovely way.</p>
+<p>But over time (or due to overuse of bulk updates in VSCode), you can end up with images that aren&rsquo;t referenced anywhere, or links to images that don&rsquo;t exist (or are not where the note expects them to be).</p>
+<p>My first attempt at making a list of lost things used <a href=https://github.com/blacksmithgu/obsidian-dataview>dataview</a>, but I had a few problems with it: it was generally slow to render (not surprising, it was doing a lot), and due to that slowness, the note would flicker when I opened it on my tablet.</p>
+<p>In this attempt, I&rsquo;m using an <a href=https://github.com/saml-dev/obsidian-custom-js#invocable-scripts>invokable scripts</a> from the <a href=https://github.com/saml-dev/obsidian-custom-js>CustomJS</a> plugin to update/replace the conent of a note.</p>
+<p>The general idea: I run the script (command), it updates/replaces the contents of a note. I can review that note and decide if unreferenced files should be deleted, or if links need to be fixed, etc. I can run the script again to verify that I&rsquo;ve fixed the problem, or I can forget about it until the next time I feel like I should tidy things up.</p>
+<p>The gist is below the fold (see more).</p>
+</section>
+<div>[<a class=read-more href=/2023/09/14/find-lost-things-in-obsidian-with-customjs.html>more</a>]</div>
+<footer class=byline>
+<div>posted <time class=post_date>14 September 2023</time></div>
+<div class=tags>tags:
+<ul><li>&nbsp;<a href=/tags/#obsidian>obsidian</a></li><li>&nbsp;<a href=/tags/#customjs>customjs</a></li></ul>
+</div>
+</footer>
+</article>
+<article>
+<header>
 <h2><a href=/2023/04/07/devnexus-beyond-rest-and-crud.html>Devnexus 2023: Beyond Rest and Crud</a></h2>
 </header>
 <section class=post_excerpt>
@@ -190,24 +211,6 @@
 <div>posted <time class=post_date>18 April 2022</time></div>
 <div class=tags>tags:
 <ul><li>&nbsp;<a href=/tags/#command-line>command-line</a></li><li>&nbsp;<a href=/tags/#conference>conference</a></li><li>&nbsp;<a href=/tags/#java>java</a></li><li>&nbsp;<a href=/tags/#quarkus>quarkus</a></li><li>&nbsp;<a href=/tags/#pockets>pockets</a></li></ul>
-</div>
-</footer>
-</article>
-<article>
-<header>
-<h2><a href=/2022/02/21/qi-morphia-and-mongodb.html>Quarkus Insights #81 (host): Morphia and MongoDB object-document mapping</a></h2>
-</header>
-<section class=post_excerpt>
-<p>Justin Lee drops by to discuss MongoDB object-document mapping with the Quarkus Morphia extension.</p>
-<p>We talk about Morphia, MongoDB, and the whens/whys of &ldquo;NoSQL&rdquo; vs. SQL data sources.</p>
-<div class="embed video-player">
-<iframe name=XL-rSQJuhqI class=youtube-player frameborder=0 allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src=https://www.youtube.com/embed/XL-rSQJuhqI></iframe>
-</div>
-</section>
-<footer class=byline>
-<div>posted <time class=post_date>21 February 2022</time></div>
-<div class=tags>tags:
-<ul><li>&nbsp;<a href=/tags/#interview>interview</a></li><li>&nbsp;<a href=/tags/#java>java</a></li><li>&nbsp;<a href=/tags/#quarkus>quarkus</a></li></ul>
 </div>
 </footer>
 </article>

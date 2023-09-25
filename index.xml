@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ebullient·works</title><link>/</link><description>Recent content on ebullient·works</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Find lost things in Obsidian with the CustomJS plugin</title><link>/2023/09/14/find-lost-things-in-obsidian-with-customjs.html</link><pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate><guid>/2023/09/14/find-lost-things-in-obsidian-with-customjs.html</guid><description>&lt;p>&lt;a href="https://obsidian.md">Obsidian&lt;/a> is a lovely note-taking tool that I use for all the things.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ebullient·works</title><link>/</link><description>Recent content on ebullient·works</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Erin Schnabel - skills, etc.</title><link>/skills/</link><pubDate>Mon, 25 Sep 2023 12:38:38 -0400</pubDate><guid>/skills/</guid><description> Erin Schnabel Linked in I am proficient with Object Oriented principles, design, and analysis. I was the development lead for the WebSphere Application Server Liberty runtime from it's initial release through 8.5.5.6. I've developed web applications using Perl (both CGI and Fast-CGI), PHP, and Ruby/Ruby on Rails, and javascript front-ends using JAX-RS or Servlets for the server-side. I am familiar with JSPs and JSF, though I prefer the ease-of-use provided by JAX-RS.
+I've worked in both the Core and Enterprise Expert Groups for the OSGi standards body, and have experience with the OSGi core specification and several of the services defined in the compendium.
+I'm now a Distinguished Engineer at Red Hat, working on Java, Cloud Native, Microservices, Quarkus, and other emerging technologies.
+InfoQ interview (Liberty) Active projects Game On! Text Adventure (Microservices) 8 years
+(2015 - current) Monster Combat (Application metrics) 4 years
+(2019 - current) Pockets CLI (Quarkus CLI &amp;#43; JPA) 2 years
+(2021 - current) Obsidian plugin (TypeScript) 2 years
+(2021 - current) Obsidian theme (Sass) 2 years
+(2021 - current) TTRPG Convert CLI (Quarkus CLI &amp;#43; D&amp;amp;D) 1 year
+(2022 - current) Proficient Experience Programming langauges Java (1.2.1 - 17) 27 years
+(1996 - current) Microservices and Cloud Native Docker &amp;nbsp;&amp;nbsp;[docker, docker-compose] 8 years
+(2015 - current) Know enough to be dangerous Experience Programming langauges Typescript 2 years
+(2021 - current) Javascript &amp;nbsp;&amp;nbsp;Angular.js (v1.x), Ember, Node.js, Grunt, Gulp, esbuild, etc. 16 years
+(2007 - current) Microservices and Cloud Native Kubernetes &amp;nbsp;&amp;nbsp;[minikube] 5 years
+(2018 - current) Micrometer (1.5.x - current) &amp;nbsp;&amp;nbsp;Java metrics library 4 years
+(2019 - current) Prometheus (2.15.x - current) 3 years
+(2020 - current) Quarkus (1.7.x - current) &amp;nbsp;&amp;nbsp;Creator/maintainer of Quarkus Micrometer extension 3 years
+(2020 - current) Front-end markup CSS 22 years
+(2001 - current) HTML (1.1 - 5.x) 28 years
+(1995 - current) DevOps GitHub Actions 3 years
+(2020 - current) Operating systems MacOS 14 years
+(2009 - current) Manjaro / Arch linux 3 years
+(2020 - current) ubuntu linux 13 years
+(2010 - current) Now-and-again dabbling Experience Programming languages Golang 5 years
+(2018 - current) Rust 3 years
+(2020 - current) Rust bucket Experience Programming Languages C/C&amp;#43;&amp;#43; 13 years
+(1995 - 2008) PL/X, PL/1 4 years
+(1999 - 2003) Perl 15 years
+(2001 - 2016) PHP (4.0.6 - 4.5.x, 5.2.x) 10 years
+(2002 - 2012) Ruby / Ruby on Rails 7 years
+(2006 - 2013) SQL 23 years
+(1995 - 2018) Velocity 5 years
+(2007 - 2012) DevOps Travis CI 2 years
+(2018 - 2020) Standards OSGi (R4, R5) &amp;nbsp;&amp;nbsp;[DS, ConfigAdmin, Bnd] 9 years
+(2007 - 2016) CORBA (2.3.x-2.6.x) &amp;nbsp;&amp;nbsp;[GIOP, RMI/IIOP] 15 years
+(1997 - 2012) IMAP (4Rev1) 3 years
+(2002 - 2005) SMTP 3 years
+(2002 - 2005) Applications Apache (1.3.2x/2.x) 12 years
+(2001 - 2013) Courier-IMAP (1.7) 3 years
+(2002 - 2005) Jetty (6.1.x,7,8) 9 years
+(2009 - 2018) MySQL (4.0, 5.0) 14 years
+(2002 - 2016) Postfix (2.x) 3 years
+(2002 - 2005) WebSphere Liberty &amp;nbsp;&amp;nbsp;Founding contributor / architect / technical lead 12 years
+(2005 - 2017) WebSphere Application Server for z/OS and OS/390 (4.x - 6.x) &amp;nbsp;&amp;nbsp;Component Broker for OS/390 v3.0.2 9 years
+(1999 - 2008) Operating systems gentoo linux 10 years
+(2003 - 2013)</description></item><item><title>Find lost things in Obsidian with the CustomJS plugin</title><link>/2023/09/14/find-lost-things-in-obsidian-with-customjs.html</link><pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate><guid>/2023/09/14/find-lost-things-in-obsidian-with-customjs.html</guid><description>&lt;p>&lt;a href="https://obsidian.md">Obsidian&lt;/a> is a lovely note-taking tool that I use for all the things.
 It is flexible and plastic in a really lovely way.&lt;/p>
 &lt;p>But over time (or due to overuse of bulk updates in VSCode), you can end up with images that aren&amp;rsquo;t referenced anywhere, or links to images that don&amp;rsquo;t exist (or are not where the note expects them to be).&lt;/p>
 &lt;p>My first attempt at making a list of lost things used &lt;a href="https://github.com/blacksmithgu/obsidian-dataview">dataview&lt;/a>, but I had a few problems with it: it was generally slow to render (not surprising, it was doing a lot), and due to that slowness, the note would flicker when I opened it on my tablet.&lt;/p>
@@ -34,46 +79,7 @@ QCon session listing</description></item><item><title>Quarkus and Camel in bites
 alt="Coding in the air" width="400px"/>
 &lt;/figure></description></item><item><title>DevNexus 2022: Take a walk on the cient side</title><link>/2022/04/18/pockets-command-line-apps-at-devnexus.html</link><pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate><guid>/2022/04/18/pockets-command-line-apps-at-devnexus.html</guid><description>A new talk! I have two recorded versions, but few charts, as this one was mostly code.
 My daughter figured out how to text me in the middle of it. The notifications appeared on my ipad, so I could see them while the audience couldn&amp;rsquo;t, but I&amp;rsquo;d like to know if you would have been able to keep a straight face as the notifications arrived: &amp;ldquo;mom&amp;rdquo;&amp;hellip; &amp;ldquo;mom&amp;rdquo;&amp;hellip;&amp;ldquo;mom&amp;rdquo;&amp;hellip;
-The subject of the talk is a little command line application called &amp;ldquo;Pockets&amp;rdquo;, and it lives here: https://github.com/ebullient/pockets-cli</description></item><item><title>Erin Schnabel - skills, etc.</title><link>/skills/</link><pubDate>Tue, 22 Feb 2022 18:51:15 -0500</pubDate><guid>/skills/</guid><description> Erin Schnabel Linked in I am proficient with Object Oriented principles, design, and analysis. I was the development lead for the WebSphere Application Server Liberty runtime from it's initial release through 8.5.5.6. I've developed web applications using Perl (both CGI and Fast-CGI), PHP, and Ruby/Ruby on Rails, and javascript front-ends using JAX-RS or Servlets for the server-side. I am familiar with JSPs and JSF, though I prefer the ease-of-use provided by JAX-RS.
-I've worked in both the Core and Enterprise Expert Groups for the OSGi standards body, and have experience with the OSGi core specification and several of the services defined in the compendium.
-I'm now a Distinguished Engineer at Red Hat, working on Java, Cloud Native, Microservices, Quarkus, and other emerging technologies.
-InfoQ interview (Liberty) Proficient Experience Programming langauges Java (1.2.1 - 11) 27 years
-(1996 - current) Microservices and Cloud Native Docker (1.2.1 - 11) &amp;nbsp;&amp;nbsp;[docker, docker-compose] 8 years
-(2015 - current) Know enough to be dangerous Experience Programming langauges Typescript 2 years
-(2021 - current) Javascript &amp;nbsp;&amp;nbsp;Angular.js (v1.x), Ember, Node.js, Grunt, Gulp, etc. 16 years
-(2007 - current) Microservices and Cloud Native Kubernetes (1.2.1 - 11) &amp;nbsp;&amp;nbsp;[minikube] 5 years
-(2018 - current) Micrometer (1.5.x - current) &amp;nbsp;&amp;nbsp;Java metrics library 4 years
-(2019 - current) Prometheus (2.15.x - current) 3 years
-(2020 - current) Quarkus (1.7.x - current) &amp;nbsp;&amp;nbsp;Creator/maintainer of Quarkus Micrometer extension 3 years
-(2020 - current) Front-end development CSS 22 years
-(2001 - current) HTML (1.1 - 5.x) 28 years
-(1995 - current) DevOps GitHub Actions 3 years
-(2020 - current) Travis CI 5 years
-(2018 - current) Operating systems MacOS 14 years
-(2009 - current) Manjaro / Arch linux 3 years
-(2020 - current) ubuntu linux 13 years
-(2010 - current) Now-and-again dabbling Experience Programming languages Golang 5 years
-(2018 - current) Rust 3 years
-(2020 - current) Rust bucket Experience Programming Languages C/C&amp;#43;&amp;#43; 13 years
-(1995 - 2008) PL/X, PL/1 4 years
-(1999 - 2003) Perl 15 years
-(2001 - 2016) PHP (4.0.6 - 4.5.x, 5.2.x) 10 years
-(2002 - 2012) Ruby / Ruby on Rails 7 years
-(2006 - 2013) SQL 23 years
-(1995 - 2018) Velocity 5 years
-(2007 - 2012) Standards OSGi (R4, R5) &amp;nbsp;&amp;nbsp;[DS, ConfigAdmin, Bnd] 9 years
-(2007 - 2016) CORBA (2.3.x-2.6.x) &amp;nbsp;&amp;nbsp;[GIOP, RMI/IIOP] 15 years
-(1997 - 2012) IMAP (4Rev1) 3 years
-(2002 - 2005) SMTP 3 years
-(2002 - 2005) Applications Apache (1.3.2x/2.x) 12 years
-(2001 - 2013) Courier-IMAP (1.7) 3 years
-(2002 - 2005) Jetty (6.1.x,7,8) 9 years
-(2009 - 2018) MySQL (4.0, 5.0) 14 years
-(2002 - 2016) Postfix (2.x) 3 years
-(2002 - 2005) WebSphere Liberty &amp;nbsp;&amp;nbsp;Founding contributor / architect / technical lead 12 years
-(2005 - 2017) WebSphere Application Server for z/OS and OS/390 (4.x - 6.x) &amp;nbsp;&amp;nbsp;Component Broker for OS/390 v3.0.2 9 years
-(1999 - 2008) Operating systems gentoo linux 10 years
-(2003 - 2013)</description></item><item><title>Quarkus Insights #81 (host): Morphia and MongoDB object-document mapping</title><link>/2022/02/21/qi-morphia-and-mongodb.html</link><pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><guid>/2022/02/21/qi-morphia-and-mongodb.html</guid><description>Justin Lee drops by to discuss MongoDB object-document mapping with the Quarkus Morphia extension.
+The subject of the talk is a little command line application called &amp;ldquo;Pockets&amp;rdquo;, and it lives here: https://github.com/ebullient/pockets-cli</description></item><item><title>Quarkus Insights #81 (host): Morphia and MongoDB object-document mapping</title><link>/2022/02/21/qi-morphia-and-mongodb.html</link><pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><guid>/2022/02/21/qi-morphia-and-mongodb.html</guid><description>Justin Lee drops by to discuss MongoDB object-document mapping with the Quarkus Morphia extension.
 We talk about Morphia, MongoDB, and the whens/whys of &amp;ldquo;NoSQL&amp;rdquo; vs. SQL data sources.</description></item><item><title>Quarkus Insights #80 (co-host): Neo4j with Quarkus</title><link>/2022/02/14/qi-neo4j-with-quarkus.html</link><pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate><guid>/2022/02/14/qi-neo4j-with-quarkus.html</guid><description>Max and I talked to Michael Simons about the creation of the Neo4j Quarkus extension, from understanding Quarkus&amp;rsquo;s extension model, to a deep dive into how Quarkus helps create native images via GraalVM.</description></item><item><title>Distinguished Engineer</title><link>/2022/01/25/distinguished-engineer.html</link><pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate><guid>/2022/01/25/distinguished-engineer.html</guid><description/></item><item><title>Quarkus Insights #77 (co-host): Quarkus Renarde - a server-side web framework experiment</title><link>/2022/01/25/qi-quarkus-renarde.html</link><pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate><guid>/2022/01/25/qi-quarkus-renarde.html</guid><description>Max and I talk to Stéphane Épardaud about his experiment making a server-side web framework.</description></item><item><title>Obsidian plugin: Snippetor</title><link>/2022/01/21/obsidian-plugin-snippetor.html</link><pubDate>Fri, 21 Jan 2022 00:00:00 +0000</pubDate><guid>/2022/01/21/obsidian-plugin-snippetor.html</guid><description>&lt;div class="github-card" data-github="ebullient/obsidian-snippetor" data-width="400" data-height="" data-theme="default">&lt;/div>
 &lt;script src="//cdn.jsdelivr.net/github-cards/latest/widget.js">&lt;/script>
 &lt;p>This plugin was both fussy and fun! It helps people that are not CSS savvy customize the way their task lists appear.&lt;/p></description></item><item><title>Quarkus Insights #76 (guest): Quarkus Q&amp;A</title><link>/2022/01/17/qi-quarkus-q-a.html</link><pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate><guid>/2022/01/17/qi-quarkus-q-a.html</guid><description>Max, Jason, Georgios and I all got together to answer questions about Quarkus.</description></item><item><title>Quarkus Insights #71 (co-host): Using JReleaser with Quarkus</title><link>/2021/11/22/qi-using-jreleaser-with-quarkus.html</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>/2021/11/22/qi-using-jreleaser-with-quarkus.html</guid><description>Andres Almiray joins us to discuss how to package and release Quarkus applications with JReleaser.</description></item><item><title>Obsidian.md theme: ebullientworks</title><link>/2021/11/13/obsidian-md-theme-ebullientworks.html</link><pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate><guid>/2021/11/13/obsidian-md-theme-ebullientworks.html</guid><description>Put together on a whim for the Obsidian October event, my theme is out!

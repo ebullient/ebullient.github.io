@@ -1,0 +1,3 @@
+[submodule "projects/ttrpg-convert-cli"]
+	path = projects/ttrpg-convert-cli
+	url = https://github.com/ebullient/ttrpg-convert-cli.git

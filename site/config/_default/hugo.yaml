@@ -1,7 +1,6 @@
 title: ebullient·works
 description: > # this means to ignore newlines until the next tag
   Nothing poetic here, just a collection of things. Some are "how I did this so I can remember later", others are "this is totally cool!", and some are something else entirely.
-baseURL: ""
 uglyURLs: true
 disablePathToLower: true
 disableLiveReload: true
@@ -34,6 +33,22 @@ markup:
     lineNoStart: 1
     lineNos: true
     lineNumbersInTable: false
-    noClasses: true
+    noClasses: false
     style: github
     tabWidth: 2
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+module:
+  mounts:
+  - source: ../projects/ttrpg-convert-cli/docs
+    target: content/projects/ttrpg-convert-cli/docs
+  - source: ../projects/ttrpg-convert-cli
+    includeFiles: '*.md'
+    target: content/projects/ttrpg-convert-cli
+  - source: ../projects/
+    includeFiles: '*.md'
+    target: content/projects/
+  - source: content
+    target: content

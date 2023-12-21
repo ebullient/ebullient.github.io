@@ -1,0 +1,24 @@
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<nav class="navigation breadcrumb">
+  {{- with .CurrentSection.Parent -}}
+  <a href="{{- .Permalink -}}" data-attr="⤴️">{{- .Title -}}</a>
+  {{- end -}}
+  {{- with .CurrentSection -}}
+  {{- if ne .Permalink $.Page.Permalink -}}
+  <a href="{{- .Permalink -}}">{{- .Title -}}</a>
+  {{- end -}}
+  {{- end -}}
+  {{- with .Page -}}
+  <a href="{{- .Permalink -}}" {{ if eq .Permalink $.Permalink }}class="active"{{ end }}>{{- .Title -}}</a>
+  {{- end -}}
+</nav>
+<main class="docs" id="content">
+  {{ .TableOfContents }}
+  <section class="content">
+    {{ .Content }}
+  </section>
+</main>
+{{ end }}

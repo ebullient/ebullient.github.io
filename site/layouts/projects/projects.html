@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main class="page">
+  <header class="page-header">
+    <h1 class="page-title">{{.Title}}</h1>
+  </header>
+  {{- with .Content }}
+  <article>
+    {{.}}
+  </article>
+  {{- end}}
+
+  <section>
+    <ul>
+      {{- range .CurrentSection.Pages }}
+      <li>
+        <a href="{{ .Permalink }}">{{- if .IsSection -}}<strong>{{- end -}}{{ .Title }}{{- if .IsSection -}}</strong>{{- end -}}</a>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+</main>
+{{ end }}

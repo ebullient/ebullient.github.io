@@ -392,51 +392,9 @@ section.cv th {
   height: 100%;
 }
 
-/* Default Layout: body containing wrapper and footer
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-body {
-  position: relative;
-  min-height: 100vh;
-  height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: stretch;
-}
-
-.wrapper {
-  position: relative;
-  flex: 1 1 auto;
-  height: 100%
-}
 
 article:not(.post) header {
   clear: both;
-}
-
-header {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1em;
-
-  &.page-header {
-    padding-right: 2rem;
-    gap: 0;
-    h1 {
-      flex-grow: 2;
-      line-height: 1.2;
-    }
-  }
-}
-
-footer.page-footer {
-  flex: 0;
-  display: flex;
-  min-height: 3em;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
 }
 
 /* Layout: wrapper contains header and content
@@ -444,13 +402,6 @@ footer.page-footer {
  archive: header.page-header, div.archive
  post: header.page-header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.wrapper {
-  display: flex;
-  max-width: 1000px;
-  padding: 0 1em;
-  flex-flow: column nowrap;
-  align-items: stretch;
-}
 
 nav.prev-next {
   flex: 0;
@@ -469,24 +420,79 @@ div.archive {
 /* Layout: main.docs contains section.content and nav#TableOfContents
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+body {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+.wrapper,
 main.docs {
   position: relative;
+  flex: 1 1 auto;
+  height: 100%
 }
-
-@media(min-width: 600px) {
-  main.docs {
-    position: relative;
-    #TableOfContents {
-      float: right;
-      max-width: 250px;
-      margin-left: 1em;
+.wrapper {
+  display: flex;
+  padding: 0 1em;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+footer.page-footer {
+  flex: 0;
+  display: flex;
+  min-height: 3em;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1em;
+  &.page-header {
+    padding-right: 2rem;
+    gap: 0;
+    h1 {
+      flex-grow: 2;
+      line-height: 1.2;
     }
   }
 }
 
-@media (min-width: 1000px) {
+@media(min-width: 600px) {
   .wrapper {
-    width: 1000px;
+    margin: 0 5%;
+  }
+  main.docs {
+    display: flex;
+    flex-flow: row nowrap;
+    section.content {
+      width: 70%;
+    }
+    #TableOfContents {
+      float: right;
+      max-width: 250px;
+      min-width: 100px;
+      margin-left: 1em;
+      height: 100vh;
+      top: 0; /* this is required for "sticky" to work */
+      position: sticky;
+      padding: 0 1rem 0 0;
+      overflow-y: scroll;
+      order: 2;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    max-width: 900px;
     margin: 0 auto;
   }
 }

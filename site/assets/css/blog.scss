@@ -1,6 +1,7 @@
 @import "normalize";
 @import "_01-color-palette";
 @import "_02a-font-faces";
+@import "theme";
 
 body {
   font-family: 'IBM Plex Sans', Helvetica Neue, sans serif;
@@ -417,6 +418,16 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: baseline;
+  gap: 1em;
+
+  &.page-header {
+    padding-right: 2rem;
+    gap: 0;
+    h1 {
+      flex-grow: 2;
+      line-height: 1.2;
+    }
+  }
 }
 
 footer.page-footer {
@@ -436,7 +447,7 @@ footer.page-footer {
 .wrapper {
   display: flex;
   max-width: 1000px;
-  padding: 0 .5em;
+  padding: 0 1em;
   flex-flow: column nowrap;
   align-items: stretch;
 }

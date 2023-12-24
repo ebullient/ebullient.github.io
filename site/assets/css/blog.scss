@@ -466,9 +466,6 @@ header {
 }
 
 @media(min-width: 600px) {
-  .wrapper {
-    margin: 0 5%;
-  }
   main.docs {
     display: flex;
     flex-flow: row nowrap;

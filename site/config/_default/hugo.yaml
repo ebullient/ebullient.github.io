@@ -47,16 +47,6 @@ module:
   mounts:
   - source: ../projects/
     target: content/projects/
-    excludeFiles:
-    - "*/.git*"
-    - "*/\\.editorconfig"
-    - "*/\\.mvn"
-    - "*/dco\\.txt"
-    - "*/jitpack\\.yml"
-    - "*/jreleaser\\.yml"
-    - "*/migration/**"
-    - "*/mvn*"
-    - "*/pom\\.xml"
-    - "*/src/**"
+    includeFiles: "**/*.md"
   - source: content
     target: content

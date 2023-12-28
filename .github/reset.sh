@@ -14,4 +14,4 @@ node ${SCRIPT_DIR}/update-pages.js
 
 rm -r ${BASE_DIR}/public
 cd ${BASE_DIR}/site
-hugo --minify
+hugo

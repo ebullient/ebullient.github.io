@@ -45,13 +45,18 @@ markup:
     startLevel: 2
 module:
   mounts:
-  - source: ../projects/ttrpg-convert-cli/docs
-    target: content/projects/ttrpg-convert-cli/docs
-  - source: ../projects/ttrpg-convert-cli
-    includeFiles: '*.md'
-    target: content/projects/ttrpg-convert-cli
   - source: ../projects/
-    includeFiles: '*.md'
     target: content/projects/
+    excludeFiles:
+    - "*/.git*"
+    - "*/\\.editorconfig"
+    - "*/\\.mvn"
+    - "*/dco\\.txt"
+    - "*/jitpack\\.yml"
+    - "*/jreleaser\\.yml"
+    - "*/migration/**"
+    - "*/mvn*"
+    - "*/pom\\.xml"
+    - "*/src/**"
   - source: content
     target: content

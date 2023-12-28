@@ -26,6 +26,9 @@ permalinks:
 taxonomies:
   tag: tags
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     codeFences: true
     guessSyntax: false

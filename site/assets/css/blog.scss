@@ -397,6 +397,17 @@ article:not(.post) header {
   clear: both;
 }
 
+main.docs table {
+  width: 100%;
+  margin: 0 auto;
+  th, td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--background-primary-alt);
+    padding: 0 0.2em;
+  }
+}
+
 /* Layout: wrapper contains header and content
  page: header.page-header, main.page, and div.prev-next
  archive: header.page-header, div.archive

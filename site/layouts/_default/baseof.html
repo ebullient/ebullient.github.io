@@ -20,57 +20,43 @@
   {{ end -}}
   <script>
     function setTheme() {
-      const storedTheme = localStorage.getItem('color-theme');
-      console.log("toggle.theme", storedTheme, document.documentElement.dataset.storedTheme)
-      if (storedTheme === 'dark') {
+      const storedTheme = localStorage.getItem('color-theme') || 'system';
+      document.documentElement.dataset.storedTheme = storedTheme;
+      let theme_color = "#fafafa";
+      if (storedTheme === 'dark' || (storedTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
-        document.documentElement.dataset.storedTheme = 'dark';
-      } else if (storedTheme === 'light') {
+        theme_color = "#1e1e1e";
+      } else {
         document.documentElement.classList.remove('dark');
-        document.documentElement.dataset.storedTheme = 'light';
-      } else if (storedTheme === 'system' || !storedTheme) {
-        document.documentElement.dataset.storedTheme = 'system';
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
       }
+      return theme_color;
     }
     // Toggle theme when button is clicked
     function toggleTheme() {
-      const storedTheme = localStorage.getItem('color-theme');
-      let newTheme = storedTheme;
-      if (storedTheme === 'dark') {
-        newTheme = 'light';
-      } else if (storedTheme === 'light') {
-        newTheme = 'system';
-      } else {
-        newTheme = 'dark';
-      }
+      const themeOrder = ['dark', 'light', 'system'];
+      const storedTheme = localStorage.getItem('color-theme') || 'system';
+      const newTheme = themeOrder[(themeOrder.indexOf(storedTheme) + 1) % themeOrder.length];
       localStorage.setItem('color-theme', newTheme);
-      setTheme();
+      document.querySelector('meta[name="theme-color"]').content = setTheme();
       updateButton();
     }
     function updateButton() {
       const button = document.getElementById('theme-toggle');
-      const storedTheme = localStorage.getItem('color-theme');
-      let nextTitle, newAriaLabel;
-      if (storedTheme === 'dark') {
-        newAriaLabel = 'dark';
-        nextTitle = 'Color scheme: dark; next: light';
-      } else if (storedTheme === 'light') {
-        newAriaLabel = 'light';
-        nextTitle = 'Color scheme: light; next: system preferences';
-      } else {
-        newAriaLabel = 'system';
-        nextTitle = 'Color scheme: system preferences; next: dark';
-      }
-      button.setAttribute('aria-label', newAriaLabel);
-      button.setAttribute('title', nextTitle);
+      const storedTheme = localStorage.getItem('color-theme') || 'system';
+      const themeTitles = {
+        'dark': 'Color scheme: dark; next: light',
+        'light': 'Color scheme: light; next: system preferences',
+        'system': 'Color scheme: system preferences; next: dark'
+      };
+
+      button.setAttribute('aria-label', storedTheme);
+      button.setAttribute('title', themeTitles[storedTheme]);
     }
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    setTheme();
+    const meta = document.createElement('meta');
+    meta.name = "theme-color";
+    meta.content = setTheme();
+    document.head.appendChild(meta);
     // Update the button once things have been rendered
     window.onload = function() {
       updateButton();

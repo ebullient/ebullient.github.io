@@ -90,17 +90,18 @@ h3,
 h4,
 h5,
 h6 {
+  position: relative;
   font-variant: var(--h-variant);
   font-weight: var(--h-weight);
   margin-block-start: var(--p-spacing);
   margin-block-end: var(--p-spacing);
   margin-left: -12px;
+  padding-left: 0.8em;
+  text-indent: -0.8em;
   &:before {
     content: "\00a0\00a7\00a0";
     font-size: 0.5em;
     font-weight: 200;
-    position: relative;
-    vertical-align: middle;
     visibility: visible;
   }
 }
@@ -392,7 +393,6 @@ section.cv th {
   height: 100%;
 }
 
-
 article:not(.post) header {
   clear: both;
 }
@@ -487,9 +487,10 @@ header {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .wrapper {
-    max-width: 900px;
+    max-width: 800px;
+    width: 800px;
     margin: 0 auto;
   }
 }

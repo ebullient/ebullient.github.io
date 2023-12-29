@@ -33,9 +33,12 @@ layout: single
 function addFrontMatter(file) {
   // Regular expression to match .json, .yaml, .css, and .txt links
   const regex = /\(([^)]*?\.(json|yaml|css|txt))\)/g;
-  const content = fs.readFileSync(file, 'utf8')
-      .replace('index.txt', 'index-template')
-      .replace(regex, '($1.md)');
+  const content = fs.readFileSync(file, 'utf8').replace(regex, (match, group1) => {
+    if (group1.startsWith('http')) {
+      return match;
+    }
+    return `(${group1.replace('index.txt', 'index-template')}.md)`;
+  });
   const fileName = path.basename(file);
   let newFrontMatter = singleFrontMatter;
 
@@ -77,9 +80,9 @@ canonical: "${url}"
 download: "${download}"
 ---
 ${cssNote}
-\`\`\`${lang}
+~~~${lang}
 ${code}
-\`\`\`
+~~~
 `;
 
   fs.writeFileSync(target, content);

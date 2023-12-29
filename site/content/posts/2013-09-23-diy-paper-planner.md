@@ -37,5 +37,5 @@ title: DIY paper planner
 
 <p id="fn18558719825240867d96bec" class="footnote"><sup>1</sup> <a href="http://www.designsponge.com/2013/03/bookbinding-101-five-hole-pamphlet-stitch.html">Bookbinding 101: Five-hole Pamphlet Stitch</a></p>
 
-<p id="fn18914270245240867d9714e" class="footnote"><sup>2</sup> <a href="/file_download/3/Planner-1.key" title="First version of DIY monthly/weekly planner.">Planner-1.key</a></p>
+<p id="fn18914270245240867d9714e" class="footnote"><sup>2</sup> <a href="/files/Planner-1.key" title="First version of DIY monthly/weekly planner.">Planner-1.key</a></p>
 {{< /raw_html >}}

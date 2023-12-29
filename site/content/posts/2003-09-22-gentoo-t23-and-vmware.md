@@ -14,7 +14,7 @@ title: Gentoo, T23, and VMWare
 
 <blockquote><p>Because devfs rebuilds the /dev tree at each reboot, it is likely that your vmnet and vmmon devices will become unavailable. Because those devices are now unavailable, you have to manually run the vmware-config.pl to rebuild them into the existing /dev tree.</p></blockquote>
 
-<p><strong>[UPDATE: 9/29/2004]</strong> This is total hogwash, see <a href="{{ site.baseurl }}{% link _posts/2003-09-29-its-alive-gentoo-and-t23.html %}">here</a></p>
+<p><strong>[UPDATE: 9/29/2004]</strong> This is total hogwash, see <a href="/2003/09/29/its-alive-gentoo-and-t23.html">here</a></p>
 
 {{< /raw_html >}}
 <!--more-->

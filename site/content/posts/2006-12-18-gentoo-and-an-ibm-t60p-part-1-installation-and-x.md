@@ -12,8 +12,8 @@ title: 'Gentoo and an IBM T60p - Part 1: Installation and X'
 <p>See also (Updated as new parts are added):</p>
 
 <ul>
-	<li><a href="/config/261/GentooandanIBMT60pPart2">Part 2: <span class="caps">NTFS</span></a></li>
-	<li><a href="/config/260/GentooandanIBMT60pPart3">Part 3: Networking</a></li>
+	<li><a href="/2007/01/05/gentoo-and-an-ibm-t60p-part-2-dual-boot-ntfs.html">Part 2: <span class="caps">NTFS</span></a></li>
+	<li><a href="/2007/01/05/gentoo-and-an-ibm-t60p-part-3-networking.html">Part 3: Networking</a></li>
 </ul>
 {{< /raw_html >}}
 <!--more-->

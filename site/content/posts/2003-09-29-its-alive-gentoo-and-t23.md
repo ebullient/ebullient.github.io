@@ -10,7 +10,7 @@ title: It's Alive!! (Gentoo and T23)
 {{< raw_html >}}
 <p>So a comment on the first of my entries about Gentoo on a T23 reminded me to make an update regarding my now working system...</p>
 
-<p>I also sorted out my <a href="{{ site.baseurl }}{% link _posts/2003-09-22-gentoo-t23-and-vmware.html %}"><span class="caps">VMW</span>are issues</a>.</p>
+<p>I also sorted out my <a href="/2003/09/22/gentoo-t23-and-vmware.html"><span class="caps">VMW</span>are issues</a>.</p>
 
 {{< /raw_html >}}
 <!--more-->

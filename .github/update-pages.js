@@ -32,12 +32,15 @@ layout: single
 // Function to add front matter to a file
 function addFrontMatter(file) {
   // Regular expression to match .json, .yaml, .css, and .txt links
-  const regex = /\(([^)]*?\.(json|yaml|css|txt))\)/g;
-  const content = fs.readFileSync(file, 'utf8').replace(regex, (match, group1) => {
+  const codeFiles = /\(([^)]*?\.(json|yaml|css|txt))\)/g;
+  const htmlLinks = /(href="[^"]*)\.md(#\w+?")/g;
+  const content = fs.readFileSync(file, 'utf8').replace(codeFiles, (match, group1) => {
     if (group1.startsWith('http')) {
       return match;
     }
     return `(${group1.replace('index.txt', 'index-template')}.md)`;
+  }).replace(htmlLinks, (match, group1, group2) => {
+    return `${group1}${group2.replace('.md', 'html')}`
   });
   const fileName = path.basename(file);
   let newFrontMatter = singleFrontMatter;

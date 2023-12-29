@@ -8,7 +8,7 @@ tags:
 title: Fixing Sound/Suspend-Resume on IBM T23 for Gentoo
 ---
 {{< raw_html >}}
-<p><span class="caps">ALSA</span> does work, as I mentioned <a href="{{site.baseurl}}{% link _posts/2003-09-21-dammit-gentoo-on-t23-continued.html %}">here</a>, but it seems to have problems across a suspend-resume, i.e. it doesn't work post-resume.</p>
+<p><span class="caps">ALSA</span> does work, as I mentioned <a href="/2003/09/21/dammit-gentoo-on-t23-continued.html">here</a>, but it seems to have problems across a suspend-resume, i.e. it doesn't work post-resume.</p>
 
 <p>Previously used patches don't seem to apply to newer Alsa modules.</p>
 {{< /raw_html >}}

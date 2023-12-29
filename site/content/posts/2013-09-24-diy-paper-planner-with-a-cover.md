@@ -22,7 +22,7 @@ source: html
 
 <p>As I had no idea if it would work, and was kind of putting things together here and there in the house where I had room, I neglected to take work-in-progress photos. Don't hate me. I'll do what I can to describe what I did.</p>
 
-<p><a href="{{site.baseurl}}{% link _posts/2013-09-23-diy-paper-planner.html %}">The planner</a>, remember, is basically an 8.5&#215;11&#8221; piece of paper folded in half, i.e. 5.5&#215;8.5&#8221;. What I wanted at the end of the day was an outer jacket, with some pockets, that would form a sleeve for the planner I stitched together.</p>
+<p><a href="/2013/09/23/diy-paper-planner.html">The planner</a>, remember, is basically an 8.5&#215;11&#8221; piece of paper folded in half, i.e. 5.5&#215;8.5&#8221;. What I wanted at the end of the day was an outer jacket, with some pockets, that would form a sleeve for the planner I stitched together.</p>
 
 <p>So I started with how to make the sleeve for the planner. I used two matching pieces of 12&#215;12 paper, and folded each of them in half (6&#8221; wide). I trimmed each piece to 9&#8221; in height. I used a 2-3&#8221; wide piece of contact paper (centered) to cover the outside of each folded edge: these would be the outer edges of the cover. These two pieces lay side-by-side with the folded edges to the outside. I trimmed about 1/2&#8221; off the top layer for each piece to allow the planner to be added to the cover.</p>
 

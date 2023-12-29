@@ -19,10 +19,10 @@ There were a few more that I haven't posted the charts for.. phew!
 
 <!--more-->
 
-{{< pdf "/files/2017-InterConnect-BAS-5093-SecureMicroservices.pdf" >}}
+{{< pdf "/files/2017-Interconnect-BAS-5093-SecureMicroservices.pdf" >}}
 
-{{< pdf "/files/2017-InterConnect-HAM-5074-12-factor-Liberty.pdf" >}}
+{{< pdf "/files/2017-Interconnect-HAM-5074-12-factor-Liberty.pdf" >}}
 
-{{< pdf "/files/2017-InterConnect-HAM-5092-MonolithToMicroservices.pdf" >}}
+{{< pdf "/files/2017-Interconnect-HAM-5092-MonolithToMicroservices.pdf" >}}
 
-{{< pdf "/files/2017-InterConnect-HAM-5044-Game-On.pdf" >}}
+{{< pdf "/files/2017-Interconnect-HAM-5044-Game-On.pdf" >}}

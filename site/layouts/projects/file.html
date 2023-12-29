@@ -1,0 +1,28 @@
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<nav class="navigation breadcrumb">
+  {{- with .CurrentSection.Parent -}}
+  <a href="{{- .Permalink -}}" data-attr="⤴️">{{- .Title -}}</a>
+  {{- end -}}
+  {{- with .CurrentSection -}}
+  {{- if ne .Permalink $.Page.Permalink -}}
+  <a href="{{- .Permalink -}}">{{- .Title -}}</a>
+  {{- end -}}
+  {{- end -}}
+  {{- with .Page -}}
+  <a href="{{- .Permalink -}}" {{ if eq .Permalink $.Permalink }}class="active"{{ end }}>{{- .Title -}}</a>
+  {{- end -}}
+</nav>
+<main class="docs file" id="content">
+  <section class="content">
+    {{- if isset .Params "download" }}
+    <a href="{{ .Params.download | absURL }}" class="download"><p>View / Download source</p></a>
+    {{- else if isset .Params "canonical" }}
+    <a href="{{ .Params.canonical | absURL }}" class="download"><p>View / Download source</p></a>
+    {{- end }}
+    {{ .Content }}
+  </section>
+</main>
+{{ end }}

@@ -10,7 +10,6 @@ function getGithubUrl(dir) {
   // Use a regular expression to find the URL for the project
   const regex = new RegExp(`(https.*?/${projectName})\\.git`, 'i');
   const match = gitmodules.match(regex);
-
   let githubUrl = match ? match[1] + '/blob/main/' : null;
 
   console.log(`GitHub URL: ${githubUrl}`)
@@ -20,10 +19,8 @@ function getGithubUrl(dir) {
 function githubPath(dir, githubUrl) {
   // Split the path into segments
   let segments = dir.split(path.sep);
-
   // Remove the first two segments
   segments = segments.slice(2);
-
   return `${githubUrl}${segments.join('/')}`;
 }
 
@@ -36,7 +33,9 @@ layout: single
 function addFrontMatter(file) {
   // Regular expression to match .json, .yaml, .css, and .txt links
   const regex = /\(([^)]*?\.(json|yaml|css|txt))\)/g;
-  const content = fs.readFileSync(file, 'utf8').replace(regex, '($1.md)');
+  const content = fs.readFileSync(file, 'utf8')
+      .replace('index.txt', 'index-template')
+      .replace(regex, '($1.md)');
   const fileName = path.basename(file);
   let newFrontMatter = singleFrontMatter;
 
@@ -61,19 +60,23 @@ function addFrontMatter(file) {
 }
 
 function addWrapper(file, githubUrl) {
-  const relativePath = path.relative(process.cwd(), file);
-  const target = file + '.md';
   const url = githubPath(file, githubUrl);
+  const relativePath = url.replace(githubUrl, '');
+  const download = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob', '');
+  const target = file.replace('index.txt', 'index-template') + '.md';
   const lang = path.extname(file).replace('.', '');
-  console.log(relativePath, "\n  ", target, "\n  ", url);
   const code = fs.readFileSync(file, 'utf8');
+  const cssNote = lang === 'css'
+    ? `> [!NOTE] This is a CSS file that is built using Sass. The SCSS source is available on [GitHub](${githubUrl}src/scss).`
+    : '';
   const content = `---
 layout: file
 title: "${relativePath}"
 language: ${lang}
 canonical: "${url}"
+download: "${download}"
 ---
-
+${cssNote}
 \`\`\`${lang}
 ${code}
 \`\`\`

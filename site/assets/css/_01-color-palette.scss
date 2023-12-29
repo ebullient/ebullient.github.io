@@ -141,6 +141,10 @@ body {
   --footer-bg-color: var(--background-primary-alt);
   --footer-link-hover: var(--cyan-2);
 
+  --text-on-accent: var(--gray-light-8);
+  --interactive-accent: var(--cyan-4);
+  --interactive-hover: var(--purple-4);
+
   --code-background: var(--background-primary-alt);
 }
 
@@ -166,6 +170,7 @@ body {
   --background-primary: var(--gray-light-8); //  Note background
   --background-primary-alt: var(--gray-light-5); //  Note title background
 
+  --text-on-accent: var(--gray-light-8);
   --text-normal: var(--gray-dark-5);
   --text-muted: var(--gray-dark-4); // Text darker for sidebar, toggles, inactive, tags, etc
   --text-faint: var(--gray-dark-1); // Link brackets color  --text-error: var(--red-3);

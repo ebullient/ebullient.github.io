@@ -408,6 +408,28 @@ main.docs table {
   }
 }
 
+main.docs.file a.download {
+  float: left;
+  padding: 8px;
+  margin: 1em;
+  text-decoration: none;
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border: 1px solid var(--color-base-20);
+  border-radius: 4px;
+  p {
+    margin: 0.5em 0;
+  }
+  &:hover {
+    background-color: var(--interactive-hover);
+  }
+}
+
+main.docs.file pre {
+  clear: both;
+  text-wrap: wrap;
+}
+
 /* Layout: wrapper contains header and content
  page: header.page-header, main.page, and div.prev-next
  archive: header.page-header, div.archive
@@ -428,6 +450,12 @@ div.archive {
   position: relative;
 }
 
+img[src$='#float-right'] {
+  float: right;
+  max-width: 300px;
+  max-height: 400px;
+}
+
 /* Layout: main.docs contains section.content and nav#TableOfContents
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -440,15 +468,11 @@ body {
   flex-flow: column nowrap;
   align-items: stretch;
 }
-.wrapper,
-main.docs {
-  position: relative;
-  flex: 1 1 auto;
-  height: 100%
-}
 .wrapper {
   display: flex;
   padding: 0 1em;
+  position: relative;
+  flex: 1 1 auto;
   flex-flow: column nowrap;
   align-items: stretch;
 }
@@ -479,35 +503,32 @@ header {
 @media(min-width: 600px) {
   main.docs {
     display: flex;
-    flex-flow: row nowrap;
-    section.content {
+    .content {
       width: 70%;
+      flex: 1 1 auto;
     }
     #TableOfContents {
-      float: right;
+      order: 2;
+      min-width: 200px;
       max-width: 250px;
-      min-width: 100px;
       margin-left: 1em;
-      height: 100vh;
-      top: 0; /* this is required for "sticky" to work */
-      position: sticky;
       padding: 0 1rem 0 0;
       overflow-y: scroll;
-      order: 2;
+      min-height: 100vh;
+      height: 100vh;
+      position: -webkit-sticky; /* for Safari */
+      position: sticky;
+      top: 0;
+      align-self: flex-start; /* <-- this is the fix */
+      overflow-y: scroll;
     }
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .wrapper {
-    max-width: 800px;
-    width: 800px;
+    max-width: 900px;
+    width: 900px;
     margin: 0 auto;
   }
-}
-
-img[src$='#float-right'] {
-  float: right;
-  max-width: 300px;
-  max-height: 400px;
 }

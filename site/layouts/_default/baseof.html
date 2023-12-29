@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ .Lang }}">
+<html lang="en-us">
 <head>
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-  {{ $options := (dict "targetPath" "blog.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-  {{ $blogStyle := resources.Get "css/blog.scss" | resources.ToCSS $options }}
+  {{- $options := (dict "targetPath" "blog.css" "outputStyle" "compressed" "enableSourceMap" true) -}}
+  {{- $blogStyle := resources.Get "css/blog.scss" | resources.ToCSS $options -}}
   <link rel="stylesheet" href="{{ $blogStyle.RelPermalink }}" />
   <link rel="shortcut icon" href="/favicon.ico"  type="image/x-icon"/>
   <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
-  {{- block "description" . }}{{ end }}
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
   {{- if isset .Params "canonical" }}
   <link rel="canonical" href="{{ .Params.canonical | absURL }}">
   {{- else }}

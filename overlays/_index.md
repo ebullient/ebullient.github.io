@@ -1,4 +1,3 @@
 ---
 title: Projects
-url: "/projects/"
 ---

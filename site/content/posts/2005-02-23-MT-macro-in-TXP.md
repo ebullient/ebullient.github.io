@@ -7,7 +7,7 @@ tags:
 title: 'TXP Hack: MT-Macro like function in textpattern'
 ---
 {{< raw_html >}}
-<p>This is a simple hack to add one of my favorite MT-plugins, Brad Choate's <a href="http://www.bradchoate.com/weblog/2002/08/12/mtmacro"><span class="caps">MTM</span>acros</a> <span class="attribute">[<a href="http://www.bradchoate.com">bradchoate.com</a>]</span>, to textpattern.</p>
+<p>This is a simple hack to add one of my favorite MT-plugins, Brad Choate's <a href="http://www.bradchoate.com/weblog/2002/08/12/mtmacro"><span class="caps">MTM</span>acros</a>, to textpattern.</p>
 
 <p>Granted, I didn't pull the entire kaboodle. This doesn't do fun container logic and acronym matching, etc. But it does do simple string replacement, which is what I used it for (e.g. smilies and pretty attributions).</p>
 
@@ -96,7 +96,7 @@ title: 'TXP Hack: MT-Macro like function in textpattern'
 
 <h3><a name="textilePHP"></a> Using macros with original <code>TextilePHP</code></h3>
 
-<p>This also works with <a href="http://jimandlissa.com/project/textilephp">TextilePHP</a> <span class="attribute">[<a href="http://jimandlissa.com">jimandlissa.com</a>]</span>.</p>
+<p>This also works with <a href="http://jimandlissa.com/project/textilephp">TextilePHP</a>.</p>
 
 <p>I made the following updates to their class:</p>
 
@@ -141,7 +141,7 @@ restore preserved blocks.</li>
 
 <h3>Footnotes</h3>
 
-<p class="footnote" id="fn1"><sup>1</sup> <a href="http://www.solarorange.com/projects/textile/">Unofficial Textile 2.0 beta</a> <span class="attribute">[<a href="http://www.solarorange.com">solarorange.com</a>]</span>, from <a href="http://forum.textpattern.com/viewtopic.php?id=2285">this thread</a> <span class="attribute">[<a href="http://forum.textpattern.com">forum.textpattern.com</a>]</span>.</p>
+<p class="footnote" id="fn1"><sup>1</sup> <a href="http://www.solarorange.com/projects/textile/">Unofficial Textile 2.0 beta</a>, from <a href="http://forum.textpattern.com/viewtopic.php?id=2285">this thread</a>.</p>
 
-<p class="footnote" id="fn2"><sup>2</sup> <a href="http://greenrift.textdrive.com/projects/9/textilephp-for-txp">TextilePHP for <span class="caps">TXP</span></a> <span class="attribute">[<a href="http://greenrift.textdrive.com">greenrift.textdrive.com</a>]</span>, as mentioned in <a href="http://forum.textpattern.com/viewtopic.php?id=2059">this thread</a> <span class="attribute">[<a href="http://forum.textpattern.com">forum.textpattern.com</a>]</span>.</p>
+<p class="footnote" id="fn2"><sup>2</sup> <a href="http://greenrift.textdrive.com/projects/9/textilephp-for-txp">TextilePHP for <span class="caps">TXP</span></a>, as mentioned in <a href="http://forum.textpattern.com/viewtopic.php?id=2059">this thread</a>.</p>
 {{< /raw_html >}}

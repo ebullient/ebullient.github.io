@@ -160,38 +160,38 @@ OpenGL version string: 2.0.6119 (8.30.3)
 
 <h3>Footnotes / References :</h3>
 
-<p id="fn21131636054fd685f89dc07" class="footnote"><sup>1</sup> <a href="http://www-307.ibm.com/pc/support/site.wss/document.do?sitestyle=lenovo&amp;lndocid=MIGR-62487">Overview – ThinkPad T60, T60p</a> <span class="attribute">[<a href="http://www.ibm.com">www.ibm.com</a>]</span></p>
+<p id="fn21131636054fd685f89dc07" class="footnote"><sup>1</sup> <a href="http://www-307.ibm.com/pc/support/site.wss/document.do?sitestyle=lenovo&amp;lndocid=MIGR-62487">Overview – ThinkPad T60, T60p</a></p>
 
-<p id="fn15003744444fd685f89de7a" class="footnote"><sup>2</sup> <a href="http://support.intel.com/support/notebook/centrino/duo/">Intel&#174; Centrino&#8482; Duo Mobile Technology</a> <span class="attribute">[<a href="http://www.intel.com">intel.com</a>]</span><br />
+<p id="fn15003744444fd685f89de7a" class="footnote"><sup>2</sup> <a href="http://support.intel.com/support/notebook/centrino/duo/">Intel&#174; Centrino&#8482; Duo Mobile Technology</a><br />
 <a href="http://processorfinder.intel.com/details.aspx?sSpec=SL8VN">Intel&#174; Core&#8482; Duo processor T2600</a></p>
 
-<p id="fn16564309884fd685f89e634" class="footnote"><sup>3</sup> <a href="http://www.alsa-project.org/alsa-doc/doc-php/template.php?company=Intel&amp;card=ICH+southbridge+HD-audio+and+modem.&amp;chip=ICH6%2C+ICH6M%2C+ICH7%2C+ESB2&amp;module=hda-intel"><span class="caps">ALSA</span>: hda-intel</a> <span class="attribute">[<a href="http://www.alsa-project.org">alsa-project.org</a>]</span></p>
+<p id="fn16564309884fd685f89e634" class="footnote"><sup>3</sup> <a href="http://www.alsa-project.org/alsa-doc/doc-php/template.php?company=Intel&amp;card=ICH+southbridge+HD-audio+and+modem.&amp;chip=ICH6%2C+ICH6M%2C+ICH7%2C+ESB2&amp;module=hda-intel"><span class="caps">ALSA</span>: hda-intel</a></p>
 
-<p id="fn4313280124fd685f89fc9d" class="footnote"><sup>4</sup> <a href="http://gentoo-wiki.com/HOWTO_Gmail_and_sSMTP"><span class="caps">HOWTO</span> Gmail and sSMTP</a> <span class="attribute">[<a href="http://gentoo-wiki.com/">gentoo-wiki.com</a>]</span></p>
+<p id="fn4313280124fd685f89fc9d" class="footnote"><sup>4</sup> <a href="http://gentoo-wiki.com/HOWTO_Gmail_and_sSMTP"><span class="caps">HOWTO</span> Gmail and sSMTP</a></p>
 
-<p id="fn19985520194fd685f8a126c" class="footnote"><sup>5</sup> <a href="http://odin.prohosting.com/wedge01/gentoo-radeon-faq.html#1_whyuse">Gentoo <span class="caps">ATI</span> Radeon <span class="caps">FAQ</span></a> <span class="attribute">[<a href="http://odin.prohosting.com/wedge01/">odin.prohosting.com/wedge01</a>]</span></p>
+<p id="fn19985520194fd685f8a126c" class="footnote"><sup>5</sup> <a href="http://odin.prohosting.com/wedge01/gentoo-radeon-faq.html#1_whyuse">Gentoo <span class="caps">ATI</span> Radeon <span class="caps">FAQ</span></a></p>
 
 <p id="fn6" class="footnote"><sup>6</sup> <a href="http://www.mozilla.org/unix/dpi.html">Mozilla Font Size / <span class="caps">DPI</span> Issues</a></p>
 
 <h3>Other References (of course):</h3>
 
 <ul>
-	<li><a href="http://tuxmobil.org/centrino.html">Linux on Intel&#174; Centrino&#8482; and Centrino-Duo&#8482; Laptops and Notebooks</a> <span class="attribute">[<a href="http://tuxmobil.org/">tuxmobil.org</a>]</span></li>
-	<li><a href="http://tuxmobil.org/ibm.html">Linux Laptop and Notebook Installation Survey: <span class="caps">IBM</span>/Lenovo</a> <span class="attribute">[<a href="http://tuxmobil.org/">tuxmobil.org</a>]</span></li>
+	<li><a href="http://tuxmobil.org/centrino.html">Linux on Intel&#174; Centrino&#8482; and Centrino-Duo&#8482; Laptops and Notebooks</a></li>
+	<li><a href="http://tuxmobil.org/ibm.html">Linux Laptop and Notebook Installation Survey: <span class="caps">IBM</span>/Lenovo</a></li>
 </ul>
 
 <ul>
-	<li><a href="http://www.hardwareinreview.com/cms/content/view/49">Lenovo ThinkPad T60p review</a> <span class="attribute">[<a href="http://www.hardwareinreview.com">hardwareinreview.com</a>]</span></li>
-	<li><a href="http://thinkwiki.org/wiki/Category:T60p">Category:T60p</a> <span class="attribute">[<a href="http://thinkwiki.org/">thinkwiki.org</a>]</span></li>
-	<li><a href="http://zachtib.com/?p=19">The new Thinkpad T60p</a> <span class="attribute">[<a href="http://zachtib.com">zachtib.com</a>]</span></li>
+	<li><a href="http://www.hardwareinreview.com/cms/content/view/49">Lenovo ThinkPad T60p review</a></li>
+	<li><a href="http://thinkwiki.org/wiki/Category:T60p">Category:T60p</a></li>
+	<li><a href="http://zachtib.com/?p=19">The new Thinkpad T60p</a></li>
 	<li><a href="http://buzzy.tesuji.org/thinkpad_t60p.html">Gentoo Linux on the Thinkpad T60p</a></li>
-	<li><a href="http://www.thinkwiki.org/wiki/Installation_instructions_for_the_ThinkPad_T60p">Installation instructions for the ThinkPad T60p</a> <span class="attribute">[<a href="http://www.thinkwiki.org">thinkwiki.org</a>]</span></li>
-	<li><a href="http://www.thinkwiki.org/wiki/HDAPS"><span class="caps">HDAPS</span></a> <span class="attribute">[<a href="http://www.thinkwiki.org">thinkwiki.org</a>]</span>
+	<li><a href="http://www.thinkwiki.org/wiki/Installation_instructions_for_the_ThinkPad_T60p">Installation instructions for the ThinkPad T60p</a></li>
+	<li><a href="http://www.thinkwiki.org/wiki/HDAPS"><span class="caps">HDAPS</span></a>
 <ul>
 	<li><a href="http://www.thinkwiki.org/wiki/How_to_protect_the_harddisk_through_APS">How to protect the harddisk through <span class="caps">APS</span></a></li>
 </ul></li>
-	<li><a href="http://gentoo-wiki.com/HOWTO_ALSA_sound_mixer_aka_dmix" title="Complete, include sound mixer"><span class="caps">HOWTO</span> Alsa</a> <span class="attribute">[<a href="http://gentoo-wiki.com">gentoo-wiki.com</a>]</span></li>
-	<li><a href="http://www.infinitephoto.com/pages/dpi.htm"><span class="caps">DPI</span> and File Size calculator/formulas</a> <span class="attribute">[<a href="http://www.infinitephoto.com">www.infinitephoto.com</a>]</span></li>
+	<li><a href="http://gentoo-wiki.com/HOWTO_ALSA_sound_mixer_aka_dmix" title="Complete, include sound mixer"><span class="caps">HOWTO</span> Alsa</a></li>
+	<li><a href="http://www.infinitephoto.com/pages/dpi.htm"><span class="caps">DPI</span> and File Size calculator/formulas</a></li>
 </ul>
 
 <p><em>2007-01-05: Updated to make all linked files work (missed uploading a few), added link to Parts 2 and 3.</em></p>

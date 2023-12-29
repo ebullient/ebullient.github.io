@@ -10,7 +10,7 @@ source: html
 {{< raw_html >}}
 <p>OK. getting ACPI to work properly needed to be revisited.</p>
 
-<p><a href="http://bellet.info/laptop/t40.html#suspend_resume">Suspend/Resume on T40</a> <span class="attribute">[<a href="http://bellet.info/">bellet.info</a>]</span></p>
+<p><a href="http://bellet.info/laptop/t40.html#suspend_resume">Suspend/Resume on T40</a></p>
 
 <p>This guy originally used APM, but his update on 2004/07/15 makes some good notes, which I followed, notably:</p>
 <ul>

@@ -12,7 +12,7 @@ title: 'Gentoo/T40: Nailing down wireless config'
 <p><em>References:</em></p>
 
 <ul>
-<li><a href="http://gentoo-wiki.com/HOWTO_Wireless_Configuration_and_Startup"><span class="caps">HOWTO</span> Wireless Configuration and Startup</a> <span class="attribute">[<a href="http://gentoo-wiki.com">gentoo-wiki.com</a>]</span></li>
-<li><a href="http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&amp;chap=4">Wireless Networking</a> <span class="attribute">[<a href="http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=0&amp;chap=0">Gentoo Linux Handbook</a>]</span></li>
+<li><a href="http://gentoo-wiki.com/HOWTO_Wireless_Configuration_and_Startup"><span class="caps">HOWTO</span> Wireless Configuration and Startup</a></li>
+<li><a href="http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&amp;chap=4">Wireless Networking</a></li>
 </ul>
 {{< /raw_html >}}

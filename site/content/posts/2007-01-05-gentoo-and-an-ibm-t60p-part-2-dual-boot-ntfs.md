@@ -28,9 +28,9 @@ title: 'Gentoo and an IBM T60p - Part 2: Dual Boot / NTFS'
 
 <h3>Footnotes / References :</h3>
 
-<p id="fn7048958234fd685f22dbf8" class="footnote"><sup>1</sup> <a href="http://www.geocities.com/epark/linux/grub-w2k-HOWTO.html">Dual-boot with Grub</a> <span class="attribute">[<a href="http://www.geocities.com/epark/linux/">geocities.com/epark/linux/</a>]</span> , and <a href="http://news.u32.net/articles/2006/07/18/running-vmware-on-a-physical-partition">Running <span class="caps">VMW</span>are on a Physical Partition</a></p>
+<p id="fn7048958234fd685f22dbf8" class="footnote"><sup>1</sup> <a href="http://www.geocities.com/epark/linux/grub-w2k-HOWTO.html">Dual-boot with Grub</a> , and <a href="http://news.u32.net/articles/2006/07/18/running-vmware-on-a-physical-partition">Running <span class="caps">VMW</span>are on a Physical Partition</a></p>
 
-<p id="fn422670574fd685f22dc27" class="footnote"><sup>2</sup> <a href="http://gentoo-wiki.com/HOWTO_NTFS_write_with_ntfsmount"><span class="caps">HOWTO</span> <span class="caps">NTFS</span> write with ntfsmount</a> <span class="attribute">[<a href="http://gentoo-wiki.com/">gentoo-wiki.com</a>]</span></p>
+<p id="fn422670574fd685f22dc27" class="footnote"><sup>2</sup> <a href="http://gentoo-wiki.com/HOWTO_NTFS_write_with_ntfsmount"><span class="caps">HOWTO</span> <span class="caps">NTFS</span> write with ntfsmount</a></p>
 
 <p id="fn21372720164fd685f22e6a2" class="footnote"><sup>3</sup> <a href="http://en.wikipedia.org/wiki/NTFS"><span class="caps">NTFS</span></a> :wiki:</p>
 {{< /raw_html >}}

@@ -49,7 +49,7 @@ title: 'Gentoo and an IBM T60p - Part 3: Networking'
 
 	<h3>Footnotes / References :</h3>
 
-	<p id="fn11129864324fd685eb57840" class="footnote"><sup>1</sup> <a href="http://www.gentoo-wiki.com/HARDWARE_ar5212"><span class="caps">HARDWARE</span> (Atheros) ar5212</a> <span class="attribute">[<a href="http://gentoo-wiki.com/">gentoo-wiki.com</a>]</span></p>
+	<p id="fn11129864324fd685eb57840" class="footnote"><sup>1</sup> <a href="http://www.gentoo-wiki.com/HARDWARE_ar5212"><span class="caps">HARDWARE</span> (Atheros) ar5212</a></p>
 
 	<p id="fn8827124634fd685eb57f89" class="footnote"><sup>2</sup> <a href="http://lists.shmoo.com/pipermail/hostap/2006-June/013430.html">wpa_supplicant + madwifi + hidden <span class="caps">SSID</span></a></p>
 
@@ -62,7 +62,7 @@ title: 'Gentoo and an IBM T60p - Part 3: Networking'
 	<h3>Other References (of course):</h3>
 
 	<ul>
-		<li><a href="http://madwifi.org/wiki/UserDocs">MadWifi User Docs</a> <span class="attribute">[<a href="http://madwifi.org">madwifi.org</a>]</span></li>
+		<li><a href="http://madwifi.org/wiki/UserDocs">MadWifi User Docs</a></li>
 		<li><a href="http://www.thinkwiki.org/wiki/Installing_Ubuntu_6.06_Flight_6_on_a_ThinkPad_X60s">Ubunto on X60s</a> — ndiswrapper for Atheros</li>
 	</ul>
 {{< /raw_html >}}

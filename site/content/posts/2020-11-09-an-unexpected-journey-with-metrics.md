@@ -16,8 +16,8 @@ I hope you enjoy it.
 
 **Publication**:
 
-* Schnabel, E. (2020, September). Dungeons & Dragons: An adventure full of monsters, battles, and application metrics. _Java Magazin_, 82–94. https://kiosk.entwickler.de/java-magazin/java-magazin-9-2020/dungeons-dragons/  
+* Schnabel, E. (2020, September). Dungeons & Dragons: An adventure full of monsters, battles, and application metrics. _Java Magazin_, 82–94. <https://web.archive.org/web/20200929115449/https://kiosk.entwickler.de/java-magazin/java-magazin-9-2020/dungeons-dragons/>  
 First publication, in German
-* Schnabel, E. (2020, November 9). _Monsters in combat: exploring application metrics with D&D_. **JAXenter**. https://jaxenter.com/metrics-dnd-173311.html
-* Schnabel, E. (2020, November 3). _Monsters in combat: exploring application metrics with D&D_. DevOps Conference Blog. https://devopscon.io/blog/monsters-in-combat-exploring-application-metrics-with-dd
-* Schnabel, E. (2021, January 21). Monsters in Combat: Exploring Application Metrics with Dungeons & Dragons. _DEVOPS MAGAZINE_, 43–53. https://devopscon.io/whitepaper/devops-magazine-1-21/
+* Schnabel, E. (2020, November 9). _Monsters in combat: exploring application metrics with D&D_. **JAXenter**. <https://web.archive.org/web/20200929115449/https://jaxenter.com/metrics-dnd-173311.html>
+* Schnabel, E. (2020, November 3). _Monsters in combat: exploring application metrics with D&D_. DevOps Conference Blog. <https://devopscon.io/blog/monsters-in-combat-exploring-application-metrics-with-dd>
+* Schnabel, E. (2021, January 21). Monsters in Combat: Exploring Application Metrics with Dungeons & Dragons. _DEVOPS MAGAZINE_, 43–53. <https://devopscon.io/whitepaper/devops-magazine-1-21/>

@@ -22,7 +22,11 @@ outputs:
     - RSS
     - JSON
 permalinks:
-  posts: /:year/:month/:day/:slug
+  page:
+    posts: /:year/:month/:day/:slug
+  section:
+    projects: /projects/
+
 taxonomies:
   tag: tags
 markup:

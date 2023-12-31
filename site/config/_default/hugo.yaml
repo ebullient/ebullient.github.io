@@ -31,6 +31,8 @@ taxonomies:
   tag: tags
 markup:
   goldmark:
+    extensions:
+      footnote: true
     renderer:
       unsafe: true
   highlight:

@@ -1,0 +1,4 @@
+layout: layouts/post.vto
+type: post
+description: > # this means to ignore newlines until the next tag
+  Nothing poetic here, just a collection of things. Some are "how I did this so I can remember later", others are "this is totally cool!", and some are something else entirely.

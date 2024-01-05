@@ -1,0 +1,35 @@
+---
+layout: layouts/base.vto
+cssclasses: page
+noindex: true
+---
+<header class="page-header">
+  <h1 class="page-title">{{ page.data.title }}</h1>
+</header>
+<article>
+{{ content }}
+</article>
+<section class="archive_list">
+{{- set allPosts = search.pages("type=post", "date=desc") }}
+{{- set postsByYear = allPosts.reduce((acc, post) => {
+  const year = new Date(post.date).getFullYear();
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(post);
+  return acc;
+}, {}) }}
+{{- set sortedYears = Object.keys(postsByYear).sort((a, b) => b - a) }}
+{{- for year of sortedYears }}
+  <h2 id="y{{year}}">{{ year }}</h2>
+  <ul>
+  {{- set posts = postsByYear[year] }}
+  {{- for post of posts }}
+    <li>
+      <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {{- /for }}
+  </ul>
+{{- /for }}
+</section>

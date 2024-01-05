@@ -1,26 +1,40 @@
 ---
 layout: layouts/base.vto
 cssclasses: page
-noindex: true
+metas:
+  robots: noindex,noarchive
 ---
-<section class="articles">
-  {{ for post of search.pages("type=post", "date=desc title", 10) }}
+<section class="articles" aria-label="Blog excerpts; page ${data.pagination.page} of ${data.pagination.totalPages}">
+  {{ for post of results }}
     <article>
       <header>
         <h2><a href="{{ post.url }}">{{ post.title }}</a></a></h2>
       </header>
+      {{- set excerpt = post.children.split("<!--more-->") }}
       <section class="post_excerpt">
-        {{ post.children.split("<!--more-->")[0] }}
+        {{ excerpt[0] }}
       </section>
-      {{ if post.content.includes("<!--more-->") }}
+      {{- if excerpt.length > 1 }}
       <div>[<a class="read-more" href="{{ post.url }}">more</a>]</div>
-      {{ /if }}
-      {{ include "./byline.vto" }}
+      {{- /if }}
+      <footer class="byline">
+        <div>
+          posted
+          <time  class="post_date" datetime="{{ post.date |> date('DATE') }}">{{ page.data.date |> date("dd MMMM yyyy") }}</time>
+        </div>
+        {{- if post.tags }}
+        <div class="tags">tags:
+          {{ for tag of post.tags }}<a href="/tags/#{{ tag }}">{{ tag }}</a>{{ /for }}
+        </div>
+        {{- /if }}
+      </footer>
     </article>
   {{ /for }}
 </section>
 <nav class="prev-next">
-  <div>&nbsp;</div>
-  <div><a href="/archive/">More..</a></div>
-  <div>&nbsp;</div>
+  <ul>
+    <li>{{ if pagination.previous }}<a href="{{ pagination.previous }}" rel="prev">Previous</a>{{ else }}&nbsp;{{ /if }}</li>
+    <li><a href="/archive/">More..</a></li>
+    <li>{{ if pagination.next }}<a href="{{ pagination.next }}" rel="next">Next</a>{{ else }}&nbsp;{{ /if }}</li>
+  </ul>
 </nav>

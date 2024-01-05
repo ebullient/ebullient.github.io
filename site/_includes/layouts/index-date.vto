@@ -1,15 +1,19 @@
 ---
 layout: layouts/base.vto
 cssclasses: page
-noindex: true
+metas:
+  robots: noindex, noarchive
+canonical: none
 ---
+<section class="archive_list" aria-label="List of articles grouped by year">
 <header class="page-header">
   <h1 class="page-title">{{ page.data.title }}</h1>
 </header>
+{{- if content }}
 <article>
 {{ content }}
 </article>
-<section class="archive_list">
+{{- /if }}
 {{- set allPosts = search.pages("type=post", "date=desc") }}
 {{- set postsByYear = allPosts.reduce((acc, post) => {
   const year = new Date(post.date).getFullYear();
@@ -21,7 +25,8 @@ noindex: true
 }, {}) }}
 {{- set sortedYears = Object.keys(postsByYear).sort((a, b) => b - a) }}
 {{- for year of sortedYears }}
-  <h2 id="y{{year}}">{{ year }}</h2>
+  <section id="y{{year}}" aria-label="Posts from {{year}}">
+  <h2 aria-hidden="true">{{ year }}</h2>
   <ul>
   {{- set posts = postsByYear[year] }}
   {{- for post of posts }}
@@ -31,5 +36,6 @@ noindex: true
     </li>
   {{- /for }}
   </ul>
+  </section>
 {{- /for }}
 </section>

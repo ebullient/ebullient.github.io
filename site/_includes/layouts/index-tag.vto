@@ -1,17 +1,22 @@
 ---
 layout: layouts/base.vto
 cssclasses: page
-noindex: true
+metas:
+  robots: noindex, noarchive
+canonical: none
 ---
+<section class="archive_list" aria-label="List of articles grouped by tag">
 <header class="page-header">
   <h1 class="page-title">{{ page.data.title }}</h1>
 </header>
+{{- if content }}
 <article>
 {{ content }}
 </article>
-<section class="archive_list">
+{{- /if }}
 {{- for tag of search.values("tags").sort() }}
-  <h2 id="{{ tag }}">{{ tag}}</h2>
+  <section id="{{ tag }}" aria-label="Posts tagged with {{tag}}">
+  <h2 aria-hidden="true">{{ tag}}</h2>
   <ul>
   {{- for post of search.pages(tag, "date=desc") }}
     <li>
@@ -20,5 +25,6 @@ noindex: true
     </li>
   {{- /for }}
   </ul>
+  </section>
 {{- /for }}
 </section>

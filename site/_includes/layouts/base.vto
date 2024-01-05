@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.data.title }}</title>
+  <title>{{ page.data.title }} - {{ page.data.metas.site }}</title>
   <meta name="author" content="{{ page.data.metas.author }}" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <script type="application/ld+json">
@@ -16,7 +16,9 @@
   }
   </script>
   <link rel="stylesheet" href="/assets/blog.css" />
+  {{- if page.data.canonical && page.data.canonical != "none" }}
   <link rel="canonical" href="{{ (page.data.canonical ? page.data.canonical : page.data.url) |> url(true) }}" />
+  {{- /if }}
   <script>
     function setTheme() {
       const storedTheme = localStorage.getItem('color-theme') || 'system';

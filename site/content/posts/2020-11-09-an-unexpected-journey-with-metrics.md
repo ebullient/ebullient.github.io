@@ -1,6 +1,5 @@
 ---
 tags:
-  - article
   - java
   - microservices
   - micrometer

@@ -7,7 +7,7 @@ title: Hugo with markdown and asciidoc
 ---
 All done!
 
-Building on [the previous post]({{< relref "2020-01-08-from-jekyll-and-gitbook-to-hugo-and-asciidoc-care-of-github-actions" >}}), here is a summary of what I had to do to collapse two sites (one a date-oriented blog, and the other an outline-based gitbook) into a single site.
+Building on [the previous post](2020-01-08-from-jekyll-and-gitbook-to-hugo-and-asciidoc-care-of-github-actions.md), here is a summary of what I had to do to collapse two sites (one a date-oriented blog, and the other an outline-based gitbook) into a single site.
 
 <!--more-->
 

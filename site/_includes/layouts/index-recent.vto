@@ -1,0 +1,26 @@
+---
+layout: layouts/base.vto
+cssclasses: page
+noindex: true
+---
+<section class="articles">
+  {{ for post of search.pages("type=post", "date=desc title", 10) }}
+    <article>
+      <header>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></a></h2>
+      </header>
+      <section class="post_excerpt">
+        {{ post.children.split("<!--more-->")[0] }}
+      </section>
+      {{ if post.content.includes("<!--more-->") }}
+      <div>[<a class="read-more" href="{{ post.url }}">more</a>]</div>
+      {{ /if }}
+      {{ include "./byline.vto" }}
+    </article>
+  {{ /for }}
+</section>
+<nav class="prev-next">
+  <div>&nbsp;</div>
+  <div><a href="/archive/">More..</a></div>
+  <div>&nbsp;</div>
+</nav>

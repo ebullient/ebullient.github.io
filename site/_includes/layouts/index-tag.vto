@@ -1,0 +1,24 @@
+---
+layout: layouts/base.vto
+cssclasses: page
+noindex: true
+---
+<header class="page-header">
+  <h1 class="page-title">{{ page.data.title }}</h1>
+</header>
+<article>
+{{ content }}
+</article>
+<section class="archive_list">
+{{- for tag of search.values("tags").sort() }}
+  <h2 id="{{ tag }}">{{ tag}}</h2>
+  <ul>
+  {{- for post of search.pages(tag, "date=desc") }}
+    <li>
+      <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date('DATE') }}</time>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {{- /for }}
+  </ul>
+{{- /for }}
+</section>

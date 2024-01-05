@@ -1,4 +1,19 @@
 ---
 layout: layouts/base.vto
 ---
+<article>
+<section>
 {{ content }}
+</section>
+<footer class="byline">
+  <div>
+    posted
+    <time  class="post_date" datetime="{{ page.data.date |> date('DATE') }}">{{ page.data.date |> date("dd MMMM yyyy") }}</time>
+  </div>
+  {{- if page.data.tags }}
+  <div class="tags">tags:
+    {{ for tag of page.data.tags }}<a href="/tags/#{{ tag }}">{{ tag }}</a>{{ /for }}
+  </div>
+  {{- /if }}
+</footer>
+</article>

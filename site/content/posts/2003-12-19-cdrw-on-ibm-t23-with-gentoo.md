@@ -7,14 +7,11 @@ tags:
   - hardware-thinkpad
 title: CDRW on IBM T23 with Gentoo
 ---
-{{< raw_html >}}
 <p>Didn't notice until now that my CD-RW/DVD player wasn't loading properly – you can tell how much I use it, eh? <img alt=";-&#41;" src="/images/smilies/wink2.gif" class="icon" /></p>
 
 <p>I'd already built the kernel with the correct SCSI modules (see references, below). I'd also already added <code>"hdc=ide-scsi"</code> to my grub boot parameters.</p>
 
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 
 <p>What was left was the following:</p>
 
@@ -64,4 +61,3 @@ scsibus0:
 <li><a href="http://zeppox.ath.cx/~jackson/stuff/notes/gentoo_cdrw_notes.html">How to get a CD-RW and CDROM working using Gentoo</a></li>
 </ol></li>
 </ul>
-{{< /raw_html >}}

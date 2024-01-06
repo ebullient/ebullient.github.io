@@ -6,16 +6,13 @@ tags:
   - hardware-nas
 title: 'DNS-323: FFP on a stick, nightly rsync backup... '
 ---
-{{< raw_html >}}
 <p>I have a lot of things working well, gathered from a lot of resources. I tweaked some scripts to make them work better:</p>
 <ul>
 <li>I created an /ffp/<hostname> directory for my personal scripts.</li>
 <li>I have an rsync script that mirrors the ffp installation on the USB stick (/mnt/usb/ffp) to the primary hard drive (/mnt/HD_a2). This means I only have to maintain the USB-copy, but if the USB is not available, I'll still have working stuff on the regular drive.</li>
 <li>I have a few (small) scripts that I use for cron jobs, rather than putting it all directly into the cron task: has the advantage of being able to use logger to add syslog messages.</li>
 </ul>
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <p>Very very simple: ffp-sync.sh for keeping the usb ffp in sync with the copy on the hard drive. I have this as a small, separate, invokable script so that I can run the backup myself if I've made changes and am feeling paranoid/proactive.</p>
 <div class="code">#!/ffp/bin/sh
 
@@ -129,4 +126,3 @@ echo "root" >> /var/spool/cron/crontabs/cron.update
 <li><a href="http://forum.dsmg600.info/viewtopic.php?id=1150">Tutorial: Backup Everything from Vol A to Vol B once a night</a></li>
 
 </ul></p>
-{{< /raw_html >}}

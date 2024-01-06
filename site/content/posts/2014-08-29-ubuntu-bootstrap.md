@@ -6,12 +6,9 @@ tags:
 title: Bootstrapping ubuntu server on an external drive
 source: html
 ---
-{{< raw_html >}}
 <p>I have a new 2TB drive that I am going to use to replace a drive on a much used server that is currently running gentoo (which I have increasingly less time to tend). So. I have this new drive in an external enclosure, and I want to bootstrap it with the new OS without having to do that &#8220;go reboot your computer with a <span class="caps">USB</span> key thing&#8221;. I want my OS on the disk, I want to test that all the services can be coerced to behave the way I need them to behave, and I want to do all this with a minimum of fuss and gymnastics.</p>
 
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 
 <p>This whole setup is now sitting next to me crunching away, and as it is a combination of my experience bootstrapping gentoo in a chroot, and some of the (off the beaten path) instructions for creating debian chroots, I thought I'd throw them together in one place in case they help someone else out.</p>
 
@@ -66,4 +63,3 @@ I didn't try it, so <span class="caps">YMMV</span>
 	<li><a href="http://jonnytyers.wordpress.com/2013/01/26/debootstrap-installing-ubuntu-from-ubuntu/">http://jonnytyers.wordpress.com/2013/01/26/debootstrap-installing-ubuntu-from-ubuntu/</a></li>
 	<li><a href="https://help.ubuntu.com/community/Installation/FromLinux#Without_CD">https://help.ubuntu.com/community/Installation/FromLinux#Without_CD</a></li>
 </ul></p>
-{{< /raw_html >}}

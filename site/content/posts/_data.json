@@ -1,0 +1,5 @@
+{
+    "layout": "layouts/post.vto",
+    "type": "post",
+    "cssclasses": ["page"]
+}

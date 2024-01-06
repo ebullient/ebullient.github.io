@@ -6,12 +6,9 @@ tags:
   - hardware-nas
 title: 'DNS-323: Finally back to it (SSH/busybox)'
 ---
-{{< raw_html >}}
 <p>After a long hiatus, I'm back to trying to finish customizing our NAS; life with kid means your extra time doesn't always get spent the way you'd like, and I've migrated to a new laptop running ubuntu en route, I should write about that, too.
 </p>
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <p>Reviewed the <a href="http://wiki.dns323.info/howto:ffp#version_0.5">howto</a> again, to see where I left off, which was pretty much right where I finished writing the last entry.</p>
 
 <h3>Setting up SSH</h3>
@@ -67,4 +64,3 @@ ln -s /ffp/bin/busybox /bin/busybox
 <p>lighttpd and php next... </p>
 
 <p><i>UPDATE - 6 Jun 2010: Holy hell, batman: when I originally wrote this, I totally typed SSL instead of SSH. WTF?!</i></p>
-{{< /raw_html >}}

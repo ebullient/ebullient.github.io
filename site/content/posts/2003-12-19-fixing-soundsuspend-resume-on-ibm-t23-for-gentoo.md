@@ -7,13 +7,10 @@ tags:
   - hardware-thinkpad
 title: Fixing Sound/Suspend-Resume on IBM T23 for Gentoo
 ---
-{{< raw_html >}}
 <p><span class="caps">ALSA</span> does work, as I mentioned <a href="/2003/09/21/dammit-gentoo-on-t23-continued.html">here</a>, but it seems to have problems across a suspend-resume, i.e. it doesn't work post-resume.</p>
 
 <p>Previously used patches don't seem to apply to newer Alsa modules.</p>
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <p>Gentoo installs apmd_proxy in /etc/apm, with suspend.d and resume.d directories for handling special suspend/resume operations. Even better, event.d handles both.</p>
 
 <p>So, based on some searching around, I ended up adding apmd to the list of services to start (<code>rc-update add apmd default</code>), and added the following script to get alsa to behave on resume:</p>
@@ -87,4 +84,3 @@ esac </pre></p>
 <p>Everywhere I looked, things would reference debian's <code>/etc/apm/event.d/alsa</code> script. Thing is, I don't run debian, and I'll be damned if I could find the contents of the script anywhere. </p>
 
 <p>For future reference, I've attached the source <a href="/files/alsa">here</a>.</p>
-{{< /raw_html >}}

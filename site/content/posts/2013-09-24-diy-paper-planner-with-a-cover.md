@@ -6,14 +6,11 @@ tags:
 title: DIY paper planner - with a cover
 source: html
 ---
-{{< raw_html >}}
 <p>So. It took one day, and I had to make a cover. I couldn't help myself. Thankfully, I have more scrapbooking supplies lying around than I know what to do with, so it didn't take too long. </p>
 
 <p>I wanted pockets. I wanted pseudo-lamination. I wanted something that could still flex backwards. No problem, right?</p>
 
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <p>I used three 12&#215;12 sheets of scrapbooking paper:
 <ul>
 	<li>one was thinner and more decorative, it forms the outer cover/pockets, and is completely backed with clear contact paper.</li>
@@ -39,4 +36,3 @@ source: html
 <p><img src="/images/7t.jpg" title="cover made from 2 12x12 scrapbook pages" alt="cover made from 2 12x12 scrapbook pages" /></p>
 
 <p>Now to see if all this work makes it through the new-planner honeymoon period. I'll let you know in a few months.. </p>
-{{< /raw_html >}}

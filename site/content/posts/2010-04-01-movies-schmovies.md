@@ -5,7 +5,6 @@ tags:
   - linux
 title: Movies schmovies
 ---
-{{< raw_html >}}
 <p>Want to get DVDs playing on the laptop that is running gentoo that I'll only have to use for a few more days before I get a new shiny (purple!) one. I know, makes no sense.. but hey, learning is good, right?
 </p><ul>
 <li>Use xine-ui. It got the farthest first.</li>
@@ -15,4 +14,3 @@ title: Movies schmovies
 <li>And last, but not least, the simplest instruction from <a href="http://www.xine-project.org/faq#discardedskipped">xine's help</a>: change the niceness level of xine.. <code>nice --5 xine</code></li>
 </ul>
 <p>And poof! movie! with menu! rock on</p>
-{{< /raw_html >}}

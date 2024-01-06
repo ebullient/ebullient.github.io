@@ -5,4 +5,6 @@ description: "Index of all posts by tag"
 url: "/tags/"
 metas:
   robots: noindex,noarchive
+aliases:
+  - /tags.html
 ---

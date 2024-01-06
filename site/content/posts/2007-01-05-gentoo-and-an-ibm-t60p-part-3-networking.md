@@ -6,11 +6,8 @@ tags:
   - hardware-thinkpad
 title: 'Gentoo and an IBM T60p - Part 3: Networking'
 ---
-{{< raw_html >}}
 	<p>Getting networking up and running on the T60p has been a mixed bag. On one hand, the wired connection was easy (expected). The wireless was at first <span class="caps">REALLY</span> flaky, then after some fiddling the connection at home (<span class="caps">WEP</span>) was functional, and as of now (when I'm finally posting this thing) it still doesn't work at work (<span class="caps">LEAP</span>). </p>
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 	<h3>Wired connection</h3>
 
 	<p>I set the wired connection (using e1000 module) up with netplug so that it will figure out when the cable is and isn't there – it has the added bonus of scheduling net-dependent services at startup.</p>
@@ -65,4 +62,3 @@ title: 'Gentoo and an IBM T60p - Part 3: Networking'
 		<li><a href="http://madwifi.org/wiki/UserDocs">MadWifi User Docs</a></li>
 		<li><a href="http://www.thinkwiki.org/wiki/Installing_Ubuntu_6.06_Flight_6_on_a_ThinkPad_X60s">Ubunto on X60s</a> — ndiswrapper for Atheros</li>
 	</ul>
-{{< /raw_html >}}

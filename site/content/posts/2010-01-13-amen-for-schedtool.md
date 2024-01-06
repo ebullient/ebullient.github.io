@@ -5,7 +5,6 @@ tags:
   - linux
 title: Amen for schedtool
 ---
-{{< raw_html >}}
 <p>How did I not know about this sooner?
 </p><p>
 Trying to build a particularly large maven project would consume so much CPU that my poor laptop would quit because it was sweating too much.
@@ -15,4 +14,3 @@ I used schedtool to set an affinity to only one of the two CPUs available on my 
 <ul>
 <li><a href="http://linux.die.net/man/8/schedtool">schedtool</a></li>
 </ul>
-{{< /raw_html >}}

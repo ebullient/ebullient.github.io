@@ -5,7 +5,6 @@ tags:
   - sketches
 title: Scanning in my pencil sketches...
 ---
-{{< raw_html >}}
 <p>So, I blew some time this weekend working on getting some of my pencil sketches scanned in the right way (why I decide the summer is the time to try this stuff.. ).  There are a few of them I've been lugging along in my silly sketchbook, and I really like them.. which actually makes me less likely to carry the thing along, because it could mess up some of those doodles I really like.</p>
 
 <p>So. I started by *gasp* removing them all from my little sketch book. I happen (because I'm a dork) to be equipped with things to make a nice portfolio with these sketches in them because of other crafty things, so I know where they'll end up. BUT.. before they go there, I'd like to get some  high-quality scans of them (I'd like to be able to make prints of at least one..).</p>
@@ -24,4 +23,3 @@ title: Scanning in my pencil sketches...
 <li>  Created a "pencil sketch" medium: Gray with 1.0 Gamma, and -100/100 brightness/contrast (basically telling the xsane post-scanning processor to leave it alone)</li>
 </ul>
 </p>
-{{< /raw_html >}}

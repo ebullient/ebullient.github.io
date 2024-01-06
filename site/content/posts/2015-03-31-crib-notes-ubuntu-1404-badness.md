@@ -6,12 +6,9 @@ tags:
 title: 'Crib notes: ubuntu 14.04 badness'
 source: html
 ---
-{{< raw_html >}}
 <p>Woopsie. Somehow, with some update, I managed to screw nvidia up properly, and then in fixing that, I broke symantec antivirus, too. Part of it was that the 14.04 ubuntu headers have moved up, but the kernel was still at an older version, which made dkms pissy, and .. well.</p>
 
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 
 <p>Here is the (probably wrong and redundant, but it worked) list of things I did to fix it:
 <ul>
@@ -32,4 +29,3 @@ So. Yea.. busted nvidia drivers. We'll see how we do without. ;)</p>
 <ul>
 	<li><a href="http://askubuntu.com/questions/451221/ubuntu-14-04-install-nvidia-driver">Q&amp;A with scads of options</a></li>
 </ul>
-{{< /raw_html >}}

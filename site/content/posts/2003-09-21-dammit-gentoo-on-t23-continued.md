@@ -7,14 +7,11 @@ tags:
   - hardware-thinkpad
 title: Dammit- Gentoo on T23 continued
 ---
-{{< raw_html >}}
 <p>So everything was working flawlessly, and I had to switch over into Mandrake to get something, and when I rebooted to Gentoo again, chaos reigned.</p>
 
 <p>Well, not quite chaos, but several modules were refusing to load, with lots of scary messages about IRQ settings and other hogwash.</p>
 
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 
 <p>Actually, somehow, with building kernel modules for vmware and alsasound, it seems that module loading got completely hosed – it was trying to load e100, for example, which was a directory name.</p>
 
@@ -44,4 +41,3 @@ rc-update add alsasound <strong>boot</strong></p>
 <blockquote>
 <p>gentoo bug <a href="http://bugs.gentoo.org/show_bug.cgi?id=23491">24391</a></p>
 </blockquote>
-{{< /raw_html >}}

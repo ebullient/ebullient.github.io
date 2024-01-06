@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/assets/blog.css" />
   <title>{{ page.data.title }} - {{ page.data.metas.site }}</title>
   <meta name="author" content="{{ page.data.metas.author }}" />
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <script type="application/ld+json">
   {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "{{ page.data.title }}",
-      "description": "{{- page.data.description -}}"
+      "description": "{{- JSON.stringify(page.data.description.trim()) -}}"
   }
   </script>
-  <link rel="stylesheet" href="/assets/blog.css" />
-  {{- if page.data.canonical && page.data.canonical != "none" }}
+  <script defer data-domain="ebullient.dev" src="https://plausible.ebullient.dev/js/script.js"></script>
+  {{- if !page.data.canonical || page.data.canonical != "none" }}
   <link rel="canonical" href="{{ (page.data.canonical ? page.data.canonical : page.data.url) |> url(true) }}" />
   {{- /if }}
   <script>
@@ -32,7 +33,6 @@
       }
       return theme_color;
     }
-    // Toggle theme when button is clicked
     function toggleTheme() {
       const themeOrder = ['dark', 'light', 'system'];
       const storedTheme = localStorage.getItem('color-theme') || 'system';
@@ -53,12 +53,10 @@
       button.setAttribute('aria-label', storedTheme);
       button.setAttribute('title', themeTitles[storedTheme]);
     }
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     const meta = document.createElement('meta');
     meta.name = "theme-color";
     meta.content = setTheme();
     document.head.appendChild(meta);
-    // Update the button once things have been rendered
     window.onload = function() {
       updateButton();
     };
@@ -90,7 +88,7 @@
       </svg>
     </button>
   </header>
-  <main {{ if page.data.cssclasses }} class="{{ page.data.cssclasses  |> join(' ') }}"{{ /if }}>
+  <main {{ if page.data.cssclasses }} class="{{ page.data.cssclasses  |> join(' ') }}"{{ /if }} id="content">
     {{ content -}}
   </main>
   </div>

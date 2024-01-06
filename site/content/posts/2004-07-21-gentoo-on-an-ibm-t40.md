@@ -7,15 +7,12 @@ tags:
 title: Gentoo on an IBM T40
 source: html
 ---
-{{< raw_html >}}
 
 <p>So, I have gentoo up and running on my T40, and thought I'd share the resources that helped me get there.</p>
 
 <p>For those interested, here's the currently running kernel <a href="/files/config-2.6.7-gentoo-r11" title="2.6.7-gentoo-r11">config</a>.</p>
 
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <p><em><strong>Preparation:</strong></em><br />
 I wiped the predesktop area. I don't plan on running windows, and I'd rather have the disk space, thanks.</p>
 
@@ -139,4 +136,3 @@ srwxrwxrwx    1 xfs      xfs             0 Jul  9 23:15 /tmp/.font-unix/fs7100</
 <p>Which the font server (xfs) is listening on. Note the &#8220;s&#8221; in the beggining<br />
 of the ls -l line: this says this is a special unix-domain *s*ocket file.</p>
 </blockquote>
-{{< /raw_html >}}

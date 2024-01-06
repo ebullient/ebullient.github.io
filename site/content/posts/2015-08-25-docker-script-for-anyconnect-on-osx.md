@@ -8,7 +8,6 @@ tags:
   - scripts
 title: Docker script for AnyConnect on OSX
 ---
-{{< raw_html >}}
 <p>I am queen of laziness, and I have to use AnyConnect, and that screws with Docker, and then I have to go looking to remember the magic incantation to get things right...</p>
 
 <p>Who has time for that? </p>
@@ -19,9 +18,7 @@ title: Docker script for AnyConnect on OSX
 <code>&gt; docker-machine env default</code><br />
 I do this instead, and the script does the rest: <br />
 <code>&gt; . dockerEnv</code></p>
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <p>The contents of the script are pretty trivial (I am sure shell wizards can find plenty  wrong with it, starting with the direct reference to bash, but whatever. Laziness, right?): </p>
 
 <pre><code>#!/bin/bash
@@ -50,4 +47,3 @@ docker-machine ls
 </code></pre>
 
 <p class="small">[edit on 3 Sept: updated for even better-ness. Laziness rocks.]</p>
-{{< /raw_html >}}

@@ -6,12 +6,9 @@ tags:
   - hardware-nas
 title: 'DNS-323: Initial set-up'
 ---
-{{< raw_html >}}
 <p>I purchased (a shamefully long time ago, welcome to tech live as a mom with a toddler) a DNS-323 (and two 1T drives) with the hope of moving most of our shared files onto it.  Now that we don't record TV shows anymore, having that box on all the time is just a power drain. So: the goal is a DNS-323 with all of our files (photos, music, finance stuff, some movies, etc.) onto the first volume of that drive, and then using an rsync shadow with hardlinks to do nightly backups to the second drive. Some RAID configurations have been reported as less than stable, and using a mirror configuration requires both drives to be active: a nightly rsync backup will do.
 </p>
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <h3>Applying firmware and extra software</h3>
 <p>
 A <a href="http://www.dlink.com/products/default.aspx?pid=DNS-323&amp;tab=3">firmware update</a> became available between when I bought the unit and when I finally got a chance to work on it-- so I updated the firmware to 1.08, and installed the optional NFS package, though I haven't set NFS up yet.
@@ -58,4 +55,3 @@ All of the above was easy enough, and gave me a telnet shell with root access (n
 <tr><td>grpck</td><td>Sanity check the /etc/group file; ignore bad group names 500/501</td></tr>
 <tr><td>login</td><td>Test your changes: verify you can log in with the password you think you set. ;) </td></tr>
 </table>
-{{< /raw_html >}}

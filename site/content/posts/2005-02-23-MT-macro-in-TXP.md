@@ -6,14 +6,11 @@ tags:
   - textpattern
 title: 'TXP Hack: MT-Macro like function in textpattern'
 ---
-{{< raw_html >}}
 <p>This is a simple hack to add one of my favorite MT-plugins, Brad Choate's <a href="http://www.bradchoate.com/weblog/2002/08/12/mtmacro"><span class="caps">MTM</span>acros</a>, to textpattern.</p>
 
 <p>Granted, I didn't pull the entire kaboodle. This doesn't do fun container logic and acronym matching, etc. But it does do simple string replacement, which is what I used it for (e.g. smilies and pretty attributions).</p>
 
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <p><span class="attribute">[Based on Textpattern 1.0rc1]</span></p>
 
 <ul>
@@ -144,4 +141,3 @@ restore preserved blocks.</li>
 <p class="footnote" id="fn1"><sup>1</sup> <a href="http://www.solarorange.com/projects/textile/">Unofficial Textile 2.0 beta</a>, from <a href="http://forum.textpattern.com/viewtopic.php?id=2285">this thread</a>.</p>
 
 <p class="footnote" id="fn2"><sup>2</sup> <a href="http://greenrift.textdrive.com/projects/9/textilephp-for-txp">TextilePHP for <span class="caps">TXP</span></a>, as mentioned in <a href="http://forum.textpattern.com/viewtopic.php?id=2059">this thread</a>.</p>
-{{< /raw_html >}}

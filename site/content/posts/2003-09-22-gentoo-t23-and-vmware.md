@@ -7,7 +7,6 @@ tags:
   - hardware-thinkpad
 title: Gentoo, T23, and VMWare
 ---
-{{< raw_html >}}
 <p><a href="http://lindows.prodigydigital.com/tutorials/vmware.html">Why do I have to run vmware-config.pl every time I reboot my computer?</a></p>
 
 <p>This was happening to me, and while that's a lindows tutorial, it hit the nail on the head:</p>
@@ -16,9 +15,7 @@ title: Gentoo, T23, and VMWare
 
 <p><strong>[UPDATE: 9/29/2004]</strong> This is total hogwash, see <a href="/2003/09/29/its-alive-gentoo-and-t23.html">here</a></p>
 
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 
 <p>So, I added the vmmon lines to devfs.d/vmware, which should start that part ok. The vmnet nodes are a bit more of a puzzle. One place says put a wrapper around init. I am not brave enough for that, and I'd rather work out the right stuff to have the nodes added by devfs when vmnet is referenced - that would make the most sense to me, anyway.</p>
 
@@ -39,4 +36,3 @@ title: Gentoo, T23, and VMWare
 <li><a href="http://www-106.ibm.com/developerworks/library/l-fs4.html" title="Introduction to devfs">Common threads: Advanced filesystem implementor's guide, Part 4</a></li>
 <li><a href="http://www-106.ibm.com/developerworks/library/l-fs5.html" title="Setting up devfs">Common threads: Advanced filesystem implementor's guide, Part 5</a></li>
 </ul>
-{{< /raw_html >}}

@@ -238,6 +238,35 @@ nav.navigation.breadcrumb {
     }
   }
 }
+nav ul {
+  list-style-type: none; // Removes the bullet points
+  margin: 0; // Removes the default margin
+  padding: 0; // Removes the default padding
+}
+header.page-header > nav {
+  > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: .2em;
+
+    li:not(:last-child) {
+      margin-right: .5em;
+    }
+    li:not(:last-child)::after {
+      position: absolute;
+      content: "\00a0·";
+    }
+    &:before {
+      content: "[ ";
+    }
+    &:after {
+      content: " ]";
+    }
+  }
+}
 
 .tags a {
   margin: .2em;

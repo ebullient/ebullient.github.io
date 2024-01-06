@@ -6,7 +6,6 @@ tags:
   - hardware-thinkpad
 title: 'Gentoo and an IBM T60p - Part 1: Installation and X'
 ---
-{{< raw_html >}}
 <p>Got a new T60 <strong>yay!</strong>, here's my brain dump on getting it to work with gentoo (2006.1).</p>
 
 <p>See also (Updated as new parts are added):</p>
@@ -15,9 +14,7 @@ title: 'Gentoo and an IBM T60p - Part 1: Installation and X'
 	<li><a href="/2007/01/05/gentoo-and-an-ibm-t60p-part-2-dual-boot-ntfs.html">Part 2: <span class="caps">NTFS</span></a></li>
 	<li><a href="/2007/01/05/gentoo-and-an-ibm-t60p-part-3-networking.html">Part 3: Networking</a></li>
 </ul>
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <h3>General 'fo:</h3>
 
 <table>
@@ -195,4 +192,3 @@ OpenGL version string: 2.0.6119 (8.30.3)
 </ul>
 
 <p><em>2007-01-05: Updated to make all linked files work (missed uploading a few), added link to Parts 2 and 3.</em></p>
-{{< /raw_html >}}

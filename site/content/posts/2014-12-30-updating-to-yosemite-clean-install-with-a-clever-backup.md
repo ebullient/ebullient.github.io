@@ -7,7 +7,6 @@ tags:
 title: 'Updating to Yosemite: clean install with a clever backup'
 source: html
 ---
-{{< raw_html >}}
 <p>I upgraded my iMac (which is aging, sadly) to Yosemite while taking a break from work. </p>
 
 <p>I wanted to do a clean install: the drive had two partitions, one an old windows partition that we don't use anymore, and the other was full of crap from years of trying out apps and the migration from Snow Leopard to Lion to Mountain Lion to Mavericks, etc.</p>
@@ -20,9 +19,7 @@ source: html
 </ul>
 
 <p>Can you see my plan? It worked very well.</p>
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <p>I did have to boot into recovery mode (I had a bootable <span class="caps">USB</span> drive with the Yosemite installer on it, so I just used that), and I did use the command line instead of working through disk utility, though I believe either would have worked. </p>
 
 <pre>&gt; hdiutil create /Volumes/External-USB/full-backup.dmg -srcdevice /dev/disk0s2</pre>
@@ -32,4 +29,3 @@ source: html
 <p>After wiping the drive and putting Yosemite on, I was able to raid the *.dmg for apps and settings, etc. (I am sure I could have used the data migration utility, but I was trying to ditch the cruft&#8230; so I was selective. I have the dmg to refer to if I find something missing).</p>
 
 <p>Whee!</p>
-{{< /raw_html >}}

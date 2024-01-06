@@ -7,11 +7,8 @@ tags:
   - hardware-thinkpad
 title: Linux/T23 - Dual Monitors
 ---
-{{< raw_html >}}
 <p>Trying to get dual monitors working..</p>
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <p><strong>References:</strong></p>
 
 <ol>
@@ -27,4 +24,3 @@ title: Linux/T23 - Dual Monitors
 <p>Well crap. All that research, and the Savage driver for the T23 just plain won't do dual display. </p>
 
 <p>I'll have to wait for my upgrade..</p>
-{{< /raw_html >}}

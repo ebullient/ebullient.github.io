@@ -5,7 +5,6 @@ tags:
   - hardware-mac
 title: Happy Solstice!
 ---
-{{< raw_html >}}
 <p>The longest night of the year has come.. the shortest day of the year is done, and I... well.</p>
 
 <p>So there was this box. It got shipped here a little while ago. It's large, squarish, and only about a foot and a half deep. It's been sitting in the dining room by the skimpily ornamented Norfolk pine and the tiny Meyer lemon tree (which is just beside itself with lemons on the make, but that's another story).</p>
@@ -15,4 +14,3 @@ title: Happy Solstice!
 <p>And Lo! it was a big beautiful LCD monitor.. complete with a bluetooth wireless keyboard and mouse. My husband, that wonderful man, gifted me an iMac.</p>
 
 <p><i>Yesss..</i></p>
-{{< /raw_html >}}

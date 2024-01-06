@@ -5,7 +5,6 @@ tags:
   - rails
 title: 'Rails: Printing validation errors as flash notices'
 ---
-{{< raw_html >}}
 <p>I am quite sure someone has already found this simple solution, but when I poked around, I couldn't find it.</p>
 
 <p>Here is my snippet to print out the error messages resulting from a validation as a flash notice:</p>
@@ -17,4 +16,3 @@ title: 'Rails: Printing validation errors as flash notices'
         &lt;&lt; @user.errors.full_messages.join(&quot;; &quot;)
   end
 </code></pre>
-{{< /raw_html >}}

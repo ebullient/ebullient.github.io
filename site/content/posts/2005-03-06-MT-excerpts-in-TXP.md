@@ -6,11 +6,8 @@ tags:
   - textpattern
 title: 'TXP Hack: Using TXP Excerpts like MT'
 ---
-{{< raw_html >}}
 <p>One of the things I used heavily in MT was the body/extended body trick. I wanted to continue that with Textpattern, but it involved some hacks to how <span class="caps">TXP </span>handles excerpts.</p>
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <p><span class="attribute">[Based on Textpattern 1.0rc1]</span></p>
 
 <ol>
@@ -77,4 +74,3 @@ This diff is a little more involved, I've attached it <a href="/files/excerpt_ht
 </code></pre>
 
 <p>Have Fun!</p>
-{{< /raw_html >}}

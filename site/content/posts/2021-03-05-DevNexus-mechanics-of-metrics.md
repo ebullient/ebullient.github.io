@@ -1,6 +1,4 @@
 ---
-aliases:
-  - /2021/03/05/DevNexus-mechanics-of-metrics.html
 tags:
   - conference
   - java

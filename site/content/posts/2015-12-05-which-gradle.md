@@ -5,7 +5,6 @@ tags:
   - scripts
 title: 'Which gradle... '
 ---
-{{< raw_html >}}
 <p>I am lazy. My fingers have habits that are sometimes hard to change.</p>
 
 <p>I've learned to type <code>gradle</code>, like all the time. Now I need to use <code>gradlew</code>, and for some reason this is difficult.</p>
@@ -23,4 +22,3 @@ else
   gradle $@
 fi
 </code></pre>
-{{< /raw_html >}}

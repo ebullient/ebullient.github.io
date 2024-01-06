@@ -7,12 +7,9 @@ tags:
 title: IBM T40 and multi-channel audio (ALSA)
 source: html
 ---
-{{< raw_html >}}
 <p>I'm finally getting around to setting up multi-channel audio. I've had this machine for awhile now, and most things are humming along.</p>
 
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 
 <p><em>References</em></p>
 <ul>
@@ -20,4 +17,3 @@ source: html
 	<li><a href="http://alsa.opensrc.org/index.php?page=DmixPlugin">dmix plugin</a></li>
 	<li><a href="http://thread.gmane.org/gmane.linux.hardware.thinkpad/11358">T40 and ALSA, but no multichannel mixing</a></li>
 </ul>
-{{< /raw_html >}}

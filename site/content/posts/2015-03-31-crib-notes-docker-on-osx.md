@@ -8,7 +8,6 @@ tags:
 title: 'Crib notes: Docker on OSX'
 source: html
 ---
-{{< raw_html >}}
 <p>Of course I'm messing with Docker (isn't everyone)? But as most people using OS X are discovering, there are some hiccups. Here are some notes for myself (and perhaps for others) about what is required to make docker work well on OS X: </p>
 
 <ul>
@@ -21,4 +20,3 @@ source: html
 <ul>
 	<li>I also use AnyConnect, which introduces it's own fun, as it likes to rewrite the routing table for giggles. I am thankfully <a href="https://github.com/boot2docker/boot2docker/issues/392#issuecomment-61999567">not the only one with this problem</a>. So there were good things to be gleaned here, too.</li>
 </ul>
-{{< /raw_html >}}

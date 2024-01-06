@@ -7,11 +7,8 @@ tags:
 title: 'TXP Hack: centralizing priv lookups'
 source: html
 ---
-{{< raw_html >}}
 <p>I use <span class="caps">HTTP</span> Auth for one of my Textpattern installations, and so, I wanted people that could get to the textpattern pages to have, by default, staff writer permissions.</p>
-{{< /raw_html >}}
 <!--more-->
-{{< raw_html >}}
 <h3>Checking Privledges</h3>
 
 <p>In Textpattern 1.0 (rc1-3), check_privs returns a message if the requested privs are not present. There is no way to non-destructively check privledges.</p>
@@ -68,4 +65,3 @@ function has_privs()
 <p><code>$myprivs = safe_field('privs', 'txp_users', &quot;name = '$txp_user'&quot;);</code></p>
 
 <p>To call the new <code>has_privs</code> method instead.</p>
-{{< /raw_html >}}

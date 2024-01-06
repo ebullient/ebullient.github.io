@@ -12,8 +12,6 @@ Sitting down with [Kadi](https://www.linkedin.com/in/kadi-grigg) and [Theresa](h
 
 It felt like a natural extension of my [QCon talk](2023-03-28-qcon-london-go-your-own-way.md), in some ways.
 
-{{< raw_html >}}
 <iframe src="https://podcasters.spotify.com/pod/show/wickedgooddevelopment/embed/episodes/Episode-32-Java-Queens-at-Devnexus-2023-e235n14/a-a9oc5po" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
-{{< /raw_html >}}
 
 [Wicked Good Development Episode 32: Java Queens at Devnexus 2023](https://blog.sonatype.com/wicked-good-development-java-queens-at-devnexus-2023)

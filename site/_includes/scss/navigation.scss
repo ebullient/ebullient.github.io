@@ -63,6 +63,11 @@ main.docs {
   nav.navigation.breadcrumb {
     background-color: var(--background-primary-alt);
   }
+  nav.table-of-contents h2 {
+    font-weight: normal;
+    font-size: 1.4em;
+    padding-left: .2em;
+  }
 }
 
 nav.prev-next {

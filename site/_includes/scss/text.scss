@@ -50,6 +50,7 @@ article.post a img {
 
 // pin sectioning formatting to immediate children of section/article
 // to avoid styling nested elements like gist
+.page,
 section,
 article {
   > header {

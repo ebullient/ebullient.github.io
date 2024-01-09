@@ -28,27 +28,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - name: Setup Deno environment
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-
-      - name: Set Deno cache dir
-        shell: bash
-        run: echo "DENO_DIR=$RUNNER_TEMP${{ runner.os == 'Windows' && '\\' || '/'  }}deno_cache" >> $GITHUB_ENV
-
-      - name: Cache Deno dependencies
-        id: cache-deno
-        uses: actions/cache@v3.3.2
-        with:
-          key: ${{ hashFiles("./deno.lock") }}
-          path: ${{ env.DENO_DIR }}
-
-      - name: Restore Deno dependencies
-        shell: bash
-        run: |
-          find . -regex '.*\.[jt]sx*' -exec deno cache {} \;
 
       - uses: actions/checkout@v4
         with:

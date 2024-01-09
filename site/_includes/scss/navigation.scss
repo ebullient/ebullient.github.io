@@ -42,11 +42,7 @@ nav.breadcrumb {
     flex-wrap: nowrap;
     gap: .2em;
 
-    li:not(:last-child) {
-      margin-right: .5em;
-    }
-    li:not(:last-child)::after {
-      position: absolute;
+    li:not(:first-child)::before {
       content: "/";
     }
     a {

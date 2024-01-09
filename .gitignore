@@ -1,6 +1,7 @@
 *.DS_Store
 *~
 .bundle
+.deno-cache
 .frontmatter
 .jekyll-metadata
 .mysql

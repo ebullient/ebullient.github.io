@@ -1,5 +1,3 @@
-import { CHAR_0 } from "https://deno.land/std@0.210.0/path/_common/constants.ts";
-
 const interestingFiles = [
     '.css',
     '.json',
@@ -109,6 +107,8 @@ for (const key in meta) {
     if (meta[key].visited !== now) {
         console.log(`Removing ${key}`);
         delete meta[key];
+    } else {
+        delete meta[key].visited;
     }
 }
 

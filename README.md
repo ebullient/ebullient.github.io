@@ -1,4 +1,4 @@
 # ebullient.github.io
 
-Hugo blog
+Deno + Lume blog
 

@@ -1,0 +1,21 @@
+---
+layout: layouts/base.vto
+---
+<nav class="navigation breadcrumb">
+  <ul>
+    {{- for item of nav.breadcrumb(page.data.url) }}
+    <li>
+      {{- if item.data }}
+        <a href="{{ item.data.url }}">
+          {{ item.data.title }}
+        </a>
+      {{- else }}
+        <span>{{ item.slug }}</span>
+      {{- /if }}
+    </li>
+    {{- /for }}
+  </ul>
+</nav>
+<section class="content">
+{{ content }}
+</section>

@@ -15,7 +15,7 @@ metas:
         {{ excerpt[0] }}
       </section>
       {{- if excerpt.length > 1 }}
-      <div>[<a class="read-more" href="{{ post.url }}">more</a>]</div>
+      <div><a class="more" href="{{ post.url }}" aria-label="click to read more">more</a></div>
       {{- /if }}
       <footer class="byline">
         <div>

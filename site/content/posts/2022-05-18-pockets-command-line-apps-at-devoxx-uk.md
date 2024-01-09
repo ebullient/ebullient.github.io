@@ -16,4 +16,6 @@ I spoke about creating command line applications at DevNexus in May. I wanted to
 
 {{< youtube ffGKrO1yD_c >}}
 
-The subject of the talk is a little command line application called "Pockets", and it lives here: https://github.com/ebullient/pockets-cli
+The subject of the talk is a little command line application called "Pockets".
+
+{{< gh_card "ebullient/markdown-it-obsidian-callouts" >}}

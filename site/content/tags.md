@@ -6,5 +6,7 @@ url: "/tags/"
 metas:
   robots: noindex,noarchive
 aliases:
-  - /tags.html
+- /tags.html
+cssclasses: 
+- page
 ---

@@ -12,6 +12,7 @@ export default function* ({ search, paginate }) {
     data.description = `Blog excerpts; page ${data.pagination.page} of ${data.pagination.totalPages}`;
     data.metas = data.metas || {};
     data.metas.robots = "noindex, noarchive";
+    data.cssclasses = ['page'];
     yield data;
   }
 }

@@ -13,6 +13,8 @@ A new talk! This is an evolution of pockets (as referenced [in a previous post](
 
 {{< youtube 0aqyOSzzDzg >}}
 
-"Pockets" lives here: <https://github.com/ebullient/pockets-cli>
+The subject of the talk is a little command line application called "Pockets", and it lives here: 
+
+{{< gh_card "ebullient/pockets-cli" >}}
 
 The referenced keynote by Adrian Cockcroft is [here](https://www.infoq.com/presentations/microservices-netflix-industry/)

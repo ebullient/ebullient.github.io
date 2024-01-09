@@ -10,7 +10,7 @@ function getGithubUrl(dir) {
   // Use a regular expression to find the URL for the project
   const regex = new RegExp(`(https.*?/${projectName})\\.git`, 'i');
   const match = gitmodules.match(regex);
-  let githubUrl = match ? match[1] + '/blob/main/' : null;
+  const githubUrl = match ? match[1] + '/blob/main/' : null;
 
   console.log(`GitHub URL: ${githubUrl}`)
   return githubUrl;

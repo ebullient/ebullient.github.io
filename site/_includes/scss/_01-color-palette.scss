@@ -135,11 +135,8 @@ body {
   --link-decoration: underline;
   --link-decoration-hover: underline;
 
-
-  // Accent is inverted
-  --footer-fg-color: var(--color-base-05);
-  --footer-bg-color: var(--background-primary-alt);
-  --footer-link-hover: var(--cyan-2);
+  --footer-bg-color: var(--purple-4);
+  --footer-link-hover: var(--purple-2);
 
   --text-on-accent: var(--gray-light-8);
   --interactive-accent: var(--cyan-4);
@@ -182,7 +179,11 @@ body {
   --link-decoration-color: var(--cyan-2);
 
   --code-normal: var(--blue-4);
-  --tag-background: rgba(var(--purple-1-rgb), .5);
+  --tag-bg: rgba(var(--purple-1-rgb), .5);
+  --tag-fg: var(--purple-5);
+
+  --footer-fg-color: var(--background-primary);
+  --timestamp: var(--green-4);
 
   @import "syntax-light";
 }
@@ -220,7 +221,10 @@ body {
   --link-decoration-color: var(--cyan-4);
 
   --code-normal: var(--blue-2);
-  --tag-background: rgba(var(--purple-4-rgb), .5);
+  --tag-bg: rgba(var(--purple-4-rgb), .5);
+
+  --footer-fg-color: var(--gray-light-8);
+  --timestamp: var(--green-3);
 
   @import "syntax-dark";
 }

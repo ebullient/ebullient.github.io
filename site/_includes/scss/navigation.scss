@@ -1,0 +1,88 @@
+header.page-header > nav,
+nav.breadcrumb,
+nav.prev-next {
+  > ul {
+    list-style-type: none; // Removes the bullet points
+    margin: 0; // Removes the default margin
+    padding: 0; // Removes the default padding
+  }
+}
+
+header.page-header > nav {
+  > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: .2em;
+
+    li:not(:last-child) {
+      margin-right: .5em;
+    }
+    li:not(:last-child)::after {
+      position: absolute;
+      content: "\00a0·";
+    }
+    &:before {
+      content: "[ ";
+    }
+    &:after {
+      content: " ]";
+    }
+  }
+}
+
+nav.breadcrumb {
+  > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: .2em;
+
+    li:not(:last-child) {
+      margin-right: .5em;
+    }
+    li:not(:last-child)::after {
+      position: absolute;
+      content: "/";
+    }
+    a {
+      margin: .2em .5em .2em .2em;
+    }
+  }
+}
+
+main:not(.docs) {
+  nav.navigation.breadcrumb,
+  nav.table-of-contents {
+    display: none;
+  }
+}
+
+main.docs {
+  nav.table-of-contents,
+  nav.navigation.breadcrumb {
+    background-color: var(--background-primary-alt);
+  }
+}
+
+nav.prev-next {
+  > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: .2em;
+  }
+
+  .prev a:before {
+    content: "← ";
+  }
+  .next a:after {
+    content: " →";
+  }
+}

@@ -14,4 +14,6 @@ My daughter figured out how to text me in the middle of it. The notifications ap
 
 {{< youtube M-Xbym3Dbpo >}}
 
-The subject of the talk is a little command line application called "Pockets", and it lives here: https://github.com/ebullient/pockets-cli
+The subject of the talk is a little command line application called "Pockets", and it lives here: 
+
+{{< gh_card "ebullient/pockets-cli" >}}

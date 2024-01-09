@@ -19,8 +19,8 @@ layout: layouts/base.vto
   {{- set prev = search.previousPage(url, "type=post") -}}
   {{- set next = search.nextPage(url, "type=post") -}}
   <ul>
-    <li class="prev">{{ if prev }}<a href="{{ prev.url }}" title="Previous: {{ prev.title |> htmlAttr }}">Older</a>{{ else }}&nbsp;{{ /if }}</li>
-    <li class="up"><a href="/">Top</a> | <a href="/archive/">Archive</a></li>
-    <li class="next">{{ if next }}<a href="{{ next.url }}" title="Next: {{ next.title |> htmlAttr }}">Newer</a>{{ else }}&nbsp;{{ /if }}</li>
+    <li class="prev">{{ if prev }}<a href="{{ prev.url }}" title="Previous: {{ prev.title |> htmlAttr }}" rel="prev">Older</a>{{ else }}&nbsp;{{ /if }}</li>
+    <li class="up"><a href="/">Top</a> <a href="/archive/">Archive</a></li>
+    <li class="next">{{ if next }}<a href="{{ next.url }}" title="Next: {{ next.title |> htmlAttr }}" rel="next">Newer</a>{{ else }}&nbsp;{{ /if }}</li>
   </ul>
 </nav>

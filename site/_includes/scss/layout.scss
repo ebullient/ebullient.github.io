@@ -1,0 +1,141 @@
+@mixin content-align {
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+}
+
+@mixin content-pad {
+  padding: 1em 1.2em;
+}
+@mixin narrow-pad {
+  padding: 1em 5px;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  align-items: stretch;
+}
+
+header.page-header {
+  @include content-align();
+  z-index: 20;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 2.5em;
+  flex-wrap: wrap;
+  gap: 0.2em;
+
+  h1 {
+    flex-grow: 1;
+  }
+}
+
+main {
+  flex: 2 1 auto;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: stretch;
+
+  > header {
+    @include content-align();
+  }
+
+  >article,
+  >section {
+    @include content-align();
+    position: relative;
+    flex: 1 1 auto;
+
+    img {
+      max-width: 90%;
+    }
+  }
+
+  >nav.breadcrumb {
+    @include content-align();
+    flex: 1 1 auto;
+  }
+  >nav.table-of-contents {
+    @include content-pad();
+    flex: 1 1 auto;
+  }
+  >nav.prev-next {
+    @include content-pad();
+    flex: 1 1 auto;
+  }
+}
+
+body:not(:has(main.docs)) {
+  header.page-header {
+    position: sticky;
+    top: 0;
+  }
+}
+
+body:has(main.docs) {
+  nav.breadcrumb {
+    position: sticky;
+    top: 0;
+    height: 2em;
+    min-height: 2em;
+    z-index: 4;
+  }
+}
+
+footer.page-footer {
+  @include content-pad();
+  display: flex;
+  min-height: 3em;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media(min-width: 600px) {
+  main:has(nav.table-of-contents) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+
+    > nav.breadcrumb {
+      width: 100%;
+      flex-basis: 100%;
+    }
+
+    > article,
+    > section {
+      flex: 1 1 auto;
+      width: 350px;
+    }
+
+    > nav.table-of-contents {
+      width: 150px;
+      min-width: 150px;
+      max-width: 300px;
+      flex: 1 1 auto;
+      min-height: 100vh;
+      height: 100vh;
+
+      position: sticky;
+      top: 0;
+
+      overflow-y: scroll;
+      @include narrow-pad();
+    }
+  }
+}
+
+@media(min-width: 800px) {
+  main.page {
+    width: 800px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

@@ -2,6 +2,8 @@
 layout: layouts/page.vto
 title: 'All about ebullient... '
 url: "/about/"
+cssclasses: 
+- page
 ---
 <p>Ebullient is one of my favorite words, and if you know me at all, you'll know it's apropos. </p>
 

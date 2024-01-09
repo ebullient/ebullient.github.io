@@ -1,0 +1,159 @@
+body {
+  --callout-color: var(--color-blue-rgb);
+
+  --ebw-callout-warning: 234, 175, 0; // yellow-3
+  --ebw-callout-success: 139, 167, 145; // green-3
+
+  --ebw-callout-note: 148, 189, 223; // blue-2
+  --ebw-callout-info: 111, 166, 211; // blue-3
+  --ebw-callout-quote: 53, 120, 175; // blue-4
+
+  --ebw-callout-tip: 134, 196, 193; // cyan-2
+  --ebw-callout-question: 89, 174, 170; // cyan-3
+  --ebw-callout-chat: 61, 126, 123; // cyan-4
+
+  --ebw-callout-abstract: 199, 178, 195; // purple-2
+  --ebw-callout-bug: 180, 152, 175; // purple-3
+  --ebw-callout-example: 142, 103, 135; // purple-4
+
+  --ebw-callout-danger: 230, 133, 132; // red-3
+  --ebw-callout-failure: 211, 141, 159; // pink-3
+
+  --ebw-callout-reference: 183, 183, 183; // gray
+  --ebw-callout-toc: 235, 235, 235; // gray-light-4
+}
+
+:not(dark) {
+  --blockquote-border-color: var(--secondary-accent-2);
+  --ebw-callout-toc: 159, 159, 159; // gray-dark-1
+  --ebw-callout-reference: 137, 137, 137; // gray-dark-2
+  --ebw-callout-success: 92, 122, 99; // green-4
+
+  --ebw-callout-note: 33, 75, 109; // blue-5
+  --ebw-callout-abstract: 88, 64, 84; // purple-5
+  --ebw-callout-info: 53, 119, 174; // blue-4
+  --ebw-callout-tip: 61, 126, 123; // cyan-4
+
+  --ebw-callout-danger: 167, 92, 112; // pink-4
+}
+
+$callout-types: (
+  "abstract": ebw-callout-abstract,
+  "summary": ebw-callout-abstract,
+  "tldr": ebw-callout-abstract,
+  "note": ebw-callout-note,
+  "info": ebw-callout-info,
+  "todo": ebw-callout-info,
+  "tip": ebw-callout-tip,
+  "hint": ebw-callout-tip,
+  "important": ebw-callout-tip,
+  "success": ebw-callout-success,
+  "check": ebw-callout-success,
+  "done": ebw-callout-success,
+  "question": ebw-callout-question,
+  "help": ebw-callout-question,
+  "faq": ebw-callout-question,
+  "warning": ebw-callout-warning,
+  "caution": ebw-callout-warning,
+  "attention": ebw-callout-warning,
+  "failure": ebw-callout-failure,
+  "fail": ebw-callout-failure,
+  "missing": ebw-callout-failure,
+  "danger": ebw-callout-danger,
+  "error": ebw-callout-danger,
+  "bug": ebw-callout-bug,
+  "example": ebw-callout-example,
+  "excerpt": ebw-callout-quote,
+  "quote": ebw-callout-quote,
+  "cite": ebw-callout-quote,
+  "chat": ebw-callout-chat,
+  "reference": ebw-callout-reference,
+  "toc": ebw-callout-toc
+);
+
+$callout-title-types: (
+  "info": blue-5,
+  "todo": blue-5,
+  "note": blue-5,
+  "excerpt": blue-5,
+  "quote": blue-5,
+  "cite": blue-5,
+  "bug": purple-5,
+  "example": purple-5,
+  "abstract": purple-5,
+  "summary": purple-5,
+  "tldr": purple-5,
+  "question": cyan-5,
+  "help": cyan-5,
+  "faq": cyan-5,
+  "tip": cyan-5,
+  "hint": cyan-5,
+  "important": cyan-5,
+  "success": green-5,
+  "check": green-5,
+  "done": green-5,
+  "warning": yellow-5,
+  "caution": yellow-5,
+  "attention": yellow-5,
+  "danger": red-5,
+  "error": red-5,
+  "failure": red-5,
+  "fail": red-5,
+  "missing": red-5,
+  "toc": gray-dark-4,
+  "reference": gray-dark-4
+);
+
+.callout {
+  @each $type, $color in $callout-types {
+    &[data-callout="#{$type}"] {
+      --callout-color: var(--#{$color});
+    }
+  }
+}
+
+:not(dark) {
+  @each $type, $color in $callout-title-types {
+    .callout[data-callout="#{$type}"] {
+      --callout-title-color: var(--#{$color});
+    }
+  }
+}
+
+.callout {
+  overflow: hidden;
+  border-style: solid;
+  border-color: rgba(var(--callout-color), 0.5);
+  border-width: 0 1px 1px 2px;
+  border-radius: 6px;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.callout-title {
+  background-color: rgba(var(--callout-color), 0.1);
+  display: flex;
+  gap: .5em;
+  color: rgb(var(--callout-title-color, var(--callout-color)));
+  align-items: center;
+  padding: .5em;
+
+  & .callout-title-icon {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    height: 1em;
+    max-height: 1em;
+    width: 1em;
+    max-width: 1em;
+  }
+
+  & .callout-title-inner {
+    font-weight: 700;
+    flex: 2;
+  }
+}
+
+.callout-content {
+  padding: 0 .5em;
+}

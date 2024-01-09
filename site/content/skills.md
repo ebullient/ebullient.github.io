@@ -5,7 +5,9 @@ url: "/skills/"
 description: "Abridged CV for Erin Schnabel. Skills, experience, etc."
 aliases:
 - /skills.php
-cssclasses: cv
+cssclasses: 
+- cv
+- page
 ---
 <header>
   <h1>

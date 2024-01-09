@@ -19,6 +19,8 @@ I have a few objectives for the exercise this time around: I want site content (
 
 [^1]: [Movable Type](https://movabletype.org/documentation/) (2002?) -> [Textpattern](https://textpattern.com/) (2005) -> [NucleusCMS](http://nucleuscms.org/) (2007) -> [Jekyll](https://jekyllrb.com/) (2017) -> [Hugo](https://gohugo.io/) (2020), and now [Lume](https://lume.land/).
 
+{{< gh_card "ebullient/markdown-it-obsidian-callouts" >}}
+
 <!--more-->
 
 ## From CMS to SSG

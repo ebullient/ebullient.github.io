@@ -12,7 +12,7 @@ import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import slugify_urls from "lume/plugins/slugify_urls.ts";
 import source_maps from "lume/plugins/source_maps.ts";
-import toc from "https://deno.land/x/lume_markdown_plugins/toc.ts";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.7.0/toc.ts";
 import { stripHtml } from "https://deno.land/x/core@0.1.9/mod.ts";
 
 import anchor from "npm:markdown-it-anchor";

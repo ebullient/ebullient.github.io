@@ -30,7 +30,7 @@
     ]
   },
   "projects/ttrpg-convert-cli/docs/sourceMap.md": {
-    "date": "2023-12-28T14:22:24.000Z",
+    "date": "2024-01-14T04:24:57.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/sourceMap.md",
     "url": "/projects/ttrpg-convert-cli/docs/sourceMap.html",
     "type": "project-doc",
@@ -580,7 +580,7 @@
     ]
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteItem/Variant.md": {
-    "date": "2023-12-20T19:32:37.000Z",
+    "date": "2024-01-14T03:29:03.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteItem/Variant.md",
     "url": "/projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteItem/Variant.html",
     "type": "project-doc",
@@ -590,7 +590,7 @@
     ]
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteItem/README.md": {
-    "date": "2023-12-21T15:39:50.000Z",
+    "date": "2024-01-14T03:29:03.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteItem/README.md",
     "url": "/projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteItem/",
     "type": "project-doc",
@@ -1310,7 +1310,7 @@
     ]
   },
   "projects/ttrpg-convert-cli/src/main/resources/sourceMap.json": {
-    "date": "2023-12-28T14:21:14.000Z",
+    "date": "2024-01-14T04:24:57.000Z",
     "srcPath": "projects/ttrpg-convert-cli/src/main/resources/sourceMap.json",
     "url": "/projects/ttrpg-convert-cli/src-main-resources-sourceMap.json.html",
     "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
@@ -1325,7 +1325,7 @@
     "title": "src/main/resources/sourceMap.json"
   },
   "projects/ttrpg-convert-cli/src/main/resources/convertData.json": {
-    "date": "2023-11-29T04:29:53.000Z",
+    "date": "2024-01-14T04:24:57.000Z",
     "srcPath": "projects/ttrpg-convert-cli/src/main/resources/convertData.json",
     "url": "/projects/ttrpg-convert-cli/src-main-resources-convertData.json.html",
     "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",

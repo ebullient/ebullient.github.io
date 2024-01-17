@@ -10,7 +10,7 @@ tags:
   - lume
 ---
 
-The next few templates to address are indexes. Despite the substantial amount of template markup, there's not much text or old formatting to handle. I have posts dating back quite a bit, carrying some unique (?) markup practices.
+Continuing the migration from [Hugo](https://gohugo.io/) to [Lume](https://lume.land/) that I started [here](./2024-01-04-moving-from-hugo-to-lume.md), the next few templates to address are indexes. Despite the substantial amount of template markup, there's not much text or old formatting to handle. Posts are another matter. Some of them are very old, and use some interesting markup.
 
 - [Archive by Date](#archive-by-date)
 - [Archive by Tag](#archive-by-tag)

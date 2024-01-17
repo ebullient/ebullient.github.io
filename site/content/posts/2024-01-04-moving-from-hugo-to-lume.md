@@ -9,7 +9,7 @@ keywords:
   - lume
 ---
 
-I've decided to move my blog from Hugo to Lume. As noted in [my previous post](./2023-12-30-ssg-with-obsidian-and-lume.md), I've been using Hugo for a while, and it's been pretty great! But putting together made me realize how many small friction points there are. I also want to embed the documentation for some of my projects in the site, and (based on an experiment), I think that will be much easier to do with Lume.
+I've decided to move my blog from [Hugo](https://gohugo.io/) to [Lume](https://lume.land/). As noted in [my previous post](./2023-12-30-ssg-with-obsidian-and-lume.md), I've been using Hugo for a while, and it's been pretty great! But putting together made me realize how many small friction points there are. I also want to embed the documentation for some of my projects in the site, and (based on an experiment), I think that will be much easier to do with Lume.
 
 This will be a multi-step process, and I'll document it as I go. I'm starting with the base template, and will work my way through the rest of the site.
 

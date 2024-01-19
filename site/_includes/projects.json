@@ -20,7 +20,7 @@
     ]
   },
   "projects/ttrpg-convert-cli/docs/configuration.md": {
-    "date": "2024-01-02T13:20:09.000Z",
+    "date": "2024-01-19T15:13:11.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/configuration.md",
     "url": "/projects/ttrpg-convert-cli/docs/configuration.html",
     "type": "project-doc",
@@ -840,7 +840,7 @@
     ]
   },
   "projects/ttrpg-convert-cli/README.md": {
-    "date": "2024-01-02T13:23:21.000Z",
+    "date": "2024-01-19T15:13:11.000Z",
     "srcPath": "projects/ttrpg-convert-cli/README.md",
     "url": "/projects/ttrpg-convert-cli/",
     "type": "project-doc",
@@ -915,7 +915,7 @@
     ]
   },
   "projects/ttrpg-convert-cli/examples/config/config.pf2e.json": {
-    "date": "2023-07-19T16:08:09.000Z",
+    "date": "2024-01-19T15:13:11.000Z",
     "srcPath": "projects/ttrpg-convert-cli/examples/config/config.pf2e.json",
     "url": "/projects/ttrpg-convert-cli/examples/config/config.pf2e.json.html",
     "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
@@ -930,7 +930,7 @@
     "title": "examples/config/config.pf2e.json"
   },
   "projects/ttrpg-convert-cli/examples/config/config.5e.yaml": {
-    "date": "2023-06-27T19:39:14.000Z",
+    "date": "2024-01-19T15:13:11.000Z",
     "srcPath": "projects/ttrpg-convert-cli/examples/config/config.5e.yaml",
     "url": "/projects/ttrpg-convert-cli/examples/config/config.5e.yaml.html",
     "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
@@ -945,7 +945,7 @@
     "title": "examples/config/config.5e.yaml"
   },
   "projects/ttrpg-convert-cli/examples/config/config.5e.json": {
-    "date": "2023-07-19T16:08:09.000Z",
+    "date": "2024-01-19T15:13:11.000Z",
     "srcPath": "projects/ttrpg-convert-cli/examples/config/config.5e.json",
     "url": "/projects/ttrpg-convert-cli/examples/config/config.5e.json.html",
     "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
@@ -960,7 +960,7 @@
     "title": "examples/config/config.5e.json"
   },
   "projects/ttrpg-convert-cli/examples/config/config.pf2e.yaml": {
-    "date": "2023-06-27T19:39:14.000Z",
+    "date": "2024-01-19T15:13:11.000Z",
     "srcPath": "projects/ttrpg-convert-cli/examples/config/config.pf2e.yaml",
     "url": "/projects/ttrpg-convert-cli/examples/config/config.pf2e.yaml.html",
     "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
@@ -1325,7 +1325,7 @@
     "title": "src/main/resources/sourceMap.json"
   },
   "projects/ttrpg-convert-cli/src/main/resources/convertData.json": {
-    "date": "2024-01-14T04:24:57.000Z",
+    "date": "2024-01-19T15:13:11.000Z",
     "srcPath": "projects/ttrpg-convert-cli/src/main/resources/convertData.json",
     "url": "/projects/ttrpg-convert-cli/src-main-resources-convertData.json.html",
     "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",

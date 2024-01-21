@@ -1,16 +1,15 @@
 ---
 title: Moving from Hugo to Lume (2, Indexes)
 description: Part two of the migration from Hugo to Lume, focusing on rebuilding content indexes (by date and by tag).
-keywords:
-  - Hugo
-  - Lume
 tags:
   - blog
   - hugo
   - lume
+aliases:
+  - /2024/01/05/hugo-to-lume.html
 ---
 
-Continuing the migration from [Hugo](https://gohugo.io/) to [Lume](https://lume.land/) that I started [here](./2024-01-04-moving-from-hugo-to-lume.md), the next few templates to address are indexes. Despite the substantial amount of template markup, there's not much text or old formatting to handle. Posts are another matter. Some of them are very old, and use some interesting markup.
+Continuing the migration from [Hugo](https://gohugo.io/) to [Lume](https://lume.land/) that I started [here](./2024-01-04-moving-from-hugo-to-lume-1-templates.md), the next few templates to address are indexes. Despite the substantial amount of template markup, there's not much text or old formatting to handle. Posts are another matter. Some of them are very old, and use some interesting markup.
 
 - [Archive by Date](#archive-by-date)
 - [Archive by Tag](#archive-by-tag)

@@ -5,7 +5,7 @@
       "name": "default",
       "pageBundle": false,
       "previewPath": null,
-      "template": "[[workspace]]/site/archetypes/post.md",
+      "template": "[[workspace]]/.frontmatter/templates/post.md",
       "fields": [
         {
           "title": "Title",
@@ -16,11 +16,6 @@
           "title": "Description",
           "name": "description",
           "type": "string"
-        },
-        {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
         },
         {
           "title": "Tags",

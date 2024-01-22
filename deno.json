@@ -1,9 +1,11 @@
 {
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "attach": "echo \"import 'lume/cli.ts'\" | deno run --inspect-wait --unstable -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s",
-    "debug": "LUME_LOGS=debug deno task lume",
+    "debug": "deno task attach -s",
+    "verbose": "LUME_LOGS=debug deno task lume",
     "lastmod": "deno run --allow-run=\"git\" --allow-read=. --allow-write=. ./.github/lastmod.ts"
   },
   "compilerOptions": {
@@ -12,6 +14,12 @@
     ]
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.0.2/"
+    "lume/": "https://deno.land/x/lume@v2.0.2/",
+    "npm:markdown-it": "npm:markdown-it@14.0.0",
+    "npm:markdown-it-anchor": "npm:markdown-it-anchor@8.6.7",
+    "npm:markdown-it-attrs": "npm:markdown-it-attrs@4.1.6",
+    "npm:markdown-it-deflist": "npm:markdown-it-deflist@3.0.0",
+    "npm:markdown-it-footnote": "npm:markdown-it-footnote@4.0.0",
+    "npm:markdown-it-obsidian-callouts": "npm:markdown-it-obsidian-callouts@0.2.0"
   }
 }

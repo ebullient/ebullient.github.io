@@ -112,7 +112,7 @@ site.preprocess(['.md'], (pages) => {
         if (typeof page.data.content !== "string") {
             continue;
         }
-        if (page.src.path.startsWith('/content')) {
+        if (page.src.path.startsWith('/content/posts')) {
            page.data.content = shortcodes(page.data.content);
         }
     }

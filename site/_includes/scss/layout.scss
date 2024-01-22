@@ -87,6 +87,9 @@ body:has(main.docs) {
     min-height: 2em;
     z-index: 4;
   }
+  section {
+    height: 100%;
+  }
 }
 
 footer.page-footer {
@@ -99,14 +102,16 @@ footer.page-footer {
 }
 
 @media(min-width: 600px) {
+  nav.breadcrumb {
+    max-height: 2em;
+  }
   main:has(nav.table-of-contents) {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100vw;
 
     > nav.breadcrumb {
-      width: 100%;
-      flex-basis: 100%;
+      flex: 0 0 100%;
     }
 
     > article,
@@ -140,7 +145,7 @@ footer.page-footer {
   }
 }
 @media(min-width: 1100px) {
-  main:has(nav.table-of-contents) > section {
+  main > section {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;

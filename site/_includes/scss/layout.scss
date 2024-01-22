@@ -139,3 +139,10 @@ footer.page-footer {
     margin: 0 auto;
   }
 }
+@media(min-width: 1100px) {
+  main:has(nav.table-of-contents) > section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

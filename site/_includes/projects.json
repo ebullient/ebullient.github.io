@@ -30,7 +30,7 @@
     ]
   },
   "projects/ttrpg-convert-cli/docs/sourceMap.md": {
-    "date": "2024-01-14T04:24:57.000Z",
+    "date": "2024-01-23T21:13:56.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/sourceMap.md",
     "url": "/projects/ttrpg-convert-cli/docs/sourceMap.html",
     "type": "project-doc",
@@ -1310,7 +1310,7 @@
     ]
   },
   "projects/ttrpg-convert-cli/src/main/resources/sourceMap.json": {
-    "date": "2024-01-14T04:24:57.000Z",
+    "date": "2024-01-23T21:13:56.000Z",
     "srcPath": "projects/ttrpg-convert-cli/src/main/resources/sourceMap.json",
     "url": "/projects/ttrpg-convert-cli/src-main-resources-sourceMap.json.html",
     "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",

@@ -6,7 +6,7 @@ tags:
   - hugo
   - lume
 ---
-Welcome to the grand finale of our [Hugo](https://gohugo.io/) to [Lume](https://lume.land/) migration saga! 
+Welcome to the grand finale of our [Hugo](https://gohugo.io/) to [Lume](https://lume.land/) migration saga!
 In [part 1](./2024-01-04-moving-from-hugo-to-lume-1-templates.md), we talked about motivations and initial setup. [Part 2](./2024-01-05-moving-from-hugo-to-lume-2-indexes.md) covered index generation. Now, we face the ultimate challenge: tackling the 'gorpy bits'—the formatting quirks and embedded Hugo shortcodes in our site's content.
 
 <!--more-->
@@ -14,7 +14,7 @@ In [part 1](./2024-01-04-moving-from-hugo-to-lume-1-templates.md), we talked abo
 ## URL Structures
 
 My blog posts are organized using a date-based URL pattern.
-I crafted a custom URL function in `_config.ts` to maintain this structure and 
+I crafted a custom URL function in `_config.ts` to maintain this structure and
 update the post date from the file name.
 
 ```ts
@@ -34,13 +34,19 @@ site.data("url", (page: Page) => {
 
 ## Shortcodes
 
-My early blog posts were written in different content management systems that used their own markup syntax. When I moved from one system to another, I kept only the HTML-rendered post content so I wouldn't have to deal with markup conversion. 
+My early blog posts were written in different content management systems that used their own markup syntax. When I moved from one system to another, I kept only the HTML-rendered post content so I wouldn't have to deal with markup conversion.
 
 When I moved from Jekyll to Hugo, I had a problem. Hugo does not play as well with raw HTML in posts. I converted simpler posts to markdown, and created a `{{< raw_html >}}` shortcode to allow the inclusion of raw HTML for the rest.
 
-My usage of `{{< raw_html >}}`, Hugo-specific shortcodes like `{{< figure >}}`, `{{< gh_card >}}`, `{{< gist >}}`, `{{< tweet >}}`, and `{{< youtube >}}`, along with other custom shortcodes I'd created for embedding content and performing date math, needed reevaluation.
+My usage of
+<code>&#123;{< raw_html >}}</code>, Hugo-specific shortcodes like
+<code>&#123;{< figure >}}</code>,
+<code>&#123;{< gh_card >}}</code>,
+<code>&#123;{< gist >}}</code>,
+<code>&#123;{< tweet >}}</code>, and
+<code>&#123;{< youtube >}}</code>, along with other custom shortcodes I'd created for embedding content and performing date math, needed reevaluation.
 
-I decided to port some of the shortcodes to typescript, and use a pre-processor to transform shortcode content. 
+I decided to port some of the shortcodes to typescript, and use a pre-processor to transform shortcode content.
 
 You declare a pre-processor in `_config.ts` like this:
 
@@ -59,7 +65,7 @@ site.preprocess(['.md'], (pages) => {
 
 This snippet checks if page.data.content is a string (which excludes pages like my tag index, that only have frontmatter). Files in the `content` directory have their content transformed by the `shortcodes` function.
 
-The shortcodes function is a bit of a beast. It looks for and replaces instances of each known shortcode with content constructed from the shortcode's attributes. Here's an example of the `{{< figure >}}` shortcode:
+The shortcodes function is a bit of a beast. It looks for and replaces instances of each known shortcode with content constructed from the shortcode's attributes. Here's an example of the <code>&#123;{< figure >}}</code> shortcode:
 
 ```ts
 function shortcodes(result: string): string {
@@ -117,7 +123,7 @@ With Lume's (and markdown-it's) ability to handle raw HTML, the `{{< raw_html >}
 
 This migration to Lume ranks among the most seamless transitions I've ever undertaken.
 
-Lume provides 'just enough' structure to guide content processing without overwhelming complexity. 
+Lume provides 'just enough' structure to guide content processing without overwhelming complexity.
 The effort I spent on this transition was all focused on cleaning up my old messes, not on understanding how Lume works.
 
 At the end of last year, I started integrating documentation for one of my projects into my website just to see how it would work (and if it was more readable in the end). It was a slog. What I wanted to do was not what Hugo wanted me to do. I made it work, but it was complicated and messy. I could throw all that mess away and pull in this content in a much more straightforward way with Lume.

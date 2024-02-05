@@ -48,9 +48,9 @@ title: 'TXP Hack: Using TXP Excerpts like MT'
   </ul>
 </li>
 <li>Make <code>textpattern/include/txp_article.php</code> store the raw textile text and the html formatted text separately. Also, since I am used to writing the excerpt and then the body, I moved the excerpt box above the body box on the entry form.
-This diff is a little more involved, I've attached it <a href="/files/excerpt_html.txp_article.diff.txt">here</a>.<br />
+This diff is a little more involved, I've attached it <a href="/files/excerpt-html.txp-article.diff.txt">here</a>.<br />
 </li>
-<li>Finally, we need to make <code>textpattern/publish.php</code> display <code>Excerpt_html</code> instead of <code>Excerpt</code>. The diff is <a href="/files/excerpt_html.publish.diff.txt">here</a>.
+<li>Finally, we need to make <code>textpattern/publish.php</code> display <code>Excerpt_html</code> instead of <code>Excerpt</code>. The diff is <a href="/files/excerpt-html.publish.diff.txt">here</a>.
 </li>
 </ol>
 

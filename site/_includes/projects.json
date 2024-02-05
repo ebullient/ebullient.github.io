@@ -10,7 +10,7 @@
     ]
   },
   "projects/ttrpg-convert-cli/docs/README.md": {
-    "date": "2023-12-29T14:37:24.000Z",
+    "date": "2024-02-05T16:58:32.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/README.md",
     "url": "/projects/ttrpg-convert-cli/docs/",
     "type": "project-doc",
@@ -1893,5 +1893,35 @@
       "files"
     ],
     "title": "src/main/resources/templates/toolsPf2e/indexTrait.txt"
+  },
+  "projects/ttrpg-convert-cli/src/main/resources/templates/README.md": {
+    "date": "2024-02-05T16:58:32.000Z",
+    "srcPath": "projects/ttrpg-convert-cli/src/main/resources/templates/README.md",
+    "url": "/projects/ttrpg-convert-cli/src-main-resources-templates/",
+    "type": "project-doc",
+    "layout": "layouts/project-doc.vto",
+    "cssclasses": [
+      "docs"
+    ]
+  },
+  "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/README.md": {
+    "date": "2024-02-05T16:58:32.000Z",
+    "srcPath": "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/README.md",
+    "url": "/projects/ttrpg-convert-cli/src-main-resources-templates/tools5e/",
+    "type": "project-doc",
+    "layout": "layouts/project-doc.vto",
+    "cssclasses": [
+      "docs"
+    ]
+  },
+  "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/README.md": {
+    "date": "2024-02-05T16:58:32.000Z",
+    "srcPath": "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/README.md",
+    "url": "/projects/ttrpg-convert-cli/src-main-resources-templates/toolsPf2e/",
+    "type": "project-doc",
+    "layout": "layouts/project-doc.vto",
+    "cssclasses": [
+      "docs"
+    ]
   }
 }

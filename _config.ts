@@ -7,7 +7,8 @@ import favicon from "lume/plugins/favicon.ts";
 import feed from "lume/plugins/feed.ts";
 import metas from "lume/plugins/metas.ts";
 import nav from "lume/plugins/nav.ts";
-import resolve_urls from "lume/plugins/resolve_urls.ts";
+import resolve_urls, { getPathInfo } from "lume/plugins/resolve_urls.ts";
+import modifyUrls from "lume/plugins/modify_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import slugify_urls from "lume/plugins/slugify_urls.ts";
@@ -19,6 +20,8 @@ import anchor from "npm:markdown-it-anchor";
 import footnote from "npm:markdown-it-footnote";
 import callouts from "npm:markdown-it-obsidian-callouts";
 import { markdownItAttrs, markdownItDeflist } from "lume/deps/markdown_it.ts";
+import { posix } from "lume/deps/path.ts";
+import { normalizePath } from "lume/core/utils/path.ts";
 
 const markdown = {
     options: {
@@ -37,12 +40,13 @@ const markdown = {
                 assistiveText: _ => 'Permalink',
                 visuallyHiddenClass: 'invisible',
                 wrapper: ['<header>', '\n</header>']
-              }),
+            }),
             slugify: slHelperSlugify,
         }],
         footnote,
     ]
 };
+const cache = new Map<string, string | null>();
 
 const site = lume({
     src: "site",
@@ -60,19 +64,18 @@ site.use(attributes())
         output: ["/index.rss", "/index.json"],
         query: "type=post",
         info: {
-          title: "ebullient·works",
-          description: "Nothing poetic here, just a collection of things. Some are \"how I did this so I can remember later\", others are \"this is totally cool!\", and some are something else entirely.",
-          published: new Date()
+            title: "ebullient·works",
+            description: "Nothing poetic here, just a collection of things. Some are \"how I did this so I can remember later\", others are \"this is totally cool!\", and some are something else entirely.",
+            published: new Date()
         },
         items: {
-          title: "=title",
-          description: "=description",
-          published: "=date",
+            title: "=title",
+            description: "=description",
+            published: "=date",
         },
     }))
     .use(metas())
     .use(nav())
-    .use(resolve_urls())
     .use(sass({
         includes: "_includes/scss",
     }))
@@ -107,13 +110,92 @@ function slHelperSlugify(s: string) {
     return slHelper(s).toLowerCase();
 }
 
+site.addEventListener("beforeUpdate", () => cache.clear());
+
+site.use(modifyUrls({
+    extensions: [".html"],
+    fn: (url, page) => {
+        if (url.startsWith('#')
+            || url.includes('//')
+            || url.startsWith("/assets")
+            || url.startsWith("/files")
+            || url.startsWith("/images")
+            || url.startsWith("/index")
+            || url.endsWith(".ico")
+            || url.endsWith(".rss")
+            || url.includes(".html")) {
+            return url;
+        }
+        if (url.startsWith("/") && !(page.data.contentRoot || page.data.srcPath)) {
+            return url;
+        }
+        // extra resolution for markdown files from generated project pages
+        // that do not have a meaningful page.src.path, but instead have
+        // page.data.srcPath
+
+        let [file, rest] = getPathInfo(url);
+        if (file.startsWith("/") && file.endsWith("/")) {
+            return url;
+        }
+
+        const srcPath = page.data.contentRoot
+            ? `${page.data.contentRoot}index.md`
+            : (page.data.srcPath ? page.data.srcPath : page.src.path);
+
+        if (!file.startsWith("/") && !file.startsWith("~")) {
+            file = posix.resolve(
+                posix.dirname(normalizePath(srcPath)),
+                file,
+            );
+        }
+
+        if (cache.has(file)) {
+            const cached = cache.get(file);
+            return cached ? cached + rest : url;
+        }
+        try {
+            let lookup = file;
+            if (file.includes("ttrpg-convert-cli")) {
+                lookup = lookup.replace("src/main/resources/", "src-main-resources-")
+                    .replace(/\.css$/, ".css.html")
+                    .replace(/\.json$/, ".json.html")
+                    .replace(/\.yaml$/, ".yaml.html")
+                    .replace(/\.txt$/, ".txt.html");
+            }
+            let resolved = (page.data.srcPath && !page.data.contentRoot)
+                    ? lookup
+                    : site.url(`~${lookup}`);
+
+            if (resolved.includes(".md")) {
+                resolved = resolved
+                        .replace("README.md", "")
+                        .replace(".md", ".html");
+                console.log("URL: ", url,
+                "\n    srcPath: ", srcPath,
+                "\n    file: ", file,
+                "\n    rest: ", rest,
+                "\n    resolved: ", resolved);
+            }
+
+            cache.set(file, resolved);
+            return resolved + rest;
+        } catch {
+            console.log("FAILED URL: ", url,
+                    "\n    srcPath: ", srcPath,
+                    "\n    file: ", file,
+                    "\n    rest: ", rest);
+        }
+        return url;
+    },
+}))
+
 site.preprocess(['.md'], (pages) => {
-    for(const page of pages) {
+    for (const page of pages) {
         if (typeof page.data.content !== "string") {
             continue;
         }
         if (page.src.path.startsWith('/content/posts')) {
-           page.data.content = shortcodes(page.data.content);
+            page.data.content = shortcodes(page.data.content);
         }
     }
 });

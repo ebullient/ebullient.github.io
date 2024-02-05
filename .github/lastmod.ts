@@ -1,3 +1,5 @@
+import url from "lume/plugins/url.ts";
+
 const interestingFiles = [
     '.css',
     '.json',
@@ -7,8 +9,6 @@ const interestingFiles = [
     '.yml',
  ];
 const ignore = [
-    'CONTRIBUTING.md',
-    'dco.txt',
     'jitpack.yml',
     'jreleaser.yml',
     'migration',
@@ -68,17 +68,14 @@ async function readDir(path: string, relative: string, repo: string, repoRelativ
                 const repoPath = `${repoRelative}${dirEntry.name}`;
                 struct.date = gitLastCommitDate(repoPath, repo);
                 struct.srcPath = filePath;
-                struct.url = `/${filePath}.html`
-                    .replace('.md', '')
-                    .replace('README.html', '')
-                    .replace('src/main/resources/', 'src-main-resources-');
+                struct.githubUrl = `${ghUrl}`;
+                struct.repoUrl = `${ghUrl}${repoPath}`;
                 if (dirEntry.name.endsWith('.md')) {
                     struct.type = 'project-doc';
                     struct.layout = 'layouts/project-doc.vto';
                     struct.cssclasses = ['docs'];
                 } else {
-                    struct.githubUrl = `${ghUrl}`;
-                    struct.download = `${ghUrl}${repoPath}`
+                    struct.download = struct.repoUrl
                             .replace('github.com', 'raw.githubusercontent.com').replace('/blob', '');
                     struct.type = 'project-file';
                     struct.layout = 'layouts/project-wrapper.vto';
@@ -87,6 +84,11 @@ async function readDir(path: string, relative: string, repo: string, repoRelativ
                     struct.cssclasses = ['docs', 'files'];
                     struct.title = repoPath;
                 }
+                struct.url = `/${filePath}.html`
+                        .replace('.md', '')
+                        .replace('README.html', '')
+                        .replace('src/main/resources/', 'src-main-resources-');
+                struct.genUrl = url;
             }
         } else if (dirEntry.isDirectory) {
             const nextDir = `${path}/${dirEntry.name}`;

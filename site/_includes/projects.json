@@ -7,7 +7,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/README-WINDOWS.md"
   },
   "projects/ttrpg-convert-cli/docs/README.md": {
     "date": "2024-02-05T16:58:32.000Z",
@@ -17,7 +19,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/README.md"
   },
   "projects/ttrpg-convert-cli/docs/configuration.md": {
     "date": "2024-02-02T16:28:58.000Z",
@@ -27,7 +31,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md"
   },
   "projects/ttrpg-convert-cli/docs/sourceMap.md": {
     "date": "2024-01-23T21:13:56.000Z",
@@ -37,7 +43,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/sourceMap.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteHazard/README.md": {
     "date": "2023-12-21T15:39:50.000Z",
@@ -47,7 +55,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteHazard/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteHazard/QuteHazardAttributes.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -57,7 +67,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteHazard/QuteHazardAttributes.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteArchetype.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -67,7 +79,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteArchetype.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteBook/BookInfo.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -77,7 +91,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteBook/BookInfo.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteBook/README.md": {
     "date": "2023-12-21T15:39:50.000Z",
@@ -87,7 +103,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteBook/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteBackground.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -97,7 +115,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteBackground.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteSpell/QuteSpellSaveDuration.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -107,7 +127,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteSpell/QuteSpellSaveDuration.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteSpell/QuteSpellTarget.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -117,7 +139,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteSpell/QuteSpellTarget.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteSpell/QuteSpellAmp.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -127,7 +151,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteSpell/QuteSpellAmp.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteSpell/README.md": {
     "date": "2023-12-21T15:39:50.000Z",
@@ -137,7 +163,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteSpell/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteSpell/QuteSpellCasting.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -147,7 +175,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteSpell/QuteSpellCasting.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteInlineAffliction/QuteAfflictionStage.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -157,7 +187,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteInlineAffliction/QuteAfflictionStage.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteInlineAffliction/README.md": {
     "date": "2023-12-21T15:39:50.000Z",
@@ -167,7 +199,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteInlineAffliction/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteItem/QuteItemActivate.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -177,7 +211,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteItem/QuteItemActivate.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteItem/QuteItemWeaponData.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -187,7 +223,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteItem/QuteItemWeaponData.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteItem/QuteItemVariant.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -197,7 +235,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteItem/QuteItemVariant.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteItem/QuteItemShieldData.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -207,7 +247,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteItem/QuteItemShieldData.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteItem/QuteItemArmorData.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -217,7 +259,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteItem/QuteItemArmorData.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteItem/README.md": {
     "date": "2023-12-21T15:39:50.000Z",
@@ -227,7 +271,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteItem/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteAffliction.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -237,7 +283,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteAffliction.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteInlineAttack.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -247,7 +295,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteInlineAttack.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteRitual/QuteRitualChecks.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -257,7 +307,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteRitual/QuteRitualChecks.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteRitual/QuteRitualCasting.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -267,7 +319,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteRitual/QuteRitualCasting.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteRitual/README.md": {
     "date": "2023-12-21T15:39:50.000Z",
@@ -277,7 +331,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteRitual/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDeity/QuteDivineAvatarAction.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -287,7 +343,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDeity/QuteDivineAvatarAction.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDeity/QuteDivineAvatar.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -297,7 +355,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDeity/QuteDivineAvatar.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDeity/QuteDeityCleric.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -307,7 +367,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDeity/QuteDeityCleric.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDeity/README.md": {
     "date": "2023-12-21T15:39:50.000Z",
@@ -317,7 +379,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDeity/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDeity/QuteDivineAvatarAbility.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -327,7 +391,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDeity/QuteDivineAvatarAbility.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDeity/QuteDivineIntercession.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -337,7 +403,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDeity/QuteDivineIntercession.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteTraitIndex.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -347,7 +415,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteTraitIndex.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteTrait.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -357,7 +427,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteTrait.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteFeat.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -367,7 +439,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteFeat.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteAction/README.md": {
     "date": "2023-12-21T15:39:50.000Z",
@@ -377,7 +451,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteAction/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteAction/ActionType.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -387,7 +463,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteAction/ActionType.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDataHpHardness.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -397,7 +475,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDataHpHardness.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/Pf2eQuteBase.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -407,7 +487,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/Pf2eQuteBase.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/Pf2eQuteNote.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -417,7 +499,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/Pf2eQuteNote.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteAbility.md": {
     "date": "2023-12-27T05:10:18.000Z",
@@ -427,7 +511,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteAbility.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDataDefenses/QuteSavingThrows.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -437,7 +523,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDataDefenses/QuteSavingThrows.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDataDefenses/README.md": {
     "date": "2023-12-21T15:39:50.000Z",
@@ -447,7 +535,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDataDefenses/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/README.md": {
     "date": "2023-12-27T05:10:18.000Z",
@@ -457,7 +547,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDataArmorClass.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -467,7 +559,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDataArmorClass.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDataActivity.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -477,7 +571,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDataActivity.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/SourceAndPage.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -487,7 +583,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/SourceAndPage.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/ImageRef.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -497,7 +595,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/ImageRef.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/NamedText.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -507,7 +607,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/NamedText.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/QuteBase.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -517,7 +619,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/QuteBase.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/QuteNote.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -527,7 +631,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/QuteNote.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteVehicle/ShipAcHp.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -537,7 +643,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteVehicle/ShipAcHp.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteVehicle/README.md": {
     "date": "2023-12-21T15:39:50.000Z",
@@ -547,7 +655,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteVehicle/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteVehicle/ShipCrewCargoPace.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -557,7 +667,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteVehicle/ShipCrewCargoPace.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteVehicle/ShipSection.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -567,7 +679,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteVehicle/ShipSection.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteBackground.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -577,7 +691,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteBackground.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteItem/Variant.md": {
     "date": "2024-01-14T03:29:03.000Z",
@@ -587,7 +703,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteItem/Variant.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteItem/README.md": {
     "date": "2024-01-14T03:29:03.000Z",
@@ -597,7 +715,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteItem/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/AbilityScores.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -607,7 +727,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/AbilityScores.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteDeity.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -617,7 +739,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteDeity.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteSpell.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -627,7 +751,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteSpell.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/Tools5eQuteNote.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -637,7 +763,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/Tools5eQuteNote.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteFeat.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -647,7 +775,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteFeat.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/Tools5eQuteBase.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -657,7 +787,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/Tools5eQuteBase.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteSubclass.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -667,7 +799,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteSubclass.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteDeck/Card.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -677,7 +811,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteDeck/Card.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteDeck/README.md": {
     "date": "2023-12-21T15:39:50.000Z",
@@ -687,7 +823,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteDeck/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QutePsionic.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -697,7 +835,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QutePsionic.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/ImmuneResist.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -707,7 +847,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/ImmuneResist.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteObject.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -717,7 +859,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteObject.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteClass.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -727,7 +871,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteClass.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteReward.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -737,7 +883,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteReward.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/README.md": {
     "date": "2023-12-27T05:10:18.000Z",
@@ -747,7 +895,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteMonster/Spells.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -757,7 +907,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteMonster/Spells.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteMonster/SavesAndSkills.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -767,7 +919,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteMonster/SavesAndSkills.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteMonster/Spellcasting.md": {
     "date": "2023-12-27T05:10:18.000Z",
@@ -777,7 +931,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteMonster/Spellcasting.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteMonster/README.md": {
     "date": "2023-12-27T05:10:18.000Z",
@@ -787,7 +943,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteMonster/README.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/AcHp.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -797,7 +955,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/AcHp.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteRace.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -807,7 +967,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteRace.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/dnd5e/QuteHazard.md": {
     "date": "2023-12-20T19:32:37.000Z",
@@ -817,7 +979,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/dnd5e/QuteHazard.md"
   },
   "projects/ttrpg-convert-cli/docs/templates/README.md": {
     "date": "2023-12-27T05:10:18.000Z",
@@ -827,7 +991,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/README.md"
   },
   "projects/ttrpg-convert-cli/docs/alternateRun.md": {
     "date": "2024-01-20T15:42:20.000Z",
@@ -837,7 +1003,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/alternateRun.md"
   },
   "projects/ttrpg-convert-cli/README.md": {
     "date": "2024-02-02T16:13:27.000Z",
@@ -847,7 +1015,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/README.md"
   },
   "projects/ttrpg-convert-cli/examples/admonitions/admonitions-5e.json": {
     "date": "2023-12-27T05:10:18.000Z",
@@ -862,7 +1032,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/admonitions/admonitions-5e.json"
+    "title": "examples/admonitions/admonitions-5e.json",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/admonitions/admonitions-5e.json"
   },
   "projects/ttrpg-convert-cli/examples/admonitions/admonitions-pf2e-v3.json": {
     "date": "2023-12-27T05:10:18.000Z",
@@ -877,7 +1048,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/admonitions/admonitions-pf2e-v3.json"
+    "title": "examples/admonitions/admonitions-pf2e-v3.json",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/admonitions/admonitions-pf2e-v3.json"
   },
   "projects/ttrpg-convert-cli/examples/admonitions/other-admonitions.json": {
     "date": "2023-12-27T05:10:18.000Z",
@@ -892,7 +1064,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/admonitions/other-admonitions.json"
+    "title": "examples/admonitions/other-admonitions.json",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/admonitions/other-admonitions.json"
   },
   "projects/ttrpg-convert-cli/examples/admonitions/README.md": {
     "date": "2023-12-27T05:10:18.000Z",
@@ -902,7 +1075,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/admonitions/README.md"
   },
   "projects/ttrpg-convert-cli/examples/config/README.md": {
     "date": "2024-01-02T13:20:09.000Z",
@@ -912,7 +1087,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/config/README.md"
   },
   "projects/ttrpg-convert-cli/examples/config/config.pf2e.json": {
     "date": "2024-01-19T15:13:11.000Z",
@@ -927,7 +1104,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/config/config.pf2e.json"
+    "title": "examples/config/config.pf2e.json",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/config/config.pf2e.json"
   },
   "projects/ttrpg-convert-cli/examples/config/config.5e.yaml": {
     "date": "2024-01-19T15:13:11.000Z",
@@ -942,7 +1120,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/config/config.5e.yaml"
+    "title": "examples/config/config.5e.yaml",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/config/config.5e.yaml"
   },
   "projects/ttrpg-convert-cli/examples/config/config.5e.json": {
     "date": "2024-01-19T15:13:11.000Z",
@@ -957,7 +1136,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/config/config.5e.json"
+    "title": "examples/config/config.5e.json",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/config/config.5e.json"
   },
   "projects/ttrpg-convert-cli/examples/config/config.pf2e.yaml": {
     "date": "2024-01-19T15:13:11.000Z",
@@ -972,7 +1152,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/config/config.pf2e.yaml"
+    "title": "examples/config/config.pf2e.yaml",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/config/config.pf2e.yaml"
   },
   "projects/ttrpg-convert-cli/examples/css-snippets/pf2-compendium.css": {
     "date": "2023-12-29T03:15:16.000Z",
@@ -987,7 +1168,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/css-snippets/pf2-compendium.css"
+    "title": "examples/css-snippets/pf2-compendium.css",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/css-snippets/pf2-compendium.css"
   },
   "projects/ttrpg-convert-cli/examples/css-snippets/dnd5e-only-statblock.css": {
     "date": "2023-12-29T03:15:16.000Z",
@@ -1002,7 +1184,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/css-snippets/dnd5e-only-statblock.css"
+    "title": "examples/css-snippets/dnd5e-only-statblock.css",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/css-snippets/dnd5e-only-statblock.css"
   },
   "projects/ttrpg-convert-cli/examples/css-snippets/README.md": {
     "date": "2024-01-02T13:20:09.000Z",
@@ -1012,7 +1195,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/css-snippets/README.md"
   },
   "projects/ttrpg-convert-cli/examples/css-snippets/dnd5e-compendium.css": {
     "date": "2023-12-29T03:15:16.000Z",
@@ -1027,7 +1212,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/css-snippets/dnd5e-compendium.css"
+    "title": "examples/css-snippets/dnd5e-compendium.css",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/css-snippets/dnd5e-compendium.css"
   },
   "projects/ttrpg-convert-cli/examples/css-snippets/hide-markdown-link-url.css": {
     "date": "2023-12-29T03:15:16.000Z",
@@ -1042,7 +1228,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/css-snippets/hide-markdown-link-url.css"
+    "title": "examples/css-snippets/hide-markdown-link-url.css",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/css-snippets/hide-markdown-link-url.css"
   },
   "projects/ttrpg-convert-cli/examples/css-snippets/pf2-only-statblocks.css": {
     "date": "2023-12-29T03:15:16.000Z",
@@ -1057,7 +1244,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/css-snippets/pf2-only-statblocks.css"
+    "title": "examples/css-snippets/pf2-only-statblocks.css",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/css-snippets/pf2-only-statblocks.css"
   },
   "projects/ttrpg-convert-cli/examples/css-snippets/dnd5e-float-images.css": {
     "date": "2023-12-29T03:15:16.000Z",
@@ -1072,7 +1260,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/css-snippets/dnd5e-float-images.css"
+    "title": "examples/css-snippets/dnd5e-float-images.css",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/css-snippets/dnd5e-float-images.css"
   },
   "projects/ttrpg-convert-cli/examples/css-snippets/dnd5e-only-admonitions.css": {
     "date": "2023-12-29T03:15:16.000Z",
@@ -1087,7 +1276,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/css-snippets/dnd5e-only-admonitions.css"
+    "title": "examples/css-snippets/dnd5e-only-admonitions.css",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/css-snippets/dnd5e-only-admonitions.css"
   },
   "projects/ttrpg-convert-cli/examples/README.md": {
     "date": "2023-12-27T16:32:30.000Z",
@@ -1097,7 +1287,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/README.md"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/images-race2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1112,7 +1304,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/images-race2md.txt"
+    "title": "examples/templates/tools5e/images-race2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/images-race2md.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/monster2md-scores.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1127,7 +1320,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/monster2md-scores.txt"
+    "title": "examples/templates/tools5e/monster2md-scores.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/monster2md-scores.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/images-monster2md.txt": {
     "date": "2023-09-07T03:45:03.000Z",
@@ -1142,7 +1336,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/images-monster2md.txt"
+    "title": "examples/templates/tools5e/images-monster2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/images-monster2md.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/images-item2md.txt": {
     "date": "2023-11-01T13:25:34.000Z",
@@ -1157,7 +1352,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/images-item2md.txt"
+    "title": "examples/templates/tools5e/images-item2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/images-item2md.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/object2md-yamlStatblock-body.txt": {
     "date": "2023-10-11T23:15:25.000Z",
@@ -1172,7 +1368,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/object2md-yamlStatblock-body.txt"
+    "title": "examples/templates/tools5e/object2md-yamlStatblock-body.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/object2md-yamlStatblock-body.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/images-object2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1187,7 +1384,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/images-object2md.txt"
+    "title": "examples/templates/tools5e/images-object2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/images-object2md.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/monster2md-yamlStatblock-body.txt": {
     "date": "2023-10-11T23:15:25.000Z",
@@ -1202,7 +1400,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/monster2md-yamlStatblock-body.txt"
+    "title": "examples/templates/tools5e/monster2md-yamlStatblock-body.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/monster2md-yamlStatblock-body.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/images-vehicle2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1217,7 +1416,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/images-vehicle2md.txt"
+    "title": "examples/templates/tools5e/images-vehicle2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/images-vehicle2md.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/README.md": {
     "date": "2023-12-29T03:20:40.000Z",
@@ -1227,7 +1427,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/README.md"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/monster2md-yamlStatblock-header.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1242,7 +1444,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/monster2md-yamlStatblock-header.txt"
+    "title": "examples/templates/tools5e/monster2md-yamlStatblock-header.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/monster2md-yamlStatblock-header.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/images-background2md.txt": {
     "date": "2023-09-18T13:38:19.000Z",
@@ -1257,7 +1460,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/images-background2md.txt"
+    "title": "examples/templates/tools5e/images-background2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/images-background2md.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/object2md-yamlStatblock-header.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1272,7 +1476,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/object2md-yamlStatblock-header.txt"
+    "title": "examples/templates/tools5e/object2md-yamlStatblock-header.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/object2md-yamlStatblock-header.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/tools5e/images-spell2md.txt": {
     "date": "2023-10-14T02:00:28.000Z",
@@ -1287,7 +1492,8 @@
       "docs",
       "files"
     ],
-    "title": "examples/templates/tools5e/images-spell2md.txt"
+    "title": "examples/templates/tools5e/images-spell2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/tools5e/images-spell2md.txt"
   },
   "projects/ttrpg-convert-cli/examples/templates/README.md": {
     "date": "2023-12-29T03:20:40.000Z",
@@ -1297,7 +1503,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/templates/README.md"
   },
   "projects/ttrpg-convert-cli/CHANGELOG.md": {
     "date": "2024-01-02T13:20:09.000Z",
@@ -1307,7 +1515,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/CHANGELOG.md"
   },
   "projects/ttrpg-convert-cli/src/main/resources/sourceMap.json": {
     "date": "2024-01-23T21:13:56.000Z",
@@ -1322,7 +1532,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/sourceMap.json"
+    "title": "src/main/resources/sourceMap.json",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/sourceMap.json"
   },
   "projects/ttrpg-convert-cli/src/main/resources/convertData.json": {
     "date": "2024-01-19T15:13:11.000Z",
@@ -1337,7 +1548,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/convertData.json"
+    "title": "src/main/resources/convertData.json",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/convertData.json"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/deity2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1352,7 +1564,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/deity2md.txt"
+    "title": "src/main/resources/templates/tools5e/deity2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/deity2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/monster2md.txt": {
     "date": "2023-10-10T04:59:12.000Z",
@@ -1367,7 +1580,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/monster2md.txt"
+    "title": "src/main/resources/templates/tools5e/monster2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/monster2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/css-font.txt": {
     "date": "2023-10-17T01:49:32.000Z",
@@ -1382,7 +1596,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/css-font.txt"
+    "title": "src/main/resources/templates/tools5e/css-font.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/css-font.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/item2md.txt": {
     "date": "2023-11-01T13:25:34.000Z",
@@ -1397,7 +1612,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/item2md.txt"
+    "title": "src/main/resources/templates/tools5e/item2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/item2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/reward2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1412,7 +1628,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/reward2md.txt"
+    "title": "src/main/resources/templates/tools5e/reward2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/reward2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/deck2md.txt": {
     "date": "2023-09-21T04:42:18.000Z",
@@ -1427,7 +1644,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/deck2md.txt"
+    "title": "src/main/resources/templates/tools5e/deck2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/deck2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/index.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1442,7 +1660,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/index.txt"
+    "title": "src/main/resources/templates/tools5e/index.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/index.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/object2md.txt": {
     "date": "2023-10-10T04:59:12.000Z",
@@ -1457,7 +1676,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/object2md.txt"
+    "title": "src/main/resources/templates/tools5e/object2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/object2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/subclass2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1472,7 +1692,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/subclass2md.txt"
+    "title": "src/main/resources/templates/tools5e/subclass2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/subclass2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/background2md.txt": {
     "date": "2023-09-18T13:38:19.000Z",
@@ -1487,7 +1708,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/background2md.txt"
+    "title": "src/main/resources/templates/tools5e/background2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/background2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/note2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1502,7 +1724,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/note2md.txt"
+    "title": "src/main/resources/templates/tools5e/note2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/note2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/race2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1517,7 +1740,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/race2md.txt"
+    "title": "src/main/resources/templates/tools5e/race2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/race2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/feat2md.txt": {
     "date": "2023-09-18T13:38:19.000Z",
@@ -1532,7 +1756,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/feat2md.txt"
+    "title": "src/main/resources/templates/tools5e/feat2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/feat2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/psionic2md.txt": {
     "date": "2023-09-18T01:17:41.000Z",
@@ -1547,7 +1772,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/psionic2md.txt"
+    "title": "src/main/resources/templates/tools5e/psionic2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/psionic2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/class2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1562,7 +1788,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/class2md.txt"
+    "title": "src/main/resources/templates/tools5e/class2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/class2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/spell2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1577,7 +1804,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/spell2md.txt"
+    "title": "src/main/resources/templates/tools5e/spell2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/spell2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/hazard2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1592,7 +1820,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/hazard2md.txt"
+    "title": "src/main/resources/templates/tools5e/hazard2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/hazard2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/vehicle2md.txt": {
     "date": "2023-10-10T04:59:12.000Z",
@@ -1607,7 +1836,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/tools5e/vehicle2md.txt"
+    "title": "src/main/resources/templates/tools5e/vehicle2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/vehicle2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/deity2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1622,7 +1852,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/deity2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/deity2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/deity2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/item2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1637,7 +1868,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/item2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/item2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/item2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/index.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1652,7 +1884,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/index.txt"
+    "title": "src/main/resources/templates/toolsPf2e/index.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/index.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/trait2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1667,7 +1900,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/trait2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/trait2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/trait2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/ability2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1682,7 +1916,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/ability2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/ability2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/ability2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/background2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1697,7 +1932,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/background2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/background2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/background2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/note2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1712,7 +1948,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/note2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/note2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/note2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/feat2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1727,7 +1964,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/feat2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/feat2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/feat2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/book2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1742,7 +1980,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/book2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/book2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/book2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/inline-ability2md.txt": {
     "date": "2023-08-08T23:16:53.000Z",
@@ -1757,7 +1996,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/inline-ability2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/inline-ability2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/inline-ability2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/inline-affliction2md.txt": {
     "date": "2023-01-28T17:27:04.000Z",
@@ -1772,7 +2012,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/inline-affliction2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/inline-affliction2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/inline-affliction2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/action2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1787,7 +2028,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/action2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/action2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/action2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/spell2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1802,7 +2044,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/spell2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/spell2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/spell2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/affliction2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1817,7 +2060,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/affliction2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/affliction2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/affliction2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/inline-attack2md.txt": {
     "date": "2023-01-29T08:06:20.000Z",
@@ -1832,7 +2076,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/inline-attack2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/inline-attack2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/inline-attack2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/ritual2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1847,7 +2092,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/ritual2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/ritual2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/ritual2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/archetype2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1862,7 +2108,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/archetype2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/archetype2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/archetype2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/hazard2md.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1877,7 +2124,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/hazard2md.txt"
+    "title": "src/main/resources/templates/toolsPf2e/hazard2md.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/hazard2md.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/indexTrait.txt": {
     "date": "2023-08-30T22:22:57.000Z",
@@ -1892,7 +2140,8 @@
       "docs",
       "files"
     ],
-    "title": "src/main/resources/templates/toolsPf2e/indexTrait.txt"
+    "title": "src/main/resources/templates/toolsPf2e/indexTrait.txt",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/indexTrait.txt"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/README.md": {
     "date": "2024-02-05T16:58:32.000Z",
@@ -1902,7 +2151,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/README.md"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/tools5e/README.md": {
     "date": "2024-02-05T16:58:32.000Z",
@@ -1912,7 +2163,9 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/tools5e/README.md"
   },
   "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/README.md": {
     "date": "2024-02-05T16:58:32.000Z",
@@ -1922,6 +2175,36 @@
     "layout": "layouts/project-doc.vto",
     "cssclasses": [
       "docs"
-    ]
+    ],
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/README.md"
+  },
+  "projects/ttrpg-convert-cli/CONTRIBUTING.md": {
+    "date": "2023-11-13T00:35:50.000Z",
+    "srcPath": "projects/ttrpg-convert-cli/CONTRIBUTING.md",
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/CONTRIBUTING.md",
+    "type": "project-doc",
+    "layout": "layouts/project-doc.vto",
+    "cssclasses": [
+      "docs"
+    ],
+    "url": "/projects/ttrpg-convert-cli/CONTRIBUTING.html"
+  },
+  "projects/ttrpg-convert-cli/dco.txt": {
+    "date": "2022-11-09T03:35:23.000Z",
+    "srcPath": "projects/ttrpg-convert-cli/dco.txt",
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/dco.txt",
+    "download": "https://raw.githubusercontent.com/ebullient/ttrpg-convert-cli/main/dco.txt",
+    "type": "project-file",
+    "layout": "layouts/project-wrapper.vto",
+    "lang": "txt",
+    "cssclasses": [
+      "docs",
+      "files"
+    ],
+    "title": "dco.txt",
+    "url": "/projects/ttrpg-convert-cli/dco.txt.html"
   }
 }

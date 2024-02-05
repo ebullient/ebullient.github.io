@@ -1,30 +1,28 @@
-export default function* ({ page }) {
-  const codeFiles = /\(([^)]*?\.(json|yaml|yml|css|txt))\)/g;
-  const htmlLinks = /(href="[^"]*\.)md((#[^"]*)?")/g;
-  const projectMeta = JSON.parse(Deno.readTextFileSync('./site/_includes/projects.json'));
-  for (const [name, data] of Object.entries(projectMeta)) {
+import { path } from "https://deno.land/x/vento@v0.10.0/deps.ts";
 
+export default function* ({ page }) {
+  const projectMeta = JSON.parse(Deno.readTextFileSync('./site/_includes/projects.json'));
+
+  for (const [name, data] of Object.entries(projectMeta)) {
     data.templateEngine = ['md', 'vto'];
     data.content = Deno.readFileSync(`${Deno.cwd()}/site/${name}`);
-    data.content = new TextDecoder().decode(data.content)
-      .replace(codeFiles, (match, group1) => {
-        if (group1.startsWith('http')) {
-          return match;
-        }
-        const target = group1
-          .replace('src/main/resources/', 'src-main-resources-')
-          .replace('README', '')
-          + '.html';
-        return `(${target})`;
-      }).replace(htmlLinks, (_, group1, group2) => {
-        return `${group1}html${group2}`;
-      });
-
+    data.content = new TextDecoder().decode(data.content);
     if (name.endsWith('.md')) {
       // Markdown content
       const titleMatch = data.content.match(/^#\s+(.*)$/m);
       if (titleMatch) {
         data.title = titleMatch[1];
+      }
+      if (data.content.includes('type: fileIndex')) {
+        data.content += '';
+        const current = path.basename(`${Deno.cwd()}/site/${name}`);
+        const dir = path.dirname(`${Deno.cwd()}/site/${name}`);
+        const files = Deno.readDirSync(dir);
+        for (const file of files) {
+          if (file.name !== current) {
+            data.content += `- [${file.name}](./${file.name})\n`;
+          }
+        }
       }
     } else if (data.lang) {
       // File wrapper around css/json/yaml/txt

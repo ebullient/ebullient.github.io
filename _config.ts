@@ -1,10 +1,11 @@
-import { Page } from "lume/core/file.ts";
 import lume from "lume/mod.ts";
+import { Page } from "lume/core/file.ts";
 import attributes from "lume/plugins/attributes.ts";
 import code_highlight from "lume/plugins/code_highlight.ts";
 import date from "lume/plugins/date.ts";
 import favicon from "lume/plugins/favicon.ts";
 import feed from "lume/plugins/feed.ts";
+import inline from "lume/plugins/inline.ts";
 import metas from "lume/plugins/metas.ts";
 import nav from "lume/plugins/nav.ts";
 import resolve_urls, { getPathInfo } from "lume/plugins/resolve_urls.ts";
@@ -46,7 +47,6 @@ const markdown = {
         footnote,
     ]
 };
-const cache = new Map<string, string | null>();
 
 const site = lume({
     src: "site",
@@ -58,6 +58,7 @@ const site = lume({
 site.use(attributes())
     .use(code_highlight())
     .use(date())
+    .use(metas())
     .use(toc())
     //.use(favicon())
     .use(feed({
@@ -74,7 +75,7 @@ site.use(attributes())
             published: "=date",
         },
     }))
-    .use(metas())
+    .use(inline(/* Options */))
     .use(nav())
     .use(sass({
         includes: "_includes/scss",
@@ -106,9 +107,12 @@ const md = mdValue ? mdValue[0] : (text: string) => text;
 
 const slValue = site.renderer.helpers.get('slugify');
 const slHelper = slValue ? slValue[0] : (text: string) => text;
+
 function slHelperSlugify(s: string) {
     return slHelper(s).toLowerCase();
 }
+
+const cache = new Map<string, string | null>();
 
 site.addEventListener("beforeUpdate", () => cache.clear());
 
@@ -189,17 +193,6 @@ site.use(modifyUrls({
     },
 }))
 
-site.preprocess(['.md'], (pages) => {
-    for (const page of pages) {
-        if (typeof page.data.content !== "string") {
-            continue;
-        }
-        if (page.src.path.startsWith('/content/posts')) {
-            page.data.content = shortcodes(page.data.content);
-        }
-    }
-});
-
 // Update URLs and Dates for posts (third parameter)
 site.data("url", (page: Page) => {
     const dateRegex = /content\/posts\/(\d{4})-(\d{2})-(\d{2})-(.*)/;
@@ -213,6 +206,17 @@ site.data("url", (page: Page) => {
     }
     return page.data.url.replace("content/posts/", "");
 }, "/content/posts");
+
+site.preprocess(['.md'], (pages) => {
+    for (const page of pages) {
+        if (typeof page.data.content !== "string") {
+            continue;
+        }
+        if (page.src.path.startsWith('/content/posts')) {
+            page.data.content = shortcodes(page.data.content);
+        }
+    }
+});
 
 function shortcodes(result: string): string {
     const now = new Date();

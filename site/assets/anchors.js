@@ -1,0 +1,2 @@
+function adjustAnchors() { const e = document.body.querySelector("header.page-header"); document.querySelectorAll('a[href^="#"]').forEach((function (t) { t.addEventListener("click", (function (o) { o.preventDefault(); const c = document.querySelector(t.getAttribute("href")); c && globalThis.scrollTo({ top: globalThis.scrollY + c.getBoundingClientRect().top - e.offsetHeight, behavior: "smooth" }) })) })) }
+globalThis.addEventListener("load", () => { adjustAnchors(); });

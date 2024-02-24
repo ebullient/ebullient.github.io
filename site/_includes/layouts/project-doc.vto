@@ -3,7 +3,7 @@ layout: layouts/base.vto
 ---
 <nav class="navigation breadcrumb" aria-label="Breadcrumb">
   <ul>
-    {{- for item of nav.breadcrumb(page.data.url) }}
+    {{- for item of nav.breadcrumb(page.data.url).slice(-3) }}
     <li>
       {{- if item.data }}
         <a href="{{ item.data.url }}">

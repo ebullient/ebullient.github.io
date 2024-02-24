@@ -42,6 +42,9 @@ nav.breadcrumb {
     flex-wrap: nowrap;
     gap: .2em;
 
+    li {
+      white-space: nowrap;
+    }
     li:not(:first-child)::before {
       content: "/";
     }

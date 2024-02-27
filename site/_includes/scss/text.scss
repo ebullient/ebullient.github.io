@@ -324,43 +324,50 @@ section.content {
   padding: 0 5px;
 }
 
-section.cv .title {
-  font-weight: bold;
+main.cv {
+  section .title {
+    font-weight: bold;
+  }
+
+  section .address,
+  section .contact,
+  section .version,
+  section .duration,
+  section .location {
+    font-size: small;
+  }
+
+  section tr.bullet td {
+    padding: 0px 10px 5px 15px;
+    border-bottom: 1px solid var(--color-base-20);
+  }
+
+  section tr.category td {
+    padding: 5px;
+    background: var(--background-primary-alt);
+  }
+
+  section h1 {
+    font-size: 1.3em;
+    &:before {
+      content: "";
+    }
+  }
+
+  section h2 {
+    font-size: 1.2em;
+    border-bottom: 1px solid var(--color-base-20);
+  }
+
+  section th {
+    font-size: 1.2em;
+    text-align: left;
+    padding: 1.5em 0 0 0;
+    border-bottom: 1px solid var(--color-base-30);
+  }
 }
 
-section.cv .address,
-section.cv .contact,
-section.cv .version,
-section.cv .duration,
-section.cv .location {
-  font-size: small;
-}
 
-section.cv tr.bullet td {
-  padding: 0px 10px 5px 15px;
-  border-bottom: 1px solid var(--color-base-20);
-}
-
-section.cv tr.category td {
-  padding: 5px;
-  background: var(--background-primary-alt);
-}
-
-section.cv h1 {
-  font-size: 1.3em;
-}
-
-section.cv h2 {
-  font-size: 1.2em;
-  border-bottom: 1px solid var(--color-base-20);
-}
-
-section.cv th {
-  font-size: 1.2em;
-  text-align: left;
-  padding: 1.5em 0 0 0;
-  border-bottom: 1px solid var(--color-base-30);
-}
 
 .embed-container {
   position: relative;

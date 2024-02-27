@@ -25,12 +25,12 @@ cssclasses:
 </article>
 <section>
   <table cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+      <th colspan="2">Ridiculous things</th>
+    </tr>
     <tr class="category">
       <td colspan="2">Active projects</td>
     </tr>
-    {{< skill url="https://www.gameontext.org/"
-      name="Game On! Text Adventure (Microservices)"
-      start="2015" end="current" >}}
     {{< skill url="https://github.com/ebullient/monster-combat"
       name="Monster Combat (Application metrics)"
       start="2019" end="current" >}}
@@ -46,6 +46,12 @@ cssclasses:
     {{< skill url="https://github.com/ebullient/ttrpg-convert-cli"
       name="TTRPG Convert CLI (Quarkus CLI + D&D)"
       start="2022" end="current" >}}
+    <tr class="category">
+      <td colspan="2">Archived projects</td>
+    </tr>
+    {{< skill url="https://www.gameontext.org/"
+      name="Game On! Text Adventure (Microservices)"
+      start="2015" end="2023" >}}
     <tr>
       <th>Proficient</th>
       <th>Experience</th>

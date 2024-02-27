@@ -212,7 +212,7 @@ site.preprocess(['.md'], (pages) => {
         if (typeof page.data.content !== "string") {
             continue;
         }
-        if (page.src.path.startsWith('/content/posts')) {
+        if (page.src.path.startsWith('/content/posts') || page.src.path.startsWith('/content/skills')) {
             page.data.content = shortcodes(page.data.content);
         }
     }

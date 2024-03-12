@@ -9,6 +9,7 @@ import inline from "lume/plugins/inline.ts";
 import metas from "lume/plugins/metas.ts";
 import nav from "lume/plugins/nav.ts";
 import modifyUrls from "lume/plugins/modify_urls.ts";
+import { getPathInfo } from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import slugify_urls from "lume/plugins/slugify_urls.ts";

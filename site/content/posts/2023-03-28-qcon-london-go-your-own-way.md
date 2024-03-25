@@ -1,5 +1,7 @@
 ---
 title: "QCon London 2023: You can go your own way"
+description: |
+  A soft-skills talk about navigating your own career path.
 figure:
   src: "/images/2023-03-qcon-london.png"
 tags:
@@ -12,4 +14,5 @@ Technically, the talk title was a lot longer, "You Can Go Your Own Way: Navigati
 
 I have never done a soft-skills, career development talk before. It was a unique experience. Being vulnerable and somewhat uncomfortable, sharing your story, dealing with imposter syndrome (why would anyone want to hear this?)... It was all of those things. Connecting with people and sharing experiences was totally worth it.
 
+- [InfoQ: You can go your own way: Navigating your own career path](https://www.infoq.com/presentations/lessons-opportunities-carrier/)
 - [QCon session listing](https://qconlondon.com/presentation/mar2023/you-can-go-your-own-way-navigating-your-own-career-path)

@@ -1,5 +1,7 @@
 ---
 title: "Find lost things in Obsidian with the CustomJS plugin"
+description: |
+  Use the invokable scripts from the Obsidian CustomJS plugin plugin to find and manage lost images and links.
 tags:
   - obsidian
   - customjs

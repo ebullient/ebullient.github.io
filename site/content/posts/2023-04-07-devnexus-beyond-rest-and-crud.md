@@ -1,5 +1,7 @@
 ---
 title: "Devnexus 2023: Beyond Rest and Crud"
+description: |
+  A new talk that explores what Camel can do for you, as you move beyond the simple requirements of a REST application.
 tags:
   - command-line
   - conference

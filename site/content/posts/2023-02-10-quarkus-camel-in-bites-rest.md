@@ -1,5 +1,6 @@
 ---
 title: "Quarkus and Camel in bites: REST endpoints"
+description: "Explore how to use Quarkus and Camel for REST endpoints. This post provides a snapshot of setting up a REST endpoint with Quarkus and Camel."
 tags:
   - camel
   - java

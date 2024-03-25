@@ -1,5 +1,6 @@
 ---
 title: "Iterative development with Quarkus and Svelte, care of Quinoa"
+description: "Learn to build a web UI with Quarkus, Svelte, and Quinoa. This post guides you through the process, from setup to live-coding."
 tags:
   - gameontext
   - java

@@ -1,5 +1,7 @@
 ---
 title: "Wicked Good Development Episode 32: Java Queens at Devnexus 2023"
+description: |
+  Podcast with Kadi Grigg, Theresa Mammarella, Emily Jiang, Mary Grygleski, and Holly Cummins.
 tags:
   - podcast
   - career

@@ -70,6 +70,9 @@ async function readDir(path: string, relative: string, repo: string, repoRelativ
                 struct.srcPath = filePath;
                 struct.githubUrl = `${ghUrl}`;
                 struct.repoUrl = `${ghUrl}${repoPath}`;
+                if (ghUrl.includes('ttrpg-convert-cli')) {
+                    struct.description = 'Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown.';
+                }
                 if (dirEntry.name.endsWith('.md')) {
                     struct.type = 'project-doc';
                     struct.layout = 'layouts/project-doc.vto';

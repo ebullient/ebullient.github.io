@@ -129,3 +129,9 @@ The effort I spent on this transition was all focused on cleaning up my old mess
 At the end of last year, I started integrating documentation for one of my projects into my website just to see how it would work (and if it was more readable in the end). It was a slog. What I wanted to do was not what Hugo wanted me to do. I made it work, but it was complicated and messy. I could throw all that mess away and pull in this content in a much more straightforward way with Lume.
 
 Amazing. Super good. 10/10. Would recommend.
+
+## Previous
+
+- [SSG with Obsidian and Lume](./2023-12-30-ssg-with-obsidian-and-lume.md)
+- [Moving from Hugo to Lume (1, base template)](./2024-01-04-moving-from-hugo-to-lume-1-templates.md)
+- [Moving from Hugo to Lume (2, indexes)](./2024-01-05-moving-from-hugo-to-lume-2-indexes.md)

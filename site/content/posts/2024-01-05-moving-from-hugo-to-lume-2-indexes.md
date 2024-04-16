@@ -151,3 +151,7 @@ This command displays the list of tags in the console. We can then build the tag
 ```
 
 And that's it, two more templates down. 🎉
+
+## Next
+
+- [Moving from Hugo to Lume (3, the rest)](./2024-01-20-moving-from-hugo-to-lume-the-rest.md)

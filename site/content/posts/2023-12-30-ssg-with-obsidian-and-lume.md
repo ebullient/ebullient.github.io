@@ -73,3 +73,9 @@ I did find some promising options:
 - <https://github.com/mdit-plugins/mdit-plugins> - collection of plugins for markdown-it, including callout-style admonitions
 
 I created [ebullient/markdown-it-obsidian-callouts](https://github.com/ebullient/markdown-it-obsidian-callouts) to handle both Obsidian callouts and code-block admonitions care of the Admonition plugin. It uses Obsidian default icons and callout flavors.
+
+## Next
+
+- [Moving from Hugo to Lume (1, base template)](./2024-01-04-moving-from-hugo-to-lume-1-templates.md)
+- [Moving from Hugo to Lume (2, indexes)](./2024-01-05-moving-from-hugo-to-lume-2-indexes.md)
+- [Moving from Hugo to Lume (3, the rest)](./2024-01-20-moving-from-hugo-to-lume-the-rest.md)

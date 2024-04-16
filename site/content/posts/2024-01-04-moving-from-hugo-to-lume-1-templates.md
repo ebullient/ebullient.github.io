@@ -118,3 +118,8 @@ After starting the live server (`deno task serve`), the canonical links rendered
 ## Closing note
 
 As a final recommendation for Part 1, consider using the [metas plugin](https://lume.land/plugins/metas/) for SEO optimizations. Site-wide defaults can be set in a `_data/metas.yaml` file to minimize individual page configurations.
+
+## Next
+
+- [Moving from Hugo to Lume (2, indexes)](./2024-01-05-moving-from-hugo-to-lume-2-indexes.md)
+- [Moving from Hugo to Lume (3, the rest)](./2024-01-20-moving-from-hugo-to-lume-the-rest.md)

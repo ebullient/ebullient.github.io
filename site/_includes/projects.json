@@ -1,6 +1,6 @@
 {
   "projects/ttrpg-convert-cli/README-WINDOWS.md": {
-    "date": "2024-04-19T12:14:23.000Z",
+    "date": "2024-04-28T17:36:13.000Z",
     "srcPath": "projects/ttrpg-convert-cli/README-WINDOWS.md",
     "url": "/projects/ttrpg-convert-cli/README-WINDOWS.html",
     "type": "project-doc",
@@ -585,7 +585,7 @@
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/README.md": {
-    "date": "2023-12-27T05:10:18.000Z",
+    "date": "2024-04-29T13:13:48.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/templates/pf2e/README.md",
     "url": "/projects/ttrpg-convert-cli/docs/templates/pf2e/",
     "type": "project-doc",
@@ -1079,7 +1079,7 @@
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
   },
   "projects/ttrpg-convert-cli/docs/alternateRun.md": {
-    "date": "2024-04-19T12:14:23.000Z",
+    "date": "2024-04-28T17:36:13.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/alternateRun.md",
     "url": "/projects/ttrpg-convert-cli/docs/alternateRun.html",
     "type": "project-doc",
@@ -1655,7 +1655,7 @@
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
   },
   "projects/ttrpg-convert-cli/src/main/resources/convertData.json": {
-    "date": "2024-02-25T14:41:21.000Z",
+    "date": "2024-04-29T13:13:48.000Z",
     "srcPath": "projects/ttrpg-convert-cli/src/main/resources/convertData.json",
     "url": "/projects/ttrpg-convert-cli/src-main-resources-convertData.json.html",
     "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
@@ -2368,5 +2368,35 @@
     "title": "dco.txt",
     "url": "/projects/ttrpg-convert-cli/dco.txt.html",
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
+  },
+  "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteCreature.md": {
+    "date": "2024-04-29T13:13:48.000Z",
+    "srcPath": "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteCreature.md",
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteCreature.md",
+    "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown.",
+    "type": "project-doc",
+    "layout": "layouts/project-doc.vto",
+    "cssclasses": [
+      "docs"
+    ],
+    "url": "/projects/ttrpg-convert-cli/docs/templates/pf2e/QuteCreature.html"
+  },
+  "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/creature2md.txt": {
+    "date": "2024-04-29T13:13:48.000Z",
+    "srcPath": "projects/ttrpg-convert-cli/src/main/resources/templates/toolsPf2e/creature2md.txt",
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/templates/toolsPf2e/creature2md.txt",
+    "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown.",
+    "download": "https://raw.githubusercontent.com/ebullient/ttrpg-convert-cli/main/src/main/resources/templates/toolsPf2e/creature2md.txt",
+    "type": "project-file",
+    "layout": "layouts/project-wrapper.vto",
+    "lang": "txt",
+    "cssclasses": [
+      "docs",
+      "files"
+    ],
+    "title": "src/main/resources/templates/toolsPf2e/creature2md.txt",
+    "url": "/projects/ttrpg-convert-cli/src-main-resources-templates/toolsPf2e/creature2md.txt.html"
   }
 }

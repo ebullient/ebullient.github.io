@@ -1,6 +1,6 @@
 {
   "projects/ttrpg-convert-cli/README-WINDOWS.md": {
-    "date": "2024-04-28T17:36:13.000Z",
+    "date": "2024-04-29T21:06:43.000Z",
     "srcPath": "projects/ttrpg-convert-cli/README-WINDOWS.md",
     "url": "/projects/ttrpg-convert-cli/README-WINDOWS.html",
     "type": "project-doc",
@@ -26,7 +26,7 @@
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
   },
   "projects/ttrpg-convert-cli/docs/configuration.md": {
-    "date": "2024-04-04T18:56:37.000Z",
+    "date": "2024-05-01T01:33:43.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/configuration.md",
     "url": "/projects/ttrpg-convert-cli/docs/configuration.html",
     "type": "project-doc",
@@ -598,7 +598,7 @@
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDataArmorClass.md": {
-    "date": "2023-12-20T19:32:37.000Z",
+    "date": "2024-04-29T13:15:01.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDataArmorClass.md",
     "url": "/projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDataArmorClass.html",
     "type": "project-doc",
@@ -1079,7 +1079,7 @@
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
   },
   "projects/ttrpg-convert-cli/docs/alternateRun.md": {
-    "date": "2024-04-28T17:36:13.000Z",
+    "date": "2024-04-29T21:06:43.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/alternateRun.md",
     "url": "/projects/ttrpg-convert-cli/docs/alternateRun.html",
     "type": "project-doc",
@@ -2370,7 +2370,7 @@
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
   },
   "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteCreature.md": {
-    "date": "2024-04-29T13:13:48.000Z",
+    "date": "2024-04-29T13:15:01.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteCreature.md",
     "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
     "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteCreature.md",
@@ -2398,5 +2398,61 @@
     ],
     "title": "src/main/resources/templates/toolsPf2e/creature2md.txt",
     "url": "/projects/ttrpg-convert-cli/src-main-resources-templates/toolsPf2e/creature2md.txt.html"
+  },
+  "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDataSkillBonus.md": {
+    "date": "2024-04-29T13:15:01.000Z",
+    "srcPath": "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDataSkillBonus.md",
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteDataSkillBonus.md",
+    "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown.",
+    "type": "project-doc",
+    "layout": "layouts/project-doc.vto",
+    "cssclasses": [
+      "docs"
+    ],
+    "url": "/projects/ttrpg-convert-cli/docs/templates/pf2e/QuteDataSkillBonus.html"
+  },
+  "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteCreature/CreatureSkills.md": {
+    "date": "2024-04-29T13:15:01.000Z",
+    "srcPath": "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteCreature/CreatureSkills.md",
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteCreature/CreatureSkills.md",
+    "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown.",
+    "type": "project-doc",
+    "layout": "layouts/project-doc.vto",
+    "cssclasses": [
+      "docs"
+    ],
+    "url": "/projects/ttrpg-convert-cli/docs/templates/pf2e/QuteCreature/CreatureSkills.html"
+  },
+  "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteCreature/CreatureLanguages.md": {
+    "date": "2024-04-29T13:15:01.000Z",
+    "srcPath": "projects/ttrpg-convert-cli/docs/templates/pf2e/QuteCreature/CreatureLanguages.md",
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/templates/pf2e/QuteCreature/CreatureLanguages.md",
+    "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown.",
+    "type": "project-doc",
+    "layout": "layouts/project-doc.vto",
+    "cssclasses": [
+      "docs"
+    ],
+    "url": "/projects/ttrpg-convert-cli/docs/templates/pf2e/QuteCreature/CreatureLanguages.html"
+  },
+  "projects/ttrpg-convert-cli/examples/config/config.schema.json": {
+    "date": "2024-05-01T01:33:43.000Z",
+    "srcPath": "projects/ttrpg-convert-cli/examples/config/config.schema.json",
+    "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
+    "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/examples/config/config.schema.json",
+    "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown.",
+    "download": "https://raw.githubusercontent.com/ebullient/ttrpg-convert-cli/main/examples/config/config.schema.json",
+    "type": "project-file",
+    "layout": "layouts/project-wrapper.vto",
+    "lang": "json",
+    "cssclasses": [
+      "docs",
+      "files"
+    ],
+    "title": "examples/config/config.schema.json",
+    "url": "/projects/ttrpg-convert-cli/examples/config/config.schema.json.html"
   }
 }

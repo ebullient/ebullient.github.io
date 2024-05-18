@@ -26,7 +26,7 @@
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
   },
   "projects/ttrpg-convert-cli/docs/configuration.md": {
-    "date": "2024-05-18T12:46:26.000Z",
+    "date": "2024-05-18T13:08:55.000Z",
     "srcPath": "projects/ttrpg-convert-cli/docs/configuration.md",
     "url": "/projects/ttrpg-convert-cli/docs/configuration.html",
     "type": "project-doc",
@@ -1092,7 +1092,7 @@
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
   },
   "projects/ttrpg-convert-cli/README.md": {
-    "date": "2024-05-18T13:08:08.000Z",
+    "date": "2024-05-18T13:09:06.000Z",
     "srcPath": "projects/ttrpg-convert-cli/README.md",
     "url": "/projects/ttrpg-convert-cli/",
     "type": "project-doc",
@@ -1625,7 +1625,7 @@
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
   },
   "projects/ttrpg-convert-cli/CHANGELOG.md": {
-    "date": "2024-05-18T12:46:26.000Z",
+    "date": "2024-05-18T13:08:55.000Z",
     "srcPath": "projects/ttrpg-convert-cli/CHANGELOG.md",
     "url": "/projects/ttrpg-convert-cli/CHANGELOG.html",
     "type": "project-doc",

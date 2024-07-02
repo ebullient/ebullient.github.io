@@ -2340,7 +2340,7 @@
     "description": "Documentation for TTRPG Convert CLI: a command-line utility to convert 5eTools or Pf2eTools JSON data into Obsidian-friendly Markdown."
   },
   "projects/ttrpg-convert-cli/CONTRIBUTING.md": {
-    "date": "2024-02-10T17:17:54.000Z",
+    "date": "2024-07-02T08:03:23.000Z",
     "srcPath": "projects/ttrpg-convert-cli/CONTRIBUTING.md",
     "githubUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/",
     "repoUrl": "https://github.com/ebullient/ttrpg-convert-cli/blob/main/CONTRIBUTING.md",

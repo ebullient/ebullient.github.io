@@ -23,6 +23,7 @@ import callouts from "npm:markdown-it-obsidian-callouts";
 import { markdownItAttrs, markdownItDeflist } from "lume/deps/markdown_it.ts";
 import { posix } from "lume/deps/path.ts";
 import { normalizePath } from "lume/core/utils/path.ts";
+import contentHash from "./site/_plugins/contentHash.ts";
 
 const markdown = {
     options: {
@@ -91,6 +92,9 @@ site.use(attributes())
             "&": "and",
             "@": "",
         },
+    }))
+    .use(contentHash({
+        attribute: "data-hash",
     }))
     .use(source_maps());
 

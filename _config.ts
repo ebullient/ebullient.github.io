@@ -24,6 +24,7 @@ import { markdownItAttrs, markdownItDeflist } from "lume/deps/markdown_it.ts";
 import { posix } from "lume/deps/path.ts";
 import { normalizePath } from "lume/core/utils/path.ts";
 import contentHash from "./site/_plugins/contentHash.ts";
+import renderSlides from "./site/_plugins/renderSlides.ts";
 
 const markdown = {
     options: {
@@ -61,6 +62,7 @@ site.use(attributes())
     .use(date())
     .use(metas())
     .use(toc())
+    .use(renderSlides()) // post-markdwn render of revealjs
     //.use(favicon())
     .use(feed({
         output: ["/index.rss", "/index.json"],
@@ -148,7 +150,9 @@ site.use(modifyUrls({
 
         const srcPath = page.data.contentRoot
             ? `${page.data.contentRoot}index.md`
-            : (page.data.srcPath ? page.data.srcPath : page.src.path);
+            : (page.data.srcPath
+                    ? page.data.srcPath
+                    : page.src.path);
 
         if (!file.startsWith("/") && !file.startsWith("~")) {
             file = posix.resolve(
@@ -164,12 +168,15 @@ site.use(modifyUrls({
         try {
             let lookup = file;
             if (file.includes("ttrpg-convert-cli")) {
-                lookup = lookup.replace("src/main/resources/", "src-main-resources-")
+                lookup = lookup.replace('src/main/resources/', 'examples/defaults/')
                     .replace(/\.css$/, ".css.html")
                     .replace(/\.json$/, ".json.html")
                     .replace(/\.yaml$/, ".yaml.html")
                     .replace(/\.txt$/, ".txt.html");
+            } else if (file.includes('obsidian-slides-extended')) {
+                lookup = lookup.replace('docs/content/', '');
             }
+
             let resolved = (page.data.srcPath && !page.data.contentRoot)
                     ? lookup
                     : site.url(`~${lookup}`);
@@ -177,13 +184,16 @@ site.use(modifyUrls({
             if (resolved.includes(".md")) {
                 resolved = resolved
                         .replace("README.md", "")
+                        .replace("_index.md", "")
                         .replace(".md", ".html");
-                console.log("URL: ", url,
-                "\n    srcPath: ", srcPath,
-                "\n    file: ", file,
-                "\n    rest: ", rest,
-                "\n    resolved: ", resolved);
             }
+
+            // console.log(url,
+            //     "\n  ::  ", srcPath,
+            //     "\n  ::  ", file,
+            //     "\n  ::  ", lookup,
+            //     "\n  ::  ", resolved,
+            //     "\n  ::  ", rest);
 
             cache.set(file, resolved);
             return resolved + rest;

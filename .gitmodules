@@ -1,3 +1,6 @@
 [submodule "site/projects/ttrpg-convert-cli"]
 	path = site/projects/ttrpg-convert-cli
 	url = https://github.com/ebullient/ttrpg-convert-cli.git
+[submodule "site/projects/obsidian-slides-extended"]
+	path = site/projects/obsidian-slides-extended
+	url = https://github.com/ebullient/obsidian-slides-extended.git

@@ -7,7 +7,7 @@ trim_trailing_whitespace = true
 insert_final_newline = false
 indent_style = space
 
-[*.java]
+[*.{java,ts}]
 indent_size = 4
 
 [*.md]

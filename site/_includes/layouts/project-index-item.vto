@@ -1,0 +1,18 @@
+<li>
+{{ if item.data.url }}
+  <a href="{{ item.data.url }}">
+    {{ item.data.title }}
+  </a>
+{{ else if item.data.title }}
+  <span>{{ item.data.title }}</span>
+{{ else }}
+  <span>{{ item.data.basename }}</span>
+{{ /if }}
+{{ if item.children }}
+  <ul>
+    {{- for child of item.children }}
+      {{ include "layouts/project-index-item.vto" { item: child } }}
+    {{- /for }}
+  </ul>
+{{ /if }}
+</li>

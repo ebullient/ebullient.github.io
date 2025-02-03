@@ -1,0 +1,11 @@
+<ul>
+{{- for item of menu.children }}
+<li><strong><a href="{{ item.data.url }}">{{ item.data.title }}</a></strong>
+  {{ set abstract = item.data.content |> firstSection }}
+  {{ if abstract }}
+    <blockquote>
+    {{ abstract }}
+    </blockquote>
+  {{ /if }}
+{{ /for -}}
+</ul>

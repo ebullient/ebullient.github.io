@@ -1,8 +1,8 @@
-@import "normalize";
-@import "_01-color-palette";
-@import "_02a-font-faces";
-@import "theme";
-@import "text";
-@import "callout";
-@import "navigation";
-@import "layout";
+@use "normalize" as *;
+@use "_01-color-palette" as *;
+@use "_02a-font-faces" as *;
+@use "theme" as *;
+@use "text" as *;
+@use "callout" as *;
+@use "navigation" as *;
+@use "layout" as *;

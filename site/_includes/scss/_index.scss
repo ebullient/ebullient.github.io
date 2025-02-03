@@ -1,0 +1,13 @@
+@mixin content-align {
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+}
+@mixin content-pad {
+  padding: 1em 1.2em;
+}
+@mixin narrow-pad {
+  padding: 1em 5px;
+}
+@mixin narrow-align {
+  padding: 0 5px;
+}

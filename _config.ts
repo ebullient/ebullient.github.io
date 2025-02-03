@@ -54,7 +54,10 @@ const site = lume({
     src: "site",
     dest: "public",
     prettyUrls: false,
-    location: new URL("https://www.ebullient.dev")
+    location: new URL("https://www.ebullient.dev"),
+    watcher: {
+        include: [ "projects" ]
+    }
 }, { markdown });
 
 site.use(attributes())
@@ -104,17 +107,13 @@ site.use(attributes())
 site.copy("static", "/");
 site.mergeKey("cssclasses", "stringArray");
 
-site.ignore((path) => {
-    return path.startsWith('/projects/') && !path.startsWith('/projects/index'); // included by default
-});
-
 const mdValue = site.renderer.helpers.get('md');
 const md = mdValue ? mdValue[0] : (text: string) => text;
 
 const slValue = site.renderer.helpers.get('slugify');
 const slHelper = slValue ? slValue[0] : (text: string) => text;
 
-function slHelperSlugify(s: string) {
+export function slHelperSlugify(s: string) {
     return slHelper(s).toLowerCase();
 }
 
@@ -168,7 +167,7 @@ site.use(modifyUrls({
         try {
             let lookup = file;
             if (file.includes("ttrpg-convert-cli")) {
-                lookup = lookup.replace('src/main/resources/', 'examples/defaults/')
+                lookup = lookup
                     .replace(/\.css$/, ".css.html")
                     .replace(/\.json$/, ".json.html")
                     .replace(/\.yaml$/, ".yaml.html")
@@ -332,6 +331,15 @@ function shortcodes(result: string): string {
 }
 
 site.filter("htmlAttr", (value: string) => value.replace(/"/g, '&quot;'));
+
+site.filter("firstSection", (value: string) => {
+    let idx = value.indexOf('<!--more-->');
+    if (idx >= 0) {
+        return value.substring(0, idx);
+    }
+    idx = value.indexOf('\n## ');
+    return idx > 0 ? value.substring(0, idx) : value;
+});
 
 function ifValue(value: string, text: string): string {
     return value

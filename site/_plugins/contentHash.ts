@@ -27,6 +27,9 @@ export default function (userOptions?: Partial<Options>): Lume.Plugin {
         site.use(modifyUrls({ fn: replaceUrls }));
 
         async function replaceUrls(url: string, page: Page, element: Element) {
+            if (Deno.env.get("DEV_MODE")) {
+                return url;
+            }
             if (url && element.matches(selector)) {
                 return await addHashToUrl(url, page);
             }
@@ -67,6 +70,9 @@ export default function (userOptions?: Partial<Options>): Lume.Plugin {
         }
 
         function updateFileUrl(url: string, hash: string) {
+            if (Deno.env.get("DEV_MODE")) {
+                return '';
+            }
             const [path, ext] = getPathAndExtension(url);
             const page = site.pages.find((page) => page.data.url === url);
             if (page) {

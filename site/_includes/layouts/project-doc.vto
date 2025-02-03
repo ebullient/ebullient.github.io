@@ -16,27 +16,41 @@ layout: layouts/base.vto
     {{- /for }}
   </ul>
 </nav>
-<section>
+
+<section class="doc-content">
+{{ if !hasContentTitle }}
+<h1>{{ title }}</h1>
+{{ /if }}
+
 {{ content }}
 </section>
-{{ if toc.length }}
+
+{{ set menu = nav.menu(page.data.projectRoot, "", "weight sortOrder url") }}
 <nav class="table-of-contents">
-  <h2>On this page</h2>
-  <ul>
-    {{- for item of toc }}
-    <li>
-      <a href="#{{ item.slug }}">{{ item.text }}</a>
-      {{- if item.children.length }}
-      <ul>
-        {{- for child of item.children }}
-        <li>
-          <a href="#{{ child.slug }}">{{ child.text }}</a>
-        </li>
-        {{- /for }}
-      </ul>
-      {{- /if }}
-    </li>
-    {{- /for }}
-  </ul>
+  <section class="project-menu">
+    <ul class="top-level">
+    {{- for item of menu.children }}
+      {{ include "layouts/project-menu-item.vto" { item } }}
+    {{ /for -}}
+    </ul>
+  </section>
+  <section class="page-menu">
+    <h2>On this page</h2>
+    <ul>
+      {{- for item of toc }}
+      <li>
+        <a href="#{{ item.slug }}">{{ item.text }}</a>
+        {{- if item.children.length }}
+        <ul>
+          {{- for child of item.children }}
+          <li>
+            <a href="#{{ child.slug }}">{{ child.text }}</a>
+          </li>
+          {{- /for }}
+        </ul>
+        {{- /if }}
+      </li>
+      {{- /for }}
+    </ul>
+  </section>
 </nav>
-{{- /if }}

@@ -1,0 +1,19 @@
+<li data-sort="{{ item.data.sortOrder }}">
+{{ if item.data.url }}
+  <a href="{{ item.data.url }}">
+    {{ item.data.title }}
+  </a>
+{{ else if item.data.title }}
+  <span>{{ item.data.title }}</span>
+{{ else }}
+  <span>{{ item.data.basename }}</span>
+{{ /if }}
+{{ if item.children }}
+  <input type="checkbox" class="menu-toggle" id="{{ item.data.boxId }}"/>
+  <ul class="submenu">
+    {{- for child of item.children }}
+      {{ include "layouts/project-menu-item.vto" { item: child } }}
+    {{- /for }}
+  </ul>
+{{ /if }}
+</li>

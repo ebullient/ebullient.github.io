@@ -34,7 +34,7 @@ const meta = document.createElement('meta');
 meta.name = "theme-color";
 meta.content = setTheme();
 document.head.appendChild(meta);
-window.onload = function() {
+globalThis.addEventListener("load",function() {
   const button = updateButton();
   button.addEventListener('click', toggleTheme);
-};
+});

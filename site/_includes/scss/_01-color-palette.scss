@@ -1,3 +1,6 @@
+@use "syntax-dark" as *;
+@use "syntax-light" as *;
+
 body {
   // https://accessiblepalette.com/?lightness=98.2,93.9,87.5,82.5,74.8,66,48.4,30.6,19.4,10&C76E85=0,0&DD5755=0,0&d78e6e=0,-8&E1BA60=0,-10&5c7a62=0,0&3376AD=0,10&8E6787=0,0&808080=0,0&009698=0,-3
   // Red
@@ -185,7 +188,10 @@ body {
   --footer-fg-color: var(--background-primary);
   --timestamp: var(--green-4);
 
-  @import "syntax-light";
+  --active-section-bg: rgba(var(--cyan-1-rgb), .5);
+  --active-submenu-bg: var(--gray-light-6);
+
+  @include syntax-light();
 }
 
 .dark body {
@@ -226,5 +232,8 @@ body {
   --footer-fg-color: var(--gray-light-8);
   --timestamp: var(--green-3);
 
-  @import "syntax-dark";
+  --active-section-bg: rgba(var(--cyan-4-rgb), .5);
+  --active-submenu-bg: var(--gray-dark-6);
+
+  @include syntax-dark();
 }

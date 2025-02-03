@@ -18,6 +18,9 @@
   </script>
   <script src="/assets/theme.js" inline></script>
   <script src="/assets/anchors.js" inline></script>
+  {{- for x of page.data.scripts }}
+  <script src="{{ x }}" inline></script>
+  {{ /for -}}
   {{- if !page.data.canonical || page.data.canonical != "none" }}
   <link rel="canonical" href="{{ (page.data.canonical ? page.data.canonical : page.data.url) |> url(true) }}" />
   {{- /if }}

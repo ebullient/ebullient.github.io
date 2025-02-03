@@ -1,3 +1,4 @@
+@mixin syntax-light() {
 /* Background */ .bg { background-color: #ffffff; }
 /* PreWrapper */ .chroma { background-color: #ffffff; }
 /* Other */ .chroma .x {  }
@@ -84,3 +85,4 @@
 /* GenericTraceback */ .chroma .gt { color: #aa0000 }
 /* GenericUnderline */ .chroma .gl { text-decoration: underline }
 /* TextWhitespace */ .chroma .w { color: #bbbbbb }
+}

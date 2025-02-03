@@ -1,14 +1,4 @@
-@mixin content-align {
-  padding-left: 1.2em;
-  padding-right: 1.2em;
-}
-
-@mixin content-pad {
-  padding: 1em 1.2em;
-}
-@mixin narrow-pad {
-  padding: 1em 5px;
-}
+@use "index" as *;
 
 body {
   display: flex;
@@ -63,7 +53,6 @@ main {
     flex: 1 1 auto;
   }
   >nav.table-of-contents {
-    @include content-pad();
     flex: 1 1 auto;
   }
   >nav.prev-next {
@@ -111,7 +100,7 @@ footer.page-footer {
     width: 100vw;
 
     > nav.breadcrumb {
-      flex: 0 0 100%;
+      flex-basis: 100%;
     }
 
     > article,
@@ -132,7 +121,6 @@ footer.page-footer {
       top: 0;
 
       overflow-y: scroll;
-      @include narrow-pad();
     }
   }
 }

@@ -55,27 +55,13 @@ return `
     }
     </script>
 </div>
-<ul>
-<li><a href="#" onclick="slideFullScreen();">See it fullscreen</a></li>
-</ul>
 
-<script type="text/javascript">
-var toto = document.getElementById('slideContent').innerHTML
-document.getElementById('slideFrame').contentWindow.document.write(document.getElementById('slideContent').innerHTML);
-document.getElementById('slideContent').remove();
-document.addEventListener("DOMContentLoaded",function(){
-      setTimeout(function () {
-      document.getElementById('slideFrame').contentWindow.initSlides() ;
-    }, 2000);
-});
-
-function slideFullScreen() {
-    document.open();
-    document.write(toto);
-    document.close();
-    initSlides()
-}
-</script>
+<p><a href="#" onclick="_slideFullScreen(
+    ${options.controls || true},
+    ${options.center || true},
+    ${options.history || true},
+    ${options.progress || true},
+    ${options.transition || true});">See it fullscreen</a></p>
 `;
 }
 

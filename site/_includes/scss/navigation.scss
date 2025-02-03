@@ -1,3 +1,5 @@
+@use "index" as *;
+
 header.page-header > nav,
 nav.breadcrumb,
 nav.prev-next {
@@ -72,6 +74,57 @@ main.docs {
     padding-left: .2em;
   }
 }
+
+section.page-menu {
+  @include narrow-align();
+}
+
+body:has(main.docs) section.project-menu {
+  height: unset;
+  overflow: hidden;
+  ul {
+    margin-top: 0;
+    padding-inline-start: 0px;
+    li {
+      @include content-align();
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      a, span {
+        flex: 1;
+      }
+      ul.submenu {
+        flex-basis: 100%;
+        display: none;
+        li {
+          padding-right: 0;
+        }
+      }
+      input[type="checkbox"] {
+        appearance: none;
+        height: 18px;
+        width: 18px;
+        background-color: var( --text-muted);
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>');
+        &:checked {
+          mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up"><path d="m18 15-6-6-6 6"/></svg>');
+        }
+      }
+      input:checked ~ ul.submenu {
+        display: block;
+      }
+    }
+    > li.active {
+      background-color: var(--active-section-bg);
+    }
+  }
+}
+
+// Lucide panel-bottom-open
+// <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-bottom-open"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 15h18"/><path d="m9 10 3-3 3 3"/></svg>
+// Lucide panel-top-open
+// <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-top-open"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="m15 14-3 3-3-3"/></svg>
 
 nav.prev-next {
   > ul {

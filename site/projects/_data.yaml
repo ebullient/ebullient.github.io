@@ -1,9 +1,0 @@
-projects:
-  - title: Slides Extended
-    url: /projects/obsidian-slides-extended/
-    description: |
-      Create markdown-based reveal.js presentations in Obsidian (fork of Advanced Slides)
-  - title: TTRPG Convert CLI
-    url: /projects/ttrpg-convert-cli/
-    description: |
-      Utility to convert JSON data (for content you own) from 5etools or pf2etools into Obsidian-friendly Markdown.

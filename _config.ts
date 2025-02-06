@@ -61,7 +61,6 @@ const site = lume({
 }, { markdown });
 
 site.use(attributes())
-    .use(code_highlight())
     .use(date())
     .use(metas())
     .use(toc())
@@ -86,6 +85,7 @@ site.use(attributes())
     .use(sass({
         includes: "_includes/scss",
     }))
+    .use(code_highlight())
     .use(sitemap({
         sort: "url=desc",
         // only include things that are not redirects

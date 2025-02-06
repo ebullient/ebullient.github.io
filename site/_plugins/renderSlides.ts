@@ -12,56 +12,25 @@ export type RevealJsOptions = {
 }
 
 function generateRevealContent(options: RevealJsOptions): string {
+    const prelimString="<body>RevealJS example</body>";
 return `
 <!-- based on hugo shortcode: https://github.com/vjeantet/hugo-theme-docdock/blob/master/layouts/shortcodes/revealjs.html -->
-<iframe id="slideFrame" src="none.html" style="width:${options.width}; height:${options.height}; border:0px"></iframe>
-
-<div id="slideContent">
-    <link rel="stylesheet" href="/revealjs/dist/reveal.css">
-    <link rel="stylesheet" href="/revealjs/dist/theme/${options.theme}.css" id="theme">
-    <link rel="stylesheet" href="/revealjs/plugin/highlight/${options.highlight}.css">
-
-    <div class="reveal">
-        <div class="slides">
-            <section data-markdown
-                    data-separator="^---"
-                    data-separator-vertical="^___"
-                    data-separator-notes="^Note:"
-                    data-charset="utf8">
-                ${options.innerContent}
-            </section>
-        </div>
-    </div>
-
-    <script src="/revealjs/dist/reveal.js"></script>
-    <script src="/revealjs/plugin/notes/notes.js"></script>
-    <script src="/revealjs/plugin/markdown/markdown.js"></script>
-    <script src="/revealjs/plugin/highlight/highlight.js"></script>
-    <script src="/revealjs/plugin/zoom/zoom.js"></script>
-
-    <script>
-    function initSlides() {
-        Reveal.initialize({
-            embedded : true,
-
-            controls: ${options.controls},
-            center: ${options.center},
-            history: ${options.history},
-            progress: ${options.progress},
-            transition: ${options.transition},
-
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-        });
-    }
-    </script>
+<div class="embed-container">
+<iframe id="slideFrame" class="embed video-player" src="javascript:'${prelimString}'" srcdoc="${prelimString}"></iframe>
 </div>
 
-<p><a href="#" onclick="_slideFullScreen(
-    ${options.controls || true},
-    ${options.center || true},
-    ${options.history || true},
-    ${options.progress || true},
-    ${options.transition || true});">See it fullscreen</a></p>
+<div id="slideContent"
+    data-controls="${options.controls}"
+    data-center="${options.center}"
+    data-history="${options.history}"
+    data-progress="${options.progress}"
+    data-transition="${options.transition}"
+    data-theme="${options.theme}"
+    data-highlight="${options.highlight}">
+${options.innerContent.trim()}
+</div>
+
+<script src="/assets/reveal-iframe.js"></script>
 `;
 }
 

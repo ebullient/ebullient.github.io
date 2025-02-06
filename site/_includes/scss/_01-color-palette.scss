@@ -191,6 +191,8 @@ body {
   --active-section-bg: rgba(var(--cyan-1-rgb), .5);
   --active-submenu-bg: var(--gray-light-6);
 
+  --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.2);
+
   @include syntax-light();
 }
 
@@ -234,6 +236,7 @@ body {
 
   --active-section-bg: rgba(var(--cyan-4-rgb), .5);
   --active-submenu-bg: var(--gray-dark-6);
+  --text-highlight-bg: var(--primary-accent-2);
 
   @include syntax-dark();
 }

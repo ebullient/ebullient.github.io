@@ -23,6 +23,10 @@ body {
   --h-weight: 500;
 }
 
+#slideContent {
+  display: none;
+}
+
 code,
 pre,
 section.archive_list ul time {
@@ -380,6 +384,9 @@ main.cv {
   overflow: hidden;
   position: relative;
   width: 100%;
+  &#slideFrame {
+    min-height: 20em;
+  }
 }
 
 .embed.video-player::after {
@@ -437,4 +444,9 @@ img[src$='#float-right'] {
   float: right;
   max-width: 300px;
   max-height: 400px;
+}
+
+mark {
+  background-color: var(--text-highlight-bg);
+  color: var(--text-normal);
 }

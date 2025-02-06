@@ -1,6 +1,10 @@
-import { basename, extname } from "@std/path";
+import { extname } from "@std/path";
 import { Data, RawData } from "lume/core/file.ts";
 import { extract, test } from "lume/deps/front_matter.ts";
+import { slHelperSlugify } from "../../_config.ts";
+import { createHash } from "node:crypto";
+
+const hash = createHash('md5');
 
 export const IGNORE_FILES = [
     'dco.txt',
@@ -104,6 +108,8 @@ export function setFileData(data: Partial<Data>,
         .replace('README.html', '')
         .replace('_index.html', '');
     data.genUrl = data.url;
+    data.sortOrder = slHelperSlugify(data.srcPath.toLowerCase());
+    data.boxId = hash.update(data.srcPath).copy().digest('hex');
 }
 
 export async function walkTree(dir: string, visit: (path: string, entry: Deno.DirEntry) => Promise<boolean>) {

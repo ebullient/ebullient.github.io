@@ -12,6 +12,11 @@ const interestingFiles = [
     ".yaml",
 ];
 
+function isInterestingFile(path: string, ext: string): boolean {
+    return path.includes('/docs/')
+        || interestingFiles.includes(ext);
+}
+
 function langWrapper(content: string, lang: string, note: string): string {
     return `${note}
 ~~~${lang == 'txt' ? 'md' : lang}
@@ -33,9 +38,9 @@ function getNoteForLang(lang: string, githubUrl: string): string {
     }
 }
 
-async function ttrpgConvertCli(dirEntry: Deno.DirEntry, data: Partial<Data>): Promise<Partial<Data> | null> {
+async function ttrpgConvertCli(dir: string, dirEntry: Deno.DirEntry, data: Partial<Data>): Promise<Partial<Data> | null> {
     const ext = getExt(dirEntry.name);
-    if (dirEntry.name.match(/(convertData|sourceMap).*/) || !interestingFiles.includes(ext)) {
+    if (!isInterestingFile(dir, ext)) {
         return null; // skip these files
     }
     const rawData = await toRawData(data.fullPath);
@@ -48,6 +53,8 @@ async function ttrpgConvertCli(dirEntry: Deno.DirEntry, data: Partial<Data>): Pr
         extractTitle(data);
         data.type = 'project-doc';
         data.cssclasses = ['docs'];
+    } else if (ext.match(/\.(png|jpg)/)) {
+        return data;
     } else {
         data.type = 'project-file';
         data.cssclasses = ['docs', 'files'];
@@ -63,7 +70,6 @@ async function ttrpgConvertCli(dirEntry: Deno.DirEntry, data: Partial<Data>): Pr
                 data.content as string,
                 data.lang, note);
     }
-
 
     data.projectRoot = "/projects/ttrpg-convert-cli/";
     data.layout = 'layouts/project-doc.vto';
@@ -94,7 +100,7 @@ export default async function* () {
             let data: Partial<Data> | null = {};
             setFileData(data, path, dirEntry, ttrpgBase,
                 "https://github.com/ebullient/ttrpg-convert-cli");
-            data = await ttrpgConvertCli(dirEntry, data);
+            data = await ttrpgConvertCli(path, dirEntry, data);
             if (data) {
                 pages.push(data as Data);
             }

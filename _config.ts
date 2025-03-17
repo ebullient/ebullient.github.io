@@ -1,6 +1,7 @@
 import lume from "lume/mod.ts";
 import { Page } from "lume/core/file.ts";
 import attributes from "lume/plugins/attributes.ts";
+import checkUrls from "lume/plugins/check_urls.ts";
 import code_highlight from "lume/plugins/code_highlight.ts";
 import date from "lume/plugins/date.ts";
 import favicon from "lume/plugins/favicon.ts";
@@ -9,7 +10,6 @@ import inline from "lume/plugins/inline.ts";
 import metas from "lume/plugins/metas.ts";
 import nav from "lume/plugins/nav.ts";
 import modifyUrls from "lume/plugins/modify_urls.ts";
-import { getPathInfo } from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import slugify_urls from "lume/plugins/slugify_urls.ts";
@@ -101,6 +101,12 @@ site.use(attributes())
     .use(contentHash({
         attribute: "data-hash",
     }))
+    .use(modifyUrls({
+        extensions: [".html"],
+        fn: fixUrls}))
+    .use(checkUrls({
+        strict: true,
+    }))
     .use(source_maps());
 
 // Copy the content of "static" directory to the root of your site
@@ -120,91 +126,6 @@ export function slHelperSlugify(s: string) {
 const cache = new Map<string, string | null>();
 
 site.addEventListener("beforeUpdate", () => cache.clear());
-
-site.use(modifyUrls({
-    extensions: [".html"],
-    fn: (url, page) => {
-        if (url.startsWith('#')
-            || url.includes('//')
-            || url.startsWith("/assets")
-            || url.startsWith("/files")
-            || url.startsWith("/images")
-            || url.startsWith("/index")
-            || url.endsWith(".ico")
-            || url.endsWith(".rss")
-            || url.includes(".html")) {
-            return url;
-        }
-        if (url.startsWith("/") && !(page.data.contentRoot || page.data.srcPath)) {
-            return url;
-        }
-        // extra resolution for markdown files from generated project pages
-        // that do not have a meaningful page.src.path, but instead have
-        // page.data.srcPath
-
-        let [file, rest] = getPathInfo(url);
-        if (file.startsWith("/") && file.endsWith("/")) {
-            return url;
-        }
-
-        const srcPath = page.data.contentRoot
-            ? `${page.data.contentRoot}index.md`
-            : (page.data.srcPath
-                    ? page.data.srcPath
-                    : page.src.path);
-
-        if (!file.startsWith("/") && !file.startsWith("~")) {
-            file = posix.resolve(
-                posix.dirname(normalizePath(srcPath)),
-                file,
-            );
-        }
-
-        if (cache.has(file)) {
-            const cached = cache.get(file);
-            return cached ? cached + rest : url;
-        }
-        try {
-            let lookup = file;
-            if (file.includes("ttrpg-convert-cli")) {
-                lookup = lookup
-                    .replace(/\.css$/, ".css.html")
-                    .replace(/\.json$/, ".json.html")
-                    .replace(/\.yaml$/, ".yaml.html")
-                    .replace(/\.txt$/, ".txt.html");
-            } else if (file.includes('obsidian-slides-extended')) {
-                lookup = lookup.replace('docs/content/', '');
-            }
-
-            let resolved = (page.data.srcPath && !page.data.contentRoot)
-                    ? lookup
-                    : site.url(`~${lookup}`);
-
-            if (resolved.includes(".md")) {
-                resolved = resolved
-                        .replace("README.md", "")
-                        .replace("_index.md", "")
-                        .replace(".md", ".html");
-            }
-
-            // console.log(url,
-            //     "\n  ::  ", srcPath,
-            //     "\n  ::  ", file,
-            //     "\n  ::  ", lookup,
-            //     "\n  ::  ", resolved,
-            //     "\n  ::  ", rest);
-
-            cache.set(file, resolved);
-            return resolved + rest;
-        } catch {
-            console.log("FAILED URL: ", url,
-                    "\n    srcPath: ", srcPath,
-                    "\n    file: ", file,
-                    "\n    rest: ", rest);
-        }
-        return url;
-    },
-}))
 
 // Update URLs and Dates for posts (third parameter)
 site.data("url", (page: Page) => {
@@ -230,6 +151,101 @@ site.preprocess(['.md'], (pages) => {
         }
     }
 });
+
+function fixUrls(url: string, page: Page): string {
+    if (url.startsWith('#')
+        || url.includes('//')
+        || url.startsWith("/assets")
+        || url.startsWith("/files")
+        || url.startsWith("/images")
+        || url.startsWith("/index")
+        || url.endsWith(".ico")
+        || url.endsWith(".rss")
+        || url.includes(".html")
+        || url.includes("javascript:")) { // revealjs
+        return url;
+    }
+    if (url.startsWith("/") && !(page.data.contentRoot || page.data.srcPath)) {
+        return url;
+    }
+
+    // extra resolution for markdown files from generated project pages
+    // that do not have a meaningful page.src.path, but instead have
+
+    let [file, rest] = getPathInfo(url);
+    if (file.startsWith("/") && file.endsWith("/")) {
+        return url;
+    }
+
+    const srcPath = page.data.contentRoot
+        ? `${page.data.contentRoot}index.md`
+        : (page.data.srcPath
+                ? page.data.srcPath
+                : page.src.path);
+
+    if (!file.startsWith("/") && !file.startsWith("~")) {
+        file = posix.resolve(
+            posix.dirname(normalizePath(srcPath)),
+            file,
+        );
+    }
+
+    const cached = cache.get(file);
+    if (cached) {
+        // console.log("CACHED URL: ", file, cached, "replace", url);
+        return cached + rest;
+    }
+    try {
+        let lookup = file;
+        if (file.includes("ttrpg-convert-cli")) {
+            if (file.includes("dco.txt")) {
+                const dco = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/dco.txt";
+                cache.set(file, dco);
+                return dco;
+            }
+            lookup = lookup
+                .replace(/\.css$/, ".css.html")
+                .replace(/\.json$/, ".json.html")
+                .replace(/\.yaml$/, ".yaml.html")
+                .replace(/\.txt$/, ".txt.html")
+                .replace('src/main/resources/templates', 'examples/templates/defaults');
+        } else if (file.includes('obsidian-slides-extended')) {
+            if (file.includes("dco.txt")) {
+                const dco = "https://github.com/ebullient/obsidian-slides-extended/blob/main/dco.txt";
+                cache.set(file, dco);
+                return dco;
+            }
+            lookup = lookup.replace('docs/content/', '');
+        }
+
+        let resolved = (page.data.srcPath && !page.data.contentRoot)
+                ? lookup
+                : site.url(`~${lookup}`);
+
+        if (resolved.includes(".md")) {
+            resolved = resolved
+                    .replace("README.md", "")
+                    .replace("_index.md", "")
+                    .replace(".md", ".html");
+        }
+
+        // console.log(url,
+        //     "\n  s::  ", srcPath,
+        //     "\n  f::  ", file,
+        //     "\n  l::  ", lookup,
+        //     "\n  r::  ", resolved,
+        //     "\n  ?::  ", rest);
+
+        cache.set(file, resolved);
+        return resolved + rest;
+    } catch {
+        console.log("FAILED URL: ", url,
+                "\n    srcPath: ", srcPath,
+                "\n    file: ", file,
+                "\n    rest: ", rest);
+    }
+    return url;
+};
 
 function shortcodes(result: string): string {
     const now = new Date();

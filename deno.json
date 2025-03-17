@@ -14,7 +14,7 @@
   },
   "imports": {
     "@std/path": "jsr:@std/path@^1.0.8",
-    "lume/": "https://deno.land/x/lume@v2.5.0/",
+    "lume/": "https://deno.land/x/lume@v2.5.3/",
     "npm:prismjs": "npm:prismjs@1.29.0",
     "npm:markdown-it": "npm:markdown-it@14.0.0",
     "npm:markdown-it-anchor": "npm:markdown-it-anchor@8.6.7",

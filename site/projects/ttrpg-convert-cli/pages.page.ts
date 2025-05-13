@@ -12,6 +12,11 @@ const interestingFiles = [
     ".yaml",
 ];
 
+const TTRPG_IGNORE_FILES = [
+    'convertData.json',
+    'sourceMap.yaml'
+];
+
 function isInterestingFile(path: string, ext: string): boolean {
     return path.includes('/docs/')
         || interestingFiles.includes(ext);
@@ -93,7 +98,8 @@ export default async function* () {
             || dirEntry.name.endsWith('.java')
             || dirEntry.name.endsWith('.properties')
             || dirEntry.name.endsWith('.svg')
-            || IGNORE_FILES.includes(dirEntry.name)) {
+            || IGNORE_FILES.includes(dirEntry.name)
+            || TTRPG_IGNORE_FILES.includes(dirEntry.name)) {
             return false;
         }
         if (dirEntry.isFile) {

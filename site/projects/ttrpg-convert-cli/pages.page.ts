@@ -58,6 +58,11 @@ async function ttrpgConvertCli(dir: string, dirEntry: Deno.DirEntry, data: Parti
         extractTitle(data);
         data.type = 'project-doc';
         data.cssclasses = ['docs'];
+        const content = data.content as string;
+        data.content = content.replace(
+                /\(.*?\/src\/main\/resources\/convertData.json\)/gm,
+                '(https://github.com/ebullient/ttrpg-convert-cli/blob/main/src/main/resources/convertData.json)');
+
     } else if (ext.match(/\.(png|jpg)/)) {
         return data;
     } else {
@@ -78,6 +83,7 @@ async function ttrpgConvertCli(dir: string, dirEntry: Deno.DirEntry, data: Parti
 
     data.projectRoot = "/projects/ttrpg-convert-cli/";
     data.layout = 'layouts/project-doc.vto';
+
     data.url = data.url
         ? data.url.replace('src/main/resources/templates', 'examples/templates/defaults')
         : undefined;

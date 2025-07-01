@@ -28,6 +28,7 @@
     "jsr:@std/html@^1.0.3": "1.0.3",
     "jsr:@std/http@1.0.12": "1.0.12",
     "jsr:@std/http@1.0.13": "1.0.13",
+    "jsr:@std/internal@^1.0.9": "1.0.9",
     "jsr:@std/io@0.225": "0.225.0",
     "jsr:@std/io@~0.225.2": "0.225.2",
     "jsr:@std/json@1": "1.0.1",
@@ -39,6 +40,7 @@
     "jsr:@std/net@^1.0.4": "1.0.4",
     "jsr:@std/path@1.0.8": "1.0.8",
     "jsr:@std/path@^1.0.8": "1.0.8",
+    "jsr:@std/path@^1.1.1": "1.1.1",
     "jsr:@std/streams@^1.0.8": "1.0.8",
     "jsr:@std/streams@^1.0.9": "1.0.9",
     "jsr:@std/toml@1.0.2": "1.0.2",
@@ -56,19 +58,15 @@
     "npm:highlight.js@11.11.1": "11.11.1",
     "npm:highlight.js@11.9.0": "11.9.0",
     "npm:ico-endec@0.1.6": "0.1.6",
-    "npm:markdown-it-anchor@*": "8.6.7_@types+markdown-it@13.0.7_markdown-it@14.0.0",
-    "npm:markdown-it-anchor@8.6.7": "8.6.7_@types+markdown-it@13.0.7_markdown-it@14.0.0",
-    "npm:markdown-it-attrs@4.1.6": "4.1.6_markdown-it@14.0.0",
-    "npm:markdown-it-attrs@4.3.1": "4.3.1_markdown-it@14.0.0",
+    "npm:markdown-it-anchor@9.2.0": "9.2.0_@types+markdown-it@14.1.2_markdown-it@14.1.0",
+    "npm:markdown-it-attrs@4.3.1": "4.3.1_markdown-it@14.1.0",
     "npm:markdown-it-deflist@3.0.0": "3.0.0",
     "npm:markdown-it-footnote@4.0.0": "4.0.0",
-    "npm:markdown-it-obsidian-callouts@0.2.0": "0.2.0_markdown-it@14.0.0",
-    "npm:markdown-it@14.0.0": "14.0.0",
+    "npm:markdown-it-obsidian-callouts@0.3.2": "0.3.2_markdown-it@14.1.0",
     "npm:markdown-it@14.1.0": "14.1.0",
     "npm:meriyah@6.0.3": "6.0.3",
     "npm:meriyah@6.0.5": "6.0.5",
-    "npm:prismjs@*": "1.29.0",
-    "npm:prismjs@1.29.0": "1.29.0",
+    "npm:prismjs@1.30.0": "1.30.0",
     "npm:remove-markdown@0.6.0": "0.6.0",
     "npm:sass@1.69.6": "1.69.6",
     "npm:sass@1.83.1": "1.83.1",
@@ -168,6 +166,9 @@
         "jsr:@std/streams@^1.0.9"
       ]
     },
+    "@std/internal@1.0.9": {
+      "integrity": "bdfb97f83e4db7a13e8faab26fb1958d1b80cc64366501af78a0aee151696eb8"
+    },
     "@std/io@0.225.0": {
       "integrity": "c1db7c5e5a231629b32d64b9a53139445b2ca640d828c26bf23e1c55f8c079b3"
     },
@@ -207,6 +208,12 @@
     },
     "@std/path@1.0.8": {
       "integrity": "548fa456bb6a04d3c1a1e7477986b6cffbce95102d0bb447c67c4ee70e0364be"
+    },
+    "@std/path@1.1.1": {
+      "integrity": "fe00026bd3a7e6a27f73709b83c607798be40e20c81dde655ce34052fd82ec76",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
     },
     "@std/streams@1.0.8": {
       "integrity": "b41332d93d2cf6a82fe4ac2153b930adf1a859392931e2a19d9fabfb6f154fb3"
@@ -585,18 +592,18 @@
     "@types/estree@1.0.6": {
       "integrity": "sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw=="
     },
-    "@types/linkify-it@3.0.5": {
-      "integrity": "sha512-yg6E+u0/+Zjva+buc3EIb+29XEg4wltq7cSmd4Uc2EE/1nUVmxyzpX6gUXD0V8jIrG0r7YeOGVIbYRkxeooCtw=="
+    "@types/linkify-it@5.0.0": {
+      "integrity": "sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q=="
     },
-    "@types/markdown-it@13.0.7": {
-      "integrity": "sha512-U/CBi2YUUcTHBt5tjO2r5QV/x0Po6nsYwQU4Y04fBS6vfoImaiZ6f8bi3CjTCxBPQSO1LMyUqkByzi8AidyxfA==",
+    "@types/markdown-it@14.1.2": {
+      "integrity": "sha512-promo4eFwuiW+TfGxhi+0x3czqTYJkG8qB17ZUJiVF10Xm7NLVRSLUsfRTU/6h1e24VvRnXCx+hG7li58lkzog==",
       "dependencies": [
         "@types/linkify-it",
         "@types/mdurl"
       ]
     },
-    "@types/mdurl@1.0.5": {
-      "integrity": "sha512-6L6VymKTzYSrEf4Nev4Xa1LCHKrlTlYCBMTlQKFuddo1CvQcE52I0mwfOJayueUC7MJuXOeHTcIU683lzd0cUA=="
+    "@types/mdurl@2.0.0": {
+      "integrity": "sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg=="
     },
     "@types/node@22.12.0": {
       "integrity": "sha512-Fll2FZ1riMjNmlmJOdAyY5pUbkftXslB5DgEzlIuNaiWhXd00FhWxVC/r4yV/4wBb9JfImTu+jiSvXTkJ7F/gA==",
@@ -775,23 +782,17 @@
         "yallist"
       ]
     },
-    "markdown-it-anchor@8.6.7_@types+markdown-it@13.0.7_markdown-it@14.0.0": {
-      "integrity": "sha512-FlCHFwNnutLgVTflOYHPW2pPcl2AACqVzExlkGQNsi4CJgqOHN7YTgDd4LuhgN1BFO3TS0vLAruV1Td6dwWPJA==",
+    "markdown-it-anchor@9.2.0_@types+markdown-it@14.1.2_markdown-it@14.1.0": {
+      "integrity": "sha512-sa2ErMQ6kKOA4l31gLGYliFQrMKkqSO0ZJgGhDHKijPf0pNFM9vghjAh3gn26pS4JDRs7Iwa9S36gxm3vgZTzg==",
       "dependencies": [
         "@types/markdown-it",
-        "markdown-it@14.0.0"
+        "markdown-it"
       ]
     },
-    "markdown-it-attrs@4.1.6_markdown-it@14.0.0": {
-      "integrity": "sha512-O7PDKZlN8RFMyDX13JnctQompwrrILuz2y43pW2GagcwpIIElkAdfeek+erHfxUOlXWPsjFeWmZ8ch1xtRLWpA==",
-      "dependencies": [
-        "markdown-it@14.0.0"
-      ]
-    },
-    "markdown-it-attrs@4.3.1_markdown-it@14.0.0": {
+    "markdown-it-attrs@4.3.1_markdown-it@14.1.0": {
       "integrity": "sha512-/ko6cba+H6gdZ0DOw7BbNMZtfuJTRp9g/IrGIuz8lYc/EfnmWRpaR3CFPnNbVz0LDvF8Gf1hFGPqrQqq7De0rg==",
       "dependencies": [
-        "markdown-it@14.0.0"
+        "markdown-it"
       ]
     },
     "markdown-it-deflist@3.0.0": {
@@ -800,23 +801,11 @@
     "markdown-it-footnote@4.0.0": {
       "integrity": "sha512-WYJ7urf+khJYl3DqofQpYfEYkZKbmXmwxQV8c8mO/hGIhgZ1wOe7R4HLFNwqx7TjILbnC98fuyeSsin19JdFcQ=="
     },
-    "markdown-it-obsidian-callouts@0.2.0_markdown-it@14.0.0": {
-      "integrity": "sha512-SHehB5vo9ZE3xxOPhexgwgcLt/XyZDbFqMxXGy0b0Rejg3Z4JBAgslfSkqyaqOlC4EqLAkkB7EaftRxTQ8AGPA==",
+    "markdown-it-obsidian-callouts@0.3.2_markdown-it@14.1.0": {
+      "integrity": "sha512-YfvKgXJvqfXYqHIkQhQsDe/QzOdndhCkttqokPoZUEqUrzmumbUsUAUmyheV/igJFGwwsnE7h2UMIAKcdrLbrg==",
       "dependencies": [
-        "markdown-it@14.0.0"
+        "markdown-it"
       ]
-    },
-    "markdown-it@14.0.0": {
-      "integrity": "sha512-seFjF0FIcPt4P9U39Bq1JYblX0KZCjDLFFQPHpL5AzHpqPEKtosxmdq/LTVZnjfH7tjt9BxStm+wXcDBNuYmzw==",
-      "dependencies": [
-        "argparse",
-        "entities",
-        "linkify-it",
-        "mdurl",
-        "punycode.js",
-        "uc.micro@2.0.0"
-      ],
-      "bin": true
     },
     "markdown-it@14.1.0": {
       "integrity": "sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==",
@@ -855,8 +844,8 @@
     "picomatch@2.3.1": {
       "integrity": "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA=="
     },
-    "prismjs@1.29.0": {
-      "integrity": "sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q=="
+    "prismjs@1.30.0": {
+      "integrity": "sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw=="
     },
     "punycode.js@2.3.1": {
       "integrity": "sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA=="
@@ -1810,14 +1799,14 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@std/path@^1.0.8",
-      "npm:markdown-it-anchor@8.6.7",
-      "npm:markdown-it-attrs@4.1.6",
+      "jsr:@std/path@^1.1.1",
+      "npm:markdown-it-anchor@9.2.0",
+      "npm:markdown-it-attrs@4.3.1",
       "npm:markdown-it-deflist@3.0.0",
       "npm:markdown-it-footnote@4.0.0",
-      "npm:markdown-it-obsidian-callouts@0.2.0",
-      "npm:markdown-it@14.0.0",
-      "npm:prismjs@1.29.0"
+      "npm:markdown-it-obsidian-callouts@0.3.2",
+      "npm:markdown-it@14.1.0",
+      "npm:prismjs@1.30.0"
     ]
   }
 }

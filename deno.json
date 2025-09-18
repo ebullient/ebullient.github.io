@@ -13,7 +13,7 @@
     ]
   },
   "imports": {
-    "@std/path": "jsr:@std/path@^1.1.1",
+    "@std/path": "jsr:@std/path@^1.1.2",
     "lume/": "https://deno.land/x/lume@v2.5.3/",
     "npm:prismjs": "npm:prismjs@1.30.0",
     "npm:markdown-it": "npm:markdown-it@14.1.0",

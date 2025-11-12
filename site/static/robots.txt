@@ -1,8 +1,10 @@
 User-agent: *
+
 Disallow: /archives
 Disallow: /articles
+Disallow: /files
+Disallow: /just-breathe
 Disallow: /musing
-Disallow: /articles
 Disallow: /skills.php
 
 # AI Data Scraper
@@ -43,5 +45,3 @@ Disallow: /
 
 User-agent: omgili
 Disallow: /
-
-Sitemap: http://localhost:3000/sitemap.xml

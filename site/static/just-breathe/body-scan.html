@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Scan - 2 minutes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .content {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            text-align: center;
+            color: white;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .instruction {
+            font-size: 28px;
+            font-weight: 300;
+            opacity: 0.9;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            line-height: 1.4;
+        }
+
+        .timer {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 18px;
+            font-weight: 300;
+            z-index: 10;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="background-image" src="zen-fox-jduimovich-2025.webp" alt="Zen fox">
+
+        <div class="content">
+            <div class="instruction fade-in">Notice your head and neck</div>
+        </div>
+
+        <div class="timer">2:00</div>
+    </div>
+
+    <script>
+        const steps = [
+            "Notice your head and neck",
+            "How are your shoulders doing?",
+            "What's happening in your chest?",
+            "Check in with your belly",
+            "Notice your arms and hands",
+            "What do your legs feel like?",
+            "How are your feet?",
+            "You are here"
+        ];
+
+        const instructionEl = document.querySelector('.instruction');
+        const timerDisplay = document.querySelector('.timer');
+
+        let currentStep = 0;
+        const stepDuration = 15000; // 15 seconds per step = 2 minutes total
+        let remainingSeconds = 120;
+
+        // Update timer every second
+        const timerInterval = setInterval(() => {
+            remainingSeconds--;
+            const minutes = Math.floor(remainingSeconds / 60);
+            const seconds = remainingSeconds % 60;
+            timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+            if (remainingSeconds <= 0) {
+                clearInterval(timerInterval);
+            }
+        }, 1000);
+
+        // Advance steps
+        const stepInterval = setInterval(() => {
+            currentStep++;
+
+            if (currentStep >= steps.length) {
+                clearInterval(stepInterval);
+                return;
+            }
+
+            // Fade out
+            instructionEl.style.opacity = '0';
+
+            setTimeout(() => {
+                instructionEl.textContent = steps[currentStep];
+                instructionEl.style.opacity = '1';
+            }, 500);
+
+        }, stepDuration);
+    </script>
+</body>
+</html>

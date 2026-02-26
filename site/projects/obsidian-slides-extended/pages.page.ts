@@ -60,6 +60,7 @@ async function replaceShortCodes(data: Partial<Data>): Promise<string> {
             {{ set menu = nav.menu(page.data.url, "", "weight sortOrder url") }}
             {{ include "layouts/project-index.vto" { menu } }}`
         });
+        // content = content.replace(childrenRegex, "HERE");
     }
     return content;
 }

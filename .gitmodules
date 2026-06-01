@@ -4,3 +4,4 @@
 [submodule "projects/obsidian-slides-extended"]
 	path = projects/obsidian-slides-extended
 	url = https://github.com/ebullient/obsidian-slides-extended.git
+	branch = docs

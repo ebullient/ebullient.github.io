@@ -5,3 +5,6 @@
 	path = projects/obsidian-slides-extended
 	url = https://github.com/ebullient/obsidian-slides-extended.git
 	branch = docs
+[submodule "projects/obsidian-admonition"]
+	path = projects/obsidian-admonition
+	url = https://github.com/ebullient/obsidian-admonition.git

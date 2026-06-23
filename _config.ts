@@ -216,6 +216,8 @@ function fixUrls(url: string, page: Page): string {
                 return dco;
             }
             lookup = lookup.replace('docs/content/', '');
+        } else if (file.includes('obsidian-admonition')) {
+            lookup = lookup.replace('docs/', '');
         }
 
         let resolved = (page.data.srcPath && !page.data.contentRoot)

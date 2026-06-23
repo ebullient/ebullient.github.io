@@ -1,4 +1,8 @@
 projects:
+  - title: Admonition
+    url: /projects/obsidian-admonition/
+    description: |
+      Adds block-styled admonition content and callout functionality to Obsidian notes.
   - title: Slides Extended
     url: /projects/obsidian-slides-extended/
     description: |

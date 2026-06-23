@@ -68,17 +68,17 @@ jobs:
         run: deno task build
 
       - name: Setup Pages
-        if: github.ref == 'refs/heads/main' && github.repository == ${{ env.REPO }}
+        if: ${{ github.ref == 'refs/heads/main' && github.repository == env.REPO }}
         id: pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
       - name: Upload artifact
-        if: github.ref == 'refs/heads/main' && github.repository == ${{ env.REPO }}
+        if: ${{ github.ref == 'refs/heads/main' && github.repository == env.REPO }}
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: ./public
 
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main' && github.repository == ${{ env.REPO }}
+        if: ${{ github.ref == 'refs/heads/main' && github.repository == env.REPO }}
         id: deployment
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0

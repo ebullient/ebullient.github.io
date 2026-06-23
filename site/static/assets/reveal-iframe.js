@@ -16,6 +16,7 @@ globalThis.addEventListener("DOMContentLoaded", () => {
   <link rel="stylesheet" href="/revealjs/css/slides-extended.css" />
   <link rel="stylesheet" href="/revealjs/dist/theme/${theme}.css" id="theme">
   <link rel="stylesheet" href="/revealjs/plugin/highlight/${highlight}.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
   <span id="internalConfig" data-controls="${controls}"
     data-center="${center}"

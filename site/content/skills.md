@@ -17,11 +17,13 @@ cssclasses:
 </header>
 <article>
 
-  I am proficient with Object Oriented principles, design, and analysis. I was the development lead for the WebSphere Application Server Liberty runtime from it's initial release through 8.5.5.6. I've developed web applications using Perl (both CGI and Fast-CGI), PHP, and Ruby/Ruby on Rails, and javascript front-ends using JAX-RS or Servlets for the server-side. I am familiar with JSPs and JSF, though I prefer the ease-of-use provided by JAX-RS.
+  I'm currently a Senior Technical Staff Member at IBM and a Distinguished Engineer at Red Hat, an individual contributor working across both. My focus has shifted from Quarkus toward standing up the Commonhaus Foundation: drafting policy, onboarding projects, finding sponsorships, and building the automation that runs the foundation's machinery. I've also been using AI tooling to help with maintenance and code review, like everyone else.
+
+  Web development has been more of a lifelong hobby than a day job. My full-time work has always been in Java app server or app runtime territory. Over the years I've built server-side apps in Perl (CGI and Fast-CGI), PHP, Ruby/Ruby on Rails, and more recently Quarkus with Qute for templating and Renarde for its Servlet-like MVC layer, both excellent. I still reach for JAX-RS/REST for anything API-shaped. I use TypeScript for static-site generation (this blog, the Commonhaus site) and a small flotilla of Obsidian plugins.
+
+  I am proficient with Object Oriented principles, design, and analysis. I was the development lead for the WebSphere Application Server Liberty runtime from its initial release through 8.5.5.6.
 
   I've worked in both the Core and Enterprise Expert Groups for the OSGi standards body, and have experience with the OSGi core specification and several of the services defined in the compendium.
-
-  I'm now a Distinguished Engineer at Red Hat, working on Java, Cloud Native, Microservices, Quarkus, and other emerging technologies.
 </article>
 <section>
   <table cellspacing="0" cellpadding="0" width="100%">
@@ -31,36 +33,90 @@ cssclasses:
     <tr class="category">
       <td colspan="2">Active projects</td>
     </tr>
-    {{< skill url="https://github.com/ebullient/monster-combat"
-      name="Monster Combat (Application metrics)"
-      start="2019" end="current" >}}
-    {{< skill url="https://github.com/ebullient/pockets-cli"
-      name="Pockets CLI (Quarkus CLI + JPA)"
-      start="2021" end="current" >}}
-    {{< skill url="https://github.com/ebullient/obsidian-task-collector"
-      name="Obsidian plugin (TypeScript)"
-      start="2021" end="current" >}}
-    {{< skill url="https://github.com/ebullient/obsidian-theme-ebullientworks"
-      name="Obsidian theme (Sass)"
-      start="2021" end="current" >}}
+    {{< skill url="https://github.com/ebullient/obsidian-admonition"
+      name="Admonition (Obsidian plugin, TypeScript)"
+      details="Adopted from the original author"
+      start="2026" end="current" >}}
+    {{< skill url="https://github.com/ebullient/quarkus-ironsworn"
+      name="Quarkus Ironsworn (Quarkus + LangChain4j + RAG)"
+      details="AI-powered solo Ironsworn RPG, conference demo"
+      start="2026" end="current" >}}
+    {{< skill url="https://github.com/ebullient/quarkus-soloplay"
+      name="Soloplay (Quarkus + LangChain4j + RAG)"
+      details="AI-powered solo TTRPG assistant, conference demo"
+      start="2025" end="current" >}}
+    {{< skill url="https://github.com/ebullient/obsidian-prompt-flow"
+      name="Prompt Flow (Obsidian plugin, TypeScript)"
+      details="Generate AI content via local or OpenAI-compatible LLMs"
+      start="2025" end="current" >}}
+    {{< skill url="https://github.com/ebullient/obsidian-deck-notes"
+      name="Deck Notes (Obsidian plugin, TypeScript)"
+      details="Card decks for activities, strategies, or flashcards"
+      start="2025" end="current" >}}
+    {{< skill url="https://github.com/ebullient/obsidian-vault-mcp"
+      name="Vault as MCP (Obsidian plugin, TypeScript)"
+      details="Expose vault contents to LLMs via MCP server"
+      start="2025" end="current" >}}
+    {{< skill url="https://github.com/ebullient/obsidian-markdownlint"
+      name="Markdownlint (Obsidian plugin, TypeScript)"
+      details="Lint vault files with markdownlint"
+      start="2024" end="current" >}}
+    {{< skill url="https://github.com/ebullient/obsidian-slides-extended"
+      name="Slides Extended (Obsidian plugin, TypeScript)"
+      details="Fork of Advanced Slides"
+      start="2024" end="current" >}}
+    {{< skill url="https://github.com/commonhaus/automation"
+      name="Commonhaus Foundation Automation (Quarkus GitHub Apps)"
+      details="User/org/voting management for the Commonhaus Foundation"
+      start="2024" end="current" >}}
+    {{< skill url="https://github.com/ebullient/obsidian-show-whitespace-cm6"
+      name="Show Whitespace (Obsidian plugin, TypeScript)"
+      details="Highlight leading/trailing whitespace"
+      start="2023" end="current" >}}
     {{< skill url="https://github.com/ebullient/ttrpg-convert-cli"
       name="TTRPG Convert CLI (Quarkus CLI + D&D)"
+      details="Convert TTRPG source material to Markdown for Obsidian"
       start="2022" end="current" >}}
+    {{< skill url="https://github.com/ebullient/obsidian-snippetor"
+      name="Snippetor (Obsidian plugin, TypeScript)"
+      details="Generate common CSS snippets"
+      start="2022" end="current" >}}
+    {{< skill url="https://github.com/ebullient/obsidian-task-collector"
+      name="Task Collector (Obsidian plugin, TypeScript)"
+      details="Gather and mark completed tasks within a note"
+      start="2021" end="current" >}}
+    {{< skill url="https://github.com/ebullient/obsidian-theme-ebullientworks"
+      name="Ebullientworks (Obsidian theme, Sass)"
+      details="Dark/light theme for Obsidian and Obsidian Publish"
+      start="2021" end="current" >}}
+    {{< skill url="https://github.com/ebullient/obsidian-day-planner-og"
+      name="Day Planner OG (Obsidian plugin, TypeScript)"
+      details="Fork of the original Day Planner plugin"
+      start="2020" end="current" >}}
     <tr class="category">
       <td colspan="2">Archived projects</td>
     </tr>
+    {{< skill url="https://github.com/ebullient/pockets-cli"
+      name="Pockets CLI (Quarkus CLI + JPA)"
+      details="TTRPG inventory tracking CLI"
+      start="2021" end="2024" >}}
+    {{< skill url="https://github.com/ebullient/monster-combat"
+      name="Monster Combat (Application metrics)"
+      details="D&D combat simulator exploring Micrometer/Prometheus metrics"
+      start="2019" end="2023" >}}
     {{< skill url="https://www.gameontext.org/"
       name="Game On! Text Adventure (Microservices)"
-      start="2015" end="2023" >}}
+      details="Multiplayer text adventure demonstrating microservices"
+      start="2015" end="2022" >}}
     <tr>
       <th>Proficient</th>
       <th>Experience</th>
     </tr>
     <tr class="category">
-      <td colspan="2">Programming langauges</td>
+      <td colspan="2">Programming languages</td>
     </tr>
     {{< skill url="https://openjdk.java.net/"
-      name="Java" version="1.2.1 - 17"
+      name="Java" version="1.2.1 - 24"
       start="1996" end="current" >}}
     <tr class="category">
       <td colspan="2">Microservices and Cloud Native</td>
@@ -74,36 +130,33 @@ cssclasses:
       <th>Experience</th>
     </tr>
     <tr class="category">
-      <td colspan="2">Programming langauges</td>
+      <td colspan="2">Programming languages</td>
     </tr>
     {{< skill name="Typescript"
         start="2021" end="current" >}}
-    {{< skill name="Javascript"
-        details="Angular.js (v1.x), Ember, Node.js, Grunt, Gulp, esbuild, etc."
-        start="2007" end="current" >}}
     <tr class="category">
       <td colspan="2">Microservices and Cloud Native</td>
     </tr>
     {{< skill url="https://kubernetes.io/"
           name="Kubernetes"
           details="minikube"
-          start="2018" end="current" >}}
+          start="2018" end="2025" >}}
     {{< skill url="https://micrometer.io/"
           name="Micrometer" version="1.5.x - current"
           details="Java metrics library"
-          start="2019" end="current" >}}
+          start="2019" end="2025" >}}
     {{< skill url="https://prometheus.io/"
           name="Prometheus" version="2.15.x - current"
-          start="2020" end="current" >}}
+          start="2020" end="2025" >}}
     {{< skill url="https://quarkus.io/"
           name="Quarkus" version="1.7.x - current"
-          details="Creator/maintainer of Quarkus Micrometer extension"
+          details="Creator of Quarkus Micrometer extension"
           start="2020" end="current" >}}
     <tr class="category">
       <td colspan="2">Front-end markup</td>
     </tr>
     {{< skill url="https://www.w3.org/Style/CSS/"
-      name="CSS" start="2001" end=current >}}
+      name="CSS" start="2001" end="current" >}}
     {{< skill url="https://www.w3.org/MarkUp/"
         name="HTML" version="1.1 - 5.x"
         start="1995" end="current" >}}
@@ -118,9 +171,6 @@ cssclasses:
     {{< skill url="https://www.apple.com/macosx/"
       name="MacOS"
       start="2009" end="current" >}}
-    {{< skill url="https://manjaro.org/"
-        name="Manjaro / Arch linux"
-        start="2020" end="current" >}}
     {{< skill url="https://ubuntu.com/"
         name="ubuntu linux"
         start="2010" end="current" >}}
@@ -133,16 +183,16 @@ cssclasses:
     </tr>
     {{< skill url="https://golang.org"
         name="Golang"
-        start="2018" end="current" >}}
+        start="2018" end="2020" >}}
     {{< skill url="https://www.rust-lang.org"
         name="Rust"
-        start="2020" end="current" >}}
+        start="2020" end="2022" >}}
     <tr>
       <th>Rust bucket</th>
       <th>Experience</th>
     </tr>
     <tr class="category">
-      <td colspan="2">Programming Languages</td>
+      <td colspan="2">Programming languages</td>
     </tr>
     {{< skill name="C/C++"
         start="1995" end="2008" >}}
@@ -160,11 +210,6 @@ cssclasses:
     {{< skill name="Velocity"
       start="2007" end="2012" >}}
     <tr class="category">
-      <td colspan="2">DevOps</td>
-    </tr>
-    {{< skill name="Travis CI"
-        start="2018" end="2020" >}}
-    <tr class="category">
       <td colspan="2">Standards</td>
     </tr>
     {{< skill url="https://osgi.org"
@@ -175,29 +220,12 @@ cssclasses:
         name="CORBA" version="2.3.x-2.6.x"
         details="GIOP, RMI/IIOP"
         start="1997" end="2012" >}}
-    {{< skill url="https://www.faqs.org/rfcs/rfc3501.html"
-        name="IMAP" version="4Rev1"
-        start="2002" end="2005" >}}
-    {{< skill name="SMTP"
-        start="2002" end="2005" >}}
     <tr class="category">
       <td colspan="2">Applications</td>
     </tr>
     {{< skill url="https://httpd.apache.org/"
       name="Apache" version="1.3.2x/2.x"
       start="2001" end="2013" >}}
-    {{< skill url="https://www.inter7.com/courierimap/courierimap.html"
-      name="Courier-IMAP " version="1.7"
-      start="2002" end="2005" >}}
-    {{< skill url="https://eclipse.org/jetty/"
-        name="Jetty" version="6.1.x,7,8"
-        start="2009" end="2018" >}}
-    {{< skill url="https://www.mysql.com/"
-        name="MySQL" version="4.0, 5.0"
-        start="2002" end="2016" >}}
-    {{< skill url="https://www.postfix.org/"
-      name="Postfix" version="2.x"
-      start="2002" end="2005" >}}
     {{< skill url="https://www.ibm.com/cloud/websphere-liberty"
               name="WebSphere Liberty"
               details="Founding contributor / architect / technical lead"

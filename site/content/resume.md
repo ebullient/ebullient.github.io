@@ -32,6 +32,8 @@ preconnect:
   <p>I work primarily in Java with Quarkus and also maintain several open source projects, including a number of Obsidian plugins written in TypeScript. Recent work is highlighted on my <a href="https://www.ebullient.dev/skills/">Skills</a> page and in my GitHub repositories (<a href="https://github.com/ebullient">github.com/ebullient</a>).</p>
 
   <p>I joined IBM as a software engineer in 1999. I moved to Red Hat in 2020, and returned to IBM in 2025 while keeping my Red Hat role and title.</p>
+
+  <p>I played a central role in launching the Commonhaus Foundation, defining bylaws, policies, and procedures, and building automation to reduce operational overhead.</p>
 </article>
 
 <section>

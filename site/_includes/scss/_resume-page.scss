@@ -150,4 +150,17 @@ main.resume {
       grid-template-columns: 1fr;
     }
   }
+
+  @media print {
+    .resume-top-skills {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .resume-top-skills,
+    .credential-col {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }
 }

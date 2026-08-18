@@ -133,7 +133,7 @@ preconnect:
   <p>BS, Computer Engineering and MS, Computer Science (both 2000)</p>
 </section>
 
-<section>
+<section class="resume-top-skills">
   <h2>Top Skills</h2>
   <div class="skills-grid">
     <p><strong>Languages:</strong> Java, TypeScript, HTML/CSS</p>

@@ -1,0 +1,134 @@
+// Resume-specific overrides, layered on top of .cv.
+// Reuses the site's existing color/typography variables (see _01-color-palette.scss,
+// text.scss) rather than introducing a separate palette, so this respects light/dark
+// mode automatically.
+
+// Hide the generic page chrome for this page: the outer "Resume" <h1> that
+// layouts/page.vto adds (redundant with the custom header below), and the
+// site's nav bar, since this page is meant to stand alone.
+body:has(main.resume) header.page-header {
+  display: none;
+}
+
+body:has(main.resume) footer.page-footer {
+  display: none;
+}
+
+main.resume {
+  > header:first-child {
+    display: none;
+  }
+
+  // ---- Header block (name / tagline / contact) ----
+
+  header .title {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: 600;
+    font-size: 2.2em;
+  }
+
+  header h1 {
+    margin-block-start: 0;
+    margin-block-end: 0.15em;
+  }
+
+  header .address {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-style: italic;
+    color: var(--interactive-accent);
+    font-size: 1.05em;
+    margin: 0.2em 0 0.6em;
+  }
+
+  header .contact {
+    font-family: var(--font-monospace);
+    font-size: 0.82em;
+    color: var(--text-muted);
+  }
+
+  // ---- Section labels ----
+
+  section > h2 {
+    font-family: var(--font-monospace);
+    font-size: 0.95em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--interactive-accent);
+    border-bottom: 1px solid var(--text-muted);
+    padding-bottom: 0.4em;
+
+    &:before {
+      content: "";
+    }
+  }
+
+  section > h3 {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-size: 1.05em;
+
+    &:before {
+      content: "";
+    }
+  }
+
+  // ---- Position entries ----
+
+  .position {
+    border-left: 2px solid var(--background-primary-alt);
+    padding-left: 1em;
+    margin-bottom: 1.4em;
+
+    &.current {
+      border-left-color: var(--interactive-accent);
+    }
+
+    &.current > p:first-child strong::after {
+      content: "active";
+      display: inline-block;
+      margin-left: 0.6em;
+      font-family: var(--font-monospace);
+      font-size: 0.68em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--interactive-accent);
+      background: var(--background-primary-alt);
+      border-radius: 3px;
+      padding: 0.1em 0.5em;
+      vertical-align: middle;
+    }
+  }
+
+  .duration,
+  .location,
+  .version {
+    font-family: var(--font-monospace);
+    color: var(--text-faint);
+    font-size: 0.85em;
+  }
+
+  // ---- Two-column grids for Top Skills and Credentials ----
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3em 2em;
+
+    p {
+      margin: 0.3em 0;
+    }
+  }
+
+  .credentials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2em;
+  }
+
+  @media (max-width: 640px) {
+    .skills-grid,
+    .credentials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

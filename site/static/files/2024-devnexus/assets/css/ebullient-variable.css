@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=IBM+Plex+Sans:wght@300;400;700&display=swap');
+@import "quarkus-colors.css";
+@import "ebullient-slides.css";
+body {
+  --r-main-font: 'IBM Plex Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+  --r-heading-font: 'Architects Daughter', Helvetica Neue, Helvetica, Arial, sans-serif;
+  --r-code-font: 'Fira Code', 'Source Code Pro', Jetbrains Mono, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
+
+  --secondary-accent-2: var(--quarkus-red-2);
+  --secondary-accent-4: var(--quarkus-red-4);
+
+  --r-background-color: #fff;
+  --r-main-color: #222;
+  --r-heading-color: #222;
+  --r-link-color: #2a76dd;
+  --r-link-color-dark: #1a53a1;
+  --r-link-color-hover: #6ca0e8;
+  --r-selection-background-color: #98bdef;
+  --r-selection-color: #fff;
+  --r-faint: #999;
+  --r-table-header: rgba(152,189,239,0.2);
+  --r-bold-color: var(--r-main-color);
+  --r-italic-color: var(--r-main-color);
+  --r-bold-italic-color: var(--r-main-color);
+
+  --r-main-font-size: 36px;
+  --r-block-margin: 20px;
+  --r-heading-margin: 0 0 20px 0;
+  --r-heading-line-height: 1.2;
+  --r-heading-letter-spacing: normal;
+  --r-heading-text-transform: none;
+  --r-heading-text-shadow: none;
+  --r-heading-font-weight: 600;
+  --r-heading1-text-shadow: none;
+  --r-heading1-size: 2.5em;
+  --r-heading2-size: 1.6em;
+  --r-heading3-size: 1.3em;
+  --r-heading4-size: 1em;
+}
+.reveal .slides .inverted {
+  --r-link-color: #6baaef;
+  --r-link-color-dark: #90bff3;
+  --r-link-color-hover: #ff6697;
+  --r-selection-color: var(--r-main-color);
+  --r-bold-color: #6baaef;
+  --r-heading-color:  var(--r-background-color);
+
+  color: var(--r-background-color);
+}

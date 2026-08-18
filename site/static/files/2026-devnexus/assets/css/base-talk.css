@@ -1,0 +1,151 @@
+split.stretch {
+  align-items: center;
+}
+split.stretch > * > * {
+  vertical-align: middle;
+}
+split[even] img {
+  width: 42%;
+}
+split.no-wrap {
+  white-space: nowrap;
+}
+.full split {
+  width: 95%;
+  margin: 0 auto;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.small-text {
+  font-size: .8em;
+}
+.smaller-text {
+  font-size: .7em;
+}
+.smallest-text {
+  font-size: .6em;
+}
+.larger-text {
+  font-size: 1.2em;
+}
+.left-block {
+  text-align: left;
+}
+.reveal img.fade,
+.reveal .slide-background.fade .slide-background-content {
+  opacity: 0.2;
+}
+.reveal img.fade-max,
+.reveal .slide-background.fade-max .slide-background-content {
+  opacity: 0.1;
+}
+.reveal img.fade-out::before,
+.reveal .slide-background.fade-out .slide-background-content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 1) 100%);
+  pointer-events: none;
+}
+.reveal .slide-background.left {
+  width: 45%;
+  left: 0;
+}
+.reveal .slide-background.bottom-left {
+  width: 45%;
+  height: 45%;
+  bottom: 0;
+  left: 0;
+}
+.reveal .slides section.no-title > div > h3:first-of-type,
+.reveal .slides section.no-title > div > h2:first-of-type,
+.reveal .slides section.no-title > div > h1:first-of-type {
+  display: none;
+}
+.reveal .slides section.top-title > div > h3:first-of-type,
+.reveal .slides .top {
+  position: absolute;
+  top: 20px;
+  width:100%;
+  text-align: center;
+}
+.reveal .slides section .footer {
+  font-size: .7em;
+}
+.reveal .slides section .attribution {
+  font-size: .6em;
+}
+.reveal .slides img.code {
+  box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+}
+.reveal .slides .footer > code,
+.reveal .slides p > code,
+.reveal .slides li > code {
+  color: var(--r-link-color);
+  font-size: .8em;
+}
+.reveal .slides .footer > code.small-text,
+.reveal .slides p > code.small-text,
+.reveal .slides li > code.small-text {
+  font-size: .6em;
+}
+.reveal .slides .bottom {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width:100%;
+  text-align: center;
+}
+.reveal .slides p > code.small-text,
+.reveal .slides li > code.small-text {
+  font-size: .6em;
+}
+.reveal .raw-code pre {
+  box-shadow: none;
+}
+.reveal .code-large pre {
+  font-size: .9em;
+}
+.reveal .code-medium pre {
+  font-size: .7em;
+}
+.reveal .slides .monospace {
+  font-family: var(--r-code-font);
+}
+.reveal .slides .full-size pre {
+  margin: 0;
+  width: unset;
+}
+.reveal .slides .full-size pre code {
+  max-height: unset;
+  padding: 0;
+}
+.reveal .slides img.center.fragment {
+  position: absolute;
+  margin: auto auto;
+}
+.reveal .slides img.full-size {
+  margin: 0;
+  max-width: unset;
+}
+/* Acrostic: several lines, first letter colored */
+.reveal .slides .acrostic li {
+  list-style: none;
+  padding: 0;
+}
+.reveal .slides .acrostic li p {
+  margin: 0;
+}
+.reveal .slides .acrostic li::first-letter {
+  color: var(--r-italic-color);
+}
+/* Table of definitions: color contents of first child */
+.reveal section.definition-list table tr td:first-child {
+  color: var(--r-bold-italic-color);
+}

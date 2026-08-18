@@ -1,0 +1,102 @@
+/*
+Ebullientworks callouts 0.5.6 by @ebullient
+*/
+body {
+  --callout-padding: 0;
+  --callout-radius: 10px;
+  --callout-content-padding: 0 var(--size-4-2);
+  --callout-title-padding: var(--size-4-2);
+  --callout-border-opacity: 0.4;
+  --callout-border-width: 0 0 0 0.05rem;
+  --blockquote-border-thickness: 0.05rem;
+
+  --ebw-callout-warning: 234, 175, 0;
+  --ebw-callout-success: 139, 167, 145;
+  --ebw-callout-note: 148, 189, 223;
+  --ebw-callout-info: 111, 166, 211;
+  --ebw-callout-quote: 53, 120, 175;
+  --ebw-callout-tip: 134, 196, 193;
+  --ebw-callout-question: 89, 174, 170;
+  --ebw-callout-abstract: 199, 178, 195;
+  --ebw-callout-bug: 180, 152, 175;
+  --ebw-callout-example: 142, 103, 135;
+  --ebw-callout-danger: 191,0,56;
+  --ebw-callout-failure: 187, 79, 108;
+  --ebw-callout-reference: 183, 183, 183;
+  --ebw-callout-toc: 235, 235, 235;
+
+  --blockquote-border-color: var(--secondary-accent-2);
+}
+
+/* dark */
+.inverted {
+  --blockquote-border-color: var(--secondary-accent-4);
+  --ebw-callout-toc: 159, 159, 159;
+  --ebw-callout-reference: 137, 137, 137;
+  --ebw-callout-success: 92, 122, 99;
+  --ebw-callout-note: 33, 75, 109;
+  --ebw-callout-abstract: 88, 64, 84;
+  --ebw-callout-info: 53, 119, 174;
+  --ebw-callout-tip: 61, 126, 123;
+  --ebw-callout-danger: 194,76,74;
+  --ebw-callout-failure: 188,83,69;
+}
+
+.callout-color-default,
+.callout[data-callout=note] {
+  --callout-color: var(--ebw-callout-note);
+}
+.callout-color1,
+.callout[data-callout=abstract],
+.callout[data-callout=info],
+.callout[data-callout=summary],
+.callout[data-callout=tldr] {
+  --callout-color: var(--ebw-callout-abstract);
+}
+.callout-color2,
+.callout[data-callout=tip],
+.callout[data-callout=hint],
+.callout[data-callout=important] {
+  --callout-color: var(--ebw-callout-tip);
+}
+.callout-color3,
+.callout[data-callout=success],
+.callout[data-callout=check],
+.callout[data-callout=done] {
+  --callout-color: var(--ebw-callout-success);
+}
+.callout-color4,
+.callout[data-callout=question],
+.callout[data-callout=help],
+.callout[data-callout=faq] {
+  --callout-color: var(--ebw-callout-question);
+}
+.callout-color5,
+.callout[data-callout=warning],
+.callout[data-callout=caution],
+.callout[data-callout=attention] {
+  --callout-color: var(--ebw-callout-warning);
+}
+.callout-color6,
+.callout[data-callout=failure],
+.callout[data-callout=fail],
+.callout[data-callout=missing] {
+  --callout-color: var(--ebw-callout-failure);
+}
+.callout-color7,
+.callout[data-callout=danger],
+.callout[data-callout=error],
+.callout[data-callout=bug] {
+  --callout-color: var(--ebw-callout-danger);
+}
+.callout-color8,
+.callout[data-callout=example] {
+  --callout-color: var(--ebw-callout-example);
+}
+.callout-color9,
+.callout[data-callout=quote],
+.callout[data-callout=cite] {
+  --callout-color: var(--ebw-callout-quote);
+}
+
+

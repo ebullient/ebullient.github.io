@@ -1,0 +1,25 @@
+:root {
+  --quarkus-blue-1: #b5d4f7;
+  --quarkus-blue-2: #90bff3;
+  --quarkus-blue-3: #6baaef;
+  --quarkus-blue-4: #4695eb;
+  --quarkus-blue-5: #3570b0;
+  --quarkus-blue-6: #234b75;
+  --quarkus-blue-7: #11243b;
+
+  --quarkus-red-1: #ffcbdb;
+  --quarkus-red-2: #ff99b7;
+  --quarkus-red-3: #ff6697;
+  --quarkus-red-4: #ff004a;
+  --quarkus-red-5: #bf0038;
+  --quarkus-red-6: #bf0038;
+  --quarkus-red-7: #400013;
+
+  --quarkus-green-1: #d7ffab;
+  --quarkus-green-2: #c1ff81;
+  --quarkus-green-3: #aeff57;
+  --quarkus-green-4: #9aff20;
+  --quarkus-green-5: #73bf22;
+  --quarkus-green-6: #4d8017;
+  --quarkus-green-7: #264006;
+}

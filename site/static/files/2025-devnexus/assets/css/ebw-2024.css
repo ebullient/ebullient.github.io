@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto+Mono:wght@300;400&&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import "ebullientworks-colors.css";
+@import "ebullient-slides.css";
+body {
+  --r-main-font: 'IBM Plex Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+  --r-heading-font: 'IBM Plex Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+  --r-code-font: 'Fira Code', 'Source Code Pro', Jetbrains Mono, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
+
+  --r-background-color: white;
+  --r-main-color:  var(--gray-dark-5);
+  --r-heading-color: var(--purple-4);
+
+  --r-link-color: var(--gray-dark-3);
+  --r-link-color-dark: var(--cyan-5);
+  --r-link-color-hover: var(--cyan-4);
+  --r-link-decoration: underline;
+  --r-link-decoration-color: var(--r-link-color);
+
+  --r-selection-background-color: rgba(var(--green-4-rgb), .1);
+  --r-selection-color: var(--r-main-color);
+
+  --r-faint: var(--gray-dark-1);
+  --r-table-header: rgba(var(--purple-1-rgb),0.3);
+
+  --r-bold-color: var(--blue-4);
+  --r-italic-color: var(--pink-4);
+  --r-bold-italic-color: var(--yellow-3);
+
+  --r-main-font-size: 36px;
+  --r-block-margin: 20px;
+  --r-heading-margin: 0 0 20px 0;
+  --r-heading-line-height: 1.2;
+  --r-heading-letter-spacing: normal;
+  --r-heading-text-transform: none;
+  --r-heading-text-shadow: none;
+  --r-heading-font-weight: 500;
+  --r-heading1-text-shadow: none;
+  --r-heading1-size: 2.5em;
+  --r-heading2-size: 1.6em;
+  --r-heading3-size: 1.3em;
+  --r-heading4-size: 1em;
+}
+.reveal .slides .inverted {
+  --r-background-color: var(--gray-dark-85);
+  --r-main-color: var(--gray-light-1);
+  --r-heading-color: var(--purple-2);
+
+  --r-link-color: var(--gray-light-1);
+  --r-link-color-dark: var(--cyan-3);
+  --r-link-color-hover: var(--cyan-2);
+
+  --r-selection-background-color: rgba(var(--red-4-rgb), .1);
+  --r-selection-color: var(--r-main-color);
+
+  --r-bold-color: var(--blue-3);
+  --r-italic-color: var(--pink-2);
+  --r-bold-italic-color: var(--yellow-2);
+
+  --r-faint: var(--gray-dark-1);
+  --r-table-header: rgba(var(--purple-4-rgb),0.3);
+
+  color: var(--r-main-color);
+}

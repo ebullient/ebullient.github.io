@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto+Mono:wght@300;400&display=swap');
+@import "ebullient-variable.css";
+body {
+  --r-main-font: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+  --r-heading-font: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+  --r-code-font: 'Fira Code', 'Source Code Pro', Jetbrains Mono, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
+
+  --r-heading-color: var(--quarkus-blue-4);
+
+  --r-link-color: var(--quarkus-blue-6);
+  --r-link-color-dark: var(--quarkus-blue-5);
+  --r-link-color-hover: var(--quarkus-red-4);
+
+  --r-selection-background-color: var(--quarkus-red-1);
+  --r-selection-color: var(--r-main-color);
+
+  --r-bold-color: var(--quarkus-blue-4);
+  --r-italic-color: var(--quarkus-red-4);
+  --r-bold-italic-color: var(--quarkus-blue-3);
+}
+.reveal .slides .inverted {
+  --r-link-color: var(--quarkus-blue-3);
+  --r-link-color-dark: var(--quarkus-blue-2);
+  --r-link-color-hover: var(--quarkus-red-3);
+  --r-selection-color: var(--r-main-color);
+  --r-bold-color: var(--quarkus-blue-3);
+  --r-heading-color:  var(--r-background-color);
+
+  color: var(--r-background-color);
+}

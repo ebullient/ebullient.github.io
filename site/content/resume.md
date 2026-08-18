@@ -153,8 +153,9 @@ preconnect:
       <h3>Honors &amp; Awards</h3>
       <ul>
         <li><strong>Java Champion</strong></li>
-        <li><strong>IBM Corporate Award</strong>, IBM, Apr 2014. Awarded for work on the creation and delivery of WebSphere Liberty.</li>
         <li><strong>Outstanding Technical Achievement Award</strong>, IBM, Oct 2017</li>
+        <li><strong>IBM Corporate Award</strong>, IBM, Apr 2014. Awarded for work on the creation and delivery of WebSphere Liberty.</li>
+        <li><strong>Outstanding Technical Achievement Award</strong>, IBM, May 2013. Awarded for the initial leadership, design, and delivery of the WebSphere Application Server Liberty profile.</li>
       </ul>
 
       <h3>Publications</h3>

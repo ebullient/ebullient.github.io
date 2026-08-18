@@ -46,11 +46,11 @@ preconnect:
     <strong>Distinguished Engineer, Red Hat</strong> &middot; <span class="duration">Jan 2022-Present</span>
     </p>
     <p class="location">Remote</p>
-    <p>Individual contributor and cross-organization strategist across IBM and Red Hat: Java runtimes, Cloud Native metrics (Quarkus, Micrometer, MicroProfile Metrics, OpenTelemetry Metrics), Java's intersection with the command line, and AI-assisted development. Drive cross-organization dynamics and strategy, facilitating communication and alignment across organizational boundaries.</p>
+    <p>Individual contributor and cross-organization strategist across IBM and Red Hat, focused on AI-assisted development, Java and Quarkus for AI applications, and emerging SDLC/PDLC practices. Drive cross-organization dynamics and strategy, facilitating communication and alignment across organizational boundaries.</p>
     <ul>
-      <li>Built Java reference applications exploring agentic development, Quarkus + LangChain4j + Neo4j and Spring + Embabel, contributing upstream to an architectural shift in Embabel toward pluggable runtimes that can support Quarkus and LangChain4j</li>
+      <li>Built Java reference applications exploring agentic development, including Quarkus + LangChain4j + Neo4j and Spring + Embabel, contributing upstream to an architectural shift in Embabel toward pluggable runtimes that can support Quarkus and LangChain4j</li>
       <li>Developed a set of GitHub Apps to manage Commonhaus Foundation operations, applying AI-assisted SDLC practices to balance forward progress with code quality and maintainability</li>
-      <li>Applied hands-on experience from these applications to emerging PDLC/SDLC tooling and strategy</li>
+      <li>Applied hands-on experience from these applications to emerging PDLC/SDLC tooling, evaluation practices, and strategy</li>
     </ul>
   </div>
 

@@ -165,15 +165,6 @@ cssclasses:
     </tr>
     {{< skill name="GitHub Actions"
         start="2020" end="current" >}}
-    <tr class="category">
-      <td colspan="2">Operating systems</td>
-    </tr>
-    {{< skill url="https://www.apple.com/macosx/"
-      name="MacOS"
-      start="2009" end="current" >}}
-    {{< skill url="https://ubuntu.com/"
-        name="ubuntu linux"
-        start="2010" end="current" >}}
     <tr>
       <th>Now-and-again dabbling</th>
       <th>Experience</th>
@@ -234,11 +225,5 @@ cssclasses:
         name="WebSphere Application Server for z/OS and OS/390" version="4.x - 6.x"
         details="Component Broker for OS/390 v3.0.2"
         start="1999" end="2008" >}}
-    <tr class="category">
-      <td colspan="2">Operating systems</td>
-    </tr>
-    {{< skill url="https://gentoo.org/"
-        name="gentoo linux"
-        start="2003" end="2013" >}}
   </table>
 </section>

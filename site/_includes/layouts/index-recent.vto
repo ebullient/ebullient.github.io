@@ -20,7 +20,7 @@ metas:
       <footer class="byline">
         <div>
           posted
-          <time  class="post_date" datetime="{{ post.date |> date('DATE') }}">{{ page.data.date |> date("dd MMMM yyyy") }}</time>
+          <time  class="post_date" datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMMM yyyy") }}</time>
         </div>
         {{- if post.tags }}
         <div class="tags">tags:

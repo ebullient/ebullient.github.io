@@ -41,7 +41,7 @@ main.resume {
   }
 
   header .contact {
-    font-family: var(--font-monospace);
+    font-family: "IBM Plex Mono", var(--font-monospace);
     font-size: 0.82em;
     color: var(--text-muted);
   }
@@ -49,7 +49,7 @@ main.resume {
   // ---- Section labels ----
 
   section > h2 {
-    font-family: var(--font-monospace);
+    font-family: "IBM Plex Mono", var(--font-monospace);
     font-size: 0.95em;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -66,10 +66,15 @@ main.resume {
   section > h3 {
     font-family: "IBM Plex Serif", Georgia, serif;
     font-size: 1.05em;
+    margin-bottom: 0.3em;
 
     &:before {
       content: "";
     }
+  }
+
+  section > h3 + p.location {
+    margin-top: 0;
   }
 
   // ---- Position entries ----
@@ -79,6 +84,14 @@ main.resume {
     padding-left: 1em;
     margin-bottom: 1.4em;
 
+    > p:first-child {
+      margin-bottom: 0.3em;
+    }
+
+    > p.location {
+      margin-top: 0;
+    }
+
     &.current {
       border-left-color: var(--interactive-accent);
     }
@@ -87,7 +100,7 @@ main.resume {
       content: "active";
       display: inline-block;
       margin-left: 0.6em;
-      font-family: var(--font-monospace);
+      font-family: "IBM Plex Mono", var(--font-monospace);
       font-size: 0.68em;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -100,9 +113,15 @@ main.resume {
   }
 
   .duration,
-  .location,
+  .location {
+    font-family: "IBM Plex Mono", var(--font-monospace);
+    color: var(--text-faint);
+    font-size: 0.85em;
+  }
+
   .version {
-    font-family: var(--font-monospace);
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-style: italic;
     color: var(--text-faint);
     font-size: 0.85em;
   }

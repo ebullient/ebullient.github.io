@@ -76,7 +76,8 @@ preconnect:
       <li>Developed the first bylaws and policy drafts for the Commonhaus Foundation using AI-assisted workflows, then iterated them through council and legal review</li>
       <li>Established voting policies and procedures, backed by automation, to streamline consensus-building and organizational decision-making</li>
       <li>Drove the foundation's fiscal sponsorship pipeline end to end, growing supported projects from 15 to 32 (June 2025 to June 2026)</li>
-      <li>Negotiated and secured $105k in funding for FY25-26 ($30k from IBM, $75k from other corporate sponsors), including a multi-month negotiation with HeroDevs (proposal review, contract terms) that led to the creation of the OSSI initiative; routed $30k of sponsor funds directly to supported projects</li>
+      <li>Secured $105k in funding for FY25-26 (including 30k contributed directly to projects), with HeroDevs as a gold sponsor and IBM and TuxCare as silver sponsors</li>
+      <li>Partnered with HeroDevs to launch the Open Source Sustainability Initiative (OSSI)</li>
     </ul>
   </div>
 
